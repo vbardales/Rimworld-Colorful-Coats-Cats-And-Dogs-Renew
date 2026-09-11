@@ -25,7 +25,9 @@ port, so this is its idea rebuilt against the cats and dogs that are alive on 1.
   `ParseHelper` reads as 0-255.
 - `_tools/Measure-Coats.ps1`, which recomputes the palette from purpleyam's mod and Vanilla Animals
   Expanded, so the provenance of every colour can be checked rather than believed.
-- `About/Preview.png` and `About/ModIcon.png`.
+- `About/Preview.png`, with the mod name and a summary engraved into it per STYLE_RIMWORLD.md, and
+  `About/ModIcon.png`. `Art/preview.html` is the page headless Chrome rasterises, so the glyphs
+  are composed at 896 x 504 and never resampled.
 
 ### Decided
 
@@ -52,6 +54,10 @@ port, so this is its idea rebuilt against the cats and dogs that are alive on 1.
 - **`<success>Always</success>` on every inner operation, never on a container alone.**
   `PatchOperation.Complete` logs a failure for any operation that never matched anything, which is
   the normal case for a player who runs only one of the four target mods.
+- **No count is engraved on the banner.** Forty-one breeds is not a number this repository
+  controls: each of the four target mods can add one tomorrow, and every operation here is
+  conditional on what they do. It is the compatibility-mod case of `STYLE_RIMWORLD.md` — the number
+  would go stale without anyone touching the mod, so nothing would ever trigger a re-engraving.
 - **The name and the family are kept**, `nelim.colorfulcoats.catsanddogsrenew`, in line with the
   Dodos, Megafauna and Vanilla Animals Expanded ports. `<author>` reads `nelim, after purpleyam`
   rather than the family's usual `purpleyam - 1.6 port: nelim`, because nothing of purpleyam's is
