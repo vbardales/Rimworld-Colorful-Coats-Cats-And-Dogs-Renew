@@ -10,10 +10,36 @@
 	The tint multiplies, so a coat can only ever be darker or warmer than the original, never
 	lighter - which is why the original stays the most common one.
 
-	Shared palette, in 0-255 form:
-		soot      (122,120,124)    charcoal  (150,148,152)    ash    (168,176,186)
-		chocolate (148,110,80)     sable     (190,152,112)     honey  (220,186,124)
-		rust      (198,130,92)     fawn      (214,186,150)     cream  (234,222,198)
+	THE PALETTE IS PURPLEYAM'S, MEASURED.
+
+	Each value below is the mean colour of one of the coats purpleyam painted for
+	Colorful Coats - Cats and Dogs!, divided by the mean colour of the sprite it was painted
+	over, which is the tint that would have produced it. Nothing of theirs is shipped here;
+	what is reused is the choice of colours, and it is theirs. _tools/Measure-Coats.ps1
+	recomputes the whole table from the two mods on disk.
+
+		ink       (102, 94, 90)     from PoodleC, purpleyam's black poodle
+		blue      (111,124,166)     from GreatDaneA
+		grey      (122,122,122)     from CatMunchkinA
+		stone     (137,132,130)     from ChihuahuaA
+		chocolate (138,113, 98)     from PoodleB
+		coffee    (145,120,100)     from ChihuahuaB
+		slate     (150,155,171)     from CatSomaliB
+		ashblue   (155,174,176)     from CatSphynxA
+		iceblue   (188,228,255)     from CatSomaliA
+		silver    (192,192,192)     from CatBengalA
+		mist      (195,206,208)     from CatSphynxB
+		taupe     (221,197,170)     from CatPersianA
+		oatmeal   (231,216,204)     from ShihTzuA
+		fawn      (234,216,172)     from ChihuahuaC
+		champagne (242,205,190)     from PoodleD
+		apricot   (246,244,215)     from PoodleA
+		ivory     (255,249,201)     from CatNorwegianA
+
+	purpleyam painted 26 coats, shipped as 78 files - three rotations each. Seventeen of the
+	26 are reachable this way, and they are the seventeen above. The other nine are true
+	repaints, lighter than the sprite underneath or a pattern rather than a shade, and a
+	multiply cannot reach them at all.
 
 	Each operation is wrapped in a conditional that fires only when the breed has no
 	alternateGraphics of its own, so an upstream mod that adds its own coats one day silently
@@ -31,15 +57,15 @@
 			<value>
 				<alternateGraphicChance>0.6</alternateGraphicChance>
 				<alternateGraphics>
-					<li><color>(220,186,124)</color></li>
-					<li><color>(234,222,198)</color></li>
-					<li><color>(168,176,186)</color></li>
+					<li><color>(246,244,215)</color></li>
+					<li><color>(234,216,172)</color></li>
+					<li><color>(195,206,208)</color></li>
 				</alternateGraphics>
 			</value>
 		</nomatch>
 	</Operation>
 
-	<!-- Border collie - the brown-and-white and the red merle beside the black-and-white. -->
+	<!-- Border collie - the brown-and-white and the blue merle beside the black-and-white. -->
 	<Operation Class="PatchOperationConditional">
 		<xpath>/Defs/PawnKindDef[defName = "SCBorderCollie"]/alternateGraphics</xpath>
 		<nomatch Class="PatchOperationAdd">
@@ -48,9 +74,9 @@
 			<value>
 				<alternateGraphicChance>0.6</alternateGraphicChance>
 				<alternateGraphics>
-					<li><color>(148,110,80)</color></li>
-					<li><color>(198,130,92)</color></li>
-					<li><color>(168,176,186)</color></li>
+					<li><color>(138,113,98)</color></li>
+					<li><color>(150,155,171)</color></li>
+					<li><color>(234,216,172)</color></li>
 				</alternateGraphics>
 			</value>
 		</nomatch>
@@ -65,9 +91,9 @@
 			<value>
 				<alternateGraphicChance>0.6</alternateGraphicChance>
 				<alternateGraphics>
-					<li><color>(190,152,112)</color></li>
-					<li><color>(168,176,186)</color></li>
-					<li><color>(234,222,198)</color></li>
+					<li><color>(221,197,170)</color></li>
+					<li><color>(195,206,208)</color></li>
+					<li><color>(246,244,215)</color></li>
 				</alternateGraphics>
 			</value>
 		</nomatch>
@@ -82,9 +108,9 @@
 			<value>
 				<alternateGraphicChance>0.5</alternateGraphicChance>
 				<alternateGraphics>
-					<li><color>(214,186,150)</color></li>
-					<li><color>(148,110,80)</color></li>
-					<li><color>(122,120,124)</color></li>
+					<li><color>(234,216,172)</color></li>
+					<li><color>(145,120,100)</color></li>
+					<li><color>(137,132,130)</color></li>
 				</alternateGraphics>
 			</value>
 		</nomatch>
@@ -99,9 +125,9 @@
 			<value>
 				<alternateGraphicChance>0.6</alternateGraphicChance>
 				<alternateGraphics>
-					<li><color>(198,130,92)</color></li>
-					<li><color>(214,186,150)</color></li>
-					<li><color>(122,120,124)</color></li>
+					<li><color>(242,205,190)</color></li>
+					<li><color>(234,216,172)</color></li>
+					<li><color>(122,122,122)</color></li>
 				</alternateGraphics>
 			</value>
 		</nomatch>
@@ -116,9 +142,9 @@
 			<value>
 				<alternateGraphicChance>0.5</alternateGraphicChance>
 				<alternateGraphics>
-					<li><color>(168,176,186)</color></li>
-					<li><color>(190,152,112)</color></li>
-					<li><color>(234,222,198)</color></li>
+					<li><color>(150,155,171)</color></li>
+					<li><color>(221,197,170)</color></li>
+					<li><color>(246,244,215)</color></li>
 				</alternateGraphics>
 			</value>
 		</nomatch>
@@ -133,15 +159,16 @@
 			<value>
 				<alternateGraphicChance>0.6</alternateGraphicChance>
 				<alternateGraphics>
-					<li><color>(220,186,124)</color></li>
-					<li><color>(234,222,198)</color></li>
-					<li><color>(122,120,124)</color></li>
+					<li><color>(234,216,172)</color></li>
+					<li><color>(246,244,215)</color></li>
+					<li><color>(102,94,90)</color></li>
 				</alternateGraphics>
 			</value>
 		</nomatch>
 	</Operation>
 
-	<!-- Golden retriever - the whole point of the breed is that gold has a range. -->
+	<!-- Golden retriever - the whole point of the breed is that gold has a range, so all
+	     three coats stay light and let the gold underneath through. -->
 	<Operation Class="PatchOperationConditional">
 		<xpath>/Defs/PawnKindDef[defName = "SCGoldenRetriever"]/alternateGraphics</xpath>
 		<nomatch Class="PatchOperationAdd">
@@ -150,9 +177,9 @@
 			<value>
 				<alternateGraphicChance>0.6</alternateGraphicChance>
 				<alternateGraphics>
-					<li><color>(234,222,198)</color></li>
-					<li><color>(198,130,92)</color></li>
-					<li><color>(214,186,150)</color></li>
+					<li><color>(246,244,215)</color></li>
+					<li><color>(242,205,190)</color></li>
+					<li><color>(221,197,170)</color></li>
 				</alternateGraphics>
 			</value>
 		</nomatch>
@@ -167,10 +194,10 @@
 			<value>
 				<alternateGraphicChance>0.7</alternateGraphicChance>
 				<alternateGraphics>
-					<li><color>(168,176,186)</color></li>
-					<li><color>(148,110,80)</color></li>
-					<li><color>(214,186,150)</color></li>
-					<li><color>(122,120,124)</color></li>
+					<li><color>(195,206,208)</color></li>
+					<li><color>(138,113,98)</color></li>
+					<li><color>(234,216,172)</color></li>
+					<li><color>(122,122,122)</color></li>
 				</alternateGraphics>
 			</value>
 		</nomatch>
@@ -185,16 +212,16 @@
 			<value>
 				<alternateGraphicChance>0.6</alternateGraphicChance>
 				<alternateGraphics>
-					<li><color>(148,110,80)</color></li>
-					<li><color>(198,130,92)</color></li>
-					<li><color>(168,176,186)</color></li>
+					<li><color>(138,113,98)</color></li>
+					<li><color>(221,197,170)</color></li>
+					<li><color>(150,155,171)</color></li>
 				</alternateGraphics>
 			</value>
 		</nomatch>
 	</Operation>
 
-	<!-- Newfoundland - a dark dog to begin with, so two coats and a low chance. A tint can
-	     only darken, and there is not much room left under black. -->
+	<!-- Newfoundland - a dark dog to begin with, so two light coats and a low chance. A tint
+	     can only darken, and there is not much room left under black. -->
 	<Operation Class="PatchOperationConditional">
 		<xpath>/Defs/PawnKindDef[defName = "SCNewFoundland"]/alternateGraphics</xpath>
 		<nomatch Class="PatchOperationAdd">
@@ -203,8 +230,8 @@
 			<value>
 				<alternateGraphicChance>0.4</alternateGraphicChance>
 				<alternateGraphics>
-					<li><color>(148,110,80)</color></li>
-					<li><color>(168,176,186)</color></li>
+					<li><color>(255,249,201)</color></li>
+					<li><color>(195,206,208)</color></li>
 				</alternateGraphics>
 			</value>
 		</nomatch>
@@ -219,9 +246,9 @@
 			<value>
 				<alternateGraphicChance>0.6</alternateGraphicChance>
 				<alternateGraphics>
-					<li><color>(168,176,186)</color></li>
-					<li><color>(190,152,112)</color></li>
-					<li><color>(234,222,198)</color></li>
+					<li><color>(192,192,192)</color></li>
+					<li><color>(221,197,170)</color></li>
+					<li><color>(246,244,215)</color></li>
 				</alternateGraphics>
 			</value>
 		</nomatch>
@@ -236,14 +263,14 @@
 			<value>
 				<alternateGraphicChance>0.5</alternateGraphicChance>
 				<alternateGraphics>
-					<li><color>(214,186,150)</color></li>
-					<li><color>(122,120,124)</color></li>
+					<li><color>(234,216,172)</color></li>
+					<li><color>(102,94,90)</color></li>
 				</alternateGraphics>
 			</value>
 		</nomatch>
 	</Operation>
 
-	<!-- Saint Bernard - red and white, and the rarer brindle. -->
+	<!-- Saint Bernard - red and white, and the paler ones. -->
 	<Operation Class="PatchOperationConditional">
 		<xpath>/Defs/PawnKindDef[defName = "SCSaintbernard"]/alternateGraphics</xpath>
 		<nomatch Class="PatchOperationAdd">
@@ -252,9 +279,9 @@
 			<value>
 				<alternateGraphicChance>0.5</alternateGraphicChance>
 				<alternateGraphics>
-					<li><color>(198,130,92)</color></li>
-					<li><color>(190,152,112)</color></li>
-					<li><color>(234,222,198)</color></li>
+					<li><color>(242,205,190)</color></li>
+					<li><color>(221,197,170)</color></li>
+					<li><color>(231,216,204)</color></li>
 				</alternateGraphics>
 			</value>
 		</nomatch>
@@ -269,16 +296,17 @@
 			<value>
 				<alternateGraphicChance>0.6</alternateGraphicChance>
 				<alternateGraphics>
-					<li><color>(168,176,186)</color></li>
-					<li><color>(122,120,124)</color></li>
-					<li><color>(190,152,112)</color></li>
+					<li><color>(195,206,208)</color></li>
+					<li><color>(192,192,192)</color></li>
+					<li><color>(145,120,100)</color></li>
 				</alternateGraphics>
 			</value>
 		</nomatch>
 	</Operation>
 
-	<!-- Standard poodle - the most coloured dog in the pack, and the only one with five.
-	     purpleyam gave the poodle four coats at 80% in the original mod; this keeps that. -->
+	<!-- Standard poodle - purpleyam's own four poodle coats, in the order they had them:
+	     apricot, chocolate, black and the rose-grey one. This is the one breed in the mod
+	     where the palette lands back on the animal it was painted for. -->
 	<Operation Class="PatchOperationConditional">
 		<xpath>/Defs/PawnKindDef[defName = "SCStandardPoodle"]/alternateGraphics</xpath>
 		<nomatch Class="PatchOperationAdd">
@@ -287,11 +315,10 @@
 			<value>
 				<alternateGraphicChance>0.8</alternateGraphicChance>
 				<alternateGraphics>
-					<li><color>(220,186,124)</color></li>
-					<li><color>(234,222,198)</color></li>
-					<li><color>(148,110,80)</color></li>
-					<li><color>(122,120,124)</color></li>
-					<li><color>(168,176,186)</color></li>
+					<li><color>(246,244,215)</color></li>
+					<li><color>(138,113,98)</color></li>
+					<li><color>(102,94,90)</color></li>
+					<li><color>(242,205,190)</color></li>
 				</alternateGraphics>
 			</value>
 		</nomatch>
@@ -306,15 +333,15 @@
 			<value>
 				<alternateGraphicChance>0.6</alternateGraphicChance>
 				<alternateGraphics>
-					<li><color>(190,152,112)</color></li>
-					<li><color>(234,222,198)</color></li>
-					<li><color>(122,120,124)</color></li>
+					<li><color>(221,197,170)</color></li>
+					<li><color>(231,216,204)</color></li>
+					<li><color>(137,132,130)</color></li>
 				</alternateGraphics>
 			</value>
 		</nomatch>
 	</Operation>
 
-	<!-- Bernese mountain dog - tricolour and dark, so two coats at a low chance. -->
+	<!-- Bernese mountain dog - tricolour and dark, so two light coats at a low chance. -->
 	<Operation Class="PatchOperationConditional">
 		<xpath>/Defs/PawnKindDef[defName = "StrayDogs_BerneseMountainDog"]/alternateGraphics</xpath>
 		<nomatch Class="PatchOperationAdd">
@@ -323,8 +350,8 @@
 			<value>
 				<alternateGraphicChance>0.4</alternateGraphicChance>
 				<alternateGraphics>
-					<li><color>(198,130,92)</color></li>
-					<li><color>(168,176,186)</color></li>
+					<li><color>(255,249,201)</color></li>
+					<li><color>(195,206,208)</color></li>
 				</alternateGraphics>
 			</value>
 		</nomatch>
@@ -339,9 +366,9 @@
 			<value>
 				<alternateGraphicChance>0.6</alternateGraphicChance>
 				<alternateGraphics>
-					<li><color>(168,176,186)</color></li>
-					<li><color>(190,152,112)</color></li>
-					<li><color>(198,130,92)</color></li>
+					<li><color>(150,155,171)</color></li>
+					<li><color>(221,197,170)</color></li>
+					<li><color>(234,216,172)</color></li>
 				</alternateGraphics>
 			</value>
 		</nomatch>

@@ -16,10 +16,16 @@
 	Keeping the two mods on disjoint breeds is not only politeness: both add an
 	<alternateGraphics> element, and two of them on one def would leave the loader to pick one.
 
-	Palette, in 0-255 form:
-		soot      (122,120,124)    charcoal  (150,148,152)    ash    (168,176,186)
-		chocolate (148,110,80)     sable     (190,152,112)     honey  (220,186,124)
-		rust      (198,130,92)     fawn      (214,186,150)     cream  (234,222,198)
+	These seven are the closest the palette comes home: it was measured from coats purpleyam
+	painted over these very sprites, in this very mod, for their fourteen neighbours. The
+	header of Coats_StrayDogs.xml has the table and the provenance of each value.
+
+		ink       (102, 94, 90)   blue      (111,124,166)   grey      (122,122,122)
+		stone     (137,132,130)   chocolate (138,113, 98)   coffee    (145,120,100)
+		slate     (150,155,171)   ashblue   (155,174,176)   iceblue   (188,228,255)
+		silver    (192,192,192)   mist      (195,206,208)   taupe     (221,197,170)
+		oatmeal   (231,216,204)   fawn      (234,216,172)   champagne (242,205,190)
+		apricot   (246,244,215)   ivory     (255,249,201)
 -->
 
 <Patch>
@@ -34,9 +40,9 @@
 			<value>
 				<alternateGraphicChance>0.6</alternateGraphicChance>
 				<alternateGraphics>
-					<li><color>(168,176,186)</color></li>
-					<li><color>(234,222,198)</color></li>
-					<li><color>(148,110,80)</color></li>
+					<li><color>(150,155,171)</color></li>
+					<li><color>(231,216,204)</color></li>
+					<li><color>(242,205,190)</color></li>
 				</alternateGraphics>
 			</value>
 		</nomatch>
@@ -51,9 +57,9 @@
 			<value>
 				<alternateGraphicChance>0.6</alternateGraphicChance>
 				<alternateGraphics>
-					<li><color>(234,222,198)</color></li>
-					<li><color>(198,130,92)</color></li>
-					<li><color>(122,120,124)</color></li>
+					<li><color>(231,216,204)</color></li>
+					<li><color>(242,205,190)</color></li>
+					<li><color>(137,132,130)</color></li>
 				</alternateGraphics>
 			</value>
 		</nomatch>
@@ -68,9 +74,9 @@
 			<value>
 				<alternateGraphicChance>0.6</alternateGraphicChance>
 				<alternateGraphics>
-					<li><color>(198,130,92)</color></li>
-					<li><color>(190,152,112)</color></li>
-					<li><color>(168,176,186)</color></li>
+					<li><color>(221,197,170)</color></li>
+					<li><color>(242,205,190)</color></li>
+					<li><color>(150,155,171)</color></li>
 				</alternateGraphics>
 			</value>
 		</nomatch>
@@ -85,15 +91,15 @@
 			<value>
 				<alternateGraphicChance>0.6</alternateGraphicChance>
 				<alternateGraphics>
-					<li><color>(234,222,198)</color></li>
-					<li><color>(214,186,150)</color></li>
-					<li><color>(148,110,80)</color></li>
+					<li><color>(231,216,204)</color></li>
+					<li><color>(221,197,170)</color></li>
+					<li><color>(138,113,98)</color></li>
 				</alternateGraphics>
 			</value>
 		</nomatch>
 	</Operation>
 
-	<!-- German shepherd - the solid black one, the grey sable, and the pale one. -->
+	<!-- German shepherd - the grey sable, the pale one, and the slate. -->
 	<Operation Class="PatchOperationConditional">
 		<xpath>/Defs/PawnKindDef[defName = "AEXP_GermanShepherd"]/alternateGraphics</xpath>
 		<nomatch Class="PatchOperationAdd">
@@ -102,9 +108,9 @@
 			<value>
 				<alternateGraphicChance>0.5</alternateGraphicChance>
 				<alternateGraphics>
-					<li><color>(122,120,124)</color></li>
-					<li><color>(168,176,186)</color></li>
-					<li><color>(234,222,198)</color></li>
+					<li><color>(195,206,208)</color></li>
+					<li><color>(231,216,204)</color></li>
+					<li><color>(150,155,171)</color></li>
 				</alternateGraphics>
 			</value>
 		</nomatch>
@@ -119,8 +125,8 @@
 			<value>
 				<alternateGraphicChance>0.5</alternateGraphicChance>
 				<alternateGraphics>
-					<li><color>(214,186,150)</color></li>
-					<li><color>(122,120,124)</color></li>
+					<li><color>(234,216,172)</color></li>
+					<li><color>(102,94,90)</color></li>
 				</alternateGraphics>
 			</value>
 		</nomatch>
@@ -135,9 +141,9 @@
 			<value>
 				<alternateGraphicChance>0.5</alternateGraphicChance>
 				<alternateGraphics>
-					<li><color>(168,176,186)</color></li>
-					<li><color>(234,222,198)</color></li>
-					<li><color>(198,130,92)</color></li>
+					<li><color>(195,206,208)</color></li>
+					<li><color>(231,216,204)</color></li>
+					<li><color>(242,205,190)</color></li>
 				</alternateGraphics>
 			</value>
 		</nomatch>

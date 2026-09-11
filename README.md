@@ -2,10 +2,11 @@
 
 Coat variations for forty-one breeds of cat and dog on RimWorld 1.6 that have none.
 
-Named after **purpleyam's Colorful Coats - Cats and Dogs!** and built on its idea, but **no file
-of theirs is in it**. Their mod patched *Vanilla Animals Expanded — Cats and Dogs*, which no longer
-exists as a mod of its own, and the coats they painted for those fourteen breeds are already
-shipped by a different port. See [ATTRIBUTION.md](ATTRIBUTION.md) for the whole of that story.
+Named after **purpleyam's Colorful Coats - Cats and Dogs!** and built on its idea. **No file of
+theirs is in it, but every colour in it is theirs**, measured out of the coats they painted. Their
+mod patched *Vanilla Animals Expanded — Cats and Dogs*, which no longer exists as a mod of its own,
+and the coats themselves are already shipped by a different port. See
+[ATTRIBUTION.md](ATTRIBUTION.md) for the whole of that story.
 
 Original mod: https://steamcommunity.com/sharedfiles/filedetails/?id=2388932599 — declares 1.3 and
 nothing further.
@@ -35,7 +36,21 @@ Core does this itself: the guinea pig lists three texture coats and two colour c
 `alternateGraphics` block.
 
 ```xml
-<li><color>(198,130,92)</color></li>
+<li><color>(246,244,215)</color></li>   <!-- purpleyam's apricot poodle, as a tint -->
+```
+
+## The palette is purpleyam's, measured
+
+The colours are not invented. `_tools/Measure-Coats.ps1` takes each coat purpleyam painted, divides
+its mean colour by the mean colour of the sprite it was painted over, and that ratio is the tint
+which reproduces it. Of their 26 coats, **17 are reachable that way** and those seventeen are the
+whole palette here; the other nine are repaints a multiply cannot reach, and the tool says so
+rather than rounding them down.
+
+The standard poodle of Stray Dogs ends up wearing purpleyam's four poodle coats, in their order.
+
+```
+powershell -File _tools/Measure-Coats.ps1
 ```
 
 The limit is that a colour **multiplies** the sprite. A coat can only come out darker or warmer
@@ -84,7 +99,7 @@ Mod/          published — the junction into RimWorld/Mods points here
   About/
   Patches/
 Art/          full-resolution sources for the showcase and the icon
-_tools/       the checker
+_tools/       the checker, and the tool that recovers the palette
 ```
 
 Everything outside `Mod/` stays out of the Steam upload by construction:
@@ -93,9 +108,10 @@ filtering.
 
 ## Credit and removal
 
-purpleyam declared no licence, checked at all four places one could be. Nothing of theirs is
-redistributed here in any case — what is borrowed is the idea and the name. If purpleyam would
-rather this mod did not carry that name, say so and it is renamed or taken down, without argument.
+purpleyam declared no licence, checked at all four places one could be. No file of theirs is
+redistributed here in any case — what is borrowed is the idea, the name, and the colours measured
+from their coats. If purpleyam would rather this mod did not carry that name or those colours, say
+so and it is renamed, repainted or taken down, without argument.
 
 The animals belong to Qux and SpiderCamp, to akairo and Bernau31, to Vanilla Animals Expanded, and
 to Ludeon. This mod ships no part of any of them.

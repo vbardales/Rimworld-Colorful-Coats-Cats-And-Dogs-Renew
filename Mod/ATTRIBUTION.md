@@ -17,9 +17,10 @@ The question barely arises here, because **nothing of purpleyam's is redistribut
 borrowed is the name and the idea, and both are credited by name, in `About.xml`, in `LICENSE` and
 here, with removal on request and without argument.
 
-## What was taken, and it is not files
+## What was taken: the colours, not the files
 
-Nothing. Not a texture, not a line of XML, not a colour value.
+Not a texture and not a line of purpleyam's XML. But the palette is theirs, measured out of their
+own coats, and that is worth more than either.
 
 The original is a single patch file that adds `alternateGraphics` to fourteen `PawnKindDef`s of
 *Vanilla Animals Expanded — Cats and Dogs*, pointing at 78 textures purpleyam painted. All of that
@@ -30,15 +31,55 @@ Renew** (`nelim.colorfulcoats.vaerenew`), where the same textures are shipped by
 Re-porting the original would therefore have patched the same fourteen defs of the same mod twice.
 What was actually missing was the rest of the cats and dogs on 1.6, which is what this mod is.
 
+### How the palette was recovered
+
+For each of purpleyam's coats, `_tools/Measure-Coats.ps1` takes the mean colour of its opaque
+pixels, takes the same for the sprite it was painted over, and divides one by the other. That ratio
+is the `<color>` that makes `AlternateGraphic.GetGraphic` land on purpleyam's coat starting from the
+untouched sprite. It is a measurement of their work, reproducible from the two mods on disk, and it
+travels to animals their textures never could.
+
+purpleyam painted **26 coats**, shipped as 78 files, three rotations each. **Seventeen are
+reachable** as a tint and are the whole palette of this mod:
+
+| tint | from | tint | from |
+|---|---|---|---|
+| `(102,94,90)` | PoodleC | `(192,192,192)` | CatBengalA |
+| `(111,124,166)` | GreatDaneA | `(195,206,208)` | CatSphynxB |
+| `(122,122,122)` | CatMunchkinA | `(221,197,170)` | CatPersianA |
+| `(137,132,130)` | ChihuahuaA | `(231,216,204)` | ShihTzuA |
+| `(138,113,98)` | PoodleB | `(234,216,172)` | ChihuahuaC |
+| `(145,120,100)` | ChihuahuaB | `(242,205,190)` | PoodleD |
+| `(150,155,171)` | CatSomaliB | `(246,244,215)` | PoodleA |
+| `(155,174,176)` | CatSphynxA | `(255,249,201)` | CatNorwegianA |
+| `(188,228,255)` | CatSomaliA | | |
+
+The other nine are true repaints — lighter than the sprite underneath, or a pattern rather than a
+shade — and a multiply cannot reach them. The tool says so rather than rounding them down.
+
+Two places where the palette lands close to home: **the standard poodle of Stray Dogs takes
+purpleyam's four poodle coats**, in their order, and the labrador of the base game takes their
+chocolate and their black, which happen to be the labrador's own two.
+
+### And why the textures themselves stay where they are
+
+Four of purpleyam's cats have a namesake in *Let's Have a Cat!* — persian, maine coon, siamese,
+norwegian forest — and the poodle has one in *Stray Dogs*. Shipping the textures onto those would
+mean an alternate graphic that replaces the sprite outright, so half the animals of a breed would
+be drawn in Vanilla Animals Expanded's art, at roughly twice the resolution of the mod they belong
+to. The colours travel; the pixels do not.
+
 | taken from purpleyam | shipped here |
 |---|---|
 | the idea: a coat is a `PawnKindDef` away | 41 breeds' worth of it |
 | the name, and the family it belongs to | `Colorful Coats - Cats and Dogs! Renew` |
-| the poodle at four coats and 80% | five coats at 80%, on a different poodle |
+| 17 of their 26 coats, as colours | the whole palette |
+| the poodle at four coats and 80% | their four coats at 80%, on another poodle |
 
 ## What was made
 
-Four patch files, a showcase image and an icon. No textures, no assembly, no `Defs`, no DLC.
+Four patch files, two tools, a showcase image and an icon. No textures, no assembly, no `Defs`,
+no DLC.
 
 | file | breeds |
 |---|---|

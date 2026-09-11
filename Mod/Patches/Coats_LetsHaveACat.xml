@@ -9,19 +9,30 @@
 	averages 29 out of 255. Every tint on it would land within a couple of shades of the
 	original. A feature nobody can see is worse than no feature.
 
-	The rest are sorted by how much room their texture leaves. The white cat is the best
-	canvas in either mod and gets five coats; the dark tabbies get two, at a low chance.
+	The rest are sorted by how much room their texture leaves, measured from the sprites
+	themselves. The white cat is the best canvas in either mod and gets five coats; the dark
+	ones get two light tints and a low chance.
 
-	Palette, in 0-255 form:
-		soot      (122,120,124)    charcoal  (150,148,152)    ash    (168,176,186)
-		chocolate (148,110,80)     sable     (190,152,112)     honey  (220,186,124)
-		rust      (198,130,92)     fawn      (214,186,150)     cream  (234,222,198)
+	The palette is purpleyam's, measured from the 78 coats of Colorful Coats - Cats and Dogs!
+	and divided by the sprites they were painted over. The header of Coats_StrayDogs.xml has
+	the whole table and the provenance of each value; _tools/Measure-Coats.ps1 recomputes it.
+
+		ink       (102, 94, 90)   blue      (111,124,166)   grey      (122,122,122)
+		stone     (137,132,130)   chocolate (138,113, 98)   coffee    (145,120,100)
+		slate     (150,155,171)   ashblue   (155,174,176)   iceblue   (188,228,255)
+		silver    (192,192,192)   mist      (195,206,208)   taupe     (221,197,170)
+		oatmeal   (231,216,204)   fawn      (234,216,172)   champagne (242,205,190)
+		apricot   (246,244,215)   ivory     (255,249,201)
+
+	Four of purpleyam's cats have a namesake here - persian, maine coon, siamese, norwegian
+	forest. Their textures are not reused: they are painted over Vanilla Animals Expanded's
+	cats, at twice these sprites' resolution, and would swap one mod's art for another's on
+	half the animals of a breed. The colours travel; the pixels do not.
 -->
 
 <Patch>
 
-	<!-- White cat - the one texture light enough to take any colour. Ginger, blue, smoke,
-	     cream and a warm buff, and still white one time in five. -->
+	<!-- White cat - the one texture light enough to take any colour. -->
 	<Operation Class="PatchOperationConditional">
 		<xpath>/Defs/PawnKindDef[defName = "akaNEKO_shironeko"]/alternateGraphics</xpath>
 		<nomatch Class="PatchOperationAdd">
@@ -30,17 +41,17 @@
 			<value>
 				<alternateGraphicChance>0.8</alternateGraphicChance>
 				<alternateGraphics>
-					<li><color>(198,130,92)</color></li>
-					<li><color>(168,176,186)</color></li>
-					<li><color>(122,120,124)</color></li>
-					<li><color>(234,222,198)</color></li>
-					<li><color>(214,186,150)</color></li>
+					<li><color>(242,205,190)</color></li>
+					<li><color>(111,124,166)</color></li>
+					<li><color>(122,122,122)</color></li>
+					<li><color>(234,216,172)</color></li>
+					<li><color>(102,94,90)</color></li>
 				</alternateGraphics>
 			</value>
 		</nomatch>
 	</Operation>
 
-	<!-- Persian - the other light one. -->
+	<!-- Persian - the other light one, and it takes purpleyam's own persian tint. -->
 	<Operation Class="PatchOperationConditional">
 		<xpath>/Defs/PawnKindDef[defName = "akaNEKO_Persian"]/alternateGraphics</xpath>
 		<nomatch Class="PatchOperationAdd">
@@ -49,17 +60,16 @@
 			<value>
 				<alternateGraphicChance>0.7</alternateGraphicChance>
 				<alternateGraphics>
-					<li><color>(234,222,198)</color></li>
-					<li><color>(220,186,124)</color></li>
-					<li><color>(168,176,186)</color></li>
-					<li><color>(148,110,80)</color></li>
+					<li><color>(221,197,170)</color></li>
+					<li><color>(234,216,172)</color></li>
+					<li><color>(195,206,208)</color></li>
+					<li><color>(138,113,98)</color></li>
 				</alternateGraphics>
 			</value>
 		</nomatch>
 	</Operation>
 
-	<!-- Siamese - the three point colours the breed is actually named for: blue, chocolate
-	     and red. -->
+	<!-- Siamese - blue point, chocolate point, red point. -->
 	<Operation Class="PatchOperationConditional">
 		<xpath>/Defs/PawnKindDef[defName = "akaNEKO_Siamese"]/alternateGraphics</xpath>
 		<nomatch Class="PatchOperationAdd">
@@ -68,9 +78,9 @@
 			<value>
 				<alternateGraphicChance>0.7</alternateGraphicChance>
 				<alternateGraphics>
-					<li><color>(168,176,186)</color></li>
-					<li><color>(148,110,80)</color></li>
-					<li><color>(198,130,92)</color></li>
+					<li><color>(150,155,171)</color></li>
+					<li><color>(138,113,98)</color></li>
+					<li><color>(242,205,190)</color></li>
 				</alternateGraphics>
 			</value>
 		</nomatch>
@@ -85,9 +95,9 @@
 			<value>
 				<alternateGraphicChance>0.6</alternateGraphicChance>
 				<alternateGraphics>
-					<li><color>(168,176,186)</color></li>
-					<li><color>(234,222,198)</color></li>
-					<li><color>(198,130,92)</color></li>
+					<li><color>(195,206,208)</color></li>
+					<li><color>(231,216,204)</color></li>
+					<li><color>(221,197,170)</color></li>
 				</alternateGraphics>
 			</value>
 		</nomatch>
@@ -102,9 +112,9 @@
 			<value>
 				<alternateGraphicChance>0.6</alternateGraphicChance>
 				<alternateGraphics>
-					<li><color>(168,176,186)</color></li>
-					<li><color>(234,222,198)</color></li>
-					<li><color>(122,120,124)</color></li>
+					<li><color>(195,206,208)</color></li>
+					<li><color>(231,216,204)</color></li>
+					<li><color>(122,122,122)</color></li>
 				</alternateGraphics>
 			</value>
 		</nomatch>
@@ -119,9 +129,9 @@
 			<value>
 				<alternateGraphicChance>0.6</alternateGraphicChance>
 				<alternateGraphics>
-					<li><color>(190,152,112)</color></li>
-					<li><color>(198,130,92)</color></li>
-					<li><color>(168,176,186)</color></li>
+					<li><color>(221,197,170)</color></li>
+					<li><color>(242,205,190)</color></li>
+					<li><color>(150,155,171)</color></li>
 				</alternateGraphics>
 			</value>
 		</nomatch>
@@ -136,15 +146,15 @@
 			<value>
 				<alternateGraphicChance>0.6</alternateGraphicChance>
 				<alternateGraphics>
-					<li><color>(234,222,198)</color></li>
-					<li><color>(168,176,186)</color></li>
-					<li><color>(198,130,92)</color></li>
+					<li><color>(231,216,204)</color></li>
+					<li><color>(195,206,208)</color></li>
+					<li><color>(221,197,170)</color></li>
 				</alternateGraphics>
 			</value>
 		</nomatch>
 	</Operation>
 
-	<!-- Maine coon - a dark texture, so two coats at a low chance. -->
+	<!-- Maine coon - a dark texture, so two light coats at a low chance. -->
 	<Operation Class="PatchOperationConditional">
 		<xpath>/Defs/PawnKindDef[defName = "akaNEKO_Maine_Coon"]/alternateGraphics</xpath>
 		<nomatch Class="PatchOperationAdd">
@@ -153,14 +163,14 @@
 			<value>
 				<alternateGraphicChance>0.5</alternateGraphicChance>
 				<alternateGraphics>
-					<li><color>(198,130,92)</color></li>
-					<li><color>(168,176,186)</color></li>
+					<li><color>(255,249,201)</color></li>
+					<li><color>(195,206,208)</color></li>
 				</alternateGraphics>
 			</value>
 		</nomatch>
 	</Operation>
 
-	<!-- Russian blue - a blue cat stays a blue cat; the two coats are the warm and the cold
+	<!-- Russian blue - a blue cat stays a blue cat; the two coats are the cold and the warm
 	     end of it. -->
 	<Operation Class="PatchOperationConditional">
 		<xpath>/Defs/PawnKindDef[defName = "akaNEKO_Russian_Blue"]/alternateGraphics</xpath>
@@ -170,8 +180,8 @@
 			<value>
 				<alternateGraphicChance>0.5</alternateGraphicChance>
 				<alternateGraphics>
-					<li><color>(168,176,186)</color></li>
-					<li><color>(190,152,112)</color></li>
+					<li><color>(155,174,176)</color></li>
+					<li><color>(221,197,170)</color></li>
 				</alternateGraphics>
 			</value>
 		</nomatch>
@@ -186,14 +196,14 @@
 			<value>
 				<alternateGraphicChance>0.5</alternateGraphicChance>
 				<alternateGraphics>
-					<li><color>(190,152,112)</color></li>
-					<li><color>(234,222,198)</color></li>
+					<li><color>(221,197,170)</color></li>
+					<li><color>(231,216,204)</color></li>
 				</alternateGraphics>
 			</value>
 		</nomatch>
 	</Operation>
 
-	<!-- Brown tabby - dark to begin with. Two coats, low chance. -->
+	<!-- Brown tabby - dark to begin with. Two light coats, low chance. -->
 	<Operation Class="PatchOperationConditional">
 		<xpath>/Defs/PawnKindDef[defName = "akaNEKO_kijitora"]/alternateGraphics</xpath>
 		<nomatch Class="PatchOperationAdd">
@@ -202,8 +212,8 @@
 			<value>
 				<alternateGraphicChance>0.4</alternateGraphicChance>
 				<alternateGraphics>
-					<li><color>(168,176,186)</color></li>
-					<li><color>(198,130,92)</color></li>
+					<li><color>(195,206,208)</color></li>
+					<li><color>(255,249,201)</color></li>
 				</alternateGraphics>
 			</value>
 		</nomatch>

@@ -59,10 +59,10 @@ should differ, and the five should be distinguishable from one another.
 
 ## 2 — The tint does not ruin the sprite
 
-This is the scenario the checker cannot replace, and the only real risk in the mod. The dogs of
-Stray Dogs ship their textures inside a Unity asset bundle, so their base colours could not be
-measured from disk the way the cats' were — the values in `Coats_StrayDogs.xml` were chosen from
-what the breed looks like in life, not from its sprite.
+This is the scenario the checker cannot replace, and the only real risk in the mod. The tints
+themselves are sound — they are purpleyam's, measured — but they were measured against Vanilla
+Animals Expanded's sprites, and the dogs of Stray Dogs ship their textures inside a Unity asset
+bundle, so what those tints land on could not be checked from disk the way the cats' were.
 
 Look at each of the nineteen dogs at normal zoom and ask two questions:
 

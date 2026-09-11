@@ -23,6 +23,8 @@ port, so this is its idea rebuilt against the cats and dogs that are alive on 1.
 - `_tools/Check-Coats.ps1`, which re-checks every `defName` against the installed target mod, that
   no target has since grown `alternateGraphics` of its own, and that every colour is in the form
   `ParseHelper` reads as 0-255.
+- `_tools/Measure-Coats.ps1`, which recomputes the palette from purpleyam's mod and Vanilla Animals
+  Expanded, so the provenance of every colour can be checked rather than believed.
 - `About/Preview.png` and `About/ModIcon.png`.
 
 ### Decided
@@ -30,6 +32,16 @@ port, so this is its idea rebuilt against the cats and dogs that are alive on 1.
 - **A coat is a colour, not a texture.** `Verse.AlternateGraphic` applies its `color` over the
   animal's own sprite when no `texPath` is given — read in the decompiled 1.6 assembly, and used by
   Core itself for the guinea pig. So the mod ships no artwork and borrows nobody's.
+- **The palette is purpleyam's, measured rather than invented.** Each tint is one of their coats
+  divided by the sprite it was painted over, which is the colour that reproduces it. They painted
+  26 coats; **17 are reachable as a tint** and those 17 are the whole palette. The other nine are
+  repaints, lighter than the sprite or a pattern rather than a shade, and `_tools/Measure-Coats.ps1`
+  reports them as unreachable rather than rounding them down. The standard poodle of Stray Dogs
+  wears their four poodle coats in their order, and the labrador takes their chocolate and black.
+- **Their textures still stay where they are.** Four of their cats have a namesake in Let's Have a
+  Cat! and the poodle has one in Stray Dogs, but an alternate with a `texPath` replaces the sprite
+  outright: half the animals of a breed would be drawn in another mod's art at twice the
+  resolution. The colours travel; the pixels do not.
 - **The black cat of Let's Have a Cat! gets no coats.** A colour multiplies the sprite, and that
   texture averages 29 out of 255: every tint would land within two shades of the original. Dark
   breeds elsewhere get two coats and a chance of 40% for the same reason.

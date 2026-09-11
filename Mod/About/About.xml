@@ -36,6 +36,8 @@ HOW IT WORKS, AND WHAT THAT COSTS
 
 RimWorld 1.6 lets an alternate graphic carry a colour instead of a texture path. When it does, the game keeps the animal's own sprite and tints it. That is the whole mod: a list of tints per breed, and not one pixel of anyone's art.
 
+The tints are purpleyam's own. Each one was measured out of a coat they painted for the original mod, by dividing that coat by the sprite it was painted over - which gives the colour that reproduces it. They painted 26 coats; 17 can be reached this way and those 17 are the whole palette here. The standard poodle of Stray Dogs ends up wearing their four poodle coats, in their order.
+
 The honest limit of that trick is that a tint multiplies, so a coat can only come out darker or warmer than the original, never lighter. Two consequences, both deliberate:
 
 - The original coat is always the most common one. Chances run from 40% to 80%.
@@ -45,7 +47,7 @@ CREDIT
 
 The idea, the name and the whole shape of this mod are purpleyam's. Their Colorful Coats - Cats and Dogs! stopped at RimWorld 1.3 with the mod it patched, Vanilla Animals Expanded - Cats and Dogs, which no longer exists on its own: Vanilla Animals Expanded absorbed it, and the coats purpleyam painted for those breeds live on in Colorful Coats - Vanilla Animals Expanded! Renew. So this is not that mod ported. It is the same idea pointed at the cats and dogs that are alive on 1.6 and still have one coat each.
 
-No file of purpleyam's is included here. Original mod: https://steamcommunity.com/sharedfiles/filedetails/?id=2388932599 - declares 1.3 and nothing further.
+No file of purpleyam's is included here; the colours are theirs, the measuring is mine. Original mod: https://steamcommunity.com/sharedfiles/filedetails/?id=2388932599 - declares 1.3 and nothing further.
 
 Thanks to purpleyam for the idea, to SpiderCamp and Qux for the dogs, to akairo and Bernau31 for the cats, and to Oskar Potocki, Sarg Bjornson and Erin for the animals of Vanilla Animals Expanded.
 

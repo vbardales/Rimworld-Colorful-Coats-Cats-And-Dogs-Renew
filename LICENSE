@@ -24,22 +24,25 @@ SOFTWARE.
 ---------------------------------------------------------------------------
 SCOPE OF THE ABOVE
 
-The MIT licence above covers everything in this repository, because everything
-in it was made for it:
+The MIT licence above covers what was made for this repository:
 
-  - the four patch files and the coat colours they list
+  - the four patch files, the two tools, and the packaging
   - the showcase image and the mod icon
-  - the packaging and the documentation
+  - the documentation
 
 No file of purpleyam's is included. Their Colorful Coats - Cats and Dogs! is
-the origin of the idea and of the name, and it is credited as such, but nothing
-of it is reused here - the mod it patched no longer exists on its own, and the
-coats purpleyam painted for those breeds live in a different port:
+the origin of the idea, of the name, and of the colours: the seventeen tints
+this mod uses are measurements of coats they painted, recovered by dividing
+each coat by the sprite under it. The measuring is ours and the MIT covers
+it; the choice of colours is theirs, and no licence is claimed over it. The
+textures themselves are not reused - the mod they were painted for no longer
+exists on its own, and they live in a different port:
 
   https://steamcommunity.com/sharedfiles/filedetails/?id=2388932599
 
-If purpleyam would rather this mod did not carry their mod's name, say so and
-it is renamed or taken down. Immediately, and without discussion.
+If purpleyam would rather this mod did not carry their mod's name or their
+colours, say so and it is renamed, repainted or taken down. Immediately, and
+without discussion.
 
 The animals are neither purpleyam's nor mine. They belong to Stray Dogs
 (rescued) by Qux - itself the continuation of SpiderCamp's Dog Pack -, to
