@@ -25,6 +25,15 @@ port, so this is its idea rebuilt against the cats and dogs that are alive on 1.
   `ParseHelper` reads as 0-255.
 - `_tools/Measure-Coats.ps1`, which recomputes the palette from purpleyam's mod and Vanilla Animals
   Expanded, so the provenance of every colour can be checked rather than believed.
+- `_tools/FUNCTIONAL-SCENARIOS.md`, the eight scenarios only a game can settle — one thing to watch
+  each, and the line in `Player.log` that says it went wrong. Scenario 2 is the one that matters:
+  the tints were measured against Vanilla Animals Expanded's sprites, and the dogs of Stray Dogs
+  keep theirs in an asset bundle, so what those colours land on has never been seen.
+- `_tools/Run-Functional-Tests.ps1`, twenty-two tests that run RimWorld's own patch engine outside
+  the game: the shipped XML is rebuilt into real `PatchOperation` objects and applied to a document
+  made of the target mods' own defs, and the IL of `Assembly-CSharp` is swept for whoever reads
+  `AlternateGraphic.color`. Seventeen have been seen to fail under a mutation; the other five
+  assert the game's behaviour and cannot be made to fail from this repository.
 - `About/Preview.png`, with the mod name and a summary engraved into it per STYLE_RIMWORLD.md, and
   `About/ModIcon.png`. `Art/preview.html` is the page headless Chrome rasterises, so the glyphs
   are composed at 896 x 504 and never resampled.

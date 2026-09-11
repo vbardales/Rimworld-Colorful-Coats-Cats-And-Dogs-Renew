@@ -78,7 +78,7 @@ to. The colours travel; the pixels do not.
 
 ## What was made
 
-Four patch files, two tools, a showcase image and an icon. No textures, no assembly, no `Defs`,
+Four patch files, three tools, a showcase image and an icon. No textures, no assembly, no `Defs`,
 no DLC.
 
 | file | breeds |

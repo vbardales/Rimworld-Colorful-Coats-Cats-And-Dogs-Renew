@@ -90,7 +90,16 @@ would otherwise happen: `PatchOperationAdd` appends, it does not merge.
 
 ```
 powershell -File _tools/Check-Coats.ps1
+powershell -File _tools/Run-Functional-Tests.ps1
 ```
+
+The second one runs **RimWorld's own patch engine** outside the game: the shipped XML is turned
+back into real `PatchOperationConditional` and `PatchOperationAdd` objects and applied to a
+document built from the target mods' defs, so the coats that land on the animals are the ones the
+game itself writes. It also sweeps the IL of `Assembly-CSharp` for whoever reads
+`AlternateGraphic.color` — a setting nothing reads would be a mod that loads, logs nothing and
+does nothing. Twenty-two tests, seventeen of which have been seen to fail under a mutation, and
+two faults in the suite itself found that way.
 
 ## Layout
 
@@ -98,8 +107,8 @@ powershell -File _tools/Check-Coats.ps1
 Mod/          published — the junction into RimWorld/Mods points here
   About/
   Patches/
-Art/          full-resolution sources for the showcase and the icon
-_tools/       the checker, and the tool that recovers the palette
+Art/          full-resolution sources for the showcase, the icon, and the page that engraves it
+_tools/       the two checkers, the tool that recovers the palette, and the in-game scenarios
 ```
 
 Everything outside `Mod/` stays out of the Steam upload by construction:
@@ -116,9 +125,10 @@ so and it is renamed, repainted or taken down, without argument.
 The animals belong to Qux and SpiderCamp, to akairo and Bernau31, to Vanilla Animals Expanded, and
 to Ludeon. This mod ships no part of any of them.
 
-See [TESTING.md](TESTING.md) for what the game has to settle, [ATTRIBUTION.md](ATTRIBUTION.md) for
-what was taken and what was made, [LICENSE](LICENSE) for what the MIT grant covers, and
-[CHANGELOG.md](CHANGELOG.md).
+See [TESTING.md](TESTING.md) for what is settled before the game starts and
+[`_tools/FUNCTIONAL-SCENARIOS.md`](_tools/FUNCTIONAL-SCENARIOS.md) for the eight scenarios only the
+game can settle, [ATTRIBUTION.md](ATTRIBUTION.md) for what was taken and what was made,
+[LICENSE](LICENSE) for what the MIT grant covers, and [CHANGELOG.md](CHANGELOG.md).
 
 The work was done with the help of an AI assistant (Claude, by Anthropic), under human direction
 and in-game testing.
