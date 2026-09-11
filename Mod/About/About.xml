@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+  <packageId>nelim.colorfulcoats.catsanddogsrenew</packageId>
+  <name>Colorful Coats - Cats and Dogs! Renew</name>
+  <author>nelim, after purpleyam</author>
+  <supportedVersions>
+    <li>1.6</li>
+  </supportedVersions>
+  <url>https://github.com/vbardales/Rimworld-Colorful-Coats-Cats-And-Dogs-Renew</url>
+  <loadAfter>
+    <li>Ludeon.RimWorld</li>
+    <li>Qux.stray.dogs</li>
+    <li>akairo.LetsHaveaCat</li>
+    <li>VanillaExpanded.VanillaAnimalsExpanded</li>
+    <li>nelim.colorfulcoats.vaerenew</li>
+    <li>Erin.Cats</li>
+    <li>cucumpear.azrael.varietycoats</li>
+  </loadAfter>
+  <description>Coat variations for forty-one breeds of cat and dog that have none, so a colony's pets stop being interchangeable. Nineteen dogs from Stray Dogs, eleven cats from Let's Have a Cat!, seven breeds from Vanilla Animals Expanded, and the four pets the base game ships with.
+
+Four patch files. No textures, no assembly, no Harmony, no DLC, no def of its own. Safe to add to a save in progress and safe to remove from one. Animals already on the map take their coats the moment the mod is added, and go back to their original one if it is removed - nothing is written into the save.
+
+WHAT IT COVERS, AND WHAT IT LEAVES ALONE
+
+Every operation fires only when the animal has no coat variation already. Run it beside a mod that paints coats for the same breed and that mod wins, silently and every time - so this fills gaps rather than competing.
+
+From Stray Dogs (rescued), by Qux, the living home of Spidercamp's Dog Pack: afghan hound, border collie, borzoi, bullmastiff, bull terrier, caucasian shepherd, chow chow, golden retriever, greyhound, miniature dachshund, newfoundland, old english sheepdog, pug, saint bernard, schnauzer, standard poodle, welsh corgi, bernese mountain dog and swedish vallhund. Its collie, its doberman and its six Japanese dogs already have coats and are untouched.
+
+From Let's Have a Cat! Continued, by akairo and Bernau31: eleven of its twelve breeds. The black cat is deliberately left out - see below.
+
+From Vanilla Animals Expanded: the abyssinian cat, the beagle, the corgi, the french bulldog, the german shepherd, the pug and the welsh terrier. The other fourteen cats and dogs in that mod already have hand-painted coats from Colorful Coats - Vanilla Animals Expanded! Renew, and are left to it.
+
+From the base game: husky, labrador retriever, yorkshire terrier and cat. Animal Variety Coats and Erin's Cat Overhaul both cover some of those with real artwork; when either is running, it wins. The yorkshire terrier is the one animal here that nothing else in the workshop has ever given a second coat.
+
+HOW IT WORKS, AND WHAT THAT COSTS
+
+RimWorld 1.6 lets an alternate graphic carry a colour instead of a texture path. When it does, the game keeps the animal's own sprite and tints it. That is the whole mod: a list of tints per breed, and not one pixel of anyone's art.
+
+The honest limit of that trick is that a tint multiplies, so a coat can only come out darker or warmer than the original, never lighter. Two consequences, both deliberate:
+
+- The original coat is always the most common one. Chances run from 40% to 80%.
+- Animals whose sprite is already almost black get few coats or none. The black cat of Let's Have a Cat! gets none at all: its texture averages 29 out of 255, so every tint on it would land within two shades of where it started. A variation nobody can see is worse than no variation.
+
+CREDIT
+
+The idea, the name and the whole shape of this mod are purpleyam's. Their Colorful Coats - Cats and Dogs! stopped at RimWorld 1.3 with the mod it patched, Vanilla Animals Expanded - Cats and Dogs, which no longer exists on its own: Vanilla Animals Expanded absorbed it, and the coats purpleyam painted for those breeds live on in Colorful Coats - Vanilla Animals Expanded! Renew. So this is not that mod ported. It is the same idea pointed at the cats and dogs that are alive on 1.6 and still have one coat each.
+
+No file of purpleyam's is included here. Original mod: https://steamcommunity.com/sharedfiles/filedetails/?id=2388932599 - declares 1.3 and nothing further.
+
+Thanks to purpleyam for the idea, to SpiderCamp and Qux for the dogs, to akairo and Bernau31 for the cats, and to Oskar Potocki, Sarg Bjornson and Erin for the animals of Vanilla Animals Expanded.
+
+Source, changelog and attribution: https://github.com/vbardales/Rimworld-Colorful-Coats-Cats-And-Dogs-Renew
+
+The work was done with the help of an AI assistant (Claude, by Anthropic), under human direction and in-game testing.
+
+If I do not answer within a reasonable time after being contacted, anyone may freely update this or any other of my mods, including publishing a continuation of it. All credit must be preserved.</description>
+</ModMetaData>

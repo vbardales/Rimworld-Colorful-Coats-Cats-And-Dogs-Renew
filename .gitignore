@@ -1,0 +1,40 @@
+# This mod ships no assembly and has nothing to build, so the compilation rules below are
+# inherited convention rather than a live need. The entry that earns its place here is
+# .claude/: a session worktree is a full copy of the repository it is made in, hundreds of
+# megabytes when that was the monorepo, and one has already landed inside a mod folder once.
+#
+# Two separate reasons to have this file, and only the first is about git:
+#
+#   - This folder is its own repository, so nothing above it covers any of this. It sat in a
+#     monorepo until 2026-09-11, and even then the root rules did not travel with the exported
+#     folder, so the file has always had to stand on its own.
+#   - Steam does not read .gitignore at all. SteamUGC.SetItemContent takes the junction's
+#     target directory as it stands on disk, with no filtering, so anything sitting in the
+#     published folder is published. That is what `Mod/` is for: the junction points there,
+#     and everything else in this folder - Art/, the docs, this file - stays out of reach by
+#     construction.
+
+# Build intermediates.
+.build/
+Source/obj/
+Source/bin/
+
+# Claude Code session worktrees and local settings: each worktree is a full copy of a repository,
+# and they are never shared.
+.claude/
+
+# Showcase notes: French working notes, deleted once Preview.png and ModIcon.png are done.
+PROMPT_*.md
+
+# Development environments.
+.vs/
+.vscode/
+.idea/
+*.user
+*.suo
+*.csproj.user
+
+# System.
+Thumbs.db
+desktop.ini
+.DS_Store

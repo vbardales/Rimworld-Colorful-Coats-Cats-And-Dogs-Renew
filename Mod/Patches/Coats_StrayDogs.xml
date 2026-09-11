@@ -1,0 +1,350 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!--
+	Stray Dogs (rescued), by Qux - Qux.stray.dogs - the living home of Spidercamp's Dog Pack.
+	Nineteen of its twenty-seven breeds ship with no coat variation at all; the Japanese dogs,
+	the collie and the doberman already have theirs and are left alone.
+
+	Every coat here is a tint on the breed's own texture, never a texture of ours: an
+	AlternateGraphic with a colour and no texPath keeps the original sprite and recolours it.
+	The tint multiplies, so a coat can only ever be darker or warmer than the original, never
+	lighter - which is why the original stays the most common one.
+
+	Shared palette, in 0-255 form:
+		soot      (122,120,124)    charcoal  (150,148,152)    ash    (168,176,186)
+		chocolate (148,110,80)     sable     (190,152,112)     honey  (220,186,124)
+		rust      (198,130,92)     fawn      (214,186,150)     cream  (234,222,198)
+
+	Each operation is wrapped in a conditional that fires only when the breed has no
+	alternateGraphics of its own, so an upstream mod that adds its own coats one day silently
+	wins, and <success>Always</success> keeps the log quiet for players who run neither mod.
+-->
+
+<Patch>
+
+	<!-- Afghan hound - cream and gold in life, and the silkiest coat in the pack. -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/PawnKindDef[defName = "SCAfghanHound"]/alternateGraphics</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<success>Always</success>
+			<xpath>/Defs/PawnKindDef[defName = "SCAfghanHound"]</xpath>
+			<value>
+				<alternateGraphicChance>0.6</alternateGraphicChance>
+				<alternateGraphics>
+					<li><color>(220,186,124)</color></li>
+					<li><color>(234,222,198)</color></li>
+					<li><color>(168,176,186)</color></li>
+				</alternateGraphics>
+			</value>
+		</nomatch>
+	</Operation>
+
+	<!-- Border collie - the brown-and-white and the red merle beside the black-and-white. -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/PawnKindDef[defName = "SCBorderCollie"]/alternateGraphics</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<success>Always</success>
+			<xpath>/Defs/PawnKindDef[defName = "SCBorderCollie"]</xpath>
+			<value>
+				<alternateGraphicChance>0.6</alternateGraphicChance>
+				<alternateGraphics>
+					<li><color>(148,110,80)</color></li>
+					<li><color>(198,130,92)</color></li>
+					<li><color>(168,176,186)</color></li>
+				</alternateGraphics>
+			</value>
+		</nomatch>
+	</Operation>
+
+	<!-- Borzoi. -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/PawnKindDef[defName = "SCBorzoi"]/alternateGraphics</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<success>Always</success>
+			<xpath>/Defs/PawnKindDef[defName = "SCBorzoi"]</xpath>
+			<value>
+				<alternateGraphicChance>0.6</alternateGraphicChance>
+				<alternateGraphics>
+					<li><color>(190,152,112)</color></li>
+					<li><color>(168,176,186)</color></li>
+					<li><color>(234,222,198)</color></li>
+				</alternateGraphics>
+			</value>
+		</nomatch>
+	</Operation>
+
+	<!-- Bullmastiff - fawn, red and brindle are the three the breed actually comes in. -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/PawnKindDef[defName = "SCBullmastiff"]/alternateGraphics</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<success>Always</success>
+			<xpath>/Defs/PawnKindDef[defName = "SCBullmastiff"]</xpath>
+			<value>
+				<alternateGraphicChance>0.5</alternateGraphicChance>
+				<alternateGraphics>
+					<li><color>(214,186,150)</color></li>
+					<li><color>(148,110,80)</color></li>
+					<li><color>(122,120,124)</color></li>
+				</alternateGraphics>
+			</value>
+		</nomatch>
+	</Operation>
+
+	<!-- Bull terrier. -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/PawnKindDef[defName = "SCBullTerrier"]/alternateGraphics</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<success>Always</success>
+			<xpath>/Defs/PawnKindDef[defName = "SCBullTerrier"]</xpath>
+			<value>
+				<alternateGraphicChance>0.6</alternateGraphicChance>
+				<alternateGraphics>
+					<li><color>(198,130,92)</color></li>
+					<li><color>(214,186,150)</color></li>
+					<li><color>(122,120,124)</color></li>
+				</alternateGraphics>
+			</value>
+		</nomatch>
+	</Operation>
+
+	<!-- Caucasian shepherd. -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/PawnKindDef[defName = "SCCaucasianshepherd"]/alternateGraphics</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<success>Always</success>
+			<xpath>/Defs/PawnKindDef[defName = "SCCaucasianshepherd"]</xpath>
+			<value>
+				<alternateGraphicChance>0.5</alternateGraphicChance>
+				<alternateGraphics>
+					<li><color>(168,176,186)</color></li>
+					<li><color>(190,152,112)</color></li>
+					<li><color>(234,222,198)</color></li>
+				</alternateGraphics>
+			</value>
+		</nomatch>
+	</Operation>
+
+	<!-- Chow chow - red, cream and black, the three the breed standard names. -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/PawnKindDef[defName = "SCChowchow"]/alternateGraphics</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<success>Always</success>
+			<xpath>/Defs/PawnKindDef[defName = "SCChowchow"]</xpath>
+			<value>
+				<alternateGraphicChance>0.6</alternateGraphicChance>
+				<alternateGraphics>
+					<li><color>(220,186,124)</color></li>
+					<li><color>(234,222,198)</color></li>
+					<li><color>(122,120,124)</color></li>
+				</alternateGraphics>
+			</value>
+		</nomatch>
+	</Operation>
+
+	<!-- Golden retriever - the whole point of the breed is that gold has a range. -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/PawnKindDef[defName = "SCGoldenRetriever"]/alternateGraphics</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<success>Always</success>
+			<xpath>/Defs/PawnKindDef[defName = "SCGoldenRetriever"]</xpath>
+			<value>
+				<alternateGraphicChance>0.6</alternateGraphicChance>
+				<alternateGraphics>
+					<li><color>(234,222,198)</color></li>
+					<li><color>(198,130,92)</color></li>
+					<li><color>(214,186,150)</color></li>
+				</alternateGraphics>
+			</value>
+		</nomatch>
+	</Operation>
+
+	<!-- Greyhound - the breed with the most colours of any dog here, so the highest chance. -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/PawnKindDef[defName = "SCGreyhound"]/alternateGraphics</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<success>Always</success>
+			<xpath>/Defs/PawnKindDef[defName = "SCGreyhound"]</xpath>
+			<value>
+				<alternateGraphicChance>0.7</alternateGraphicChance>
+				<alternateGraphics>
+					<li><color>(168,176,186)</color></li>
+					<li><color>(148,110,80)</color></li>
+					<li><color>(214,186,150)</color></li>
+					<li><color>(122,120,124)</color></li>
+				</alternateGraphics>
+			</value>
+		</nomatch>
+	</Operation>
+
+	<!-- Miniature dachshund - red, chocolate and dapple. -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/PawnKindDef[defName = "SCMiniatureDachshund"]/alternateGraphics</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<success>Always</success>
+			<xpath>/Defs/PawnKindDef[defName = "SCMiniatureDachshund"]</xpath>
+			<value>
+				<alternateGraphicChance>0.6</alternateGraphicChance>
+				<alternateGraphics>
+					<li><color>(148,110,80)</color></li>
+					<li><color>(198,130,92)</color></li>
+					<li><color>(168,176,186)</color></li>
+				</alternateGraphics>
+			</value>
+		</nomatch>
+	</Operation>
+
+	<!-- Newfoundland - a dark dog to begin with, so two coats and a low chance. A tint can
+	     only darken, and there is not much room left under black. -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/PawnKindDef[defName = "SCNewFoundland"]/alternateGraphics</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<success>Always</success>
+			<xpath>/Defs/PawnKindDef[defName = "SCNewFoundland"]</xpath>
+			<value>
+				<alternateGraphicChance>0.4</alternateGraphicChance>
+				<alternateGraphics>
+					<li><color>(148,110,80)</color></li>
+					<li><color>(168,176,186)</color></li>
+				</alternateGraphics>
+			</value>
+		</nomatch>
+	</Operation>
+
+	<!-- Old English sheepdog. -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/PawnKindDef[defName = "SCOldEnglishSheepdog"]/alternateGraphics</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<success>Always</success>
+			<xpath>/Defs/PawnKindDef[defName = "SCOldEnglishSheepdog"]</xpath>
+			<value>
+				<alternateGraphicChance>0.6</alternateGraphicChance>
+				<alternateGraphics>
+					<li><color>(168,176,186)</color></li>
+					<li><color>(190,152,112)</color></li>
+					<li><color>(234,222,198)</color></li>
+				</alternateGraphics>
+			</value>
+		</nomatch>
+	</Operation>
+
+	<!-- Pug - fawn and black, and nothing else. -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/PawnKindDef[defName = "SCPug"]/alternateGraphics</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<success>Always</success>
+			<xpath>/Defs/PawnKindDef[defName = "SCPug"]</xpath>
+			<value>
+				<alternateGraphicChance>0.5</alternateGraphicChance>
+				<alternateGraphics>
+					<li><color>(214,186,150)</color></li>
+					<li><color>(122,120,124)</color></li>
+				</alternateGraphics>
+			</value>
+		</nomatch>
+	</Operation>
+
+	<!-- Saint Bernard - red and white, and the rarer brindle. -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/PawnKindDef[defName = "SCSaintbernard"]/alternateGraphics</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<success>Always</success>
+			<xpath>/Defs/PawnKindDef[defName = "SCSaintbernard"]</xpath>
+			<value>
+				<alternateGraphicChance>0.5</alternateGraphicChance>
+				<alternateGraphics>
+					<li><color>(198,130,92)</color></li>
+					<li><color>(190,152,112)</color></li>
+					<li><color>(234,222,198)</color></li>
+				</alternateGraphics>
+			</value>
+		</nomatch>
+	</Operation>
+
+	<!-- Schnauzer - salt and pepper, black, and the liver one nobody expects. -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/PawnKindDef[defName = "SCSchnauzer"]/alternateGraphics</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<success>Always</success>
+			<xpath>/Defs/PawnKindDef[defName = "SCSchnauzer"]</xpath>
+			<value>
+				<alternateGraphicChance>0.6</alternateGraphicChance>
+				<alternateGraphics>
+					<li><color>(168,176,186)</color></li>
+					<li><color>(122,120,124)</color></li>
+					<li><color>(190,152,112)</color></li>
+				</alternateGraphics>
+			</value>
+		</nomatch>
+	</Operation>
+
+	<!-- Standard poodle - the most coloured dog in the pack, and the only one with five.
+	     purpleyam gave the poodle four coats at 80% in the original mod; this keeps that. -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/PawnKindDef[defName = "SCStandardPoodle"]/alternateGraphics</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<success>Always</success>
+			<xpath>/Defs/PawnKindDef[defName = "SCStandardPoodle"]</xpath>
+			<value>
+				<alternateGraphicChance>0.8</alternateGraphicChance>
+				<alternateGraphics>
+					<li><color>(220,186,124)</color></li>
+					<li><color>(234,222,198)</color></li>
+					<li><color>(148,110,80)</color></li>
+					<li><color>(122,120,124)</color></li>
+					<li><color>(168,176,186)</color></li>
+				</alternateGraphics>
+			</value>
+		</nomatch>
+	</Operation>
+
+	<!-- Welsh corgi - sable, fawn and the tricolour. -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/PawnKindDef[defName = "SCWelshCorgi"]/alternateGraphics</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<success>Always</success>
+			<xpath>/Defs/PawnKindDef[defName = "SCWelshCorgi"]</xpath>
+			<value>
+				<alternateGraphicChance>0.6</alternateGraphicChance>
+				<alternateGraphics>
+					<li><color>(190,152,112)</color></li>
+					<li><color>(234,222,198)</color></li>
+					<li><color>(122,120,124)</color></li>
+				</alternateGraphics>
+			</value>
+		</nomatch>
+	</Operation>
+
+	<!-- Bernese mountain dog - tricolour and dark, so two coats at a low chance. -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/PawnKindDef[defName = "StrayDogs_BerneseMountainDog"]/alternateGraphics</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<success>Always</success>
+			<xpath>/Defs/PawnKindDef[defName = "StrayDogs_BerneseMountainDog"]</xpath>
+			<value>
+				<alternateGraphicChance>0.4</alternateGraphicChance>
+				<alternateGraphics>
+					<li><color>(198,130,92)</color></li>
+					<li><color>(168,176,186)</color></li>
+				</alternateGraphics>
+			</value>
+		</nomatch>
+	</Operation>
+
+	<!-- Swedish vallhund - grey, sable and the reddish one. -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/PawnKindDef[defName = "StrayDogs_SwedishVallhund"]/alternateGraphics</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<success>Always</success>
+			<xpath>/Defs/PawnKindDef[defName = "StrayDogs_SwedishVallhund"]</xpath>
+			<value>
+				<alternateGraphicChance>0.6</alternateGraphicChance>
+				<alternateGraphics>
+					<li><color>(168,176,186)</color></li>
+					<li><color>(190,152,112)</color></li>
+					<li><color>(198,130,92)</color></li>
+				</alternateGraphics>
+			</value>
+		</nomatch>
+	</Operation>
+
+</Patch>

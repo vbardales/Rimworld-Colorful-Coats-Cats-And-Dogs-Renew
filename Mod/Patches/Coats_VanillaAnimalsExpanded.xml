@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!--
+	Vanilla Animals Expanded - VanillaExpanded.VanillaAnimalsExpanded - carries the twenty-one
+	cat and dog breeds that used to be the separate Cats and Dogs module, and gives none of them
+	a coat variation of its own.
+
+	Fourteen of those twenty-one already have hand-painted coats, from purpleyam's own
+	Colorful Coats - Vanilla Animals Expanded! - ported as Colorful Coats - Vanilla Animals
+	Expanded! Renew, nelim.colorfulcoats.vaerenew. Painted coats beat tinted ones every time,
+	so this file deliberately covers only the seven breeds purpleyam never drew:
+
+		AEXP_CatAbyssinian  AEXP_Beagle  AEXP_Corgi  AEXP_FrenchBulldog
+		AEXP_GermanShepherd  AEXP_Pug  AEXP_WelshTerrier
+
+	Keeping the two mods on disjoint breeds is not only politeness: both add an
+	<alternateGraphics> element, and two of them on one def would leave the loader to pick one.
+
+	Palette, in 0-255 form:
+		soot      (122,120,124)    charcoal  (150,148,152)    ash    (168,176,186)
+		chocolate (148,110,80)     sable     (190,152,112)     honey  (220,186,124)
+		rust      (198,130,92)     fawn      (214,186,150)     cream  (234,222,198)
+-->
+
+<Patch>
+
+	<!-- Abyssinian - blue, fawn and sorrel are the three the breed is bred for, beside the
+	     ruddy one the mod already ships. -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/PawnKindDef[defName = "AEXP_CatAbyssinian"]/alternateGraphics</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<success>Always</success>
+			<xpath>/Defs/PawnKindDef[defName = "AEXP_CatAbyssinian"]</xpath>
+			<value>
+				<alternateGraphicChance>0.6</alternateGraphicChance>
+				<alternateGraphics>
+					<li><color>(168,176,186)</color></li>
+					<li><color>(234,222,198)</color></li>
+					<li><color>(148,110,80)</color></li>
+				</alternateGraphics>
+			</value>
+		</nomatch>
+	</Operation>
+
+	<!-- Beagle - tricolour, lemon and the dark one. -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/PawnKindDef[defName = "AEXP_Beagle"]/alternateGraphics</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<success>Always</success>
+			<xpath>/Defs/PawnKindDef[defName = "AEXP_Beagle"]</xpath>
+			<value>
+				<alternateGraphicChance>0.6</alternateGraphicChance>
+				<alternateGraphics>
+					<li><color>(234,222,198)</color></li>
+					<li><color>(198,130,92)</color></li>
+					<li><color>(122,120,124)</color></li>
+				</alternateGraphics>
+			</value>
+		</nomatch>
+	</Operation>
+
+	<!-- Corgi - red, sable and the blue-grey merle. -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/PawnKindDef[defName = "AEXP_Corgi"]/alternateGraphics</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<success>Always</success>
+			<xpath>/Defs/PawnKindDef[defName = "AEXP_Corgi"]</xpath>
+			<value>
+				<alternateGraphicChance>0.6</alternateGraphicChance>
+				<alternateGraphics>
+					<li><color>(198,130,92)</color></li>
+					<li><color>(190,152,112)</color></li>
+					<li><color>(168,176,186)</color></li>
+				</alternateGraphics>
+			</value>
+		</nomatch>
+	</Operation>
+
+	<!-- French bulldog - cream, fawn and chocolate. -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/PawnKindDef[defName = "AEXP_FrenchBulldog"]/alternateGraphics</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<success>Always</success>
+			<xpath>/Defs/PawnKindDef[defName = "AEXP_FrenchBulldog"]</xpath>
+			<value>
+				<alternateGraphicChance>0.6</alternateGraphicChance>
+				<alternateGraphics>
+					<li><color>(234,222,198)</color></li>
+					<li><color>(214,186,150)</color></li>
+					<li><color>(148,110,80)</color></li>
+				</alternateGraphics>
+			</value>
+		</nomatch>
+	</Operation>
+
+	<!-- German shepherd - the solid black one, the grey sable, and the pale one. -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/PawnKindDef[defName = "AEXP_GermanShepherd"]/alternateGraphics</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<success>Always</success>
+			<xpath>/Defs/PawnKindDef[defName = "AEXP_GermanShepherd"]</xpath>
+			<value>
+				<alternateGraphicChance>0.5</alternateGraphicChance>
+				<alternateGraphics>
+					<li><color>(122,120,124)</color></li>
+					<li><color>(168,176,186)</color></li>
+					<li><color>(234,222,198)</color></li>
+				</alternateGraphics>
+			</value>
+		</nomatch>
+	</Operation>
+
+	<!-- Pug - fawn and black, as in the other pack. -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/PawnKindDef[defName = "AEXP_Pug"]/alternateGraphics</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<success>Always</success>
+			<xpath>/Defs/PawnKindDef[defName = "AEXP_Pug"]</xpath>
+			<value>
+				<alternateGraphicChance>0.5</alternateGraphicChance>
+				<alternateGraphics>
+					<li><color>(214,186,150)</color></li>
+					<li><color>(122,120,124)</color></li>
+				</alternateGraphics>
+			</value>
+		</nomatch>
+	</Operation>
+
+	<!-- Welsh terrier. -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/PawnKindDef[defName = "AEXP_WelshTerrier"]/alternateGraphics</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<success>Always</success>
+			<xpath>/Defs/PawnKindDef[defName = "AEXP_WelshTerrier"]</xpath>
+			<value>
+				<alternateGraphicChance>0.5</alternateGraphicChance>
+				<alternateGraphics>
+					<li><color>(168,176,186)</color></li>
+					<li><color>(234,222,198)</color></li>
+					<li><color>(198,130,92)</color></li>
+				</alternateGraphics>
+			</value>
+		</nomatch>
+	</Operation>
+
+</Patch>

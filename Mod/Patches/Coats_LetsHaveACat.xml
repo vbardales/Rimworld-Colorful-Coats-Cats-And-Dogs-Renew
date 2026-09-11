@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!--
+	Let's Have a Cat! Continued, by akairo and Bernau31 - akairo.LetsHaveaCat - twelve cat
+	breeds on 1.6, none of which has a single coat variation.
+
+	Eleven of the twelve get coats here. The black cat does not, and that is deliberate: a
+	tint multiplies the sprite, so it can only darken, and the black cat's texture already
+	averages 29 out of 255. Every tint on it would land within a couple of shades of the
+	original. A feature nobody can see is worse than no feature.
+
+	The rest are sorted by how much room their texture leaves. The white cat is the best
+	canvas in either mod and gets five coats; the dark tabbies get two, at a low chance.
+
+	Palette, in 0-255 form:
+		soot      (122,120,124)    charcoal  (150,148,152)    ash    (168,176,186)
+		chocolate (148,110,80)     sable     (190,152,112)     honey  (220,186,124)
+		rust      (198,130,92)     fawn      (214,186,150)     cream  (234,222,198)
+-->
+
+<Patch>
+
+	<!-- White cat - the one texture light enough to take any colour. Ginger, blue, smoke,
+	     cream and a warm buff, and still white one time in five. -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/PawnKindDef[defName = "akaNEKO_shironeko"]/alternateGraphics</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<success>Always</success>
+			<xpath>/Defs/PawnKindDef[defName = "akaNEKO_shironeko"]</xpath>
+			<value>
+				<alternateGraphicChance>0.8</alternateGraphicChance>
+				<alternateGraphics>
+					<li><color>(198,130,92)</color></li>
+					<li><color>(168,176,186)</color></li>
+					<li><color>(122,120,124)</color></li>
+					<li><color>(234,222,198)</color></li>
+					<li><color>(214,186,150)</color></li>
+				</alternateGraphics>
+			</value>
+		</nomatch>
+	</Operation>
+
+	<!-- Persian - the other light one. -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/PawnKindDef[defName = "akaNEKO_Persian"]/alternateGraphics</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<success>Always</success>
+			<xpath>/Defs/PawnKindDef[defName = "akaNEKO_Persian"]</xpath>
+			<value>
+				<alternateGraphicChance>0.7</alternateGraphicChance>
+				<alternateGraphics>
+					<li><color>(234,222,198)</color></li>
+					<li><color>(220,186,124)</color></li>
+					<li><color>(168,176,186)</color></li>
+					<li><color>(148,110,80)</color></li>
+				</alternateGraphics>
+			</value>
+		</nomatch>
+	</Operation>
+
+	<!-- Siamese - the three point colours the breed is actually named for: blue, chocolate
+	     and red. -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/PawnKindDef[defName = "akaNEKO_Siamese"]/alternateGraphics</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<success>Always</success>
+			<xpath>/Defs/PawnKindDef[defName = "akaNEKO_Siamese"]</xpath>
+			<value>
+				<alternateGraphicChance>0.7</alternateGraphicChance>
+				<alternateGraphics>
+					<li><color>(168,176,186)</color></li>
+					<li><color>(148,110,80)</color></li>
+					<li><color>(198,130,92)</color></li>
+				</alternateGraphics>
+			</value>
+		</nomatch>
+	</Operation>
+
+	<!-- Scottish fold, long-haired. -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/PawnKindDef[defName = "akaNEKO_Scottish_Fold_Long"]/alternateGraphics</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<success>Always</success>
+			<xpath>/Defs/PawnKindDef[defName = "akaNEKO_Scottish_Fold_Long"]</xpath>
+			<value>
+				<alternateGraphicChance>0.6</alternateGraphicChance>
+				<alternateGraphics>
+					<li><color>(168,176,186)</color></li>
+					<li><color>(234,222,198)</color></li>
+					<li><color>(198,130,92)</color></li>
+				</alternateGraphics>
+			</value>
+		</nomatch>
+	</Operation>
+
+	<!-- Scottish fold. -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/PawnKindDef[defName = "akaNEKO_Scottish_Fold"]/alternateGraphics</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<success>Always</success>
+			<xpath>/Defs/PawnKindDef[defName = "akaNEKO_Scottish_Fold"]</xpath>
+			<value>
+				<alternateGraphicChance>0.6</alternateGraphicChance>
+				<alternateGraphics>
+					<li><color>(168,176,186)</color></li>
+					<li><color>(234,222,198)</color></li>
+					<li><color>(122,120,124)</color></li>
+				</alternateGraphics>
+			</value>
+		</nomatch>
+	</Operation>
+
+	<!-- Norwegian forest cat. -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/PawnKindDef[defName = "akaNEKO_N_Forest_Cat"]/alternateGraphics</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<success>Always</success>
+			<xpath>/Defs/PawnKindDef[defName = "akaNEKO_N_Forest_Cat"]</xpath>
+			<value>
+				<alternateGraphicChance>0.6</alternateGraphicChance>
+				<alternateGraphics>
+					<li><color>(190,152,112)</color></li>
+					<li><color>(198,130,92)</color></li>
+					<li><color>(168,176,186)</color></li>
+				</alternateGraphics>
+			</value>
+		</nomatch>
+	</Operation>
+
+	<!-- Japanese bobtail. -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/PawnKindDef[defName = "akaNEKO_J_Bobtail"]/alternateGraphics</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<success>Always</success>
+			<xpath>/Defs/PawnKindDef[defName = "akaNEKO_J_Bobtail"]</xpath>
+			<value>
+				<alternateGraphicChance>0.6</alternateGraphicChance>
+				<alternateGraphics>
+					<li><color>(234,222,198)</color></li>
+					<li><color>(168,176,186)</color></li>
+					<li><color>(198,130,92)</color></li>
+				</alternateGraphics>
+			</value>
+		</nomatch>
+	</Operation>
+
+	<!-- Maine coon - a dark texture, so two coats at a low chance. -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/PawnKindDef[defName = "akaNEKO_Maine_Coon"]/alternateGraphics</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<success>Always</success>
+			<xpath>/Defs/PawnKindDef[defName = "akaNEKO_Maine_Coon"]</xpath>
+			<value>
+				<alternateGraphicChance>0.5</alternateGraphicChance>
+				<alternateGraphics>
+					<li><color>(198,130,92)</color></li>
+					<li><color>(168,176,186)</color></li>
+				</alternateGraphics>
+			</value>
+		</nomatch>
+	</Operation>
+
+	<!-- Russian blue - a blue cat stays a blue cat; the two coats are the warm and the cold
+	     end of it. -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/PawnKindDef[defName = "akaNEKO_Russian_Blue"]/alternateGraphics</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<success>Always</success>
+			<xpath>/Defs/PawnKindDef[defName = "akaNEKO_Russian_Blue"]</xpath>
+			<value>
+				<alternateGraphicChance>0.5</alternateGraphicChance>
+				<alternateGraphics>
+					<li><color>(168,176,186)</color></li>
+					<li><color>(190,152,112)</color></li>
+				</alternateGraphics>
+			</value>
+		</nomatch>
+	</Operation>
+
+	<!-- American shorthair. -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/PawnKindDef[defName = "akaNEKO_A_Shorthair"]/alternateGraphics</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<success>Always</success>
+			<xpath>/Defs/PawnKindDef[defName = "akaNEKO_A_Shorthair"]</xpath>
+			<value>
+				<alternateGraphicChance>0.5</alternateGraphicChance>
+				<alternateGraphics>
+					<li><color>(190,152,112)</color></li>
+					<li><color>(234,222,198)</color></li>
+				</alternateGraphics>
+			</value>
+		</nomatch>
+	</Operation>
+
+	<!-- Brown tabby - dark to begin with. Two coats, low chance. -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/PawnKindDef[defName = "akaNEKO_kijitora"]/alternateGraphics</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<success>Always</success>
+			<xpath>/Defs/PawnKindDef[defName = "akaNEKO_kijitora"]</xpath>
+			<value>
+				<alternateGraphicChance>0.4</alternateGraphicChance>
+				<alternateGraphics>
+					<li><color>(168,176,186)</color></li>
+					<li><color>(198,130,92)</color></li>
+				</alternateGraphics>
+			</value>
+		</nomatch>
+	</Operation>
+
+	<!-- akaNEKO_kuroneko, the black cat, is left alone on purpose. See the note at the top. -->
+
+</Patch>

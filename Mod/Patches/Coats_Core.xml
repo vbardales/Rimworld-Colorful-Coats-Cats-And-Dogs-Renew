@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!--
+	The four pets RimWorld ships with. In 1.6 Core, none of Husky, LabradorRetriever,
+	YorkshireTerrier and Cat has a single alternateGraphics entry - the guinea pig and the horse
+	do, and the pets do not.
+
+	Two living mods already cover three of the four with hand-painted textures: Animal Variety
+	Coats (cucumpear.azrael.varietycoats) does the cat, the husky and the labrador, and Erin's
+	Cat Overhaul (Erin.Cats) gives the cat nineteen coats of its own. Painted beats tinted, so
+	each operation below fires only when the animal still has nothing, and About.xml asks to
+	load after both. The yorkshire terrier is the one nobody has ever covered.
+-->
+
+<Patch>
+
+	<!-- Labrador retriever - chocolate, yellow and black, which is the whole breed. -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/PawnKindDef[defName = "LabradorRetriever"]/alternateGraphics</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<success>Always</success>
+			<xpath>/Defs/PawnKindDef[defName = "LabradorRetriever"]</xpath>
+			<value>
+				<alternateGraphicChance>0.7</alternateGraphicChance>
+				<alternateGraphics>
+					<li><color>(148,110,80)</color></li>
+					<li><color>(220,186,124)</color></li>
+					<li><color>(122,120,124)</color></li>
+				</alternateGraphics>
+			</value>
+		</nomatch>
+	</Operation>
+
+	<!-- Husky - grey, red and the pale one. -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/PawnKindDef[defName = "Husky"]/alternateGraphics</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<success>Always</success>
+			<xpath>/Defs/PawnKindDef[defName = "Husky"]</xpath>
+			<value>
+				<alternateGraphicChance>0.6</alternateGraphicChance>
+				<alternateGraphics>
+					<li><color>(168,176,186)</color></li>
+					<li><color>(148,110,80)</color></li>
+					<li><color>(234,222,198)</color></li>
+				</alternateGraphics>
+			</value>
+		</nomatch>
+	</Operation>
+
+	<!-- Yorkshire terrier - steel blue and tan, and the two paler ones. Nothing else patches
+	     this animal in 1.6, in or out of the game. -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/PawnKindDef[defName = "YorkshireTerrier"]/alternateGraphics</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<success>Always</success>
+			<xpath>/Defs/PawnKindDef[defName = "YorkshireTerrier"]</xpath>
+			<value>
+				<alternateGraphicChance>0.6</alternateGraphicChance>
+				<alternateGraphics>
+					<li><color>(168,176,186)</color></li>
+					<li><color>(190,152,112)</color></li>
+					<li><color>(234,222,198)</color></li>
+				</alternateGraphics>
+			</value>
+		</nomatch>
+	</Operation>
+
+	<!-- Cat - the fallback for a colony running neither Erin's Cat Overhaul nor Animal Variety
+	     Coats. Either of those wins the moment it is active. -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/PawnKindDef[defName = "Cat"]/alternateGraphics</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<success>Always</success>
+			<xpath>/Defs/PawnKindDef[defName = "Cat"]</xpath>
+			<value>
+				<alternateGraphicChance>0.7</alternateGraphicChance>
+				<alternateGraphics>
+					<li><color>(122,120,124)</color></li>
+					<li><color>(168,176,186)</color></li>
+					<li><color>(198,130,92)</color></li>
+					<li><color>(234,222,198)</color></li>
+				</alternateGraphics>
+			</value>
+		</nomatch>
+	</Operation>
+
+</Patch>

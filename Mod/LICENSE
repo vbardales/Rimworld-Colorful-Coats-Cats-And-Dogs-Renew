@@ -1,0 +1,50 @@
+MIT License
+
+Copyright (c) 2026 nelim
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+
+---------------------------------------------------------------------------
+SCOPE OF THE ABOVE
+
+The MIT licence above covers everything in this repository, because everything
+in it was made for it:
+
+  - the four patch files and the coat colours they list
+  - the showcase image and the mod icon
+  - the packaging and the documentation
+
+No file of purpleyam's is included. Their Colorful Coats - Cats and Dogs! is
+the origin of the idea and of the name, and it is credited as such, but nothing
+of it is reused here - the mod it patched no longer exists on its own, and the
+coats purpleyam painted for those breeds live in a different port:
+
+  https://steamcommunity.com/sharedfiles/filedetails/?id=2388932599
+
+If purpleyam would rather this mod did not carry their mod's name, say so and
+it is renamed or taken down. Immediately, and without discussion.
+
+The animals are neither purpleyam's nor mine. They belong to Stray Dogs
+(rescued) by Qux - itself the continuation of SpiderCamp's Dog Pack -, to
+Let's Have a Cat! by akairo, to Vanilla Animals Expanded, and to RimWorld
+itself. This mod ships no part of any of them and only patches them at load
+time.
+
+ATTRIBUTION.md records what was taken and what was made.
