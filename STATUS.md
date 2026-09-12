@@ -2,12 +2,18 @@
 localization: not_applicable
 translation_en: not_applicable
 translation_fr: not_applicable
+settings_audit: not_applicable
 mod:          Colorful Coats - Cats and Dogs! Renew (unofficial)
 packageId:    nelim.colorfulcoats.catsanddogsrenew
 repo:         Rimworld-Colorful-Coats-Cats-And-Dogs-Renew
 visibility:   public
 detached:     yes
 stage:        done
+stage_workflow: done = ready for final in-game validation; not tested
+audit_revision: e56942774364cf05cd43134e97b07af06d9bb6c9
+audit_date: 2026-09-13
+automated_tests: passed; 22 passed, 0 failed, 0 skipped
+xml_tests: passed; coats, injected fields, classes, def references, third-party types
 licence:      silent
 licence_own:  MIT; LICENSE and Mod/LICENSE; covers this repository's contributions, not purpleyam's name or measured palette
 licence_at:   checked 2026-09-12; source not updated to 1.6 (original 1.3, official successor 1.4); no licence or permission found in source files, Steam descriptions and all comments; upstream repository searched but not found
@@ -18,11 +24,142 @@ workshop:
 remaining:
   - unverified: never seen running in game
   - unverified: the tints of the 19 Stray Dogs dogs have never been seen on their sprites, which live in an asset bundle unreadable from disk
+  - unverified: execute scenarios 0-7, check Player.log, new colony, existing save, save/reload and add/remove; repeat applicable checks in English and French
+  - defect: README.md and About.xml claim in-game testing despite the recorded absence of an in-game run; reconcile before publication
+  - defect: About.xml description lacks the final Steam-formatted Source code on GitHub link required by PUBLISHING.md; correct before publication
 session:      local_c77edc6e-276f-43fc-8c2d-fea14a5b8b01
-updated:      2026-09-13, translation audit recorded; previous verification retained
+updated:      2026-09-13, full ordered workflow audit; done retained with fresh technical checks
 ---
 
 # Colorful Coats - Cats and Dogs! Renew — status
+
+## Ordered workflow audit — 2026-09-13
+
+This section and the front matter are the current verdict. Earlier entries below are
+historical evidence, preserved verbatim, including their original language and limitations.
+The user's supplied workflow takes precedence over the four parent protocols, all read
+for this audit: PUBLISHING.md, STYLE_RIMWORLD.md, MOD_SETTINGS.md and TRANSLATIONS.md.
+
+**Previous stage: done. Retained stage: done.** Here `done` maps literally to the
+user's eighth transition: ready for final functional validation in game, not already
+validated in game. No shorthand mapping to `tested` or `published` is intended.
+
+### Scope and revision
+
+- Autonomous repository: `C:/Users/nelim/Documents/rimworld/ColorfulCoatsCatsAndDogsRenew`.
+  Distributed folder: its `Mod/` subdirectory, containing nine files. No source,
+  test tool, build intermediate or Art source is distributed.
+- Audited HEAD: `e56942774364cf05cd43134e97b07af06d9bb6c9`;
+  delivered Git tree: `fbd162c22db346a46a6b053ea0aa0ca85c98152d` (`HEAD:Mod`).
+  Working tree was clean before the audit. Only STATUS.md was edited by this audit;
+  delivered files, existing tests, illustrations and historical results were preserved.
+- Live read-only GitHub checks: `gh repo view ... --json name,visibility,url,defaultBranchRef`
+  returned PUBLIC, the expected repository and branch main; `git ls-remote origin HEAD`
+  returned the audited HEAD. Initial sandbox access failed; the permitted read-only
+  retry succeeded. The remote and first pushed commit are established, not inferred
+  from this status card. No commit, push or publication was performed.
+- Installed game: RimWorld `1.6.4871 rev590`. Assembly-CSharp.dll SHA256:
+  `5CF1B5BE399D5B1C9C56CA72C9D35B4ECF307FEACF5859D04AC5A1AA5926356A`.
+
+### Transitions, in order
+
+| Transition | Result | Evidence and scope |
+| --- | --- | --- |
+| dansMonoRepo -> horsMonoRepo | Validated | Independent Git root and live public GitHub repository, matching pushed HEAD; coherent folder/repository/packageId/name; initialized English README, attribution, licence and changelog. Root/distributed LICENSE and ATTRIBUTION copies have identical SHA256 hashes. |
+| horsMonoRepo -> ModIcon generated | Validated; build not applicable | Four XML patches are the complete implementation; no assembly or build project exists. Delivered ModIcon is a readable PNG, 128 x 128, 36,734 bytes, directly inspected. No unimplemented feature was identified. |
+| ModIcon generated -> Preview generated | Validated | Delivered Preview directly inspected: PNG, 896 x 504, 506,910 bytes, below both 900 KiB and 1 MB. |
+| Preview generated -> preOptions | Validated | English description and preview; coherent Renew/unofficial naming. Green accent is distinct from golden secondary ink at full size and in the existing 268 px thumbnail. `and` uses reduced primary lettering; `Renew` reduced secondary lettering; unofficial occupies its own tag line. No clipping, overlap or concrete camera defect observed. |
+| preOptions -> options | Not applicable, justified; gate passed | Settings inventory below establishes no useful settings contract, empty page or MainButtons shortcut. Applicable technical tests passed. No interactive test is required for this gate under the supplied workflow. |
+| options -> l10n | Not applicable, justified; gate passed | All 41 payloads contain numeric chance/RGB values only; no owned visible text or translation targets. English and French resources are unnecessary for this content. |
+| l10n -> preTest | Validated | Only native PatchOperationConditional/Add types; optional animal/coat mods are loadAfter entries, not hard dependencies. All 41 targets checked against installed 1.6 content. No local LoadFolders, MayRequire or third-party type exists. |
+| preTest -> done | Validated | Existing scenarios 0-7 supply setup, actions and expected outcomes; automated and XML suites rerun successfully against unchanged delivered files. |
+| done -> tested | Not verified | No game session or Player.log review performed. The written scenarios, including new/existing saves and applicable EN/FR passes, remain to be executed. |
+
+The public/silent decision is retained from the detailed 2026-09-12 rights investigation
+in this file and ATTRIBUTION.md, not newly certified by an online licence investigation
+today. Its evidence is dated and could change. MIT explicitly covers this repository's
+contributions and does not grant rights over purpleyam's name or measured palette;
+no third-party licence was invented. The unofficial notices match that recorded decision.
+
+### Settings and localization inventory
+
+Reviewed every distributed XML and the full file inventory, not only searches for C#.
+The only injected fields are `alternateGraphicChance`, `alternateGraphics`, `li`, `color`:
+4 Core + 11 Let's Have a Cat + 19 Stray Dogs + 7 VAE operations, zero unexpected leaves.
+Their classes are native patch operations, with no inherited settings provider or UI Def.
+There is no MainButtonDef, settings class, empty settings page, configurable UI, user-input
+validation, settings serialization, translation key, label, description or grammar payload.
+
+The probabilities and palettes are fixed content choices per breed. The mod's documented
+purpose is to fill missing coats automatically while deferring to existing coat lists;
+no user configuration task or XML-editing setup is promised. Exposing each colour/chance
+would invent a settings feature for this audit. Therefore settings_audit is not_applicable.
+Application is through XML patch loading; scope is the active mod list, with no owned
+settings state to save, migrate or reset. RIMMSQOL and other customization integrations
+were not tested and are not claimed; shortcut and settings persistence tests have no target.
+
+Animal text remains owned by Core/the optional animal mods and is unmodified. About
+metadata and repository documentation follow the English publishing policy, outside the
+in-game translation gate. Keyed parameters and DefInjected paths have no targets, so no
+empty language folders or redundant English translations are required. General EN/FR game
+regressions remain part of the final game pass; upstream translation completeness is not
+certified. The previous localization result is independently re-established after settings.
+
+### Executed checks and observed results
+
+All commands below used Windows PowerShell with `-NoProfile -ExecutionPolicy Bypass -File`.
+
+| Script and arguments | Observed result |
+| --- | --- |
+| `_tools/Run-Functional-Tests.ps1` | Exit 0; 22 passed, 0 failed, 0 skipped. Real game patch engine on 41 breeds; all 41 existing-coat guards and absent targets; native field readers; all 17 source-derived tints; packaging and load order. |
+| `_tools/Check-Coats.ps1` | Exit 0; 19 + 11 + 7 + 4 breeds checked successfully. |
+| `_tools/Check-PatchFields.ps1` | Exit 0; all 41 payloads extracted, including nested fields; no unknown 1.6 field. |
+| `../scripts/Check-XmlClasses.ps1 -ModPath Mod -TypeLists ../rw16_types.txt` | Exit 0; both referenced types resolve. Native types are also exercised by the functional suite. |
+| `../scripts/Check-DefRefs.ps1 -ModPath Mod` | Exit 0; XML well formed; no unresolved or mistyped Def reference/parent. There are no owned Defs; this checker does not establish XPath target coverage. |
+| `../scripts/Check-TypeRefs.ps1 -ModPath Mod` | Exit 0; five XML files, zero unguarded third-party types. |
+
+Additional direct XML checks verified all payload leaf values and installed packageIds:
+Qux.stray.dogs (3549460027), akairo.LetsHaveaCat (3682940618), and
+VanillaExpanded.VanillaAnimalsExpanded (2871933948), each declaring 1.6. Inspected their
+LoadFolders: root plus 1.6 where applicable. A separate current-version target inventory
+confirmed all 37 optional animals in those active Defs folders and all four Core animals,
+none with an existing coat list. Its first Core collection hit abstract nodes without a
+defName; the corrected `/Defs/PawnKindDef[defName]` collection was rerun successfully.
+This was an audit-helper issue, not a mod failure. Conditional upstream prosthetics and
+VAE non-Odyssey folders do not supply the animal targets checked here.
+
+Limits: the functional suite reconstructs patch objects and gathers source Defs; it is
+not the full mod loader, XML inheritance resolver, Unity renderer or game UI. Its colour
+parser check mirrors the native rule under .NET Framework. Generic existing-coat fixtures
+and the sibling VAE coat-list comparison passed; actual combined in-game sessions with
+Erin's Cats, Animal Variety Coats and the sibling Renew mod were not run. No mutation
+campaign was rerun today; the earlier mutation results remain historical.
+
+### Findings outside the next functional transition
+
+- Confirmed publishing-description discrepancy: About.xml contains a bare GitHub URL
+  instead of the final `[url=...]Source code on GitHub[/url]` required by PUBLISHING.md.
+  The URL itself is correct and live. Fix its presentation before publication; this is
+  not an additional gate in the user's explicit preOptions criteria.
+- Confirmed evidence discrepancy: README.md and About.xml say "under human direction
+  and in-game testing", while TESTING.md and the historical results say game tests have
+  not been executed. Reconcile this wording before publication; it is not proof of a
+  successful game test or of a gameplay defect.
+- Optional visual recommendation: the icon surrounds its clear orange mascot with many
+  cat/dog faces, busier than STYLE_RIMWORLD.md's single-mascot/one-or-two-object model.
+  Simplifying the surround would better match that style. The workflow's explicit PNG
+  dimensions/format gate is met; no image generation or change was made for this audit.
+- Historical French audit notes were preserved as requested. The current audit and the
+  initialized public-facing documents are in English.
+
+### Strictly necessary next transition
+
+To reach tested, execute scenarios 0-7 in RimWorld 1.6, record actual results and inspected
+logs, cover a new colony and an existing save, add/remove and save/reload, inspect the
+nineteen Stray Dogs coats and other targeted animals, and run applicable EN/FR regressions.
+Test the named optional coat integrations in game; resolve actual failures and rerun only
+affected regressions. No settings page, MainButtons shortcut or translation resources need
+to be created. Missing game results remain unverified, not confirmed defects.
 
 Status card, read by a pass over every mod rather than by asking each thread one at a time. It
 lives at the root, never inside `Mod/`, so Steam never receives it.
