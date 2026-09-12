@@ -7,7 +7,7 @@ detached:     yes
 stage:        done
 licence:      silent
 licence_at:   no licence anywhere from purpleyam: no LICENSE file, no About.xml, no linked repository, no body text on the Steam page. Dead source, stopped at 1.3. None of its files is reused here; the palette is measured off its coats and the name is its own, both credited.
-dependencies: to check
+dependencies: none
 showcase:     complete
 tested_on:
 workshop:
@@ -15,7 +15,7 @@ remaining:
   - unverified: never seen running in game
   - unverified: the tints of the 19 Stray Dogs dogs have never been seen on their sprites, which live in an asset bundle unreadable from disk
 session:      local_c77edc6e-276f-43fc-8c2d-fea14a5b8b01
-updated:      2026-09-12, champs confirmes par la session qui tient le mod
+updated:      2026-09-12, fields confirmed by the session that holds this mod
 ---
 
 # Colorful Coats - Cats and Dogs! Renew — status
@@ -39,5 +39,6 @@ attendent la session qui tient ce mod :
   `non_verifie` pour ce qui n'a pas pu etre verifie. La ligne posee d'office dit le vrai
   pour presque tout le depot ; la remplacer des qu'elle cesse de l'etre.
 
-Vocabulaire de `licence` : `open` licence explicite, `silent` aucune licence et source morte,
-`alive` aucune licence mais source vivante, `forbidden` refus ecrit, `original` rien de repris.
+`licence` vocabulary: `open` an explicit licence, `silent` no licence and a dead source,
+`alive` no licence but a living source, `forbidden` a written refusal, `original` owing nothing
+to anyone — not a name, not an idea traceable to one mod, not a value derived from its assets.
