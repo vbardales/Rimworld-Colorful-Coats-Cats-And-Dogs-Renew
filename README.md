@@ -1,4 +1,6 @@
-# Colorful Coats - Cats and Dogs! Renew
+# Colorful Coats - Cats and Dogs! Renew (unofficial)
+
+UNOFFICIAL. This mod is published without the original author's explicit consent. If the original author contacts me to request its removal, I undertake to take it down promptly.
 
 Coat variations for forty-one breeds of cat and dog on RimWorld 1.6 that have none.
 

@@ -6,12 +6,25 @@ nothing but its idea.
 
 ## Status: public
 
-The source mod is **dead** — it declares 1.3 and nothing further — and **no licence is declared
-anywhere**, checked at the four places one could be: no `LICENSE` file in the mod, no mention in
-its `About.xml`, no linked repository (`<url>` is absent entirely), and nothing in the body of the
-description on its Steam page. That last check is the one that matters: it is the one that was
-skipped once on たたら製鉄, whose ban on redistribution turned out to be a sentence in its
-description and nowhere else.
+Checked on 2026-09-12: no licence or reuse permission was found in the installed
+original's files, the Steam descriptions, all 20 original comments and all 31
+comments on the official successor. The public author profile has no reuse terms.
+
+An upstream repository was actively sought through Steam/profile links, About.xml,
+web searches by author, title and packageId, and GitHub repository search for
+"Colorful Coats". The four GitHub results are vbardales' Renew repositories;
+none is purpleyam's upstream repository. No upstream repository was found, so no
+upstream README is claimed to have been reviewed. If one is located, its README,
+licence files and other textual documents must be checked for terms before
+relying on this classification.
+
+Under the user's classification, an abandoned source means one not updated to
+RimWorld 1.6. The original declares up to 1.3 and its
+[official successor](https://steamcommunity.com/sharedfiles/filedetails/?id=2398446130)
+up to 1.4. Therefore `silent` is retained: no 1.6 update and no licence or permission
+found. Elapsed time and the author's personal activity are not classification
+criteria. The unofficial suffix remains. Absence of a licence is not permission
+to reuse.
 
 The question barely arises here, because **nothing of purpleyam's is redistributed**. What is
 borrowed is the name and the idea, and both are credited by name, in `About.xml`, in `LICENSE` and

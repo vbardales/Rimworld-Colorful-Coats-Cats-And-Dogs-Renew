@@ -10,7 +10,7 @@ it buys that by making a miss invisible. Only animals on screen settle it.
 
 ## What is settled before the game starts
 
-Two scripts, and they answer different questions.
+Two main scripts, plus a field-checking wrapper, answer different questions.
 
 **`_tools/Check-Coats.ps1`** is the quick one: every `defName` still exists in the mod its patch
 names, none of them has grown `alternateGraphics` upstream since, every colour is in the form the
@@ -31,13 +31,23 @@ made to fail from here. The mutations are listed in the script's header.
 ```
 powershell -File _tools/Check-Coats.ps1
 powershell -File _tools/Run-Functional-Tests.ps1
+powershell -File _tools/Check-PatchFields.ps1
 ```
 
 Both skip, loudly, any target mod that is not installed on the machine they run on.
+The quick checker reuses the functional suite's mod-folder cache after verifying the
+folder's location and packageId, falling back to discovery when the entry is stale.
 
-The repository's shared checkers cover the rest: `Check-XmlFields.ps1` for elements that map to no
-1.6 field, `Check-XmlClasses.ps1` for the `Class=` values, `Check-DefRefs.ps1` for dangling
-references, `Check-TypeRefs.ps1` for third-party types.
+The shared checkers in `../scripts/` cover `Class=` values (`Check-XmlClasses.ps1`),
+dangling references (`Check-DefRefs.ps1`) and third-party types (`Check-TypeRefs.ps1`).
+`Check-XmlFields.ps1` only reads Defs documents and skips patches. The local wrapper
+`_tools/Check-PatchFields.ps1` therefore extracts all 41 injected payloads into temporary
+PawnKindDefs and passes them to that checker, including the nested AlternateGraphic fields.
+Supply `-FieldChecker` if the shared script lives elsewhere; a missing checker is an error.
+
+Verified on 2026-09-12: 22 functional tests passed, zero failed or skipped; all 41 payloads
+passed the field check; XML class, def-reference and third-party-type checks also passed.
+Manual scenarios have not yet been executed in game.
 
 None of that says a coat appears on a dog. That is what the scenarios are for.
 

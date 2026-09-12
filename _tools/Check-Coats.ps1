@@ -42,6 +42,22 @@ $targets = @(
 )
 
 function Find-ModFolder([string] $packageId) {
+    # Reuse the functional suite's cache, but verify both the search root and packageId.
+    $cachePath = Join-Path $env:TEMP 'rimworld-modfolder-cache.json'
+    if (Test-Path $cachePath) {
+        try {
+            $cache = Get-Content $cachePath -Raw -Encoding UTF8 | ConvertFrom-Json
+            $candidate = $cache.PSObject.Properties[$packageId].Value
+            if ($candidate) {
+                $root = [IO.Path]::GetFullPath($WorkshopPath).TrimEnd('\') + '\'
+                $candidate = [IO.Path]::GetFullPath($candidate)
+                if ($candidate.StartsWith($root, [StringComparison]::OrdinalIgnoreCase)) {
+                    [xml] $about = Get-Content (Join-Path $candidate 'About\About.xml') -Raw -Encoding UTF8
+                    if ($about.ModMetaData.packageId.Trim() -ieq $packageId) { return $candidate }
+                }
+            }
+        } catch { } # A missing or stale entry falls back to discovery.
+    }
     foreach ($about in [System.IO.Directory]::EnumerateFiles($WorkshopPath, 'About.xml', 'AllDirectories')) {
         if ((Split-Path (Split-Path $about -Parent) -Leaf) -ne 'About') { continue }
         $text = [System.IO.File]::ReadAllText($about)
