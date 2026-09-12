@@ -1,56 +1,39 @@
-<!doctype html><meta charset="utf-8">
-<!--
-  Engraving page for Mod/About/Preview.png, per STYLE_RIMWORLD.md.
-
-  Rasterised with headless Chrome at 896x504, so the glyphs are composed at final size and never
-  resampled. The background is Preview-source.png at full resolution, scaled and cropped here
-  rather than beforehand: starting from an already-reduced Preview.png would resample the picture
-  twice.
-
-    chrome --headless --disable-gpu --screenshot=Mod/About/Preview.png \
-           --window-size=896,504 --hide-scrollbars Art/preview.html
-
-  The source is 1374x1145, which is close to 6:5, so most of the height has to go: 373 source
-  pixels of it. The crop sits low - object-position 50% 62% - because the bottom of the picture
-  is where the rust-coloured dog lies, and losing it would cost the banner its most saturated
-  coat. What goes is the basket and the stove along the top edge.
-
-  NO COUNT IS ENGRAVED, and that is the rule rather than an omission. Forty-one breeds is not a
-  number that depends on this repository: Stray Dogs, Let's Have a Cat! and Vanilla Animals
-  Expanded can each add a breed tomorrow, and every operation here is conditional on what those
-  mods do. It is the compatibility-mod case of STYLE_RIMWORLD.md - the number would go stale
-  without anyone touching the mod, so nothing would ever trigger a re-engraving.
--->
+<!doctype html><meta charset="utf-8"><title>Preview composition</title>
 <style>
-  * { margin:0; padding:0; box-sizing:border-box; }
-  html,body { width:896px; height:504px; overflow:hidden; background:#000; }
-  .stage { position:relative; width:896px; height:504px;
-           font-family:"Segoe UI",system-ui,sans-serif; }
-
-  .shot { position:absolute; inset:0; width:896px; height:504px;
-          object-fit:cover; object-position:50% 62%; }
-
-  /* Repository standard: radial darkening from the top-left, nil at 74%. Here it lands on the
-     bare plank floor to the left of the rug, which is already the darkest part of the picture -
-     the lamp pool stops short of it. */
-  .veil { position:absolute; inset:0;
-    background: radial-gradient(circle at 0% 0%, rgba(6,5,4,.86) 0%, rgba(6,5,4,0) 74%); }
-
-  /* The text sits below the sleeping cat rather than in the very corner: the cat is the one
-     thing in the upper left, and covering it would throw away the only sign that the mod is
-     about cats as well as dogs. */
-  .text { position:absolute; left:56px; top:132px; width:380px; }
-  h1 { font-size:38px; line-height:1.06; font-weight:700; color:#f2ece1;
-       letter-spacing:-.5px; text-shadow:0 2px 10px rgba(0,0,0,.7); }
-  .rule { width:58px; height:3px; background:#D68F2C; margin:22px 0 20px; }
-  p { font-size:21px; line-height:1.42; color:#d8cfc0; text-shadow:0 1px 6px rgba(0,0,0,.75); }
+*{margin:0;padding:0;box-sizing:border-box}html,body{width:896px;height:504px;overflow:hidden}body{font-family:"Segoe UI",system-ui,sans-serif}
+.art,.veil{position:absolute;inset:0;width:896px;height:504px}.art{object-fit:cover;object-position:50% 62%}
+.veil{background:radial-gradient(ellipse 1000px 760px at top left,rgba(var(--veilRGB),.94) 0%,rgba(var(--veilRGB),.90) 42%,rgba(var(--veilRGB),0) 85%)}
+.copy{position:absolute;left:50px;top:54px;text-shadow:0 3px 10px rgba(0,0,0,.75)}
+h1{font-size:46px;font-weight:600;line-height:1.1;letter-spacing:0;color:var(--inkPrimary);width:620px}
+h1 .link-word,h1 .suffix{font-size:.65em}h1 .suffix{color:var(--inkSecondary)}
+.tag{font-size:24px;font-weight:400;line-height:1.1;letter-spacing:.2px;margin-top:8px;color:var(--inkSecondary);width:max-content}
+.rule{width:58px;height:3px;margin-top:20px;margin-bottom:16px;background:var(--accent)}
+.summary{font-size:21px;font-weight:400;line-height:1.45;width:430px;color:var(--inkPrimary)}
+.badge{position:absolute;right:0;top:0;width:80px;height:80px;background:var(--accent);clip-path:polygon(0 0,100% 0,100% 100%)}
+.version{position:absolute;left:869px;top:27px;transform:translate(-50%,-50%) rotate(45deg);font-size:26px;font-weight:700;line-height:1;color:var(--badgeInk)}
+.background-only h1,.background-only .tag,.background-only .summary,.background-only .version{visibility:hidden}
 </style>
-<div class="stage">
-  <img class="shot" src="Preview-source.png">
-  <div class="veil"></div>
-  <div class="text">
-    <h1>Colorful Coats -<br>Cats and Dogs! Renew</h1>
-    <div class="rule"></div>
-    <p>Coat variations for the cats and dogs that still have only one.</p>
-  </div>
-</div>
+<img class="art" src="Preview.png"><div class="veil"></div>
+<div class="copy"><h1 id="title"></h1><div class="tag" id="tag"></div><div class="rule"></div><p class="summary">Coat variations for the cats and dogs that still have only one.</p></div>
+<div class="badge"></div><div class="version" id="version"></div>
+<script>
+window.ready=(async()=>{
+const palette=await(await fetch('preview-palette.json')).json();
+for(const [k,v] of Object.entries(palette))document.documentElement.style.setProperty('--'+k,v);
+document.documentElement.style.setProperty('--veilRGB',palette.veil.slice(1).match(/../g).map(x=>parseInt(x,16)).join(','));
+const about=new DOMParser().parseFromString(await(await fetch('../Mod/About/About.xml')).text(),'application/xml');
+const name=about.querySelector('ModMetaData > name').textContent;
+const tag=name.match(/\s*(\((?:unofficial|prohibited)\))$/);
+const title=name.replace(/\s*\((?:unofficial|prohibited)\)$/,'');
+const heading=document.querySelector('#title');
+for(const token of title.split(/(\band\b|\bRenew\b| - )/)){
+ if(token===' - '){heading.append(document.createTextNode(' -'),document.createElement('br'));}
+ else if(token==='and'||token==='Renew'){const span=document.createElement('span');span.className=token==='Renew'?'suffix':'link-word';span.textContent=token;heading.append(span);}
+ else heading.append(document.createTextNode(token));
+}
+document.querySelector('#tag').textContent=tag?tag[1]:'';if(!tag)document.querySelector('#tag').remove();
+const versions=[...about.querySelectorAll('supportedVersions > li')].map(x=>x.textContent.trim()).filter(x=>/^\d+\.\d+$/.test(x)).sort((a,b)=>{const x=a.split('.').map(Number),y=b.split('.').map(Number);return y[0]-x[0]||y[1]-x[1]});
+if(!versions.length)throw Error('No stable version');document.querySelector('#version').textContent=versions[0];
+await document.fonts.ready;await Promise.all([...document.images].map(x=>x.decode()));
+})();
+</script>

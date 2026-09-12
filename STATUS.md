@@ -118,3 +118,34 @@ to anyone — not a name, not an idea traceable to one mod, not a value derived 
    Pas de 1.6 et aucune licence/permission trouvee : silent. Source en 1.6 sans
    licence/permission : alive. Une licence ou permission explicite doit etre
    examinee avant de classer ; une interdiction ne devient pas silent.
+
+## Preview overlay recomposed — 2026-09-12
+
+- Source illustration: `Art/Preview.png`, copied unchanged from the existing
+  text-free `Art/Preview-source.png`. No illustration was generated or replaced.
+  The earlier generated lettering variant remains in `Art/Preview-unofficial-source.png`
+  for reference and is not used as the composition background.
+- Delivered image: `Mod/About/Preview.png`. Composition: `Art/preview.html`;
+  palette (single colour source): `Art/preview-palette.json`;
+  reproducible renderer and measurements: `Art/render-preview.cjs` and
+  `Art/preview-qa.json`. Run `node Art/render-preview.cjs`; set
+  `PREVIEW_NODE_MODULES` if the bundled Playwright/sharp modules live elsewhere.
+- Veil: dark, slightly desaturated wood tone from the broad plank floor.
+  Vivid accent: the green foliage of the two potted plants in the source, brightened and saturated for the
+  divider and badge. Secondary ink: the dominant warm ochre family of the
+  floorboards, lightened while retaining its golden colour for the tag and Renew suffix. The foliage green separates the accent from this dominant warm ochre family; it is a significant repeated scene detail, not an isolated pixel.
+- Actual platform fonts verified through Chrome: Segoe UI Semibold for the
+  46 px title, Segoe UI regular for tag and summary, Segoe UI Bold for version.
+  The renderer waits for `document.fonts.ready` and image decoding before capture.
+- Existing name and summary preserved. Strong words use 46 px; and and Renew use direct 0.65em spans (29.9 px), all at weight 600. The connector keeps primary ink, while Renew uses secondary ink. The unofficial status tag remains on its own line.
+  Badge version is read from the highest stable supportedVersions in delivered
+  About.xml (currently 1.6), with the prescribed triangle and rotated numerals.
+- Rendered at 896 x 504, then visually checked at 268 px wide
+  (`Art/preview-268.png`): title and version identifiable, divider visible,
+  no text clipping or overlapping text blocks; reduced title words readable and green accent distinct from golden secondary ink. Summary remains intended for
+  the full-size preview, as specified by the guide.
+- Minimum WCAG contrast over every pixel of each text block's background
+  rectangle, captured with lettering hidden: title 4.92:1, connector 12.31:1, Renew 7.60:1, summary 6.82:1,
+  tag 8.06:1. Badge digits against its opaque accent: 9.35:1.
+  Background-only proof: `Art/preview-background-qa.png`.
+- Final file: 506910 bytes, below 900 KB. No Steam publication performed.
