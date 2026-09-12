@@ -132,5 +132,5 @@ See [TESTING.md](TESTING.md) for what is settled before the game starts and
 game can settle, [ATTRIBUTION.md](ATTRIBUTION.md) for what was taken and what was made,
 [LICENSE](LICENSE) for what the MIT grant covers, and [CHANGELOG.md](CHANGELOG.md).
 
-The work was done with the help of an AI assistant (Claude, by Anthropic), under human direction
-and in-game testing.
+The work was done with the help of an AI assistant (Claude, by Anthropic), under human direction.
+Automated and XML checks have passed. Final functional validation in game remains pending.

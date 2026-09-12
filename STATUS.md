@@ -25,13 +25,26 @@ remaining:
   - unverified: never seen running in game
   - unverified: the tints of the 19 Stray Dogs dogs have never been seen on their sprites, which live in an asset bundle unreadable from disk
   - unverified: execute scenarios 0-7, check Player.log, new colony, existing save, save/reload and add/remove; repeat applicable checks in English and French
-  - defect: README.md and About.xml claim in-game testing despite the recorded absence of an in-game run; reconcile before publication
-  - defect: About.xml description lacks the final Steam-formatted Source code on GitHub link required by PUBLISHING.md; correct before publication
 session:      local_c77edc6e-276f-43fc-8c2d-fea14a5b8b01
-updated:      2026-09-13, full ordered workflow audit; done retained with fresh technical checks
+updated:      2026-09-13, documentary discrepancies corrected; done retained, in-game validation pending
 ---
 
 # Colorful Coats - Cats and Dogs! Renew — status
+
+## Documentation corrections — 2026-09-13
+
+Based on revision `590199c1cf497216a5ce5a437062bb411ec96989`, corrected README.md
+and Mod/About/About.xml to distinguish successful automated/XML checks from the
+still-pending final functional validation in game. Replaced the bare repository URL
+in the description with the prescribed Steam-formatted Source code on GitHub link
+at the end, matching the existing metadata URL and configured origin.
+
+Both documentary findings in the audit below are resolved; their original entries
+remain as history. Parsed the edited About.xml, checked the final link and its target,
+and ran `git diff --check`. Only README.md, About.xml description and STATUS.md changed.
+The patches, images, packageId, load order and supported versions are unchanged, so
+the earlier independent technical validations remain applicable. Stage remains done;
+no game test, Steam page update or publication is claimed.
 
 ## Ordered workflow audit — 2026-09-13
 
