@@ -1,4 +1,7 @@
 ---
+localization: not_applicable
+translation_en: not_applicable
+translation_fr: not_applicable
 mod:          Colorful Coats - Cats and Dogs! Renew (unofficial)
 packageId:    nelim.colorfulcoats.catsanddogsrenew
 repo:         Rimworld-Colorful-Coats-Cats-And-Dogs-Renew
@@ -16,7 +19,7 @@ remaining:
   - unverified: never seen running in game
   - unverified: the tints of the 19 Stray Dogs dogs have never been seen on their sprites, which live in an asset bundle unreadable from disk
 session:      local_c77edc6e-276f-43fc-8c2d-fea14a5b8b01
-updated:      2026-09-12, fields confirmed by the session that holds this mod
+updated:      2026-09-13, translation audit recorded; previous verification retained
 ---
 
 # Colorful Coats - Cats and Dogs! Renew — status
@@ -149,3 +152,36 @@ to anyone — not a name, not an idea traceable to one mod, not a value derived 
   tag 8.06:1. Badge digits against its opaque accent: 9.35:1.
   Background-only proof: `Art/preview-background-qa.png`.
 - Final file: 506910 bytes, below 900 KB. No Steam publication performed.
+
+## Translation audit — 2026-09-13
+
+Applied the translation gate from the parent workspace's `PUBLISHING.md` and
+`TRANSLATIONS.md` to revision `7cd437a7b854eb7e0e69a9bceb7a4b9a5bd00668`.
+The published content was unchanged during this audit.
+
+- Inventory: all files under `Mod/`, including `About/About.xml` and all four
+  conditional patch files. `rg --files -g '*.cs' -g '*.dll' -g 'LoadFolders.xml'
+  -g '*.xml'` found only the About XML and those patches: no C# source, assembly,
+  alternate load folders, owned Defs or language resources.
+- Parsed each patch with PowerShell's `[xml]` and enumerated `//value//*` and
+  `//value//*[not(*)]`. The 41 payloads (Core: 4, Let's Have a Cat: 11,
+  Stray Dogs: 19, Vanilla Animals Expanded: 7) contain only
+  `alternateGraphicChance`, `alternateGraphics`, `li` and `color`.
+  Every leaf is a numeric probability or RGB tuple; zero unexpected fields or
+  values. All four XML files parsed successfully.
+- No patch adds or changes labels, descriptions, UI, grammar or generated text.
+  XPath defNames and patch control values are internal identifiers, not displayed
+  strings. Coat names appear only in XML comments. Animal names and descriptions
+  remain owned by Core or the corresponding optional animal mod, untouched here;
+  no translation keys are reused or introduced by this mod.
+- About metadata, the preview/icon lettering, licences and attribution are
+  publication material outside the in-game translation gate. They remain in English
+  under the publishing policy. Development tools and Art sources are not shipped.
+- Result: `localization`, `translation_en` and `translation_fr` are all
+  `not_applicable`, because the complete inventory found no owned player-facing
+  text to translate. No empty language folders or duplicate upstream translations
+  are needed. DefInjected path validation and language-specific UI checks have no
+  targets in this build; upstream language coverage is not certified by this audit.
+- No in-game test was performed. Existing gameplay checks in `remaining` and the
+  historical `stage` are preserved. Reopen the affected translation fields as
+  `unchecked` after changes to patches, Defs, UI code or language resources.
