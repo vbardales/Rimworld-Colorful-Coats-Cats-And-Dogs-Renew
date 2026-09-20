@@ -68,9 +68,9 @@ port, so this is its idea rebuilt against the cats and dogs that are alive on 1.
   conditional on what they do. It is the compatibility-mod case of `STYLE_RIMWORLD.md` — the number
   would go stale without anyone touching the mod, so nothing would ever trigger a re-engraving.
 - **The name and the family are kept**, `nelim.colorfulcoats.catsanddogsrenew`, in line with the
-  Dodos, Megafauna and Vanilla Animals Expanded ports. `<author>` reads `Nelim, after purpleyam`
-  rather than the family's usual `purpleyam - 1.6 port: Nelim`, because nothing of purpleyam's is
-  in the files.
+  Dodos, Megafauna and Vanilla Animals Expanded ports. `<author>` reads `purpleyam, adapted by Nelim`
+  rather than the family's usual `purpleyam - 1.6 port: Nelim`, because this is an adaptation of
+  purpleyam's idea and nothing of purpleyam's is in the files.
 
 ### Not done
 
