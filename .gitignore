@@ -38,3 +38,10 @@ PROMPT_*.md
 Thumbs.db
 desktop.ini
 .DS_Store
+
+# Pickle test evidence: screenshots and Player.log copies kept on disk as proof, never in git.
+# Captures grow without bound (PickleTools has seen 10 GB in a day on one machine), and a report
+# about a superseded build proves nothing about the current one. What is worth keeping goes as a
+# short text summary in docs/runs/ instead. See AGENTS.md and PickleTools/README.md.
+Tests/Pickle/Evidence/
+evidence/
