@@ -20,13 +20,14 @@ licence_at:   checked 2026-09-12; source not updated to 1.6 (original 1.3, offic
 dependencies: none
 showcase:     complete
 tested_on:
-workshop:
+workshop:     3806769444 (0.1.0, item creation only; private, as Steam creates every item; not tested, not public)
 remaining:
   - unverified: never seen running in game
   - unverified: the tints of the 19 Stray Dogs dogs have never been seen on their sprites, which live in an asset bundle unreadable from disk
   - unverified: execute scenarios 0-7, check Player.log, new colony, existing save, save/reload and add/remove; repeat applicable checks in English and French
+  - unverified: no Pickle suite exists yet for this mod; docs/PROTOCOLS-READ.md tracks what remains to read before authoring one
 session:      local_c77edc6e-276f-43fc-8c2d-fea14a5b8b01
-updated:      2026-09-13, documentary discrepancies corrected; done retained, in-game validation pending
+updated:      2026-09-28, workshop item ID recorded for 0.1.0 (About/PublishedFileId.txt); stage unchanged at done, no in-game validation performed
 ---
 
 # Colorful Coats - Cats and Dogs! Renew — status

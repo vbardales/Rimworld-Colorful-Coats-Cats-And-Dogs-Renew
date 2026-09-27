@@ -2,7 +2,7 @@
 
 All notable changes to this mod are documented here.
 
-## [1.0.0] — 2026-09-11
+## [Unreleased]
 
 First release. Not a port: purpleyam's **Colorful Coats - Cats and Dogs!** had nothing left to
 port, so this is its idea rebuilt against the cats and dogs that are alive on 1.6.
@@ -78,3 +78,14 @@ port, so this is its idea rebuilt against the cats and dogs that are alive on 1.
   inside *Colorful Coats - Vanilla Animals Expanded! Renew*, identical; its own target,
   `VanillaExpanded.VAECD`, stopped at 1.3 and was absorbed by Vanilla Animals Expanded. Re-porting
   it would have patched the same fourteen defs of the same mod twice.
+
+## [0.1.0] — 2026-09-28
+
+Creates the Workshop item. Nothing else: no code change, no artwork change, no documentation
+change. `Mod/` was sent exactly as it stood in the commit that follows, and this entry exists so
+that commit is traceable to what Steam actually received.
+
+### Added
+
+- `About/PublishedFileId.txt` — the Workshop item is created (private, as Steam creates every
+  item). Its ID is recorded in `STATUS.md`.
