@@ -4,7 +4,7 @@ translation_en: not_applicable
 translation_fr: not_applicable
 settings_audit: not_applicable
 mod:          Colorful Coats - Cats and Dogs! Renew (unofficial)
-packageId:    nelim.colorfulcoats.catsanddogsrenew
+packageId:    nelim.colorfulcoats.catsanddogs
 repo:         Rimworld-Colorful-Coats-Cats-And-Dogs-Renew
 visibility:   public
 detached:     yes

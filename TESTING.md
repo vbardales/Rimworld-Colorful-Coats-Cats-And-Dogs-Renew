@@ -60,7 +60,7 @@ VanillaExpanded.VanillaAnimalsExpanded  Vanilla Animals Expanded         2871933
 nelim.colorfulcoats.vaerenew            Colorful Coats - VAE! Renew
 Erin.Cats                               Erin's Cat Overhaul              2763428090
 cucumpear.azrael.varietycoats           Animal Variety Coats             1511926373
-nelim.colorfulcoats.catsanddogsrenew    this mod                         last
+nelim.colorfulcoats.catsanddogs         this mod                         last
 ```
 
 The order matters in one direction only. Loading **after** the coat-painting mods is what lets the
