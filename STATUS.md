@@ -23,16 +23,16 @@ showcase:     complete
 tested_on:
 workshop:     3806769444 (0.1.0, item creation only; private, as Steam creates every item; not tested, not public)
 remaining:
-  - unverified: never seen running in game
+  - verified: the mod runs in game - all three Pickle passes (38 scenarios, rev 3dad095) passed
   - verified: the tints of the Stray Dogs dogs read as fur - pass 2 opened the standard poodle capture (4 distinct tints: brown, white, cream, sable-pink) and the newfoundland capture (stays dark, a tint barely changes it, as expected); the asset-bundle textures are no longer unseen
-  - unverified: execute scenarios 0-7, check Player.log, new colony, existing save, save/reload and add/remove; English only, confirmed by the owner on 2026-09-28 (no owned text, see Tests/Pickle/README.md "Passes")
-  - unverified: the Pickle suite (Tests/Pickle, 38 scenarios in three passes) is written and its step assembly builds, but no run has been filed; nothing in it has a result. Its @review captures (4) are the only evidence for scenario 2 and must be opened and read
+  - unverified: execute scenarios 0-7 of _tools/FUNCTIONAL-SCENARIOS.md by hand (new colony, existing save, save/reload, add/remove); English only, confirmed by the owner on 2026-09-28. The Pickle suite covers most of the same ground under a running game (save/reload is pass 1 scenario 9), but this manual pass has not been done and is still required for `tested`
   - verified: pass 1 (base game only, rev 3dad095) 10/10 passed, exitReason passed; the huskies capture was opened and the tints read as fur (icy blue, grey, cream, brown) - docs/runs/2026-09-28-pass1.txt, Tests/Pickle/Evidence/2026-09-28-3dad095-pass1
-  - verified: pass 2 (the three target mods, rev 3dad095) 18/18 passed, exitReason passed; no def got two coat lists, animals already coated left alone, the persian capture shows only a faint tint against their near-white base as expected - docs/runs/2026-09-28-pass2.txt, Tests/Pickle/Evidence/2026-09-28-3dad095-pass2. Pass 3 (the painting mods) filed 2026-09-28 as 20260928-171509-963-ab46; no result yet
-  - unverified: Tests/Pickle/Check-Steps.ps1 (no game) finds every step of the 38 scenarios defined exactly once and every map entry resolving, against the Workshop Pickle build; that says the phrases exist, not that a step does what it says
-  - unverified: the fix of a defect found 2026-09-28, not yet seen in game: About.xml loadAfter named the retired sibling id nelim.colorfulcoats.vaerenew instead of nelim.colorfulcoats.vae, so no load order was declared against the sibling port; the offline suite now asserts the correct id, the in-game proof is pass 3, scenario 1
+  - verified: pass 2 (the three target mods, rev 3dad095) 18/18 passed, exitReason passed; no def got two coat lists, animals already coated left alone, the persian capture shows only a faint tint against their near-white base as expected - docs/runs/2026-09-28-pass2.txt, Tests/Pickle/Evidence/2026-09-28-3dad095-pass2
+  - verified: pass 3 (the painting mods, rev 3dad095) 10/10 passed, exitReason passed; no def got two coat lists; Cat/Husky/LabradorRetriever/three sampled AEXP breeds stayed with their painter; the seven breeds the sibling never painted are this mod's; no @review scenario in this pass - docs/runs/2026-09-28-pass3.txt, Tests/Pickle/Evidence/2026-09-28-3dad095-pass3. All 38 scenarios of the Pickle suite now have a result: 38/38 passed, no @wip, no scenario left unrun
+  - verified: Tests/Pickle/Check-Steps.ps1 (no game) found every step of the 38 scenarios defined exactly once and every map entry resolving, against the Workshop Pickle build, before any pass was filed
+  - verified: the fix of a defect found 2026-09-28 (About.xml loadAfter named the retired sibling id nelim.colorfulcoats.vaerenew instead of nelim.colorfulcoats.vae) is confirmed in game - pass 3 scenario 1 ("the painters are loaded, before this mod") passed on the corrected id
 session:      local_c77edc6e-276f-43fc-8c2d-fea14a5b8b01
-updated:      2026-09-28, Pickle suite written and built, not yet played; stage unchanged at done, no in-game validation performed
+updated:      2026-09-28, all three Pickle passes played and read (38/38 scenarios passed); stage unchanged at done - the manual _tools/FUNCTIONAL-SCENARIOS.md pass 0-7 is the one thing left for `tested`
 ---
 
 # Colorful Coats - Cats and Dogs! Renew — status
