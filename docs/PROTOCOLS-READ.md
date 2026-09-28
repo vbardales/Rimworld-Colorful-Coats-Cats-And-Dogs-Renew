@@ -13,7 +13,7 @@ re-read one that did. Update the row when a document is re-read, whether or not 
 | `../MOD_SETTINGS.md` | 2026-09-13 | as of prior audit | not applicable — mod has no settings, confirmed and recorded in STATUS.md |
 | `../TRANSLATIONS.md` | 2026-09-13 | as of prior audit | not applicable — mod has no owned player-facing text |
 | `../WORKSHOP_COMMENTS.md` | not yet read | — | pending — needed only at `tested -> prepublished`, for the thank-you comments |
-| `../scripts/SEARCHING.md` | not yet read | — | pending — not needed so far; this mod's checks use its own `_tools/` scripts |
+| `../scripts/SEARCHING.md` | 2026-09-28 | working tree; first 60 lines (of 12 230 bytes) | yes for one rule - never walk an unbounded root; `Search-Workshop.sh` for the Workshop. It made this mod drop a whole-Workshop walk from two of its own scripts. The rest (assembly searches, ledger mode) has no target here |
 | `../PickleTools/Authoring/README.md` | 2026-09-28 | working tree (its own header: reviewed 2026-09-22) | yes, read in full - suite layout, pass matrix, waits, evidence; the model for `Tests/Pickle/` |
 | `../PickleTools/TESTING.md` | 2026-09-28 | working tree; only "What to keep after a test" read | yes - the keep/delete table copied into `Tests/Pickle/README.md` |
 | `../PickleTools/docs/steps.md` | 2026-09-28 | working tree; grepped for spawn, animal, camera, screenshot, patched, not read whole | partly - no shared step spawns an animal or reads a coat, hence the local `CoatSteps.cs` |

@@ -39,10 +39,11 @@
 
   Exit code 0 when everything passes, 1 otherwise.
 
-  ABOUT TWENTY-FIVE SECONDS, AND TEN MINUTES THE FIRST TIME. Finding a target mod means walking
-  every About.xml under a workshop folder of nearly ten thousand mods, so the answer is cached in
-  %TEMP%\rimworld-modfolder-cache.json and re-verified on each run rather than re-searched. Delete
-  that file to force the long way round.
+  ABOUT TWENTY-FIVE SECONDS. Each target mod is read at its known Workshop folder, and its About.xml
+  must still declare the expected packageId. No script here walks the Workshop: an earlier version
+  did, which cost ten minutes cold and loaded the whole machine (scripts/SEARCHING.md). If a target
+  mod is replaced, the tests that need it are skipped and named, and the id in
+  $script:workshopIds is the one line to update.
 
   SEVENTEEN OF THE TWENTY-TWO HAVE BEEN SEEN TO FAIL, one mutation at a time in a copy of the mod
   in a scratch directory, never in the real files. Sixteen mutations: a conditional that loses its
@@ -235,24 +236,24 @@ function New-RealOperation($op, [int] $successOverride = -1) {
 # ---------------------------------------------------------------------------------------------
 # Finding the target mods, and building the document the game would patch
 
-# Where a packageId was found last time. Looking it up means walking every About.xml of a workshop
-# folder that holds the better part of ten thousand mods, and this script does it once per target -
-# so the answer is cached beside the temp folder and re-verified rather than re-searched. The cache
-# is never trusted blind: the recorded folder has to still declare that packageId, which is what
-# makes a mod that was moved, unsubscribed or renamed fall back to a full search.
-$script:cachePath = Join-Path $env:TEMP 'rimworld-modfolder-cache.json'
-$script:cache = @{}
-if (Test-Path $script:cachePath) {
-    try {
-        $raw = Get-Content $script:cachePath -Raw -Encoding UTF8 | ConvertFrom-Json
-        foreach ($p in $raw.PSObject.Properties) { $script:cache[$p.Name] = $p.Value }
-    } catch { $script:cache = @{} }
+# The target mods live in known Workshop folders, so each is read at its own path and nowhere else.
+# An earlier version walked every About.xml of a Workshop folder holding nearly ten thousand mods
+# (ten minutes cold, and a machine-wide disk load: scripts/SEARCHING.md, "Keep an interactive
+# machine interactive"). The folder id is a fact about the target mod; what is checked on every run
+# is that the About.xml found there still declares the packageId this script expects, so a mod that
+# was replaced, renamed or unsubscribed is reported by name instead of being searched for.
+$script:workshopIds = @{
+    'Qux.stray.dogs'                         = '3549460027'
+    'akairo.LetsHaveaCat'                    = '3682940618'
+    'VanillaExpanded.VanillaAnimalsExpanded' = '2871933948'
 }
 function Test-ModFolder([string] $root, [string] $packageId) {
     if (-not $root -or -not (Test-Path $root)) { return $false }
     $about = Join-Path $root 'About\About.xml'
     if (-not (Test-Path $about)) { return $false }
     $text = [System.IO.File]::ReadAllText($about)
+    # A mod's own packageId is not always the first in the file: dependencies carry theirs too, and
+    # Vanilla Animals Expanded lists Harmony's before its own.
     foreach ($tag in 'modDependencies','modDependenciesByVersion','loadAfter','loadBefore','incompatibleWith','forceLoadAfter','forceLoadBefore') {
         $text = [regex]::Replace($text, "(?s)<$tag>.*?</$tag>", '')
     }
@@ -260,26 +261,10 @@ function Test-ModFolder([string] $root, [string] $packageId) {
     return ($m.Success -and $m.Groups[1].Value.Trim() -ieq $packageId)
 }
 function Find-ModFolder([string] $packageId) {
-    if ($script:cache.ContainsKey($packageId) -and (Test-ModFolder $script:cache[$packageId] $packageId)) {
-        return $script:cache[$packageId]
-    }
-    if (-not (Test-Path $WorkshopPath)) { return $null }
-    foreach ($about in [System.IO.Directory]::EnumerateFiles($WorkshopPath, 'About.xml', 'AllDirectories')) {
-        if ((Split-Path (Split-Path $about -Parent) -Leaf) -ne 'About') { continue }
-        $text = [System.IO.File]::ReadAllText($about)
-        # A mod's own packageId is not always the first in the file - dependencies carry theirs
-        # too, and Vanilla Animals Expanded lists Harmony's before its own.
-        foreach ($tag in 'modDependencies','modDependenciesByVersion','loadAfter','loadBefore','incompatibleWith','forceLoadAfter','forceLoadBefore') {
-            $text = [regex]::Replace($text, "(?s)<$tag>.*?</$tag>", '')
-        }
-        $m = [regex]::Match($text, '<packageId>([^<]+)</packageId>')
-        if ($m.Success -and $m.Groups[1].Value.Trim() -ieq $packageId) {
-            $found = Split-Path (Split-Path $about -Parent) -Parent
-            $script:cache[$packageId] = $found
-            try { $script:cache | ConvertTo-Json | Out-File -FilePath $script:cachePath -Encoding UTF8 } catch { }
-            return $found
-        }
-    }
+    $id = $script:workshopIds[$packageId]
+    if (-not $id) { return $null }
+    $folder = Join-Path $WorkshopPath $id
+    if (Test-ModFolder $folder $packageId) { return $folder }
     return $null
 }
 

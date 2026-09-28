@@ -41,37 +41,29 @@ $targets = @(
     @{ File = 'Coats_Core.xml';                     PackageId = '';                                      Label = 'RimWorld Core' }
 )
 
+# The three target mods live in known Workshop folders and are read there and nowhere else; walking
+# every About.xml of a Workshop holding nearly ten thousand mods took ten minutes and loaded the
+# whole machine (scripts/SEARCHING.md). What is checked on every run is that the About.xml found at
+# that id still declares the expected packageId, so a replaced mod is reported by name.
+$script:workshopIds = @{
+    'Qux.stray.dogs'                         = '3549460027'
+    'akairo.LetsHaveaCat'                    = '3682940618'
+    'VanillaExpanded.VanillaAnimalsExpanded' = '2871933948'
+}
 function Find-ModFolder([string] $packageId) {
-    # Reuse the functional suite's cache, but verify both the search root and packageId.
-    $cachePath = Join-Path $env:TEMP 'rimworld-modfolder-cache.json'
-    if (Test-Path $cachePath) {
-        try {
-            $cache = Get-Content $cachePath -Raw -Encoding UTF8 | ConvertFrom-Json
-            $candidate = $cache.PSObject.Properties[$packageId].Value
-            if ($candidate) {
-                $root = [IO.Path]::GetFullPath($WorkshopPath).TrimEnd('\') + '\'
-                $candidate = [IO.Path]::GetFullPath($candidate)
-                if ($candidate.StartsWith($root, [StringComparison]::OrdinalIgnoreCase)) {
-                    [xml] $about = Get-Content (Join-Path $candidate 'About\About.xml') -Raw -Encoding UTF8
-                    if ($about.ModMetaData.packageId.Trim() -ieq $packageId) { return $candidate }
-                }
-            }
-        } catch { } # A missing or stale entry falls back to discovery.
+    $id = $script:workshopIds[$packageId]
+    if (-not $id) { return $null }
+    $folder = Join-Path $WorkshopPath $id
+    $aboutPath = Join-Path $folder 'About\About.xml'
+    if (-not (Test-Path $aboutPath)) { return $null }
+    $text = [System.IO.File]::ReadAllText($aboutPath)
+    # A mod's own packageId is not always the first in the file: dependencies carry theirs too, and
+    # Vanilla Animals Expanded lists Harmony's before its own.
+    foreach ($tag in 'modDependencies', 'modDependenciesByVersion', 'loadAfter', 'loadBefore', 'incompatibleWith', 'forceLoadAfter', 'forceLoadBefore') {
+        $text = [regex]::Replace($text, "(?s)<$tag>.*?</$tag>", '')
     }
-    foreach ($about in [System.IO.Directory]::EnumerateFiles($WorkshopPath, 'About.xml', 'AllDirectories')) {
-        if ((Split-Path (Split-Path $about -Parent) -Leaf) -ne 'About') { continue }
-        $text = [System.IO.File]::ReadAllText($about)
-        # A mod's own packageId is not always the first one in the file: dependencies carry
-        # theirs too, and Vanilla Animals Expanded lists Harmony's before its own. Drop every
-        # block that can hold someone else's identifier before looking.
-        foreach ($tag in 'modDependencies', 'modDependenciesByVersion', 'loadAfter', 'loadBefore', 'incompatibleWith', 'forceLoadAfter', 'forceLoadBefore') {
-            $text = [regex]::Replace($text, "(?s)<$tag>.*?</$tag>", '')
-        }
-        $m = [regex]::Match($text, '<packageId>([^<]+)</packageId>')
-        if ($m.Success -and $m.Groups[1].Value.Trim() -ieq $packageId) {
-            return (Split-Path (Split-Path $about -Parent) -Parent)
-        }
-    }
+    $m = [regex]::Match($text, '<packageId>([^<]+)</packageId>')
+    if ($m.Success -and $m.Groups[1].Value.Trim() -ieq $packageId) { return $folder }
     return $null
 }
 
