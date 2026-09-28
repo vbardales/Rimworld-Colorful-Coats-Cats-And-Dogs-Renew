@@ -24,7 +24,7 @@ workshop:     3806769444 (0.1.0, item creation only; private, as Steam creates e
 remaining:
   - unverified: never seen running in game
   - unverified: the tints of the 19 Stray Dogs dogs have never been seen on their sprites, which live in an asset bundle unreadable from disk
-  - unverified: execute scenarios 0-7, check Player.log, new colony, existing save, save/reload and add/remove; English only is proposed (no owned text, see Tests/Pickle/README.md "Passes"), pending the owner's confirmation
+  - unverified: execute scenarios 0-7, check Player.log, new colony, existing save, save/reload and add/remove; English only, confirmed by the owner on 2026-09-28 (no owned text, see Tests/Pickle/README.md "Passes")
   - unverified: the Pickle suite (Tests/Pickle, 38 scenarios in three passes) is written and its step assembly builds, but no run has been filed; nothing in it has a result. Its @review captures (4) are the only evidence for scenario 2 and must be opened and read
   - unverified: the feature phrases have not been compiled against the step expressions (no Check-Steps.ps1 for this suite yet); an undefined step would only show on the first run
 session:      local_c77edc6e-276f-43fc-8c2d-fea14a5b8b01

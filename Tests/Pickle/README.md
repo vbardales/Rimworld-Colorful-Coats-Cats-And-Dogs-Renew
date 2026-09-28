@@ -33,7 +33,7 @@ Pickle is limited to what needs a running game:
 
 Three passes, three launches. No French launch: the mod owns no player-facing text
 (`localization: not_applicable` in `STATUS.md`), so a French pass would only re-check the game's own
-strings. That is a decision, not an oversight; reopen it if the mod ever gains text.
+strings. That is a decision, not an oversight, and the owner confirmed it on 2026-09-28; reopen it if the mod ever gains text.
 
 | Pass | Map | Feature | What it establishes |
 | --- | --- | --- | --- |
