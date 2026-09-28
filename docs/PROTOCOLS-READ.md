@@ -21,8 +21,8 @@ re-read one that did. Update the row when a document is re-read, whether or not 
 | `../PickleTools/Headless/README.md` | not yet read | - | pending - needed before the first ticket is actually filed |
 | `../DalmatiansRenew/Tests/Pickle/` | 2026-09-28 | working tree | yes - the model suite: `Scene`, coat steps, camera framing, pass maps, README layout |
 | `../Rimworld-Release-Admin/docs/OPERATIONS.md` | not yet read | — | pending — needed only at the actual `publish` dispatch, not before |
-| `../Rimworld-Ticket-Dispatcher/docs/WELCOME.md` | not yet read | — | pending — needed at first Pickle-run submission (`REGISTER`) |
-| `../Rimworld-Ticket-Dispatcher/docs/SUBMIT.md` | not yet read | — | pending — needed at first Pickle-run submission |
+| `../Rimworld-Ticket-Dispatcher/docs/WELCOME.md` | 2026-09-28 | working tree (not a git-tracked doc; 12 663 bytes) | yes, read in full - `-Filter` terms, `-DepMap` and the load order (the mod under test loads LAST, loadAfter is not what orders a staging), one request per pass, no SHA in a request, keep the tree frozen until RUN_DONE, do not watch the queue |
+| `../Rimworld-Ticket-Dispatcher/docs/SUBMIT.md` | 2026-09-28 | working tree (13 983 bytes) | yes, read in full - every option, the exit codes (7 = nothing played, 2 = machine busy), `-RunTimeoutMinutes` (a filter naming a file is a targeted run: 20 min unless given) |
 
 ## Not yet applicable to this mod
 
