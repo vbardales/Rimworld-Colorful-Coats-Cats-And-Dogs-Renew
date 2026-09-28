@@ -1,0 +1,14 @@
+# Pass 3: the mods that already paint coats for animals in this list, which this mod must stand
+# aside for: Animal Variety Coats (vanilla cat, husky, labrador), Erin's Cat Overhaul (vanilla
+# cat, nineteen coats) and Colorful Coats - Vanilla Animals Expanded! Renew (fourteen VAE breeds).
+# Order matters and is the one their metadata declares: Animal Variety Coats before Erin's Cat
+# Overhaul, all of them before this mod. Vanilla Animals Expanded and its framework come first
+# because the sibling port patches their defs. Every mod that could carry a second coat list is
+# staged, so a duplicate-field error has every chance to appear.
+OskarPotocki.VanillaFactionsExpanded.Core 2023507013
+VanillaExpanded.VanillaAnimalsExpanded 2871933948
+cucumpear.azrael.varietycoats 1511926373
+Erin.Cats 2763428090
+nelim.colorfulcoats.vaerenew path:ColorfulCoatsVAERenew/Mod
+nelim.colorfulcoats.catsanddogs path:ColorfulCoatsCatsAndDogsRenew/Mod
+nelim.pickletools.screenshotmode path:PickleTools/ScreenshotMode/Mod

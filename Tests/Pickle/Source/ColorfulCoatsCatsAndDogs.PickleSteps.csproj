@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net48</TargetFramework>
+    <AssemblyName>ColorfulCoatsCatsAndDogs.PickleSteps</AssemblyName>
+    <RootNamespace>ColorfulCoatsCatsAndDogs.PickleSteps</RootNamespace>
+    <LangVersion>latest</LangVersion>
+    <Nullable>disable</Nullable>
+    <Deterministic>true</Deterministic>
+    <DebugType>none</DebugType>
+    <OutputPath>..\Mod\Pickle\Assemblies\</OutputPath>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <NoWarn>$(NoWarn);CS1591</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Krafs.Rimworld.Ref" Version="1.6.*-*" ExcludeAssets="runtime" PrivateAssets="all" />
+    <PackageReference Include="Krafs.Publicizer" Version="2.*" PrivateAssets="all" />
+    <PackageReference Include="Lib.Harmony" Version="2.*" ExcludeAssets="runtime" PrivateAssets="all" />
+    <PackageReference Include="RimWorks.Pickle.Ref" Version="4.*" ExcludeAssets="runtime" PrivateAssets="all" />
+  </ItemGroup>
+  <ItemGroup>
+    <!-- AlternateGraphic.texPath and .color are private in the real assembly; the reference
+         package ships them public, so this only makes the build match what the game really has. -->
+    <Publicize Include="Assembly-CSharp" />
+  </ItemGroup>
+</Project>

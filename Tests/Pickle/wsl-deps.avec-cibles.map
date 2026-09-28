@@ -1,0 +1,11 @@
+# Pass 2: the three mods this one paints for - Stray Dogs, Let's Have a Cat!, Vanilla Animals
+# Expanded - and Vanilla Expanded Framework, which Vanilla Animals Expanded needs. None of them
+# excludes another, so one pass covers all three. This mod is named last: it declares loadAfter on
+# every one of them, and the staging script would otherwise place the mod under test wherever it
+# likes, so its own line is what fixes the order.
+OskarPotocki.VanillaFactionsExpanded.Core 2023507013
+VanillaExpanded.VanillaAnimalsExpanded 2871933948
+Qux.stray.dogs 3549460027
+akairo.LetsHaveaCat 3682940618
+nelim.colorfulcoats.catsanddogs path:ColorfulCoatsCatsAndDogsRenew/Mod
+nelim.pickletools.screenshotmode path:PickleTools/ScreenshotMode/Mod

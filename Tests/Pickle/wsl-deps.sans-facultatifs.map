@@ -1,0 +1,4 @@
+# Pass 1: the mod and nothing optional, so only the four base-game pets can carry coats. The only
+# extra is the development tool that hides the HUD around a window for the review captures.
+# Selected with -DepMap wsl-deps.sans-facultatifs.map.
+nelim.pickletools.screenshotmode path:PickleTools/ScreenshotMode/Mod
