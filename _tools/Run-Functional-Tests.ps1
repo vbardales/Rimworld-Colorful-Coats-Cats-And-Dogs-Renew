@@ -661,7 +661,7 @@ Test-That 'About.xml loads after every mod that paints coats for the same animal
     [xml] $about = Get-Content (Join-Path $ModPath 'About\About.xml') -Raw -Encoding UTF8
     $after = @($about.ModMetaData.loadAfter.li)
     $need = @('Qux.stray.dogs','akairo.LetsHaveaCat','VanillaExpanded.VanillaAnimalsExpanded',
-              'nelim.colorfulcoats.vaerenew','Erin.Cats','cucumpear.azrael.varietycoats')
+              'nelim.colorfulcoats.vae','Erin.Cats','cucumpear.azrael.varietycoats')
     $missing = @($need | Where-Object { $after -notcontains $_ })
     $missing | ForEach-Object { Say "missing: $_" }
     $missing.Count -eq 0

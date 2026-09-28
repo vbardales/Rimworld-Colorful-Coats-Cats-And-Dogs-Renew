@@ -26,7 +26,8 @@ remaining:
   - unverified: the tints of the 19 Stray Dogs dogs have never been seen on their sprites, which live in an asset bundle unreadable from disk
   - unverified: execute scenarios 0-7, check Player.log, new colony, existing save, save/reload and add/remove; English only, confirmed by the owner on 2026-09-28 (no owned text, see Tests/Pickle/README.md "Passes")
   - unverified: the Pickle suite (Tests/Pickle, 38 scenarios in three passes) is written and its step assembly builds, but no run has been filed; nothing in it has a result. Its @review captures (4) are the only evidence for scenario 2 and must be opened and read
-  - unverified: the feature phrases have not been compiled against the step expressions (no Check-Steps.ps1 for this suite yet); an undefined step would only show on the first run
+  - unverified: Tests/Pickle/Check-Steps.ps1 (no game) finds every step of the 38 scenarios defined exactly once and every map entry resolving, against the Workshop Pickle build; that says the phrases exist, not that a step does what it says
+  - unverified: the fix of a defect found 2026-09-28, not yet seen in game: About.xml loadAfter named the retired sibling id nelim.colorfulcoats.vaerenew instead of nelim.colorfulcoats.vae, so no load order was declared against the sibling port; the offline suite now asserts the correct id, the in-game proof is pass 3, scenario 1
 session:      local_c77edc6e-276f-43fc-8c2d-fea14a5b8b01
 updated:      2026-09-28, Pickle suite written and built, not yet played; stage unchanged at done, no in-game validation performed
 ---

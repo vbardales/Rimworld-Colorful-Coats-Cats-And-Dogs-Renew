@@ -39,7 +39,7 @@ The original is a single patch file that adds `alternateGraphics` to fourteen `P
 *Vanilla Animals Expanded — Cats and Dogs*, pointing at 78 textures purpleyam painted. All of that
 survives elsewhere: Vanilla Animals Expanded absorbed the Cats and Dogs module, and the fourteen
 breeds still carry purpleyam's painted coats through **Colorful Coats - Vanilla Animals Expanded!
-Renew** (`nelim.colorfulcoats.vaerenew`), where the same textures are shipped byte for byte.
+Renew** (`nelim.colorfulcoats.vae`), where the same textures are shipped byte for byte.
 
 Re-porting the original would therefore have patched the same fourteen defs of the same mod twice.
 What was actually missing was the rest of the cats and dogs on 1.6, which is what this mod is.

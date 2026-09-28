@@ -9,10 +9,10 @@ Feature: Standing aside for the mods that paint
   Scenario: the painters are loaded, before this mod
     Then mod "cucumpear.azrael.varietycoats" is loaded
     And mod "Erin.Cats" is loaded
-    And mod "nelim.colorfulcoats.vaerenew" is loaded
+    And mod "nelim.colorfulcoats.vae" is loaded
     And mod "nelim.colorfulcoats.catsanddogs" loads after "cucumpear.azrael.varietycoats"
     And mod "nelim.colorfulcoats.catsanddogs" loads after "Erin.Cats"
-    And mod "nelim.colorfulcoats.catsanddogs" loads after "nelim.colorfulcoats.vaerenew"
+    And mod "nelim.colorfulcoats.catsanddogs" loads after "nelim.colorfulcoats.vae"
 
   # Erin's Cat Overhaul loads after Animal Variety Coats and appends its list without checking, so a
   # red here may be theirs and not ours. Read the log line before concluding: if it names an animal

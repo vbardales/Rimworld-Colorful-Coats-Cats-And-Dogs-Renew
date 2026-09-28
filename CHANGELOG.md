@@ -7,6 +7,18 @@ All notable changes to this mod are documented here.
 First release. Not a port: purpleyam's **Colorful Coats - Cats and Dogs!** had nothing left to
 port, so this is its idea rebuilt against the cats and dogs that are alive on 1.6.
 
+### Fixed
+
+- `About.xml` `loadAfter` named `nelim.colorfulcoats.vaerenew`, which is no longer the packageId of the
+  sibling port (now `nelim.colorfulcoats.vae`). A `loadAfter` on an id that does not exist is ignored
+  without a line of log, so this mod had no declared order against the sibling. Corrected in
+  `About.xml`, the attribution copies, the load-order table, the functional suite and the Pickle pass map.
+
+### Changed
+
+- `packageId` `nelim.colorfulcoats.catsanddogsrenew` becomes `nelim.colorfulcoats.catsanddogs`. The
+  0.1.0 item was created with the old value; nothing was published, and it was in no active mod list.
+
 ### Added
 
 - Coats for **19 dogs of Stray Dogs (rescued)** — the seventeen Spidercamp breeds that ship with

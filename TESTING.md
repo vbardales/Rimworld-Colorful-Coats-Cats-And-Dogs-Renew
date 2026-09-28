@@ -57,7 +57,7 @@ None of that says a coat appears on a dog. That is what the scenarios are for.
 Qux.stray.dogs                          Stray Dogs (rescued)             3549460027
 akairo.LetsHaveaCat                     Let's Have a Cat! Continued      3682940618
 VanillaExpanded.VanillaAnimalsExpanded  Vanilla Animals Expanded         2871933948
-nelim.colorfulcoats.vaerenew            Colorful Coats - VAE! Renew
+nelim.colorfulcoats.vae            Colorful Coats - VAE! Renew
 Erin.Cats                               Erin's Cat Overhaul              2763428090
 cucumpear.azrael.varietycoats           Animal Variety Coats             1511926373
 nelim.colorfulcoats.catsanddogs         this mod                         last

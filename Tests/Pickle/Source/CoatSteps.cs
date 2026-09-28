@@ -170,17 +170,6 @@ namespace ColorfulCoatsCatsAndDogs.PickleSteps
                 $"the batch of {pawns.Count} wears {seen.Count} coat(s) ({string.Join(", ", seen)}); expected at least {minimum}");
         }
 
-        // Nothing is stored: TryGetAlternate rolls from thingIDNumber every time it is asked, so a
-        // coat cannot drift and the batch is expected to be entirely original where the kind has no list.
-        [Then("Colorful Coats no animal of the batch wears an alternate coat")]
-        public void NoAlternate(PickleContext ctx)
-        {
-            var pawns = Scene.Batch(ctx);
-            ctx.Require(pawns.Count > 0, "no batch was spawned");
-            var wearing = pawns.Count(p => p.GetGraphicIndex() >= 0);
-            ctx.Assert(wearing == 0, $"{wearing} of {pawns.Count} animals wear an alternate coat and none should");
-        }
-
         [When("Colorful Coats records the coat of {string}")]
         public void RecordCoat(PickleContext ctx, string alias) =>
             Scene.Coats[alias] = Scene.Named(ctx, alias).GetGraphicIndex();
