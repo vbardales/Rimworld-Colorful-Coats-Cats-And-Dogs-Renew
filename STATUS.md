@@ -17,6 +17,7 @@ xml_tests: passed; coats, injected fields, classes, def references, third-party 
 licence:      silent
 licence_own:  MIT; LICENSE and Mod/LICENSE; covers this repository's contributions, not purpleyam's name or measured palette
 licence_at:   checked 2026-09-12; source not updated to 1.6 (original 1.3, official successor 1.4); no licence or permission found in source files, Steam descriptions and all comments; upstream repository searched but not found
+upstream_mod_remotes: N/A (no git repository found for purpleyam's "Colorful Coats - Cats and Dogs!", Workshop 2388932599)
 dependencies: none
 showcase:     complete
 tested_on:
