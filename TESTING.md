@@ -91,8 +91,8 @@ tag (the three passes decide which mods are present, by pass map, and each playe
 | --- | --- | --- |
 | 0. loads, patches take, no red | pass 1 `the mod is loaded...`, `the operations aimed at absent mods left no trace`, `no errors were logged`; Player.log grepped for the four lines the scenario names, 0 hits | automated, green |
 | 1. a dog gets a coat | pass 1 forty huskies, pass 2 forty standard poodles (`wear several different coats`) | automated, green |
-| 2. a tint reads as fur | `@review` captures opened and read: huskies, standard poodles, newfoundlands, persians | **partly done**: the other 16 dogs and 10 cats were never looked at |
-| 3. one coat for life | `a husky and a cat / a dog and a cat keep their coats through a save and reload` | save and reload automated, green; **puppy growing up, and adding or removing the mod on a running colony, not played** |
+| 2. a tint reads as fur | `@review` captures read: huskies, standard poodles, newfoundlands, persians; `08-revue` (34 breeds) written, first run crashed, not yet played | **partly done** |
+| 3. one coat for life | save and reload (green, passes 1-3); puppies/kittens keep their coats on growing up (2bis-a, 2bis-b green; 2bis-c pending); removal chain green (`7faf`); add-to-a-running-colony `32-ajout` filed (`def6`) | **mostly done**, `32` not yet played |
 | 4. two mods never dress one animal | pass 3 (`no animal received two coat lists`, Erin's cat, Animal Variety Coats husky and labrador, sibling port) | automated, green |
 | 5. none of the four target mods | pass 1 | automated, green |
 | 6. the deliberate absences | pass 2 `the black cat has no coats`, `animals that already had coats were left alone` | not a test: a list of things not to report; the two assertions above cover it |
