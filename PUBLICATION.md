@@ -65,10 +65,9 @@ Fixed since the item was created: the load order against Colorful Coats - Vanill
 
 ## Description
 
-`About.xml` is read once, when the item is created, so correcting it now changes nothing on the page. The
-page description is updated by the CI (`update_description` of the manual workflow), from a Markdown block to
-write here before `prepublished`. Today's `About.xml` text still says final validation in game is pending and
-lacks the `IF I GO QUIET`, `AI-GENERATED` and `THANKS` blocks in PUBLISHING.md's order: both are to redo.
+`About.xml` is read once, when the item is created, so it does not change the live page: the page description is updated by the CI (`update_description` of the manual workflow), from a Markdown block to write here before `prepublished`. The `<description>` of `About.xml` was rewritten on 2026-10-02 to carry, after the body and in PUBLISHING.md order, `IF I GO QUIET` (clause word for word), `AI-GENERATED`, `THANKS`, the line pointing to `ATTRIBUTION.md` and the licence, and the `[url=...]Source code on GitHub[/url]` link. It no longer says that in-game validation is pending.
+
+**To confirm by the owner:** the `AI-GENERATED` block says who did what only for what the repository documents (patches, checks, suites, docs by Claude; runs played by Pickle). It says nothing about the ModIcon and the Preview, whose tooling is not recorded here; add a sentence if it should.
 
 ## After the upload
 

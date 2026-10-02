@@ -51,11 +51,19 @@ The idea, the name and the whole shape of this mod are purpleyam's. Their Colorf
 
 No file of purpleyam's is included here; the colours are theirs, the measuring is mine. Original mod: https://steamcommunity.com/sharedfiles/filedetails/?id=2388932599 - declares 1.3 and nothing further.
 
-Thanks to purpleyam for the idea, to SpiderCamp and Qux for the dogs, to akairo and Bernau31 for the cats, and to Oskar Potocki, Sarg Bjornson and Erin for the animals of Vanilla Animals Expanded.
-
-The work was done with the help of an AI assistant (Claude, by Anthropic), under human direction. Automated and XML checks have passed. Final functional validation in game remains pending.
+IF I GO QUIET
 
 If I do not answer within a reasonable time after being contacted, anyone may freely update this or any other of my mods, including publishing a continuation of it. All credit must be preserved.
+
+AI-GENERATED
+
+The XML patches, the checks, the test suites and the documentation were written with the help of an AI assistant (Claude, by Anthropic), under human direction. The in-game test runs were played by Pickle.
+
+THANKS
+
+Thanks to purpleyam for the idea and the coats, to SpiderCamp and Qux for the dogs, to akairo and Bernau31 for the cats, and to Oskar Potocki, Sarg Bjornson and Erin for the animals of Vanilla Animals Expanded. Thanks to the authors of Pickle, RimLogging and Harmony, on which the tests run (development only, not part of this mod).
+
+Full credits and the licence are in ATTRIBUTION.md and LICENSE, in the source repository below.
 
 [url=https://github.com/vbardales/Rimworld-Colorful-Coats-Cats-And-Dogs-Renew]Source code on GitHub[/url]</description>
 </ModMetaData>
