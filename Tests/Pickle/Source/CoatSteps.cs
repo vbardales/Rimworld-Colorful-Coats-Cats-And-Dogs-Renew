@@ -266,6 +266,22 @@ namespace ColorfulCoatsCatsAndDogs.PickleSteps
             }
         }
 
+        // The colonist of the photograph. She is one of the studio's actors, so she exists already: she is only moved,
+        // and added to the batch so the camera frames her with the row.
+        [Given("Colorful Coats places the colonist {string} at the cell {int} {int} facing the camera")]
+        public void PlaceColonist(PickleContext ctx, string nickname, int x, int z)
+        {
+            var map = Scene.Map(ctx);
+            var pawn = map.mapPawns.FreeColonistsSpawned.FirstOrDefault(p => p.Name != null && p.Name.ToStringShort == nickname);
+            ctx.Require(pawn != null, $"no colonist named {nickname} is on the map");
+            var cell = new IntVec3(x, 0, z);
+            ctx.Require(cell.InBounds(map) && cell.Standable(map), $"the cell {cell} is not standable");
+            pawn.jobs?.StopAll();
+            pawn.DeSpawn();
+            GenSpawn.Spawn(pawn, cell, map, Rot4.South);
+            Scene.RememberInBatch(pawn);
+        }
+
         // The camera for a row: centred on it, close enough that each animal fills a fair share of the frame.
         [When("Colorful Coats frames the row at zoom {int}", TimeoutSeconds = 15f)]
         public async Task FrameRow(PickleContext ctx, int rootSize)
