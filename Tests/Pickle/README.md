@@ -45,6 +45,9 @@ strings. That is a decision, not an oversight, and the owner confirmed it on 202
 | 2bis-b. Let's Have a Cat! alone | `wsl-deps.lets-have-a-cat.map` | `02b` | Same for the cats; kittens |
 | 2bis-c. Vanilla Animals Expanded alone | `wsl-deps.vae.map` | `02c` | Same, with its framework, without the sibling port; beagle puppies |
 | 3. Removal chain | `wsl-deps.retrait.map` | `31` then `retrait-check` | Two launches, one lock: `-Filter 31-retrait-write -Then retrait-check -ThenWithout nelim.colorfulcoats.catsanddogs,nelim.colorfulcoats.catsanddogs.pickletests`. A game saved with the mod loads and runs without it, and the save holds nothing of the mod |
+| 2ter. Review captures, every other breed | `wsl-deps.avec-cibles.map` | `08` | 34 `@review` captures (scenario 2): 17 Stray Dogs, 10 cats, 7 VAE breeds. Each opened and described in `docs/runs/` |
+| Add to a running colony | `wsl-deps.stray-dogs.map` | `32` | Needs the save `colorfulcoats-without-mod` (written by the removal chain) copied to `Tests/Pickle/Mod/Pickle/Fixtures/` first |
+| Gallery | `wsl-deps.galerie.map` | `07` | Three Workshop shots on the studio colony |
 
 **No declared-incompatibility pass:** `About.xml` declares no `incompatibleWith`, so there is no
 claim to go and look at. The three painters are `loadAfter` entries, covered by pass 3.
