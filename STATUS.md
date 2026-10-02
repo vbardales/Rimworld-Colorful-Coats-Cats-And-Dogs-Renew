@@ -323,6 +323,7 @@ to anyone — not a name, not an idea traceable to one mod, not a value derived 
 > Historical. On 2026-10-02 the files named below (`Art/preview.html`, `render-preview.cjs`, `preview-palette.json`,
 > `preview-qa.json`, `preview-copy.json`, `Preview-layout.html`, `Preview-unofficial-source.png`, `Art/Preview.png`,
 > the QA images) were replaced by `Art/Preview.config.json` and the shared renderer; see "Preview source migration" at the end of this file.
+> To re-render, run `node ../scripts/Render-Preview.cjs` from this folder, not the `node Art/render-preview.cjs` quoted below.
 
 - Source illustration: `Art/Preview.png`, copied unchanged from the existing
   text-free `Art/Preview-source.png`. No illustration was generated or replaced.

@@ -109,7 +109,9 @@ two faults in the suite itself found that way.
 Mod/          published — the junction into RimWorld/Mods points here
   About/
   Patches/
-Art/          sources of the showcase and the icon, the Preview.config.json the shared renderer reads, the Gallery
+Art/          sources of the showcase and the icon, Preview.config.json, the Gallery. The Preview is rendered
+              from inside this folder with `node ../scripts/Render-Preview.cjs`, which writes
+              Mod/About/Preview.png, Art/Gallery/0-preview.png and the two .ico files
 _tools/       the two checkers, the tool that recovers the palette, and the in-game scenarios
 ```
 
