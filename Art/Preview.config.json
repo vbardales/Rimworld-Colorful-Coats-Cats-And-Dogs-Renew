@@ -2,18 +2,33 @@
   "title": "Colorful Coats - Cats and Dogs! Renew (unofficial)",
   "titleSize": 38,
   "titleParts": [
-    { "text": "Colorful Coats", "scale": 1 },
-    { "break": true },
-    { "text": "Cats and Dogs!", "scale": 1 },
-    { "text": "Renew", "scale": 0.65, "font": "ui", "color": "secondary" }
+    {
+      "text": "Colorful Coats",
+      "scale": 1
+    },
+    {
+      "break": true
+    },
+    {
+      "text": "Cats and Dogs!",
+      "scale": 1
+    },
+    {
+      "text": "Renew",
+      "scale": 0.65,
+      "font": "ui",
+      "color": "secondary"
+    }
   ],
   "suffix": "",
   "tag": "(unofficial)",
   "tagInline": true,
-  "copyLines": ["Coat variations for forty-one cat and dog breeds that still have only one."],
+  "copyLines": [
+    "Coat variations for forty-one cat and dog breeds that still have only one."
+  ],
   "layout": "panel",
   "panelAnchor": "top-left",
-  "backgroundFile": "Preview.png",
+  "backgroundFile": "Preview-source.png",
   "backgroundPosition": "center",
   "backgroundSize": "cover",
   "echo": {
@@ -30,7 +45,7 @@
     "flipX": true
   },
   "iconBadge": {
-    "file": "ModIcon-cutout.png",
+    "file": "ModIcon-source.png",
     "corner": "bottom-left",
     "width": 220,
     "outline": false,
@@ -38,5 +53,12 @@
     "veilSize": 275,
     "veilLeft": -55,
     "veilBottom": -61
+  },
+  "palette": {
+    "veil": "#302820",
+    "inkPrimary": "#F2ECE1",
+    "inkSecondary": "#E8BA73",
+    "accent": "#92C83E",
+    "badgeInk": "#17120E"
   }
 }
