@@ -45,3 +45,7 @@ desktop.ini
 # short text summary in docs/runs/ instead. See AGENTS.md and PickleTools/README.md.
 Tests/Pickle/Evidence/
 evidence/
+
+# DirectDraw Surface textures: large binaries, never versioned here. This mod ships none (it
+# borrows every sprite from the animals it tints); the rule keeps source or scratch textures out.
+*.dds

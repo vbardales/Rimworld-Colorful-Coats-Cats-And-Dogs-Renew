@@ -78,3 +78,28 @@ thing to watch, one way of being wrong, and the line in `Player.log` that says s
 The one that matters most is the second. The tints are purpleyam's and were measured, but they were
 measured against Vanilla Animals Expanded's sprites, and the dogs of Stray Dogs keep their textures
 in a Unity asset bundle — so what those colours land on has never been seen outside a game.
+
+## Manual scenarios against what the game has already shown (2026-10-02)
+
+Criterion for `tested`: no manual test left to validate. Each of the eight scenarios of
+`_tools/FUNCTIONAL-SCENARIOS.md` is either automated and green, or listed as not applicable with its
+reason. State on revision `3dad095` (patches unchanged since); no `@wip` scenario, no `@requires`
+tag (the three passes decide which mods are present, by pass map, and each played in full:
+38 of 38, `exitReason: passed`, `setName` read in each `summary.json`).
+
+| Scenario | Covered by | State |
+| --- | --- | --- |
+| 0. loads, patches take, no red | pass 1 `the mod is loaded...`, `the operations aimed at absent mods left no trace`, `no errors were logged`; Player.log grepped for the four lines the scenario names, 0 hits | automated, green |
+| 1. a dog gets a coat | pass 1 forty huskies, pass 2 forty standard poodles (`wear several different coats`) | automated, green |
+| 2. a tint reads as fur | `@review` captures opened and read: huskies, standard poodles, newfoundlands, persians | **partly done**: the other 16 dogs and 10 cats were never looked at |
+| 3. one coat for life | `a husky and a cat / a dog and a cat keep their coats through a save and reload` | save and reload automated, green; **puppy growing up, and adding or removing the mod on a running colony, not played** |
+| 4. two mods never dress one animal | pass 3 (`no animal received two coat lists`, Erin's cat, Animal Variety Coats husky and labrador, sibling port) | automated, green |
+| 5. none of the four target mods | pass 1 | automated, green |
+| 6. the deliberate absences | pass 2 `the black cat has no coats`, `animals that already had coats were left alone` | not a test: a list of things not to report; the two assertions above cover it |
+| 7. the poodle's four coats | pass 2 `the standard poodle wears purpleyam's four poodle coats` plus its capture | automated, green |
+
+Left before `tested`: scenario 2 for the breeds not yet photographed, and the two unplayed parts of
+scenario 3. Each is either written as a Pickle scenario and played, or declared not applicable by the
+owner with a reason (the second part of 3 rests on the fact that the mod stores nothing in a save,
+which is a reading of the code and not a play). English only for any manual pass; no French pass,
+the mod owns no text (owner, 2026-09-28).

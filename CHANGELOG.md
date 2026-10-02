@@ -93,11 +93,15 @@ port, so this is its idea rebuilt against the cats and dogs that are alive on 1.
 
 ## [0.1.0] — 2026-09-28
 
-Creates the Workshop item. Nothing else: no code change, no artwork change, no documentation
-change. `Mod/` was sent exactly as it stood in the commit that follows, and this entry exists so
-that commit is traceable to what Steam actually received.
+Creation of a publishIdFile: the first upload exists only to create the Workshop item and obtain
+`About/PublishedFileId.txt`. The item is private, as Steam creates every item, and it is neither
+tested nor public. Nothing else changed in this version.
+
+`Mod/` was sent exactly as it stood at commit `01e852a`. That upload carried the packageId
+`nelim.colorfulcoats.catsanddogsrenew` and the stale `loadAfter` entry that the `[Unreleased]`
+section corrects; the item will show those until the next upload. The commit that adds the file is
+`97c19d3`, `Add published Workshop file ID for 0.1.0`.
 
 ### Added
 
-- `About/PublishedFileId.txt` — the Workshop item is created (private, as Steam creates every
-  item). Its ID is recorded in `STATUS.md`.
+- `About/PublishedFileId.txt`: Workshop item `3806769444`, recorded in `STATUS.md`.

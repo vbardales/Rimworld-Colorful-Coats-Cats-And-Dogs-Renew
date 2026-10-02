@@ -1,36 +1,37 @@
 # Protocols read for this mod
 
-Tracks which shared protocol documents were read for an audit or a work session on this mod, at
-which revision, so a later pass does not have to re-read a document that did not move — and does
-re-read one that did. Update the row when a document is re-read, whether or not it changed.
+Which shared documents were read, at which version, and whether they were of use here, so a later
+session re-reads only what moved. Version = size in bytes and last-write time on disk (the monorepo
+git is too slow to ask). Update the row when a document is re-read, changed or not.
 
-| document | last read | revision/date read | useful here? |
+Last full pass: 2026-10-02.
+
+| document | read | version (bytes, mtime) | useful here? |
 |---|---|---|---|
-| `../AGENTS.md` | 2026-09-28 | working tree, 2026-09-28 | yes — session title format, evidence policy, publishing-by-CI gates |
-| `../AUDIT.md` | 2026-09-28 | working tree, 2026-09-28 | yes — the ordered workflow chain, the whole `stage` vocabulary |
-| `../PUBLISHING.md` | 2026-09-13 | as of prior audit | yes — description BBCode order, `PUBLICATION.md` contents |
-| `../STYLE_RIMWORLD.md` | 2026-09-13 | as of prior audit | yes — ModIcon control criteria, Preview contrast/camera checks |
-| `../MOD_SETTINGS.md` | 2026-09-13 | as of prior audit | not applicable — mod has no settings, confirmed and recorded in STATUS.md |
-| `../TRANSLATIONS.md` | 2026-09-13 | as of prior audit | not applicable — mod has no owned player-facing text |
-| `../WORKSHOP_COMMENTS.md` | not yet read | — | pending — needed only at `tested -> prepublished`, for the thank-you comments |
-| `../scripts/SEARCHING.md` | 2026-09-28 | working tree; first 60 lines (of 12 230 bytes) | yes for one rule - never walk an unbounded root; `Search-Workshop.sh` for the Workshop. It made this mod drop a whole-Workshop walk from two of its own scripts. The rest (assembly searches, ledger mode) has no target here |
-| `../PickleTools/Authoring/README.md` | 2026-09-28 | working tree (its own header: reviewed 2026-09-22) | yes, read in full - suite layout, pass matrix, waits, evidence; the model for `Tests/Pickle/` |
-| `../PickleTools/TESTING.md` | 2026-09-28 | working tree; only "What to keep after a test" read | yes - the keep/delete table copied into `Tests/Pickle/README.md` |
-| `../PickleTools/docs/steps.md` | 2026-09-28 | working tree; grepped for spawn, animal, camera, screenshot, patched, not read whole | partly - no shared step spawns an animal or reads a coat, hence the local `CoatSteps.cs` |
-| `../PickleTools/README.md` | not yet read | - | pending - only its table of shared tools would matter here |
-| `../PickleTools/Headless/README.md` | not yet read | - | pending - needed before the first ticket is actually filed |
-| `../DalmatiansRenew/Tests/Pickle/` | 2026-09-28 | working tree | yes - the model suite: `Scene`, coat steps, camera framing, pass maps, README layout |
-| `../Rimworld-Release-Admin/docs/OPERATIONS.md` | not yet read | — | pending — needed only at the actual `publish` dispatch, not before |
-| `../Rimworld-Ticket-Dispatcher/docs/WELCOME.md` | 2026-09-28 | working tree (not a git-tracked doc; 12 663 bytes) | yes, read in full - `-Filter` terms, `-DepMap` and the load order (the mod under test loads LAST, loadAfter is not what orders a staging), one request per pass, no SHA in a request, keep the tree frozen until RUN_DONE, do not watch the queue |
-| `../Rimworld-Ticket-Dispatcher/docs/SUBMIT.md` | 2026-09-28 | working tree (13 983 bytes) | yes, read in full - every option, the exit codes (7 = nothing played, 2 = machine busy), `-RunTimeoutMinutes` (a filter naming a file is a targeted run: 20 min unless given) |
+| `../AGENTS.md` | 2026-10-02 | 2 716, 2026-09-29 09:11 | yes: evidence rule, CI publishing guard rails, 0.1.0 |
+| `../AUDIT.md` | 2026-10-02, whole | 68 687, 2026-09-29 00:55 | yes: chain, `tested` criteria, `done -> showcase/preTest`, 0.1.0 CHANGELOG format, session title |
+| `../PUBLISHING.md` | 2026-10-02 | 63 817, 2026-10-01 20:05 | yes: description order, `PUBLICATION.md` contents, gallery, CI |
+| `../STYLE_RIMWORLD.md` | 2026-10-02 | 50 745, 2026-10-01 22:28 | little: only the ModIcon/Preview control criteria, already settled |
+| `../MOD_SETTINGS.md` | 2026-10-02 | 7 166, 2026-09-13 | yes, to justify `not_applicable` once; unchanged |
+| `../TRANSLATIONS.md` | 2026-10-02 | 13 802, 2026-09-30 16:43 | yes, to justify `not_applicable`; moved since 2026-09-13, plurals rule has no target here |
+| `../WORKSHOP_COMMENTS.md` | 2026-10-02 | 28 446, 2026-09-29 09:29 | not yet: only at `tested -> prepublished`, for the thank-you comments |
+| `../scripts/SEARCHING.md` | 2026-10-02 | 12 230, 2026-09-27 | no: Workshop-search rules, nothing to search here; do not re-read unless a script walks the Workshop |
+| `../PickleTools/README.md` | 2026-10-02 | 9 028, 2026-10-01 17:41 | little: table of shared tools, none needed (local `CoatSteps` covers the one gap) |
+| `../PickleTools/Headless/README.md` | 2026-10-02 | 39 421, 2026-09-26 22:52 | yes before any new request: passes, `@wip`, `@requires`, maps (final newline), evidence |
+| `../PickleTools/docs/steps.md` | 2026-10-02 | 33 092, 2026-10-01 17:41 | partly: no shared step spawns an animal or reads a coat |
+| `../PickleTools/Authoring/README.md` | 2026-09-28 | header reviewed 2026-09-22 | yes, the model for `Tests/Pickle/` |
+| `../Rimworld-Release-Admin/docs/OPERATIONS.md` | 2026-10-02 | 15 568, 2026-09-26 23:20 | not yet: only at the real `publish` dispatch |
+| `../Rimworld-Ticket-Dispatcher/docs/WELCOME.md` | 2026-10-02 | 12 663, 2026-09-27 23:25 | yes before any request: `-Filter`, `-DepMap`, no SHA in a request, tree frozen until `RUN_DONE` |
+| `../Rimworld-Ticket-Dispatcher/docs/SUBMIT.md` | 2026-10-02 | 13 983, 2026-09-26 18:18 | yes before any request: options, exit codes (7 nothing played, 2 busy) |
+| `../DalmatiansRenew/Tests/Pickle/` | 2026-09-28 | working tree | yes, the model suite |
 
-## Not yet applicable to this mod
+Own files read this session: `STATUS.md`, `README.md`, `CHANGELOG.md`, `ATTRIBUTION.md`, `LICENSE`,
+`TESTING.md`, `docs/runs/`, `Tests/Pickle/`, `Mod/About/About.xml`. Do not exist in this repository, and
+none is needed yet: `PUBLICATION.md` (due at `tested -> prepublished`), `BACKLOG.md`, `NOTES.md`, `BUGS.md`.
 
-This mod is four XML patch files with no C#, no settings, and no owned player-facing text. A Pickle suite
-was written on 2026-09-28 but not yet played, so the following sections of `AGENTS.md`/`AUDIT.md` have no target
-here and were skipped rather than read closely: the Pickle lock/queue mechanics, the WSL staging
-script, sound-capture rules, and the headless launcher. They become relevant the day the first
-request is actually filed, which is when `Headless/README.md` and the two Ticket-Dispatcher docs
-must be read. The suite exists mainly for scenario 2 of `_tools/FUNCTIONAL-SCENARIOS.md` (does a
-tint read as fur), the one thing here that needs a running game rather than the patch-engine
-harness in `_tools/Run-Functional-Tests.ps1`.
+## Not applicable to this mod
+
+Four XML patch files, no C#, no settings, no owned player-facing text. The sound-capture rules, the
+Prepatcher/Concord notes, the language-switch rules and the publication-screenshot rules have no
+target here. The suite exists for what no offline check can say: whether a tint reads as fur
+(scenario 2 of `_tools/FUNCTIONAL-SCENARIOS.md`).

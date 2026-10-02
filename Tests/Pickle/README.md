@@ -97,13 +97,13 @@ git, and the disk is full.
 | Keep, per pass | Why |
 |---|---|
 | `summary.json`, `summary.md` | The verdict. `exitReason` first |
-| `junit.xml`, `messages.ndjson` | Per-step outcome and failure messages |
-| `Player.log` | Startup, load order, dropped mods, errors outside the scenarios |
+| `junit.xml` | Per-step outcome and failure messages |
 | `evidence-complete.txt` or `no-report.txt` | Says the copy is whole, or that no report exists |
 | **The `@review` captures a person actually opened**, minified to JPEG | The only evidence that tints read as fur: 3 in pass 2 (poodles, newfoundlands, persians), 1 in pass 1 (huskies) |
 | One line in `docs/runs/` per run | The history, as text, never as folders |
 
-Delete: any `screenshots/` folder copied whole, `report.html` once the verdict is written, a report
+Delete once the run is read: `Player.log` and `messages.ndjson` (the log check goes into the one
+`docs/runs/` line: what was grepped for, what was found), any `screenshots/` folder copied whole, `report.html` once the verdict is written, a report
 of a failed or infrastructure attempt once its cause is in `STATUS.md`, and any report for a
 superseded revision once the pass has been repeated on the current one. **Exception, worth stating
 here because it is this mod's only visual evidence:** the `@review` captures of pass 2 are the sole

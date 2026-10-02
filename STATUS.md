@@ -9,33 +9,73 @@ repo:         Rimworld-Colorful-Coats-Cats-And-Dogs-Renew
 visibility:   public
 detached:     yes
 stage:        done
+workflow_stage: done
 stage_workflow: done = ready for final in-game validation; not tested
-audit_revision: e56942774364cf05cd43134e97b07af06d9bb6c9
-audit_date: 2026-09-13
-automated_tests: passed; 22 passed, 0 failed, 0 skipped
-xml_tests: passed; coats, injected fields, classes, def references, third-party types
+audit_revision: c52ce5e5714c4e0c2a948df91e648cd5c1de8387 (+ uncommitted docs, this audit)
+audit_date: 2026-10-02
+automated_tests: passed; 22 passed, 0 failed, 0 skipped (rerun 2026-10-02)
+xml_tests: passed; coats, injected fields, classes, def references, third-party types (rerun 2026-10-02)
 licence:      silent
 licence_own:  MIT; LICENSE and Mod/LICENSE; covers this repository's contributions, not purpleyam's name or measured palette
 licence_at:   checked 2026-09-12; source not updated to 1.6 (original 1.3, official successor 1.4); no licence or permission found in source files, Steam descriptions and all comments; upstream repository searched but not found
-upstream_mod_remotes: N/A (no git repository found for purpleyam's "Colorful Coats - Cats and Dogs!", Workshop 2388932599)
+upstream_mod_remotes: N/A (no git repository found for purpleyam's "Colorful Coats - Cats and Dogs!", Workshop 2388932599; searched again 2026-10-02, only this mod's own Renew repositories come up)
 dependencies: none
 showcase:     complete
-tested_on:
-workshop:     3806769444 (0.1.0, item creation only; private, as Steam creates every item; not tested, not public)
+tested_on:    2026-09-28 (Pickle passes 1-3 in the WSL, rev 3dad095; no manual play)
+workshop:     3806769444 (0.1.0, item creation only; About/PublishedFileId.txt committed in 97c19d3; private, as Steam creates every item; not tested, not public)
 remaining:
-  - verified: the mod runs in game - all three Pickle passes (38 scenarios, rev 3dad095) passed
-  - verified: the tints of the Stray Dogs dogs read as fur - pass 2 opened the standard poodle capture (4 distinct tints: brown, white, cream, sable-pink) and the newfoundland capture (stays dark, a tint barely changes it, as expected); the asset-bundle textures are no longer unseen
-  - unverified: execute scenarios 0-7 of _tools/FUNCTIONAL-SCENARIOS.md by hand (new colony, existing save, save/reload, add/remove); English only, confirmed by the owner on 2026-09-28. The Pickle suite covers most of the same ground under a running game (save/reload is pass 1 scenario 9), but this manual pass has not been done and is still required for `tested`
-  - verified: pass 1 (base game only, rev 3dad095) 10/10 passed, exitReason passed; the huskies capture was opened and the tints read as fur (icy blue, grey, cream, brown) - docs/runs/2026-09-28-pass1.txt, Tests/Pickle/Evidence/2026-09-28-3dad095-pass1
-  - verified: pass 2 (the three target mods, rev 3dad095) 18/18 passed, exitReason passed; no def got two coat lists, animals already coated left alone, the persian capture shows only a faint tint against their near-white base as expected - docs/runs/2026-09-28-pass2.txt, Tests/Pickle/Evidence/2026-09-28-3dad095-pass2
-  - verified: pass 3 (the painting mods, rev 3dad095) 10/10 passed, exitReason passed; no def got two coat lists; Cat/Husky/LabradorRetriever/three sampled AEXP breeds stayed with their painter; the seven breeds the sibling never painted are this mod's; no @review scenario in this pass - docs/runs/2026-09-28-pass3.txt, Tests/Pickle/Evidence/2026-09-28-3dad095-pass3. All 38 scenarios of the Pickle suite now have a result: 38/38 passed, no @wip, no scenario left unrun
-  - verified: Tests/Pickle/Check-Steps.ps1 (no game) found every step of the 38 scenarios defined exactly once and every map entry resolving, against the Workshop Pickle build, before any pass was filed
-  - verified: the fix of a defect found 2026-09-28 (About.xml loadAfter named the retired sibling id nelim.colorfulcoats.vaerenew instead of nelim.colorfulcoats.vae) is confirmed in game - pass 3 scenario 1 ("the painters are loaded, before this mod") passed on the corrected id
+  - unverified: scenario 2 of _tools/FUNCTIONAL-SCENARIOS.md for the breeds never photographed (16 of 19 Stray Dogs dogs, 10 of 11 cats): only huskies, standard poodles, newfoundlands and persians had their @review capture read. Needs more @review scenarios played, or the owner declaring it not applicable with a reason
+  - unverified: scenario 3, a puppy growing up and the mod added to or removed from a running colony; only save/reload is covered (green). Needs a Pickle scenario, or the owner declaring it not applicable (the mod stores nothing in a save: a reading of the code, not a play)
+  - verified: all three Pickle passes (38 scenarios, rev 3dad095, Mod/ patches unchanged since) passed, exitReason passed, setName read in each summary.json (sans-facultatifs, avec-cibles, avec-peintres); no @wip, no @requires; Player.log grepped before deletion, 0 hits for this mod - docs/runs/2026-09-28-pass{1,2,3}.txt, docs/runs/2026-10-02-evidence-minified.txt
+  - verified: Tests/Pickle/Evidence/2026-09-28-3dad095-pass1/2/3 (on disk, gitignored; summary, junit, @review JPEGs kept; Player.log and messages.ndjson deleted 2026-10-02)
+  - verified: @review captures opened and read - huskies read as fur (icy blue, grey, cream, brown), poodles show 4 distinct tints, newfoundlands barely change as expected, persians show a faint tint as expected
+  - verified: Tests/Pickle/Check-Steps.ps1 (no game) found every step defined exactly once and every map entry resolving
+  - verified: the loadAfter defect of 2026-09-28 (retired sibling id) confirmed fixed in game, pass 3 scenario 1
+  - not applicable: French pass and interface check in EN/FR, MainButtons shortcut, options persistence - no owned text, no settings (owner, 2026-09-28; settings_audit above)
 session:      local_c77edc6e-276f-43fc-8c2d-fea14a5b8b01
-updated:      2026-09-28, all three Pickle passes played and read (38/38 scenarios passed); stage unchanged at done - the manual _tools/FUNCTIONAL-SCENARIOS.md pass 0-7 is the one thing left for `tested`
+updated:      2026-10-02, audit against the current AUDIT.md: stage stays done; the two unverified lines above are all that stands between this mod and `tested`
 ---
 
 # Colorful Coats - Cats and Dogs! Renew — status
+
+## Audit — 2026-10-02
+
+This section and the front matter are the current verdict. The section "Ordered workflow audit — 2026-09-13"
+below is **replaced on 2026-10-02**; kept as history.
+
+**Previous stage: done. Retained stage: done** (`workflow_stage: done`; session title `colorfulcoats.catsanddogs / done`).
+Audited HEAD `c52ce5e5714c4e0c2a948df91e648cd5c1de8387`, working tree clean before this audit's edits
+(docs only: `.gitignore`, `CHANGELOG.md`, `TESTING.md`, `Tests/Pickle/README.md`, `docs/`, this file).
+Read this time: the whole of `AUDIT.md`, and the documents of `docs/PROTOCOLS-READ.md` at the versions it lists.
+
+- **horsMonoRepo ... l10n, preTest:** unchanged and still valid. `Mod/` is byte-identical to the audited 2026-09-13 patches;
+  only `ModIcon.png` (128 x 128) and `Preview.png` (896 x 504, 627 KB, under 1 MB) changed, the latter now carrying the
+  icon cut-out in its corner. `Art/Gallery/0-preview.png` is identical to `Mod/About/Preview.png` (same SHA256). Both images
+  were generated by the owner's pipeline; this audit generated and altered nothing. `localization`, `translation_en`,
+  `translation_fr` and `settings_audit` stay `not_applicable` (no owned text, no settings, no page, no shortcut; the
+  2026-09-13 inventory still holds, the patches being unchanged).
+- **preTest -> done, rerun today, not read from an old report:** `_tools/Run-Functional-Tests.ps1` 22 passed, 0 failed, 0 skipped;
+  `Check-Coats.ps1`, `Check-PatchFields.ps1` (41 payloads), `Check-XmlClasses.ps1`, `Check-DefRefs.ps1`, `Check-TypeRefs.ps1` all exit 0.
+  Pickle suites written and their scope justified in `Tests/Pickle/README.md`.
+- **done -> tested, criteria added by the owner:** (1) no scenario in `@wip`: none (grep over the three features). (2) every
+  conditional scenario has run: the suite carries no `@requires`; the three pass maps stage the optional mods, each pass played
+  in full (10 + 18 + 10 = 38, `exitReason: passed`, `setName` read), and no declared incompatibility exists to look at.
+  (3) no manual test left to validate: eight manual scenarios mapped against the green runs in `TESTING.md`; six are
+  automated and green or not a test, **two parts remain** (listed in `remaining`).
+- **Git hygiene:** no `.dds` file anywhere in the repository or its history; `*.dds` added to `.gitignore`. No Pickle evidence
+  was ever tracked (`Tests/Pickle/Evidence/` and `evidence/` ignored). Evidence minified on disk, see `docs/runs/2026-10-02-evidence-minified.txt`.
+  `pickle-reports-archive/`: no archive of this mod's runs there, nothing to delete.
+- **Upstream:** no git repository for purpleyam's original (searched again, only this mod's own Renew repositories). No PR is possible;
+  `upstream_mod_remotes: N/A`. The sibling port `Rimworld-Colorful-Coats-Vanilla-Animals-Expanded-Renew` is ours, not an upstream.
+- **0.1.0:** `About/PublishedFileId.txt` exists (3806769444), committed in `97c19d3`. `CHANGELOG.md` carries `## [0.1.0]`, "creation of a publishIdFile",
+  under `[Unreleased]`. The item was created from the commit before `97c19d3` and still shows the old packageId and the stale `loadAfter`
+  until the next upload. Prepublication is an act, not a state: it does not change `stage`.
+
+**Not verified, not defects:** the two `unverified` lines. No game or visual check is claimed beyond what `docs/runs/` records.
+**Strictly necessary for `tested`:** close those two lines, each by a played Pickle scenario or by the owner declaring it not applicable with a reason.
+**Optional:** the icon is busier than STYLE_RIMWORLD.md's one-mascot model (2026-09-13 note, owner decides); `PUBLICATION.md` does not exist yet and
+is due at `tested -> prepublished`.
+
 
 ## Documentation corrections — 2026-09-13
 
@@ -52,7 +92,7 @@ The patches, images, packageId, load order and supported versions are unchanged,
 the earlier independent technical validations remain applicable. Stage remains done;
 no game test, Steam page update or publication is claimed.
 
-## Ordered workflow audit — 2026-09-13
+## Ordered workflow audit — 2026-09-13 (replaced on 2026-10-02, kept as history)
 
 This section and the front matter are the current verdict. Earlier entries below are
 historical evidence, preserved verbatim, including their original language and limitations.
