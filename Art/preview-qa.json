@@ -22,7 +22,7 @@
           "familyName": "RimWordFont",
           "postScriptName": "RimWordFont",
           "isCustomFont": true,
-          "glyphCount": 27
+          "glyphCount": 28
         }
       ]
     },
@@ -32,7 +32,7 @@
     },
     ".tag": {
       "bounds": {
-        "x": 264.875,
+        "x": 131.453125,
         "y": 117.59375,
         "width": 122.875,
         "height": 33
@@ -95,6 +95,16 @@
         "width": 430,
         "height": 222.859375
       }
+    }
+  },
+  "iconBadgeAlpha": {
+    "width": 1242,
+    "height": 1091,
+    "bounds": {
+      "x": 0,
+      "y": 0,
+      "width": 1242,
+      "height": 1091
     }
   }
 }
