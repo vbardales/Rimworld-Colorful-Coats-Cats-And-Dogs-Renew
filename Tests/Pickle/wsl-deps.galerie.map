@@ -1,0 +1,11 @@
+# Workshop gallery shots, on the owner's photographic colony (fixture nelim-zen-meadow-studio, from
+# ScreenshotStudio). All three target mods are staged so each shot can show its animals; this mod last.
+#   Submit-PickleRun.ps1 -Mod ColorfulCoatsCatsAndDogsRenew -DepMap wsl-deps.galerie.map -Filter 07-galerie -Language English
+OskarPotocki.VanillaFactionsExpanded.Core 2023507013
+VanillaExpanded.VanillaAnimalsExpanded 2871933948
+Qux.stray.dogs 3549460027
+akairo.LetsHaveaCat 3682940618
+nelim.colorfulcoats.catsanddogs path:ColorfulCoatsCatsAndDogsRenew/Mod
+nelim.pickletools.clickdiagnostics   path:PickleTools/ClickDiagnostics/Mod
+nelim.pickletools.screenshotmode     path:PickleTools/ScreenshotMode/Mod
+nelim.pickletools.screenshotstudio   path:PickleTools/ScreenshotStudio/Mod

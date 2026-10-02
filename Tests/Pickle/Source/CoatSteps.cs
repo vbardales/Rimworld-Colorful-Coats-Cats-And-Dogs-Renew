@@ -235,6 +235,48 @@ namespace ColorfulCoatsCatsAndDogs.PickleSteps
             ctx.Assert(count >= minimum, $"the batch holds {count} animal(s); expected at least {minimum}");
         }
 
+        // ---- Workshop gallery ------------------------------------------------------------------
+
+        // The gallery must show what the mod adds, not whatever the dice gave. Forty animals are rolled,
+        // one of each distinct coat is kept, the rest are destroyed, and the survivors stand in a row,
+        // facing the camera, ordered by coat (the original coat, index -1, first).
+        [Given("Colorful Coats lines up one {string} of each coat near the cell {int} {int}")]
+        public void LineUpEachCoat(PickleContext ctx, string kindName, int x, int z)
+        {
+            var map = Scene.Map(ctx);
+            var pool = new List<Pawn>();
+            for (var i = 0; i < 40; i++)
+            {
+                var p = PawnGenerator.GeneratePawn(new PawnGenerationRequest(Kind(ctx, kindName), null, forceGenerateNewPawn: true, fixedBiologicalAge: 3f));
+                GenSpawn.Spawn(p, FreeCell(ctx, 6), map);
+                pool.Add(p);
+            }
+            var keep = pool.GroupBy(p => p.GetGraphicIndex()).OrderBy(g => g.Key).Select(g => g.First()).ToList();
+            foreach (var p in pool.Except(keep).ToList()) p.Destroy();
+            ctx.Require(keep.Count >= 3, $"only {keep.Count} distinct coat(s) came out of 40 {kindName}; the gallery needs at least 3");
+            var start = x - keep.Count;
+            for (var i = 0; i < keep.Count; i++)
+            {
+                keep[i].Position = new IntVec3(start + i * 2, 0, z);
+                keep[i].Rotation = Rot4.South;
+                keep[i].jobs?.StopAll();
+                Scene.RememberInBatch(keep[i]);
+            }
+        }
+
+        // The camera for a row: centred on it, close enough that each animal fills a fair share of the frame.
+        [When("Colorful Coats frames the row at zoom {int}", TimeoutSeconds = 15f)]
+        public async Task FrameRow(PickleContext ctx, int rootSize)
+        {
+            var pawns = Scene.Batch(ctx);
+            ctx.Require(pawns.Count > 0, "no row was lined up");
+            Find.TickManager.CurTimeSpeed = TimeSpeed.Paused;
+            Find.Selector.ClearSelection();
+            Find.CameraDriver.JumpToCurrentMapLoc(new IntVec3((int)pawns.Average(p => p.Position.x), 0, (int)pawns.Average(p => p.Position.z)));
+            Find.CameraDriver.SetRootSize(rootSize);
+            await ctx.WaitFrames(5);
+        }
+
         [When("Colorful Coats saves the game as {string}")]
         public void SaveAs(PickleContext ctx, string file)
         {
