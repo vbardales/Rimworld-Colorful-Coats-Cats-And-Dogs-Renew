@@ -32,7 +32,7 @@ Pickle is limited to what needs a running game:
 
 ## Passes
 
-Three passes, three launches. No French launch: the mod owns no player-facing text
+Three passes plus three single-target passes (2bis) and one two-launch removal chain (added 2026-10-02). No French launch: the mod owns no player-facing text
 (`localization: not_applicable` in `STATUS.md`), so a French pass would only re-check the game's own
 strings. That is a decision, not an oversight, and the owner confirmed it on 2026-09-28; reopen it if the mod ever gains text.
 
@@ -41,6 +41,10 @@ strings. That is a decision, not an oversight, and the owner confirmed it on 202
 | 1. Without optional mods | `wsl-deps.sans-facultatifs.map` | `01` | The four base-game pets alone; the 37 operations aimed at absent mods left no trace |
 | 2. The three target mods | `wsl-deps.avec-cibles.map` | `02` | Stray Dogs, Let's Have a Cat! and Vanilla Animals Expanded together; no double coat list; the animals that already had coats were left alone |
 | 3. The mods that paint | `wsl-deps.avec-peintres.map` | `03` | Animal Variety Coats, Erin's Cat Overhaul and the sibling port own their animals; this mod wrote nothing on them |
+| 2bis-a. Stray Dogs alone | `wsl-deps.stray-dogs.map` | `02a` | A red can only be Stray Dogs or this mod; poodle puppies get coats and keep them on growing up |
+| 2bis-b. Let's Have a Cat! alone | `wsl-deps.lets-have-a-cat.map` | `02b` | Same for the cats; kittens |
+| 2bis-c. Vanilla Animals Expanded alone | `wsl-deps.vae.map` | `02c` | Same, with its framework, without the sibling port; beagle puppies |
+| 3. Removal chain | `wsl-deps.retrait.map` | `31` then `retrait-check` | Two launches, one lock: `-Filter 31-retrait-write -Then retrait-check -ThenWithout nelim.colorfulcoats.catsanddogs,nelim.colorfulcoats.catsanddogs.pickletests`. A game saved with the mod loads and runs without it, and the save holds nothing of the mod |
 
 **No declared-incompatibility pass:** `About.xml` declares no `incompatibleWith`, so there is no
 claim to go and look at. The three painters are `loadAfter` entries, covered by pass 3.
