@@ -219,6 +219,22 @@ namespace ColorfulCoatsCatsAndDogs.PickleSteps
 
         // ---- scenario 3: a game saved with the mod, loaded without it ------------------------
 
+        // A colony that already holds animals when the mod arrives: they are in the loaded save, not spawned
+        // by the scenario, so the batch is taken from the map.
+        [Given("Colorful Coats takes every animal of kind {string} on the map as the batch")]
+        public void TakeBatchFromMap(PickleContext ctx, string kindName)
+        {
+            foreach (var pawn in Scene.Map(ctx).mapPawns.AllPawnsSpawned.Where(p => p.kindDef != null && p.kindDef.defName == kindName))
+                Scene.RememberInBatch(pawn);
+        }
+
+        [Then("Colorful Coats the batch holds at least {int} animals")]
+        public void BatchSize(PickleContext ctx, int minimum)
+        {
+            var count = Scene.Batch(ctx).Count;
+            ctx.Assert(count >= minimum, $"the batch holds {count} animal(s); expected at least {minimum}");
+        }
+
         [When("Colorful Coats saves the game as {string}")]
         public void SaveAs(PickleContext ctx, string file)
         {
