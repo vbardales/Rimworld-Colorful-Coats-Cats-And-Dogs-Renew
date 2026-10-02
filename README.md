@@ -109,7 +109,7 @@ two faults in the suite itself found that way.
 Mod/          published — the junction into RimWorld/Mods points here
   About/
   Patches/
-Art/          full-resolution sources for the showcase, the icon, and the page that engraves it
+Art/          sources of the showcase and the icon, the Preview.config.json the shared renderer reads, the Gallery
 _tools/       the two checkers, the tool that recovers the palette, and the in-game scenarios
 ```
 

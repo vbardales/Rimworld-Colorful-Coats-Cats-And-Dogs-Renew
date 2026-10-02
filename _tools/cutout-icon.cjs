@@ -1,6 +1,6 @@
 // One-off: flood-fills the near-black background of Art/ModIcon-source.png from its border
 // inward, turning only the background transparent (the mascot's own near-black stroke is never
-// touched, since it does not connect to the frame). Writes Art/ModIcon-cutout.png.
+// touched, since it does not connect to the frame). Writes Art/ModIcon-cutout.png (an intermediate, no longer kept in git since 2026-10-02).
 // Model: ManyHappyReturns/_tools/cutout-icon.cjs. Re-run by hand only if the source icon changes;
 // its output is committed.
 const sharp = require('sharp');
