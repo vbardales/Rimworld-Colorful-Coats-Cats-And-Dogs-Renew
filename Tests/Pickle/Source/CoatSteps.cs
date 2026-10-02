@@ -183,5 +183,82 @@ namespace ColorfulCoatsCatsAndDogs.PickleSteps
             ctx.Assert(after == before, $"the coat of {alias} was {before} and is now {after}");
         }
 
+        // ---- scenario 3: one coat for life --------------------------------------------------
+
+        // Pups and kittens, not adults: a juvenile life stage has its own graphics, so the first
+        // question is whether a juvenile gets a coat at all.
+        [Given("Colorful Coats spawns {int} wild juvenile animals as {string}")]
+        public void SpawnJuveniles(PickleContext ctx, int count, string kindName)
+        {
+            for (var i = 0; i < count; i++) Scene.RememberInBatch(Spawn(ctx, kindName, null, 0.05f));
+        }
+
+        [Given("Colorful Coats spawns the player juvenile {string} as {string}")]
+        public void SpawnPlayerJuvenile(PickleContext ctx, string alias, string kindName)
+        {
+            var pawn = Spawn(ctx, kindName, Faction.OfPlayer, 0.05f);
+            Scene.Remember(alias, pawn);
+        }
+
+        // Ages the animal to three years by the clock the game itself reads, then asks the game for
+        // the life stage it now belongs to. The step fails if the stage did not change: a growth that
+        // did not happen would make "the coat did not change" worthless.
+        [When("Colorful Coats grows {string} up")]
+        public void GrowUp(PickleContext ctx, string alias)
+        {
+            var pawn = Scene.Named(ctx, alias);
+            var before = pawn.ageTracker.CurLifeStage;
+            var ticks = 3L * 3600000L;
+            pawn.ageTracker.AgeBiologicalTicks = ticks;
+            pawn.ageTracker.AgeChronologicalTicks = ticks;
+            pawn.ageTracker.RecalculateLifeStageIndex();
+            ctx.Assert(pawn.ageTracker.CurLifeStage != before,
+                $"{alias} stayed in life stage {before?.defName} after being aged to three years");
+        }
+
+
+        // ---- scenario 3: a game saved with the mod, loaded without it ------------------------
+
+        [When("Colorful Coats saves the game as {string}")]
+        public void SaveAs(PickleContext ctx, string file)
+        {
+            GameDataSaveLoader.SaveGame(file);
+            ctx.Require(System.IO.File.Exists(GenFilePaths.FilePathForSavedGame(file)), "no save file was written for " + file);
+        }
+
+        // The mod claims to write nothing into a save. The header lists every active mod by name, so it is
+        // set aside; anything else that names this mod, as an element, an attribute or a class, is data.
+        [Then("Colorful Coats save {string} holds nothing of this mod outside its mod list")]
+        public void SaveHoldsNothing(PickleContext ctx, string file)
+        {
+            var doc = new System.Xml.XmlDocument();
+            doc.Load(GenFilePaths.FilePathForSavedGame(file));
+            var meta = doc.DocumentElement.SelectSingleNode("meta");
+            ctx.Require(meta != null, "the save has no meta header, so the mod list cannot be set aside");
+            doc.DocumentElement.RemoveChild(meta);
+            var text = doc.OuterXml;
+            foreach (var needle in new[] { "colorfulcoats", "Colorful Coats" })
+            {
+                var at = text.IndexOf(needle, StringComparison.OrdinalIgnoreCase);
+                ctx.Assert(at < 0, "the save holds data of this mod outside its header, near: "
+                    + (at < 0 ? "" : text.Substring(Math.Max(0, at - 60), Math.Min(160, text.Length - Math.Max(0, at - 60)))));
+            }
+        }
+
+        // Pickle finds a saved game as a fixture: a .rws in Pickle/Fixtures of an active mod. The
+        // companion that survives the removal of this mod receives the file.
+        [When("Colorful Coats hands the saved game {string} to the mod {string}")]
+        public void HandOver(PickleContext ctx, string file, string packageId)
+        {
+            var target = LoadedModManager.RunningModsListForReading.FirstOrDefault(m =>
+                m.PackageIdPlayerFacing.ToLowerInvariant() == packageId.ToLowerInvariant());
+            ctx.Require(target != null, "no active mod has the packageId " + packageId);
+            var folder = System.IO.Path.Combine(target.RootDir, "Pickle", "Fixtures");
+            System.IO.Directory.CreateDirectory(folder);
+            var destination = System.IO.Path.Combine(folder, file + ".rws");
+            System.IO.File.Copy(GenFilePaths.FilePathForSavedGame(file), destination, true);
+            ctx.Require(System.IO.File.Exists(destination), "the saved game was not copied to " + destination);
+        }
+
     }
 }

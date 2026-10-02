@@ -1,0 +1,6 @@
+# Pass 2bis-c: Vanilla Animals Expanded alone, with this mod, and the framework it needs. The sibling
+# coat port is NOT staged: pass 3 covers it.
+OskarPotocki.VanillaFactionsExpanded.Core 2023507013
+VanillaExpanded.VanillaAnimalsExpanded 2871933948
+nelim.colorfulcoats.catsanddogs path:ColorfulCoatsCatsAndDogsRenew/Mod
+nelim.pickletools.screenshotmode path:PickleTools/ScreenshotMode/Mod

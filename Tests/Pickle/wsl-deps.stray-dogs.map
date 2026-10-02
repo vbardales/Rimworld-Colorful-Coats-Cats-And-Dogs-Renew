@@ -1,0 +1,5 @@
+# Pass 2bis-a: Stray Dogs alone, with this mod. A red here can only be Stray Dogs' or ours, which the
+# three-target pass 2 cannot say. None of the other mods is staged. The mod under test is named last.
+Qux.stray.dogs 3549460027
+nelim.colorfulcoats.catsanddogs path:ColorfulCoatsCatsAndDogsRenew/Mod
+nelim.pickletools.screenshotmode path:PickleTools/ScreenshotMode/Mod
