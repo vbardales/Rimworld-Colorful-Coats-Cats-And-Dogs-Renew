@@ -257,9 +257,11 @@ namespace ColorfulCoatsCatsAndDogs.PickleSteps
             var start = x - keep.Count;
             for (var i = 0; i < keep.Count; i++)
             {
-                keep[i].Position = new IntVec3(start + i * 2, 0, z);
-                keep[i].Rotation = Rot4.South;
+                var cell = new IntVec3(start + i * 2, 0, z);
+                ctx.Require(cell.InBounds(map) && cell.Standable(map), $"the cell {cell} of the row is not standable on this map");
                 keep[i].jobs?.StopAll();
+                keep[i].DeSpawn();
+                GenSpawn.Spawn(keep[i], cell, map, Rot4.South);
                 Scene.RememberInBatch(keep[i]);
             }
         }
@@ -275,6 +277,9 @@ namespace ColorfulCoatsCatsAndDogs.PickleSteps
             Find.CameraDriver.JumpToCurrentMapLoc(new IntVec3((int)pawns.Average(p => p.Position.x), 0, (int)pawns.Average(p => p.Position.z)));
             Find.CameraDriver.SetRootSize(rootSize);
             await ctx.WaitFrames(5);
+            var view = Find.CameraDriver.CurrentViewRect;
+            var hidden = pawns.Count(p => !p.Spawned || !view.Contains(p.Position));
+            ctx.Assert(hidden == 0, $"{hidden} of {pawns.Count} animals of the row are not spawned or not in the camera view {view}");
         }
 
         [When("Colorful Coats saves the game as {string}")]

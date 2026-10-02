@@ -30,6 +30,7 @@ Feature: images for the Workshop page
     When Colorful Coats frames the row at zoom 10
     And Nelim's Pickle Tools: I move the mouse to (960, 1000)
     And Nelim's Pickle Tools: developer mode is turned off for the capture
+    And Nelim's Pickle Tools: screenshot mode is enabled around the open windows
     Then I take a screenshot "Workshop page, the white cats"
 
   Scenario: huskies, one of each coat
@@ -37,4 +38,5 @@ Feature: images for the Workshop page
     When Colorful Coats frames the row at zoom 10
     And Nelim's Pickle Tools: I move the mouse to (960, 1000)
     And Nelim's Pickle Tools: developer mode is turned off for the capture
+    And Nelim's Pickle Tools: screenshot mode is enabled around the open windows
     Then I take a screenshot "Workshop page, the huskies"
