@@ -67,7 +67,7 @@ Fixed since the item was created: the load order against Colorful Coats - Vanill
 
 `About.xml` is read once, when the item is created, so it does not change the live page: the page description is updated by the CI (`update_description` of the manual workflow), from a Markdown block to write here before `prepublished`. The `<description>` of `About.xml` was rewritten on 2026-10-02 to carry, after the body and in PUBLISHING.md order, `IF I GO QUIET` (clause word for word), `AI-GENERATED`, `THANKS`, the line pointing to `ATTRIBUTION.md` and the licence, and the `[url=...]Source code on GitHub[/url]` link. It no longer says that in-game validation is pending.
 
-**To confirm by the owner:** the `AI-GENERATED` block says who did what only for what the repository documents (patches, checks, suites, docs by Claude; runs played by Pickle). It says nothing about the ModIcon and the Preview, whose tooling is not recorded here; add a sentence if it should.
+**AI tools named, per PUBLISHING.md ("Génération par IA", 2026-09-22):** Claude Code, Codex and DALL-E, as stated by the owner on 2026-10-02. The repository itself records no Codex contribution (no commit, no note), so the split of who did what is the owner's wording, not something verifiable here. Tools already named in that block are not repeated in `THANKS`.
 
 ## After the upload
 
