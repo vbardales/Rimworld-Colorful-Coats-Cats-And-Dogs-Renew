@@ -22,7 +22,7 @@ showcase:     complete
 tested_on:    2026-09-28 (Pickle passes 1-3 in the WSL, rev 3dad095; no manual play)
 workshop:     3806769444 (0.1.0, item creation only; About/PublishedFileId.txt committed in 97c19d3; private, as Steam creates every item; not tested, not public)
 remaining:
-  - unverified: ModIcon readability and weight (AUDIT 2.c): the 128 px derivative is 38.6 KB, over the 20-30 KB target; at 32 px only the orange mascot reads, the dozen surrounding animals blur. Source is the owner's; owner to override or redo, 2026-10-11
+  - verified: ModIcon readability and weight (AUDIT 2.c): 38.6 KB over the 20-30 KB target, only the mascot reads at 32 px; override granted by Virginie in chat, 2026-10-11, icon kept as is
   - defect: About.xml author "purpleyam, adapted by Nelim" is not the PUBLISHING.md format "<original authors> - 1.6 adapted by Nelim" (rule of 2026-10-10); fix at writeDocs, with the description
   - unverified: scenario 2 of Tests/FUNCTIONAL-SCENARIOS.md for the breeds never photographed (16 of 19 Stray Dogs dogs, 10 of 11 cats): only huskies, standard poodles, newfoundlands and persians had their @review capture read. Needs more @review scenarios played, or the owner declaring it not applicable with a reason
   - unverified: scenario 3, a puppy growing up and the mod added to or removed from a running colony; only save/reload is covered (green). Needs a Pickle scenario, or the owner declaring it not applicable (the mod stores nothing in a save: a reading of the code, not a play)
