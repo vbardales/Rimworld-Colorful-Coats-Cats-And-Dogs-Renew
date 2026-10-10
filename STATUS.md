@@ -32,12 +32,15 @@ remaining:
   - not applicable: French pass and interface check in EN/FR, MainButtons shortcut, options persistence - no owned text, no settings (owner, 2026-09-28; settings_audit above)
 session:      local_419c1547-a655-45f1-aae0-2bbff3ba60d2
 updated:      2026-10-10, writeTests -> playTests[1.0.0]: French review confirmed by Virginie in chat (no French shipped, FRENCH_REVIEW.md lists the English texts)
+code_review_sha: db54f234018a5a6abb98338f4b6cc017bf4dd7a8
 protocols_read_sha: a959f76528043543b1ac9025b40dc8efcefd9e56
 ---
 
 # Colorful Coats - Cats and Dogs! Renew — status
 
 ## Audit 2026-10-10
+
+**Code review (8.m), 2026-10-10:** all of `Mod/` (four patches, About.xml; no C#) read by a reviewer pass against the 22 green functional tests. Two comment inaccuracies found and fixed (greyhound "highest chance", "78 coats" for 78 files); no defect. `code_review_sha` set to the fixing commit.
 
 **Update, same day:** Virginie confirmed the French review in chat (revision `e5e73bf`, no correction requested; the review line of `FRENCH_REVIEW.md` stays hers to fill). `writeTests` exit criteria 7.a to 7.h hold (automated and XML tests rerun green today, translations `not_applicable` justified). Stage now `playTests[1.0.0]`. Next: Pickle tickets for the two `unverified` lines, small and targeted.
 
