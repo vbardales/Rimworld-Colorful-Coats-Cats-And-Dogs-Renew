@@ -10,9 +10,9 @@ does what its sentence says; only a run does.
 ## Scope
 
 The offline suites own everything provable without a game, and this mod is unusually well served
-by them: `_tools/Run-Functional-Tests.ps1` runs **RimWorld's own patch engine** on the real defs of
-the real target mods (41 breeds, 22 tests, 17 seen red under mutation), `_tools/Check-Coats.ps1`
-and `_tools/Check-PatchFields.ps1` check the defNames and every injected field, and the shared
+by them: `scripts/Run-Functional-Tests.ps1` runs **RimWorld's own patch engine** on the real defs of
+the real target mods (41 breeds, 22 tests, 17 seen red under mutation), `scripts/Check-Coats.ps1`
+and `scripts/Check-PatchFields.ps1` check the defNames and every injected field, and the shared
 `Check-XmlClasses`, `Check-DefRefs` and `Check-TypeRefs` cover the rest. A scenario that only repeats
 one of those was not written.
 
@@ -27,7 +27,7 @@ Pickle is limited to what needs a running game:
   reports itself as `defines the same field twice: alternateGraphics`;
 - **a coat drawn**, and surviving a save and reload;
 - **the pictures a person reads**, which are the reason this suite exists at all: scenario 2 of
-  `_tools/FUNCTIONAL-SCENARIOS.md`, whether a tint reads as fur or as dirt, is the one thing nothing
+  `Tests/FUNCTIONAL-SCENARIOS.md`, whether a tint reads as fur or as dirt, is the one thing nothing
   here can decide by assertion.
 
 ## Passes
@@ -124,6 +124,6 @@ Never delete a report a `STATUS.md` field still points to: repoint it first.
 dotnet build Tests/Pickle/Source/ColorfulCoatsCatsAndDogs.PickleSteps.csproj -c Release
 ```
 
-Output goes to `Tests/Pickle/Mod/Pickle/Assemblies/`; intermediates to `.build/pickle/` (ignored).
+Output goes to `Tests/Pickle/Mod/Pickle/Assemblies/`; intermediates to `Tests/Pickle/Source/obj/` and `bin/` (ignored).
 Pickle loads step assemblies at game start, so rebuild **before** filing a request, and check the DLL
 is newer than `CoatSteps.cs`. The DLL is tracked, as in the other suites.

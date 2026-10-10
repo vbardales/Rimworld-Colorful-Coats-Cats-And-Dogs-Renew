@@ -1,4 +1,4 @@
-# Scenario 3 of _tools/FUNCTIONAL-SCENARIOS.md: add the mod to a colony, remove it, the save stays intact.
+# Scenario 3 of Tests/FUNCTIONAL-SCENARIOS.md: add the mod to a colony, remove it, the save stays intact.
 # First launch of the chain; the second launch is Removal/Mod/Pickle/Features/retrait-check.feature, played
 # with this mod taken out of the list. Map: wsl-deps.retrait.map. Never part of passes 1 to 3.
 

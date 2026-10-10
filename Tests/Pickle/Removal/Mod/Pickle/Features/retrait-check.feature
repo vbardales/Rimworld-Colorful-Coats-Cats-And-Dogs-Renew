@@ -1,4 +1,4 @@
-# Scenario 3 of _tools/FUNCTIONAL-SCENARIOS.md, "remove it and they go back to their original coats, with the
+# Scenario 3 of Tests/FUNCTIONAL-SCENARIOS.md, "remove it and they go back to their original coats, with the
 # save intact". Played by the second launch of the chain started by 31-retrait-write, with this mod taken out
 # of the mod list (-ThenWithout). It uses only Pickle's own steps: the mod's own are gone with the mod.
 

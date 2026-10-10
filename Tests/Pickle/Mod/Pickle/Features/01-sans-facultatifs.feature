@@ -3,7 +3,7 @@
 # the game's own strings (see Tests/Pickle/README.md, "Languages").
 #
 # Only what a running game can show is kept in Gherkin. The offline suite already runs the game's
-# own patch engine on the real defs (_tools/Run-Functional-Tests.ps1); what it cannot do is load a
+# own patch engine on the real defs (scripts/Run-Functional-Tests.ps1); what it cannot do is load a
 # whole mod list through the real loader and then ask what the game kept, or draw an animal.
 
 Feature: The four base-game pets, and nothing else
@@ -71,7 +71,7 @@ Feature: The four base-game pets, and nothing else
     And Colorful Coats the coat of "Mimi" is the one recorded
     And no errors were logged
 
-  # Scenario 2 of _tools/FUNCTIONAL-SCENARIOS.md: does a tint read as fur or as dirt. Nothing in a
+  # Scenario 2 of Tests/FUNCTIONAL-SCENARIOS.md: does a tint read as fur or as dirt. Nothing in a
   # green run says so; a person has to open the picture and look.
   @review
   Scenario: twelve huskies side by side, for a person to judge the tints

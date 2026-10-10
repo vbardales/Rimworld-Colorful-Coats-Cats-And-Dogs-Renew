@@ -12,11 +12,11 @@ it buys that by making a miss invisible. Only animals on screen settle it.
 
 Two main scripts, plus a field-checking wrapper, answer different questions.
 
-**`_tools/Check-Coats.ps1`** is the quick one: every `defName` still exists in the mod its patch
+**`scripts/Check-Coats.ps1`** is the quick one: every `defName` still exists in the mod its patch
 names, none of them has grown `alternateGraphics` upstream since, every colour is in the form the
 game reads as 0-255, every operation has the conditional-plus-`Always` shape.
 
-**`_tools/Run-Functional-Tests.ps1`** is the one that runs the game's own code. RimWorld's patch
+**`scripts/Run-Functional-Tests.ps1`** is the one that runs the game's own code. RimWorld's patch
 engine is ordinary .NET: the shipped XML is turned back into real `PatchOperationConditional` and
 `PatchOperationAdd` objects, and their `Apply` is called on a document built from the target mods'
 own defs. So "the patch writes the right coats", "a breed that already has coats is left alone" and
@@ -29,9 +29,9 @@ been seen to fail under a mutation; the other five assert the game's own behavio
 made to fail from here. The mutations are listed in the script's header.
 
 ```
-powershell -File _tools/Check-Coats.ps1
-powershell -File _tools/Run-Functional-Tests.ps1
-powershell -File _tools/Check-PatchFields.ps1
+powershell -File scripts/Check-Coats.ps1
+powershell -File scripts/Run-Functional-Tests.ps1
+powershell -File scripts/Check-PatchFields.ps1
 ```
 
 Both skip, loudly, any target mod that is not installed on the machine they run on.
@@ -41,7 +41,7 @@ folder's location and packageId, falling back to discovery when the entry is sta
 The shared checkers in `../scripts/` cover `Class=` values (`Check-XmlClasses.ps1`),
 dangling references (`Check-DefRefs.ps1`) and third-party types (`Check-TypeRefs.ps1`).
 `Check-XmlFields.ps1` only reads Defs documents and skips patches. The local wrapper
-`_tools/Check-PatchFields.ps1` therefore extracts all 41 injected payloads into temporary
+`scripts/Check-PatchFields.ps1` therefore extracts all 41 injected payloads into temporary
 PawnKindDefs and passes them to that checker, including the nested AlternateGraphic fields.
 Supply `-FieldChecker` if the shared script lives elsewhere; a missing checker is an error.
 
@@ -72,7 +72,7 @@ leave two `<alternateGraphics>` elements on the vanilla cat for the loader to ch
 ## What only the game can settle
 
 The scenarios themselves live next to the suite that cannot replace them, in
-[`_tools/FUNCTIONAL-SCENARIOS.md`](_tools/FUNCTIONAL-SCENARIOS.md): eight of them, each with one
+[`Tests/FUNCTIONAL-SCENARIOS.md`](Tests/FUNCTIONAL-SCENARIOS.md): eight of them, each with one
 thing to watch, one way of being wrong, and the line in `Player.log` that says so.
 
 The one that matters most is the second. The tints are purpleyam's and were measured, but they were
@@ -82,7 +82,7 @@ in a Unity asset bundle — so what those colours land on has never been seen ou
 ## Manual scenarios against what the game has already shown (2026-10-02)
 
 Criterion for `tested`: no manual test left to validate. Each of the eight scenarios of
-`_tools/FUNCTIONAL-SCENARIOS.md` is either automated and green, or listed as not applicable with its
+`Tests/FUNCTIONAL-SCENARIOS.md` is either automated and green, or listed as not applicable with its
 reason. State on revision `3dad095` (patches unchanged since); no `@wip` scenario, no `@requires`
 tag (the three passes decide which mods are present, by pass map, and each played in full:
 38 of 38, `exitReason: passed`, `setName` read in each `summary.json`).

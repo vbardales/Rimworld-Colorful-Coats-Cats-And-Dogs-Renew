@@ -14,10 +14,9 @@
 #     and everything else in this folder - Art/, the docs, this file - stays out of reach by
 #     construction.
 
-# Build intermediates.
-.build/
-Source/obj/
-Source/bin/
+# Build intermediates (Tests/Pickle/Source/obj and bin).
+obj/
+bin/
 
 # Claude Code session worktrees and local settings: each worktree is a full copy of a repository,
 # and they are never shared.

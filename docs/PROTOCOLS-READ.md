@@ -34,4 +34,4 @@ none is needed yet: `PUBLICATION.md` (due at `tested -> prepublished`), `BACKLOG
 Four XML patch files, no C#, no settings, no owned player-facing text. The sound-capture rules, the
 Prepatcher/Concord notes, the language-switch rules and the publication-screenshot rules have no
 target here. The suite exists for what no offline check can say: whether a tint reads as fur
-(scenario 2 of `_tools/FUNCTIONAL-SCENARIOS.md`).
+(scenario 2 of `Tests/FUNCTIONAL-SCENARIOS.md`).

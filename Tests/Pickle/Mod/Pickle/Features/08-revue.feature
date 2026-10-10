@@ -1,4 +1,4 @@
-# Scenario 2 of _tools/FUNCTIONAL-SCENARIOS.md for every breed whose capture has not been read yet: does a
+# Scenario 2 of Tests/FUNCTIONAL-SCENARIOS.md for every breed whose capture has not been read yet: does a
 # tint read as fur, and does it still read as that breed. Poodles, newfoundlands, persians (pass 2) and
 # huskies (pass 1) were opened on 2026-09-28; these are the others. Map: wsl-deps.avec-cibles.map, filter
 # 08-revue. A green run only says the route ran: every capture has to be opened and looked at, and what was

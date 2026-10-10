@@ -73,7 +73,7 @@ Feature: The animals of the three target mods
     And Colorful Coats the coat of "Mimi" is the one recorded
     And no errors were logged
 
-  # Scenario 2 of _tools/FUNCTIONAL-SCENARIOS.md, the one that matters. The dogs of Stray Dogs keep
+  # Scenario 2 of Tests/FUNCTIONAL-SCENARIOS.md, the one that matters. The dogs of Stray Dogs keep
   # their textures in a Unity asset bundle, so their base colours could not be measured offline:
   # what these tints land on has never been seen. A person opens these and judges.
   @review

@@ -19,6 +19,10 @@ port, so this is its idea rebuilt against the cats and dogs that are alive on 1.
 - `packageId` `nelim.colorfulcoats.catsanddogsrenew` becomes `nelim.colorfulcoats.catsanddogs`. The
   0.1.0 item was created with the old value; nothing was published, and it was in no active mod list.
 
+- Tooling folders tidied at the repository root: `_tools/` is now `scripts/`, the in-game scenarios
+  moved to `Tests/FUNCTIONAL-SCENARIOS.md`, and the Pickle step build writes its intermediates under
+  `Tests/Pickle/Source/` instead of a root `.build/`. Comment references updated; no patch changed.
+
 ### Added
 
 - Coats for **19 dogs of Stray Dogs (rescued)** — the seventeen Spidercamp breeds that ship with

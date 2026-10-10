@@ -1,6 +1,6 @@
 # Pass 2bis-a: Stray Dogs alone beside this mod (wsl-deps.stray-dogs.map). Pass 2 loads the three target mods
 # together, so a red there cannot say which of them it belongs to; here it can only be Stray Dogs or this mod.
-# Scenario 3 of _tools/FUNCTIONAL-SCENARIOS.md (one coat for life) is played here on a dog.
+# Scenario 3 of Tests/FUNCTIONAL-SCENARIOS.md (one coat for life) is played here on a dog.
 
 Feature: Stray Dogs alone
 

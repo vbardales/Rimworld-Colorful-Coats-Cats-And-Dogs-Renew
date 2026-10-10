@@ -43,7 +43,7 @@ Core does this itself: the guinea pig lists three texture coats and two colour c
 
 ## The palette is purpleyam's, measured
 
-The colours are not invented. `_tools/Measure-Coats.ps1` takes each coat purpleyam painted, divides
+The colours are not invented. `scripts/Measure-Coats.ps1` takes each coat purpleyam painted, divides
 its mean colour by the mean colour of the sprite it was painted over, and that ratio is the tint
 which reproduces it. Of their 26 coats, **17 are reachable that way** and those seventeen are the
 whole palette here; the other nine are repaints a multiply cannot reach, and the tool says so
@@ -52,7 +52,7 @@ rather than rounding them down.
 The standard poodle of Stray Dogs ends up wearing purpleyam's four poodle coats, in their order.
 
 ```
-powershell -File _tools/Measure-Coats.ps1
+powershell -File scripts/Measure-Coats.ps1
 ```
 
 The limit is that a colour **multiplies** the sprite. A coat can only come out darker or warmer
@@ -81,7 +81,7 @@ would otherwise happen: `PatchOperationAdd` appends, it does not merge.
 - **`GetGraphic` really applies a colour without a path** — read in the decompiled 1.6 assembly,
   quoted in [ATTRIBUTION.md](ATTRIBUTION.md), and used by Core itself for the guinea pig.
 - **All 41 `defName`s exist in the mod each patch names**, and none of them already ships
-  `alternateGraphics` upstream. `_tools/Check-Coats.ps1` re-checks this against the installed mods,
+  `alternateGraphics` upstream. `scripts/Check-Coats.ps1` re-checks this against the installed mods,
   and names the breed when it stops being true.
 - **Nothing else in the workshop already does this.** The 9 726 installed mods were swept for one
   representative breed of each target — `SCGoldenRetriever`, `akaNEKO_Persian`, `AEXP_Beagle` — and
@@ -91,8 +91,8 @@ would otherwise happen: `PatchOperationAdd` appends, it does not merge.
   never covered the yorkshire terrier, and nor has anything else.
 
 ```
-powershell -File _tools/Check-Coats.ps1
-powershell -File _tools/Run-Functional-Tests.ps1
+powershell -File scripts/Check-Coats.ps1
+powershell -File scripts/Run-Functional-Tests.ps1
 ```
 
 The second one runs **RimWorld's own patch engine** outside the game: the shipped XML is turned
@@ -112,7 +112,7 @@ Mod/          published — the junction into RimWorld/Mods points here
 Art/          sources of the showcase and the icon, Preview.config.json, the Gallery. The Preview is rendered
               from inside this folder with `node ../scripts/Render-Preview.cjs`, which writes
               Mod/About/Preview.png, Art/Gallery/0-preview.png and the two .ico files
-_tools/       the two checkers, the tool that recovers the palette, and the in-game scenarios
+scripts/      the checkers, the tool that recovers the palette, the functional tests, the icon cut-out
 ```
 
 Everything outside `Mod/` stays out of the Steam upload by construction:
@@ -130,7 +130,7 @@ The animals belong to Qux and SpiderCamp, to akairo and Bernau31, to Vanilla Ani
 to Ludeon. This mod ships no part of any of them.
 
 See [TESTING.md](TESTING.md) for what is settled before the game starts and
-[`_tools/FUNCTIONAL-SCENARIOS.md`](_tools/FUNCTIONAL-SCENARIOS.md) for the eight scenarios only the
+[`Tests/FUNCTIONAL-SCENARIOS.md`](Tests/FUNCTIONAL-SCENARIOS.md) for the eight scenarios only the
 game can settle, [ATTRIBUTION.md](ATTRIBUTION.md) for what was taken and what was made,
 [LICENSE](LICENSE) for what the MIT grant covers, and [CHANGELOG.md](CHANGELOG.md).
 

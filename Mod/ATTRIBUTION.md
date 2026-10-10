@@ -46,7 +46,7 @@ What was actually missing was the rest of the cats and dogs on 1.6, which is wha
 
 ### How the palette was recovered
 
-For each of purpleyam's coats, `_tools/Measure-Coats.ps1` takes the mean colour of its opaque
+For each of purpleyam's coats, `scripts/Measure-Coats.ps1` takes the mean colour of its opaque
 pixels, takes the same for the sprite it was painted over, and divides one by the other. That ratio
 is the `<color>` that makes `AlternateGraphic.GetGraphic` land on purpleyam's coat starting from the
 untouched sprite. It is a measurement of their work, reproducible from the two mods on disk, and it

@@ -15,7 +15,7 @@
 	Each value below is the mean colour of one of the coats purpleyam painted for
 	Colorful Coats - Cats and Dogs!, divided by the mean colour of the sprite it was painted
 	over, which is the tint that would have produced it. Nothing of theirs is shipped here;
-	what is reused is the choice of colours, and it is theirs. _tools/Measure-Coats.ps1
+	what is reused is the choice of colours, and it is theirs. scripts/Measure-Coats.ps1
 	recomputes the whole table from the two mods on disk.
 
 		ink       (102, 94, 90)     from PoodleC, purpleyam's black poodle

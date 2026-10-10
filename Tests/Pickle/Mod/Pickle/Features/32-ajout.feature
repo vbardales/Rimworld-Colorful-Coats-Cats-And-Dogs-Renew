@@ -1,4 +1,4 @@
-# Scenario 3 of _tools/FUNCTIONAL-SCENARIOS.md, the other direction: add the mod to a colony that already has
+# Scenario 3 of Tests/FUNCTIONAL-SCENARIOS.md, the other direction: add the mod to a colony that already has
 # dogs, and they take their coats at once. The fixture colorfulcoats-without-mod.rws was saved by a game that
 # did NOT have this mod (the second launch of the removal chain, 31-retrait-write then retrait-check), with
 # twenty wild standard poodles on the map. Map: wsl-deps.stray-dogs.map (the mod, loaded). Never part of

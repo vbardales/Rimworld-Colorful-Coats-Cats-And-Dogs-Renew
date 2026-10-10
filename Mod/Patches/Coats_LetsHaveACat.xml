@@ -15,7 +15,7 @@
 
 	The palette is purpleyam's, measured from the 78 coats of Colorful Coats - Cats and Dogs!
 	and divided by the sprites they were painted over. The header of Coats_StrayDogs.xml has
-	the whole table and the provenance of each value; _tools/Measure-Coats.ps1 recomputes it.
+	the whole table and the provenance of each value; scripts/Measure-Coats.ps1 recomputes it.
 
 		ink       (102, 94, 90)   blue      (111,124,166)   grey      (122,122,122)
 		stone     (137,132,130)   chocolate (138,113, 98)   coffee    (145,120,100)
