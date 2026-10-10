@@ -185,7 +185,7 @@
 		</nomatch>
 	</Operation>
 
-	<!-- Greyhound - the breed with the most colours of any dog here, so the highest chance. -->
+	<!-- Greyhound - one of the breeds with the most colours of any dog here, so a high chance. -->
 	<Operation Class="PatchOperationConditional">
 		<xpath>/Defs/PawnKindDef[defName = "SCGreyhound"]/alternateGraphics</xpath>
 		<nomatch Class="PatchOperationAdd">

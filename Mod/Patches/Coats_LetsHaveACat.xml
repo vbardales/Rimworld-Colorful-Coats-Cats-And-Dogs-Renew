@@ -13,7 +13,7 @@
 	themselves. The white cat is the best canvas in either mod and gets five coats; the dark
 	ones get two light tints and a low chance.
 
-	The palette is purpleyam's, measured from the 78 coats of Colorful Coats - Cats and Dogs!
+	The palette is purpleyam's, measured from the 78 coat files of Colorful Coats - Cats and Dogs!
 	and divided by the sprites they were painted over. The header of Coats_StrayDogs.xml has
 	the whole table and the provenance of each value; scripts/Measure-Coats.ps1 recomputes it.
 
