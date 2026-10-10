@@ -8,7 +8,7 @@ packageId:    nelim.colorfulcoats.catsanddogs
 repo:         Rimworld-Colorful-Coats-Cats-And-Dogs-Renew
 visibility:   public
 detached:     yes
-workflow_stage: writeTests[1.0.0]
+workflow_stage: playTests[1.0.0]
 audit_revision: 408a1019c870aea227614740f5d282c8021400be (+ uncommitted root tidy, this audit)
 audit_date: 2026-10-10
 automated_tests: passed; 22 passed, 0 failed, 0 skipped (rerun 2026-10-10, from scripts/)
@@ -31,13 +31,15 @@ remaining:
   - verified: the loadAfter defect of 2026-09-28 (retired sibling id) confirmed fixed in game, pass 3 scenario 1
   - not applicable: French pass and interface check in EN/FR, MainButtons shortcut, options persistence - no owned text, no settings (owner, 2026-09-28; settings_audit above)
 session:      local_419c1547-a655-45f1-aae0-2bbff3ba60d2
-updated:      2026-10-10, localize -> writeTests[1.0.0]: FRENCH_REVIEW.md generated (no French shipped), protocols read and marked
+updated:      2026-10-10, writeTests -> playTests[1.0.0]: French review confirmed by Virginie in chat (no French shipped, FRENCH_REVIEW.md lists the English texts)
 protocols_read_sha: 1405c22e11d72011390df2af5013f748f6ed374b
 ---
 
 # Colorful Coats - Cats and Dogs! Renew — status
 
 ## Audit 2026-10-10
+
+**Update, same day:** Virginie confirmed the French review in chat (revision `e5e73bf`, no correction requested; the review line of `FRENCH_REVIEW.md` stays hers to fill). `writeTests` exit criteria 7.a to 7.h hold (automated and XML tests rerun green today, translations `not_applicable` justified). Stage now `playTests[1.0.0]`. Next: Pickle tickets for the two `unverified` lines, small and targeted.
 
 **Previous: done (= playTests in the new vocabulary). Retained: `localize[1.0.0]`, then `writeTests[1.0.0]` the same day once `FRENCH_REVIEW.md` was generated (owner request).** HEAD `408a101`, tree dirty: root tidy (`_tools/` -> `scripts/`, scenarios -> `Tests/FUNCTIONAL-SCENARIOS.md`, `.build/` removed, Pickle build intermediates now under `Tests/Pickle/Source/obj|bin`, `.gitignore` `obj/` `bin/`) plus two comment lines in `Mod/Patches/Coats_LetsHaveACat.xml` and `Coats_StrayDogs.xml` and `Mod/ATTRIBUTION.md` (path text only, no patch value). Rerun today from `scripts/`: `Run-Functional-Tests` 22/0/0, `Check-Coats` 41 breeds, `Check-PatchFields` 41 payloads, `Check-XmlClasses`, `Check-DefRefs`, `Check-TypeRefs` all green. `dotnet build` of the Pickle steps succeeds with the new props.
 
