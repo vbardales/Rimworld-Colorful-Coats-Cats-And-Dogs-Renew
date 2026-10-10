@@ -32,7 +32,7 @@ remaining:
   - not applicable: French pass and interface check in EN/FR, MainButtons shortcut, options persistence - no owned text, no settings (owner, 2026-09-28; settings_audit above)
 session:      local_419c1547-a655-45f1-aae0-2bbff3ba60d2
 updated:      2026-10-10, writeTests -> playTests[1.0.0]: French review confirmed by Virginie in chat (no French shipped, FRENCH_REVIEW.md lists the English texts)
-protocols_read_sha: 1405c22e11d72011390df2af5013f748f6ed374b
+protocols_read_sha: a959f76528043543b1ac9025b40dc8efcefd9e56
 ---
 
 # Colorful Coats - Cats and Dogs! Renew — status
