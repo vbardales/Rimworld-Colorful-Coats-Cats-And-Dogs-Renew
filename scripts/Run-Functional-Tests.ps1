@@ -85,7 +85,7 @@
   skips when it is not there.
 
 .EXAMPLE
-  powershell -ExecutionPolicy Bypass -File _tools\Run-Functional-Tests.ps1
+  powershell -ExecutionPolicy Bypass -File scripts\Run-Functional-Tests.ps1
 
   The -ExecutionPolicy is needed from Git Bash, where this machine's policy refuses -File
   outright and leaves an empty output rather than an error.
@@ -105,54 +105,19 @@ $ErrorActionPreference = 'Stop'
 if (-not $ModPath) { $ModPath = Join-Path $PSScriptRoot '..\Mod' }
 $ModPath = (Resolve-Path $ModPath).Path
 
-$script:pass = 0; $script:fail = 0; $script:skip = 0
-function Test-That([string] $name, [scriptblock] $body) {
-    try {
-        $r = & $body
-        # `$r -eq 'skip'` is NOT the test it looks like: PowerShell converts the string to a
-        # boolean when the left side is one, and every non-empty string is true - so a passing
-        # test would announce itself as skipped. The type has to be checked first.
-        if (($r -is [string]) -and ($r -eq 'skip')) { $script:skip++; Write-Host ("SKIP  {0}" -f $name) -ForegroundColor Yellow; return }
-        if ($r) { $script:pass++; Write-Host ("ok    {0}" -f $name) -ForegroundColor Green }
-        else    { $script:fail++; Write-Host ("FAIL  {0}" -f $name) -ForegroundColor Red }
-    } catch {
-        $script:fail++
-        $ex = $_.Exception; while ($ex.InnerException) { $ex = $ex.InnerException }
-        Write-Host ("FAIL  {0}`n        {1}: {2}" -f $name, $ex.GetType().Name, $ex.Message) -ForegroundColor Red
-    }
-}
-function Say([string] $line) { Write-Host "        $line" -ForegroundColor DarkGray }
+. (Join-Path $PSScriptRoot '..\..\scripts\lib\GameReflection.ps1')
+. (Join-Path $PSScriptRoot '..\..\scripts\lib\TestRunner.ps1')
 
 # ---------------------------------------------------------------------------------------------
 # Loading the game
 
-# An unresolvable assembly name asked for twice recurses to a stack overflow rather than to an
-# error, so what has been tried is remembered. Same handler and same guard as the monorepo's
-# Check-XmlFields.ps1.
-$script:probed = @{}
-[System.AppDomain]::CurrentDomain.add_AssemblyResolve([System.ResolveEventHandler] {
-    param($sender, $e)
-    if ($null -eq $script:probed) { return $null }
-    $short = $e.Name.Split(',')[0]
-    if ($script:probed.ContainsKey($short)) { return $null }
-    $script:probed[$short] = $true
-    $p = Join-Path $Managed "$short.dll"
-    if (Test-Path $p) { return [System.Reflection.Assembly]::LoadFrom($p) }
-    return $null
-})
+# Assembly resolver, type walk and test runner are shared: scripts/lib of the protocols repository.
+Initialize-GameReflection -Managed $Managed
 
 $asm = [System.Reflection.Assembly]::LoadFrom((Join-Path $Managed 'Assembly-CSharp.dll'))
 $NPI = [System.Reflection.BindingFlags] 'NonPublic,Public,Instance'
 $NPS = [System.Reflection.BindingFlags] 'NonPublic,Public,Static'
 
-# GetTypes always throws here - Unity is missing - and the exception carries every type it did
-# resolve, which is all but a handful. PowerShell wraps it, so both shapes are caught.
-function Get-AllTypes($assembly) {
-    try     { return $assembly.GetTypes() }
-    catch [System.Reflection.ReflectionTypeLoadException] { return $_.Exception.Types | Where-Object { $_ } }
-    catch   { return $_.Exception.InnerException.Types | Where-Object { $_ } }
-}
-$allTypes = Get-AllTypes $asm
 
 # Apply() opens on `if (DeepProfiler.enabled)`, and outside the game that field is true while the
 # profiler's own buffers are null - so it throws a NullReferenceException in DeepProfiler.Start
@@ -382,26 +347,26 @@ $alternateGraphic = $asm.GetType('Verse.AlternateGraphic')
 Test-That 'alternateGraphics and alternateGraphicChance are read, by PawnGraphicUtils.TryGetAlternate' {
     $r1 = Get-Readers $pawnKindDef.GetField('alternateGraphics', $NPI)
     $r2 = Get-Readers $pawnKindDef.GetField('alternateGraphicChance', $NPI)
-    Say ("alternateGraphics: " + ($r1 -join ', '))
-    Say ("alternateGraphicChance: " + ($r2 -join ', '))
+    Note ("alternateGraphics: " + ($r1 -join ', '))
+    Note ("alternateGraphicChance: " + ($r2 -join ', '))
     ($r1 -contains 'PawnGraphicUtils.TryGetAlternate') -and ($r2 -contains 'PawnGraphicUtils.TryGetAlternate')
 }
 
 Test-That 'AlternateGraphic.color is read - without a reader every coat here would be inert' {
     $r = Get-Readers $alternateGraphic.GetField('color', $NPI)
-    Say ($r -join ', ')
+    Note ($r -join ', ')
     $r -contains 'AlternateGraphic.GetGraphic'
 }
 
 Test-That 'AlternateGraphic.texPath is read by the same method, which is the branch that keeps the sprite' {
     $r = Get-Readers $alternateGraphic.GetField('texPath', $NPI)
-    Say ($r -join ', ')
+    Note ($r -join ', ')
     $r -contains 'AlternateGraphic.GetGraphic'
 }
 
 Test-That 'AlternateGraphic.weight is read, so leaving it at its default draws the coats evenly' {
     $r = Get-Readers $alternateGraphic.GetField('weight', $NPI)
-    Say ($r -join ', ')
+    Note ($r -join ', ')
     $r.Count -gt 0
 }
 
@@ -427,8 +392,8 @@ Test-That 'every operation writes its coats onto the real defs of its target mod
         }
     }
     if ($done -eq 0) { return 'skip' }
-    Say "$done breeds patched for real"
-    $bad | ForEach-Object { Say $_ }
+    Note "$done breeds patched for real"
+    $bad | ForEach-Object { Note $_ }
     $bad.Count -eq 0
 }
 
@@ -447,8 +412,8 @@ Test-That 'a breed that already has coats is left alone, on every one of them' {
         if ($lists -ne 1)              { $bad += "$($op.DefName): $lists coat lists on one def" }
         if (-not $kept -or $kept.InnerText -ne 'Someone/Elses/Art') { $bad += "$($op.DefName): the existing coats were overwritten" }
     }
-    Say "$($ops.Count) breeds offered a coat list they already had"
-    $bad | ForEach-Object { Say $_ }
+    Note "$($ops.Count) breeds offered a coat list they already had"
+    $bad | ForEach-Object { Note $_ }
     $bad.Count -eq 0
 }
 
@@ -460,8 +425,8 @@ Test-That 'a target mod that is absent costs nothing: every operation still repo
         $real = New-RealOperation $op
         if (-not $real.Apply($doc.PSObject.BaseObject)) { $bad += $op.DefName }
     }
-    Say "$($ops.Count) operations against an empty document"
-    $bad | ForEach-Object { Say "reported failure: $_" }
+    Note "$($ops.Count) operations against an empty document"
+    $bad | ForEach-Object { Note "reported failure: $_" }
     $bad.Count -eq 0
 }
 
@@ -470,25 +435,25 @@ Test-That 'and that is the Always flag doing it, not the conditional: cleared, t
     $doc.LoadXml('<Defs/>')
     $real = New-RealOperation $ops[0] 0      # Success.Normal
     $r = $real.Apply($doc.PSObject.BaseObject)
-    Say "with <success> cleared: $r"
+    Note "with <success> cleared: $r"
     -not $r
 }
 
 Test-That 'every shipped operation carries the flag, on the add and not only on a container' {
     $bad = @($ops | Where-Object { $_.Success -ne 'Always' })
-    $bad | ForEach-Object { Say "$($_.DefName) in $($_.File)" }
+    $bad | ForEach-Object { Note "$($_.DefName) in $($_.File)" }
     $bad.Count -eq 0
 }
 
 Test-That 'the conditional tests the field it is meant to test' {
     $bad = @($ops | Where-Object { $_.CondPath -notmatch '/alternateGraphics$' -or $_.AddPath -notmatch "defName = ""$([regex]::Escape($_.DefName))""" })
-    $bad | ForEach-Object { Say "$($_.DefName): cond '$($_.CondPath)' add '$($_.AddPath)'" }
+    $bad | ForEach-Object { Note "$($_.DefName): cond '$($_.CondPath)' add '$($_.AddPath)'" }
     $bad.Count -eq 0
 }
 
 Test-That 'no breed is claimed by two of this mod''s own files' {
     $dup = $ops | Group-Object DefName | Where-Object { $_.Count -gt 1 }
-    $dup | ForEach-Object { Say "$($_.Name) in $((($_.Group).File | Select-Object -Unique) -join ', ')" }
+    $dup | ForEach-Object { Note "$($_.Name) in $((($_.Group).File | Select-Object -Unique) -join ', ')" }
     $dup.Count -eq 0
 }
 
@@ -501,8 +466,8 @@ Test-That 'no breed is shared with Colorful Coats - Vanilla Animals Expanded! Re
         $theirs += [regex]::Matches((Get-Content $f.FullName -Raw), 'defName = "([^"]+)"') | ForEach-Object { $_.Groups[1].Value }
     }
     $shared = @($ops.DefName | Where-Object { $theirs -contains $_ })
-    Say "$($theirs.Count) defNames on their side, $($shared.Count) shared"
-    $shared | ForEach-Object { Say "shared: $_" }
+    Note "$($theirs.Count) defNames on their side, $($shared.Count) shared"
+    $shared | ForEach-Object { Note "shared: $_" }
     $shared.Count -eq 0
 }
 
@@ -532,7 +497,7 @@ Test-That 'every colour is well formed and read on the 0-255 scale, as the game 
         elseif (-not $col.Is255) { $bad += "$($op.DefName): '$c' would be read as 0-1" }
         elseif ($col.R -gt 255 -or $col.G -gt 255 -or $col.B -gt 255) { $bad += "$($op.DefName): '$c' is over 255" }
     } }
-    $bad | ForEach-Object { Say $_ }
+    $bad | ForEach-Object { Note $_ }
     $bad.Count -eq 0
 }
 
@@ -542,7 +507,7 @@ Test-That 'every coat changes something: a tint of pure white would be the origi
         $col = Read-Colour $c
         if ($col -and $col.R -ge 255 -and $col.G -ge 255 -and $col.B -ge 255) { $bad += "$($op.DefName): '$c' is a no-op" }
     } }
-    $bad | ForEach-Object { Say $_ }
+    $bad | ForEach-Object { Note $_ }
     $bad.Count -eq 0
 }
 
@@ -552,7 +517,7 @@ Test-That 'no breed lists the same colour twice - a duplicate is a wasted slot, 
         $dup = $op.Colours | Group-Object | Where-Object { $_.Count -gt 1 }
         foreach ($d in $dup) { $bad += "$($op.DefName): $($d.Name) x$($d.Count)" }
     }
-    $bad | ForEach-Object { Say $_ }
+    $bad | ForEach-Object { Note $_ }
     $bad.Count -eq 0
 }
 
@@ -562,7 +527,7 @@ Test-That 'every breed has at least two coats and a chance between 0 and 1' {
         if ($op.Colours.Count -lt 2)              { $bad += "$($op.DefName): $($op.Colours.Count) coat(s)" }
         if ($op.Chance -le 0 -or $op.Chance -gt 1) { $bad += "$($op.DefName): chance $($op.Chance)" }
     }
-    $bad | ForEach-Object { Say $_ }
+    $bad | ForEach-Object { Note $_ }
     $bad.Count -eq 0
 }
 
@@ -605,11 +570,11 @@ Test-That 'every colour is one purpleyam actually painted, measured out of their
             $palette["({0},{1},{2})" -f [int] [math]::Min(255,$t[0]), [int] [math]::Min(255,$t[1]), [int] [math]::Min(255,$t[2])] = $coat.BaseName
         }
     }
-    Say "$($palette.Count) tints recovered from purpleyam's coats"
+    Note "$($palette.Count) tints recovered from purpleyam's coats"
     $used = @($ops.Colours | Select-Object -Unique)
     $bad  = @($used | Where-Object { -not $palette.ContainsKey($_) })
-    $bad | ForEach-Object { Say "not theirs: $_" }
-    Say ("used {0} of the {1}" -f ($used.Count - $bad.Count), $palette.Count)
+    $bad | ForEach-Object { Note "not theirs: $_" }
+    Note ("used {0} of the {1}" -f ($used.Count - $bad.Count), $palette.Count)
     $bad.Count -eq 0
 }
 
@@ -618,27 +583,27 @@ Write-Host 'D. What ships' -ForegroundColor Cyan
 
 Test-That 'the published folder contains no texture, which is the mod''s whole claim' {
     $imgs = @(Get-ChildItem $ModPath -Recurse -Include '*.png','*.jpg','*.psd' | Where-Object { $_.Directory.Name -ne 'About' })
-    $imgs | ForEach-Object { Say $_.FullName }
+    $imgs | ForEach-Object { Note $_.FullName }
     $imgs.Count -eq 0
 }
 
 Test-That 'Preview.png is 896 x 504 and under 900 KB' {
     Add-Type -AssemblyName System.Drawing
     $p = Join-Path $ModPath 'About\Preview.png'
-    if (-not (Test-Path $p)) { Say 'missing'; return $false }
+    if (-not (Test-Path $p)) { Note 'missing'; return $false }
     $i = [System.Drawing.Image]::FromFile($p); $w = $i.Width; $h = $i.Height; $i.Dispose()
     $kb = [int] ((Get-Item $p).Length / 1KB)
-    Say "$w x $h, $kb KB"
+    Note "$w x $h, $kb KB"
     $w -eq 896 -and $h -eq 504 -and $kb -lt 900
 }
 
 Test-That 'ModIcon.png is 128 x 128 and under 60 KB' {
     Add-Type -AssemblyName System.Drawing
     $p = Join-Path $ModPath 'About\ModIcon.png'
-    if (-not (Test-Path $p)) { Say 'missing'; return $false }
+    if (-not (Test-Path $p)) { Note 'missing'; return $false }
     $i = [System.Drawing.Image]::FromFile($p); $w = $i.Width; $h = $i.Height; $i.Dispose()
     $kb = [int] ((Get-Item $p).Length / 1KB)
-    Say "$w x $h, $kb KB"
+    Note "$w x $h, $kb KB"
     $w -eq 128 -and $h -eq 128 -and $kb -lt 60
 }
 
@@ -648,7 +613,7 @@ Test-That 'About.xml loads after every mod that paints coats for the same animal
     $need = @('Qux.stray.dogs','akairo.LetsHaveaCat','VanillaExpanded.VanillaAnimalsExpanded',
               'nelim.colorfulcoats.vae','Erin.Cats','cucumpear.azrael.varietycoats')
     $missing = @($need | Where-Object { $after -notcontains $_ })
-    $missing | ForEach-Object { Say "missing: $_" }
+    $missing | ForEach-Object { Note "missing: $_" }
     $missing.Count -eq 0
 }
 
@@ -658,7 +623,5 @@ Test-That 'the mod declares no dependency: any one of the four targets is enough
     -not $about.ModMetaData.modDependencies
 }
 
-Write-Host ''
-Write-Host ("{0} passed, {1} failed, {2} skipped" -f $script:pass, $script:fail, $script:skip)
-if ($script:fail -gt 0) { exit 1 }
-exit 0
+Remove-GameReflection
+Complete-Tests

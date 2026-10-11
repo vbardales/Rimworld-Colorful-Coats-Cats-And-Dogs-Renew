@@ -29,7 +29,7 @@ remaining:
   - verified: all three Pickle passes (38 scenarios, rev 3dad095, Mod/ patches unchanged since) passed, exitReason passed, setName read in each summary.json (sans-facultatifs, avec-cibles, avec-peintres); no @wip, no @requires; Player.log grepped before deletion, 0 hits for this mod - docs/runs/2026-09-28-pass{1,2,3}.txt, docs/runs/2026-10-02-evidence-minified.txt
   - verified: Tests/Pickle/Evidence/2026-09-28-3dad095-pass1/2/3 (on disk, gitignored; summary, junit, @review JPEGs kept; Player.log and messages.ndjson deleted 2026-10-02)
   - verified: @review captures opened and read - huskies read as fur (icy blue, grey, cream, brown), poodles show 4 distinct tints, newfoundlands barely change as expected, persians show a faint tint as expected
-  - verified: Tests/Pickle/Check-Steps.ps1 (no game) found every step defined exactly once and every map entry resolving
+  - verified: shared scripts/Check-Steps.ps1 -ModRoot (protocols repository, no game; a85e83c, 2026-10-11; 24 patterns, 416 step lines) found every step defined exactly once and every map entry resolving
   - verified: the loadAfter defect of 2026-09-28 (retired sibling id) confirmed fixed in game, pass 3 scenario 1
   - not applicable: French pass and interface check in EN/FR, MainButtons shortcut, options persistence - no owned text, no settings (owner, 2026-09-28; settings_audit above)
 session:      local_419c1547-a655-45f1-aae0-2bbff3ba60d2

@@ -2,7 +2,7 @@
 
 Development only. Nothing under `Tests/` is part of the Workshop payload: Steam publishes `Mod/`
 and nothing else. **Written, built and not yet played.** No run has been submitted, so no scenario
-here has a result, and none is claimed. The step assembly compiles, and `Tests/Pickle/Check-Steps.ps1` (run it after every edit of a feature or a
+here has a result, and none is claimed. The step assembly compiles, and `scripts/Check-Steps.ps1 -ModRoot <this folder>` of the protocols repository (run it after every edit of a feature or a
 step) checks the features against Pickle's real steps: every step is defined exactly once and every map entry
 resolves. That proves the phrases exist, not that a step
 does what its sentence says; only a run does.
