@@ -1,0 +1,14 @@
+{
+  "templateStamp": "ba64b0c1b25d",
+  "workshopId": "3806769444",
+  "packageId": "nelim.colorfulcoats.catsanddogs",
+  "releaseTitle": "Colorful Coats - Cats and Dogs! Renew (unofficial) {version}",
+  "requirePaths": [
+    "Patches"
+  ],
+  "forbidPaths": [
+    "Assemblies"
+  ],
+  "previewFile": "About/Preview.png",
+  "galleryDir": "Art/Gallery"
+}
