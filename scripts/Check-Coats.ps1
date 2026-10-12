@@ -102,6 +102,7 @@ foreach ($target in $targets) {
     $checked = 0
 
     foreach ($op in $doc.Patch.Operation) {
+        if ($op.Class -eq 'PatchOperationReplace' -and "$($op.xpath)" -match 'shaderType$') { continue }   # the cats' shader replacement, not a coat
         if ($op.Class -ne 'PatchOperationConditional') { $failures.Add("$($target.File): operation is not a conditional"); continue }
 
         $dn = [regex]::Match($op.xpath, 'defName = "([^"]+)"')

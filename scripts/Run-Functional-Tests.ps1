@@ -157,6 +157,7 @@ $ops = @()
 foreach ($f in $patchFiles) {
     [xml] $doc = Get-Content $f.FullName -Raw -Encoding UTF8
     foreach ($opNode in $doc.Patch.Operation) {
+        if ($opNode.Class -ne 'PatchOperationConditional') { continue }   # the shader replacement is checked on its own
         $add = $opNode.nomatch
         $defName = ([regex]::Match($opNode.xpath, 'defName = "([^"]+)"')).Groups[1].Value
         $ops += [pscustomobject] @{
