@@ -33,7 +33,7 @@
   "backgroundPosition": "center",
   "backgroundSize": "cover",
   "echo": {
-    "file": "echo.png",
+    "file": "echo-concept.png",
     "preSized": true,
     "color": "var(--accent)",
     "width": 250,
@@ -42,8 +42,7 @@
     "veil": false,
     "panelTop": 5,
     "panelRight": -2,
-    "panelWidth": 48,
-    "flipX": true
+    "panelWidth": 48
   },
   "iconBadge": {
     "file": "ModIcon-source.png",
