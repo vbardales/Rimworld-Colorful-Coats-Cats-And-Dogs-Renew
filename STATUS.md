@@ -19,13 +19,12 @@ licence_at:   checked 2026-09-12; source not updated to 1.6 (original 1.3, offic
 upstream_mod_remotes: N/A (no git repository found for purpleyam's "Colorful Coats - Cats and Dogs!", Workshop 2388932599; searched again 2026-10-02, only this mod's own Renew repositories come up)
 dependencies: none
 showcase:     complete
-tested_on:    2026-09-28 (Pickle passes 1-3 in the WSL, rev 3dad095; no manual play)
+tested_on:    2026-10-10 (Pickle 08-revue, 34/34 passed in the WSL, rev 58bcd23; passes 1-3 and add/removal runs on 2026-09-28 and 2026-10-02; no manual play)
 workshop:     3806769444 (0.1.0, item creation only; About/PublishedFileId.txt committed in 97c19d3; private, as Steam creates every item; not tested, not public)
 remaining:
   - verified: ModIcon readability and weight (AUDIT 2.c): 38.6 KB over the 20-30 KB target, only the mascot reads at 32 px; override granted by Virginie in chat, 2026-10-11, icon kept as is
   - defect: About.xml author "purpleyam, adapted by Nelim" is not the PUBLISHING.md format "<original authors> - 1.6 adapted by Nelim" (rule of 2026-10-10); fix at writeDocs, with the description
-  - unverified: scenario 2 of Tests/FUNCTIONAL-SCENARIOS.md for the breeds never photographed (16 of 19 Stray Dogs dogs, 10 of 11 cats): only huskies, standard poodles, newfoundlands and persians had their @review capture read. Needs more @review scenarios played, or the owner declaring it not applicable with a reason
-  - unverified: scenario 3, a puppy growing up and the mod added to or removed from a running colony; only save/reload is covered (green). Needs a Pickle scenario, or the owner declaring it not applicable (the mod stores nothing in a save: a reading of the code, not a play)
+  - verified: scenario 2 of Tests/FUNCTIONAL-SCENARIOS.md for all 34 breeds: 08-revue (rev 58bcd23, avec-cibles) 34/34 passed, exitReason passed, every @review capture opened and read, coats visibly differ on every breed; russian blue, american shorthair, white cat, kijitora, japanese bobtail and siamese only subtly (owner may judge) - docs/runs/2026-10-10-revue.txt
   - verified: all three Pickle passes (38 scenarios, rev 3dad095, Mod/ patches unchanged since) passed, exitReason passed, setName read in each summary.json (sans-facultatifs, avec-cibles, avec-peintres); no @wip, no @requires; Player.log grepped before deletion, 0 hits for this mod - docs/runs/2026-09-28-pass{1,2,3}.txt, docs/runs/2026-10-02-evidence-minified.txt
   - verified: Tests/Pickle/Evidence/2026-09-28-3dad095-pass1/2/3 (on disk, gitignored; summary, junit, @review JPEGs kept; Player.log and messages.ndjson deleted 2026-10-02)
   - verified: @review captures opened and read - huskies read as fur (icy blue, grey, cream, brown), poodles show 4 distinct tints, newfoundlands barely change as expected, persians show a faint tint as expected
@@ -47,6 +46,8 @@ protocols_read_sha: a959f76528043543b1ac9025b40dc8efcefd9e56
 **Code review (8.m), 2026-10-10:** all of `Mod/` (four patches, About.xml; no C#) read by a reviewer pass against the 22 green functional tests. Two comment inaccuracies found and fixed (greyhound "highest chance", "78 coats" for 78 files); no defect. `code_review_sha` set to the fixing commit.
 
 **Update, same day:** Virginie confirmed the French review in chat (revision `e5e73bf`, no correction requested; the review line of `FRENCH_REVIEW.md` stays hers to fill). `writeTests` exit criteria 7.a to 7.h hold (automated and XML tests rerun green today, translations `not_applicable` justified). Stage now `playTests[1.0.0]`. Next: Pickle tickets for the two `unverified` lines, small and targeted.
+
+**Update 2026-10-12:** the `08-revue` ticket (34 breeds) passed 34/34 on 2026-10-10 and all 34 `@review` captures were read: the "two `unverified` lines" below no longer stand (scenario 2 verified for every breed; scenario 3 was already closed by 2bis-a/b/c, the removal chain and `32-ajout`). See `docs/runs/2026-10-10-revue.txt`.
 
 **Previous: done (= playTests in the new vocabulary). Retained: `localize[1.0.0]`, then `writeTests[1.0.0]` the same day once `FRENCH_REVIEW.md` was generated (owner request).** HEAD `408a101`, tree dirty: root tidy (`_tools/` -> `scripts/`, scenarios -> `Tests/FUNCTIONAL-SCENARIOS.md`, `.build/` removed, Pickle build intermediates now under `Tests/Pickle/Source/obj|bin`, `.gitignore` `obj/` `bin/`) plus two comment lines in `Mod/Patches/Coats_LetsHaveACat.xml` and `Coats_StrayDogs.xml` and `Mod/ATTRIBUTION.md` (path text only, no patch value). Rerun today from `scripts/`: `Run-Functional-Tests` 22/0/0, `Check-Coats` 41 breeds, `Check-PatchFields` 41 payloads, `Check-XmlClasses`, `Check-DefRefs`, `Check-TypeRefs` all green. `dotnet build` of the Pickle steps succeeds with the new props.
 

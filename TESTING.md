@@ -91,15 +91,14 @@ tag (the three passes decide which mods are present, by pass map, and each playe
 | --- | --- | --- |
 | 0. loads, patches take, no red | pass 1 `the mod is loaded...`, `the operations aimed at absent mods left no trace`, `no errors were logged`; Player.log grepped for the four lines the scenario names, 0 hits | automated, green |
 | 1. a dog gets a coat | pass 1 forty huskies, pass 2 forty standard poodles (`wear several different coats`) | automated, green |
-| 2. a tint reads as fur | `@review` captures read: huskies, standard poodles, newfoundlands, persians; `08-revue` (34 breeds) written, first run crashed, not yet played | **partly done** |
+| 2. a tint reads as fur | `@review` captures of all 34 breeds read (`08-revue`, 34/34, docs/runs/2026-10-10-revue.txt); a few breeds show only a subtle spread | automated and read, green |
 | 3. one coat for life | save and reload (green, passes 1-3); puppies/kittens keep their coats on growing up (2bis-a, 2bis-b, 2bis-c green); removal chain green (`7faf`); add-to-a-running-colony `32-ajout` green (`def6`) | **done** |
 | 4. two mods never dress one animal | pass 3 (`no animal received two coat lists`, Erin's cat, Animal Variety Coats husky and labrador, sibling port) | automated, green |
 | 5. none of the four target mods | pass 1 | automated, green |
 | 6. the deliberate absences | pass 2 `the black cat has no coats`, `animals that already had coats were left alone` | not a test: a list of things not to report; the two assertions above cover it |
 | 7. the poodle's four coats | pass 2 `the standard poodle wears purpleyam's four poodle coats` plus its capture | automated, green |
 
-Left before `tested`: scenario 2 for the breeds not yet photographed, and the two unplayed parts of
-scenario 3. Each is either written as a Pickle scenario and played, or declared not applicable by the
-owner with a reason (the second part of 3 rests on the fact that the mod stores nothing in a save,
-which is a reading of the code and not a play). English only for any manual pass; no French pass,
-the mod owns no text (owner, 2026-09-28).
+Nothing left before `tested` on the in-game side: scenario 2 is covered for all 34 breeds (`08-revue`, 2026-10-10)
+and scenario 3 is closed by 2bis-a/b/c, the removal chain and `32-ajout`. Whether the subtle spread of a few
+cat breeds is acceptable is the owner's call. English only for any manual pass; no French pass, the mod owns
+no text (owner, 2026-09-28).
