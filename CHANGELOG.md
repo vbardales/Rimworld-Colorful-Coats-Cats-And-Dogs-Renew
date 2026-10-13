@@ -37,16 +37,16 @@ port, so this is its idea rebuilt against the cats and dogs that are alive on 1.
 - Coats for the **4 base-game pets** — husky, labrador retriever, yorkshire terrier, cat — behind a
   conditional, so Animal Variety Coats and Erin's Cat Overhaul win wherever they are running. The
   yorkshire terrier is the one animal in the list that nothing else has ever covered.
-- `_tools/Check-Coats.ps1`, which re-checks every `defName` against the installed target mod, that
+- `scripts/Check-Coats.ps1`, which re-checks every `defName` against the installed target mod, that
   no target has since grown `alternateGraphics` of its own, and that every colour is in the form
   `ParseHelper` reads as 0-255.
-- `_tools/Measure-Coats.ps1`, which recomputes the palette from purpleyam's mod and Vanilla Animals
+- `scripts/Measure-Coats.ps1`, which recomputes the palette from purpleyam's mod and Vanilla Animals
   Expanded, so the provenance of every colour can be checked rather than believed.
-- `_tools/FUNCTIONAL-SCENARIOS.md`, the eight scenarios only a game can settle — one thing to watch
+- `Tests/FUNCTIONAL-SCENARIOS.md`, the eight scenarios only a game can settle — one thing to watch
   each, and the line in `Player.log` that says it went wrong. Scenario 2 is the one that matters:
   the tints were measured against Vanilla Animals Expanded's sprites, and the dogs of Stray Dogs
   keep theirs in an asset bundle, so what those colours land on has never been seen.
-- `_tools/Run-Functional-Tests.ps1`, twenty-two tests that run RimWorld's own patch engine outside
+- `scripts/Run-Functional-Tests.ps1`, twenty-two tests that run RimWorld's own patch engine outside
   the game: the shipped XML is rebuilt into real `PatchOperation` objects and applied to a document
   made of the target mods' own defs, and the IL of `Assembly-CSharp` is swept for whoever reads
   `AlternateGraphic.color`. Seventeen have been seen to fail under a mutation; the other five
@@ -63,7 +63,7 @@ port, so this is its idea rebuilt against the cats and dogs that are alive on 1.
 - **The palette is purpleyam's, measured rather than invented.** Each tint is one of their coats
   divided by the sprite it was painted over, which is the colour that reproduces it. They painted
   26 coats; **17 are reachable as a tint** and those 17 are the whole palette. The other nine are
-  repaints, lighter than the sprite or a pattern rather than a shade, and `_tools/Measure-Coats.ps1`
+  repaints, lighter than the sprite or a pattern rather than a shade, and `scripts/Measure-Coats.ps1`
   reports them as unreachable rather than rounding them down. The standard poodle of Stray Dogs
   wears their four poodle coats in their order, and the labrador takes their chocolate and black.
 - **Their textures still stay where they are.** Four of their cats have a namesake in Let's Have a
