@@ -1,7 +1,7 @@
 # Publication
 
 What the Workshop page asks for and the repository holds nowhere else. Draft opened 2026-10-02, while the
-mod is `done` and not yet `tested`: nothing here is final, and nothing has been sent. The Workshop item
+mod is at `playTests` (Pickle passes green, no manual play): nothing here is final, and nothing has been sent. The Workshop item
 `3806769444` exists (the `0.1.0` upload only created it; it is private).
 
 ## Dependencies and DLC
