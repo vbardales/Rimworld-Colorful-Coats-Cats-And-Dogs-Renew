@@ -183,7 +183,7 @@
 		</nomatch>
 	</Operation>
 
-t<!-- Russian blue - a blue cat stays a blue cat; the coats are a bluer one, a warm brown and a charcoal, all darker
+	<!-- Russian blue - a blue cat stays a blue cat; the coats are a bluer one, a warm brown and a charcoal, all darker
 	     than the sprite so they show (owner, 2026-10-12). -->
 	<Operation Class="PatchOperationConditional">
 		<xpath>/Defs/PawnKindDef[defName = "akaNEKO_Russian_Blue"]/alternateGraphics</xpath>
