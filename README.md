@@ -135,4 +135,4 @@ game can settle, [ATTRIBUTION.md](ATTRIBUTION.md) for what was taken and what wa
 [LICENSE](LICENSE) for what the MIT grant covers, and [CHANGELOG.md](CHANGELOG.md).
 
 The work was done with the help of an AI assistant (Claude, by Anthropic), under human direction.
-Automated and XML checks have passed. Final functional validation in game remains pending.
+Automated and XML checks have passed, and the in-game Pickle passes have been played and their captures read. The cats patch was changed afterwards and is being replayed.

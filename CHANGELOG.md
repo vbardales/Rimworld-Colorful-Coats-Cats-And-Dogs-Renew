@@ -9,6 +9,7 @@ port, so this is its idea rebuilt against the cats and dogs that are alive on 1.
 
 ### Fixed
 
+- The Let's Have a Cat! cats barely changed colour: their sprites use the CutoutComplex shader and ship no mask, so a tint hardly showed (twelve white cats stayed white). The patch now switches those cats to the plain Cutout shader, which multiplies the sprite by the tint, and the siamese, maine coon and russian blue get darker tints that can show. The black cat is still left out.
 - `About.xml` `loadAfter` named `nelim.colorfulcoats.vaerenew`, which is no longer the packageId of the
   sibling port (now `nelim.colorfulcoats.vae`). A `loadAfter` on an id that does not exist is ignored
   without a line of log, so this mod had no declared order against the sibling. Corrected in
