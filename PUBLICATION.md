@@ -13,7 +13,7 @@ mod is `done` and not yet `tested`: nothing here is final, and nothing has been 
   (`akairo.LetsHaveaCat`), Vanilla Animals Expanded (`VanillaExpanded.VanillaAnimalsExpanded`), the sibling port
   (`nelim.colorfulcoats.vae`), Erin's Cat Overhaul (`Erin.Cats`), Animal Variety Coats
   (`cucumpear.azrael.varietycoats`). Loading after them is what lets the conditional see their coats and stand aside.
-- **DLC: none referenced.** No `LoadFolders.xml`, no `IfModActive` branch, `supportedVersions` is 1.6 only.
+- **DLC: none referenced.** No `LoadFolders.xml`, no `IfModActive` branch, `supportedVersions` lists the latest RimWorld version only.
 
 ## Adult content boxes
 
