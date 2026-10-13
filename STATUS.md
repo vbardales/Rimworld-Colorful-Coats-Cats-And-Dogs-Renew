@@ -23,7 +23,6 @@ tested_on:    2026-10-10 (Pickle 08-revue, 34/34 passed in the WSL, rev 58bcd23;
 workshop:     3806769444 (0.1.0, item creation only; About/PublishedFileId.txt committed in 97c19d3; private, as Steam creates every item; not tested, not public)
 remaining:
   - verified: ModIcon readability and weight (AUDIT 2.c): 38.6 KB over the 20-30 KB target, only the mascot reads at 32 px; override granted by Virginie in chat, 2026-10-11, icon kept as is
-  - defect: About.xml author "purpleyam, adapted by Nelim" is not the PUBLISHING.md format "<original authors> - 1.6 adapted by Nelim" (rule of 2026-10-10); fix at writeDocs, with the description
   - verified: scenario 2 of Tests/FUNCTIONAL-SCENARIOS.md for all 34 breeds: 08-revue (rev 58bcd23, avec-cibles) 34/34 passed, exitReason passed, every @review capture opened and read, coats visibly differ on every breed; russian blue, american shorthair, white cat, kijitora, japanese bobtail and siamese only subtly (owner may judge) - docs/runs/2026-10-10-revue.txt
   - verified: all three Pickle passes (38 scenarios, rev 3dad095, Mod/ patches unchanged since) passed, exitReason passed, setName read in each summary.json (sans-facultatifs, avec-cibles, avec-peintres); no @wip, no @requires; Player.log grepped before deletion, 0 hits for this mod - docs/runs/2026-09-28-pass{1,2,3}.txt, docs/runs/2026-10-02-evidence-minified.txt
   - verified: Tests/Pickle/Evidence/2026-09-28-3dad095-pass1/2/3 (on disk, gitignored; summary, junit, @review JPEGs kept; Player.log and messages.ndjson deleted 2026-10-02)
@@ -34,7 +33,7 @@ remaining:
 session:      local_419c1547-a655-45f1-aae0-2bbff3ba60d2
 updated:      2026-10-10, writeTests -> playTests[1.0.0]: French review confirmed by Virginie in chat (no French shipped, FRENCH_REVIEW.md lists the English texts)
 code_review_sha: db54f234018a5a6abb98338f4b6cc017bf4dd7a8
-protocols_read_sha: a959f76528043543b1ac9025b40dc8efcefd9e56
+protocols_read_sha: 990a7ae732f2d6e9757c7ecf9163d4b869052701
 ---
 
 # Colorful Coats - Cats and Dogs! Renew — status
