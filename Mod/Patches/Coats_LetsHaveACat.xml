@@ -36,10 +36,11 @@
 	     so a tint on it barely shows: twelve white cats side by side stayed white (Pickle 08-revue, 2026-10-10).
 	     The plain Cutout shader multiplies the sprite by the tint, which is what these coats need. Same
 	     <success>Always</success> as the coats: without the mod the xpath matches nothing and costs nothing.
-	     The black cat is excluded, it gets no coats. -->
+	     The black cat is excluded, it gets no coats. A cat that already has alternateGraphics (another mod paints it)
+	     keeps its shader: this runs before the coats below are added, so not(alternateGraphics) still means "not painted". -->
 	<Operation Class="PatchOperationReplace">
 		<success>Always</success>
-		<xpath>/Defs/PawnKindDef[starts-with(defName, "akaNEKO_") and defName != "akaNEKO_kuroneko"]/lifeStages/li/bodyGraphicData/shaderType</xpath>
+		<xpath>/Defs/PawnKindDef[starts-with(defName, "akaNEKO_") and defName != "akaNEKO_kuroneko" and not(alternateGraphics)]/lifeStages/li/bodyGraphicData/shaderType</xpath>
 		<value>
 			<shaderType>Cutout</shaderType>
 		</value>
@@ -82,7 +83,7 @@
 		</nomatch>
 	</Operation>
 
-	<!-- Siamese - blue point, chocolate point, a warmer seal. Dark tints: the pale ones did not show (owner, 2026-10-12). -->
+	<!-- Siamese - blue point, chocolate point, seal point. Dark tints: the pale ones did not show (owner, 2026-10-12). -->
 	<Operation Class="PatchOperationConditional">
 		<xpath>/Defs/PawnKindDef[defName = "akaNEKO_Siamese"]/alternateGraphics</xpath>
 		<nomatch Class="PatchOperationAdd">
@@ -93,7 +94,7 @@
 				<alternateGraphics>
 					<li><color>(111,124,166)</color></li>
 					<li><color>(138,113,98)</color></li>
-					<li><color>(145,120,100)</color></li>
+					<li><color>(102,94,90)</color></li>
 				</alternateGraphics>
 			</value>
 		</nomatch>
