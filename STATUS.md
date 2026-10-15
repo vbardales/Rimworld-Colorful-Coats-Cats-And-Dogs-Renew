@@ -9,9 +9,9 @@ repo:         Rimworld-Colorful-Coats-Cats-And-Dogs-Renew
 visibility:   public
 detached:     yes
 workflow_stage: playTests[1.0.0]
-audit_revision: 408a1019c870aea227614740f5d282c8021400be (+ uncommitted root tidy, this audit)
-audit_date: 2026-10-10
-automated_tests: passed; 22 passed, 0 failed, 0 skipped (rerun 2026-10-10, from scripts/)
+audit_revision: a00034b4c2d3acdade8505073c708cd3f7c9f4ea (2026-10-15, chain 1 to 7 walked again, 8.a to 8.m below)
+audit_date: 2026-10-15
+automated_tests: passed; 22 passed, 0 failed, 0 skipped (rerun 2026-10-15, from scripts/)
 xml_tests: passed; Check-Coats, Check-PatchFields (41), Check-XmlClasses, Check-DefRefs, Check-TypeRefs (rerun 2026-10-10)
 licence:      silent
 licence_own:  MIT; LICENSE and Mod/LICENSE; covers this repository's contributions, not purpleyam's name or measured palette
@@ -19,10 +19,9 @@ licence_at:   checked 2026-09-12; source not updated to 1.6 (original 1.3, offic
 upstream_mod_remotes: N/A (no git repository found for purpleyam's "Colorful Coats - Cats and Dogs!", Workshop 2388932599; searched again 2026-10-02, only this mod's own Renew repositories come up)
 dependencies: none
 showcase:     complete
-tested_on:    2026-10-10 (Pickle 08-revue, 34/34 passed in the WSL, rev 58bcd23; passes 1-3 and add/removal runs on 2026-09-28 and 2026-10-02; no manual play)
+tested_on:    2026-10-15 (cats replay rev a00034b: 10/10 and peintres 10/10, docs/runs/2026-10-14-chats-shader.txt; before that 2026-10-10 (Pickle 08-revue, 34/34 passed in the WSL, rev 58bcd23; passes 1-3 and add/removal runs on 2026-09-28 and 2026-10-02; no manual play))
 workshop:     3806769444 (0.1.0, item creation only; About/PublishedFileId.txt committed in 97c19d3; private, as Steam creates every item; not tested, not public)
 remaining:
-  - verified: ModIcon readability and weight (AUDIT 2.c): 38.6 KB over the 20-30 KB target, only the mascot reads at 32 px; override granted by Virginie in chat, 2026-10-11, icon kept as is
   - verified: scenario 2 of Tests/FUNCTIONAL-SCENARIOS.md for all 34 breeds: 08-revue (rev 58bcd23, avec-cibles) 34/34 passed, exitReason passed, every @review capture opened and read, coats visibly differ on every breed; russian blue, american shorthair, white cat, kijitora, japanese bobtail and siamese only subtly (owner may judge) - docs/runs/2026-10-10-revue.txt
   - verified: all three Pickle passes (38 scenarios, rev 3dad095, Mod/ patches unchanged since) passed, exitReason passed, setName read in each summary.json (sans-facultatifs, avec-cibles, avec-peintres); no @wip, no @requires; Player.log grepped before deletion, 0 hits for this mod - docs/runs/2026-09-28-pass{1,2,3}.txt, docs/runs/2026-10-02-evidence-minified.txt
   - verified: Tests/Pickle/Evidence/2026-09-28-3dad095-pass1/2/3 (on disk, gitignored; summary, junit, @review JPEGs kept; Player.log and messages.ndjson deleted 2026-10-02)
@@ -31,12 +30,18 @@ remaining:
   - verified: the loadAfter defect of 2026-09-28 (retired sibling id) confirmed fixed in game, pass 3 scenario 1
   - not applicable: French pass and interface check in EN/FR, MainButtons shortcut, options persistence - no owned text, no settings (owner, 2026-09-28; settings_audit above)
 session:      local_419c1547-a655-45f1-aae0-2bbff3ba60d2
-updated:      2026-10-10, writeTests -> playTests[1.0.0]: French review confirmed by Virginie in chat (no French shipped, FRENCH_REVIEW.md lists the English texts)
-code_review_sha: db54f234018a5a6abb98338f4b6cc017bf4dd7a8
-protocols_read_sha: 990a7ae732f2d6e9757c7ecf9163d4b869052701
+updated:      2026-10-15, playTests[1.0.0]: cats patch changed after the passes (Cutout shader, darker tints, shader guard), replayed green; code review 8.m redone on db54f23..a00034b, three findings fixed
+code_review_sha: a00034b4c2d3acdade8505073c708cd3f7c9f4ea
+protocols_read_sha: e733386f133716f60efbad53c37602935eda7050
 ---
 
 # Colorful Coats - Cats and Dogs! Renew — status
+
+## Audit 2026-10-15
+
+Chain walked again against the current protocols (read in full where changed since `990a7ae7`: AGENTS, AUDIT, GALLERY, STYLE_RIMWORLD, USE_THIS_INSTEAD, README, CICD, scripts). Transitions 1 to 7 hold: 22 functional tests, `Check-Coats`, `Check-PatchFields` (41), `Check-XmlClasses`, `Check-DefRefs`, `Check-TypeRefs`, `Check-Steps` (416 lines) and `Check-ModBasics` rerun green. The ModIcon weight (38.6 KB) is no longer a finding: AUDIT 2.c now treats 20 to 30 KB as usual, not a threshold (only over 100 KB is absurd). `FRENCH_REVIEW.md` regenerated at `254e5b4`, its review line stays Virginie's.
+
+`playTests` reopened by the cats patch (commit `f9d5dc6` onward: plain `Cutout` shader, darker tints; `a00034b`: shader replacement guarded by `not(alternateGraphics)`, third Siamese tint made distinct). Replayed: cats 10/10, peintres 10/10, every cat `@review` capture read (`docs/runs/2026-10-14-chats-shader.txt`). 8.m code review redone on `db54f23..a00034b` (three findings: unguarded shader replace, About.xml claim it contradicted, two near-identical Siamese tints), all fixed; `code_review_sha` set to `a00034b`. Open before `shootGallery`: 8.n (`Check-Status`, `Mark-ProtocolsRead`, stage change, commit, push). Not a defect, owner may judge: maine coon, norwegian forest cat and kijitora vary in browns and tans only.
 
 ## Audit 2026-10-10
 
