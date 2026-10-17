@@ -17,6 +17,8 @@ port, so this is its idea rebuilt against the cats and dogs that are alive on 1.
 
 ### Changed
 
+- `supportedVersions` gains 1.7 (mod version 1.1.0); the Preview badge is regenerated with it. Not yet played on 1.7.
+
 - `packageId` `nelim.colorfulcoats.catsanddogsrenew` becomes `nelim.colorfulcoats.catsanddogs`. The
   0.1.0 item was created with the old value; nothing was published, and it was in no active mod list.
 

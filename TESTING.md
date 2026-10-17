@@ -1,32 +1,27 @@
 # Test scenarios
 
-Four patch files, no textures, no assembly. There is little here to break, and what can break
-breaks **silently** — which is why this mod needs the game rather than a checker.
+Four patch files, no textures, no assembly. Little here to break. What can break breaks **silently** — so mod needs game, not checker.
 
-**The absence of errors in the log is not a pass.** Every operation carries
-`<success>Always</success>`, so an operation that finds no animal reports success and writes
-nothing. That flag is what lets a player run one target mod out of four without a wall of red;
-it buys that by making a miss invisible. Only animals on screen settle it.
+**No errors in log is not a pass.** Every operation carries
+`<success>Always</success>`, so operation finding no animal reports success, writes
+nothing. Flag lets player run one target mod out of four without wall of red;
+cost: miss invisible. Only animals on screen settle it.
 
 ## What is settled before the game starts
 
-Two main scripts, plus a field-checking wrapper, answer different questions.
+Two main scripts, plus field-checking wrapper, answer different questions.
 
-**`scripts/Check-Coats.ps1`** is the quick one: every `defName` still exists in the mod its patch
-names, none of them has grown `alternateGraphics` upstream since, every colour is in the form the
-game reads as 0-255, every operation has the conditional-plus-`Always` shape.
+**`scripts/Check-Coats.ps1`** is quick one: every `defName` still exists in mod its patch
+names, none grew `alternateGraphics` upstream since, every colour in form game reads as 0-255, every operation has conditional-plus-`Always` shape.
 
-**`scripts/Run-Functional-Tests.ps1`** is the one that runs the game's own code. RimWorld's patch
-engine is ordinary .NET: the shipped XML is turned back into real `PatchOperationConditional` and
-`PatchOperationAdd` objects, and their `Apply` is called on a document built from the target mods'
-own defs. So "the patch writes the right coats", "a breed that already has coats is left alone" and
-"an absent target mod costs nothing" are answered by the game rather than by a description of it.
-It also sweeps the IL of `Assembly-CSharp` for whoever reads `AlternateGraphic.color`, because a
-setting nothing reads is a mod that loads, logs nothing and does nothing.
+**`scripts/Run-Functional-Tests.ps1`** runs game's own code. RimWorld patch
+engine is ordinary .NET: shipped XML turned back into real `PatchOperationConditional` and
+`PatchOperationAdd` objects, their `Apply` called on document built from target mods'
+own defs. So "patch writes right coats", "breed already having coats left alone" and
+"absent target mod costs nothing" answered by game, not by description of it.
+Also sweeps IL of `Assembly-CSharp` for whoever reads `AlternateGraphic.color`, because setting nothing reads is mod that loads, logs nothing, does nothing.
 
-Twenty-two tests, twenty-five seconds once the mod-folder cache is warm. Seventeen of them have
-been seen to fail under a mutation; the other five assert the game's own behaviour and cannot be
-made to fail from here. The mutations are listed in the script's header.
+Twenty-two tests, twenty-five seconds once mod-folder cache warm. Seventeen seen to fail under mutation; other five assert game's own behaviour, cannot be made to fail from here. Mutations listed in script header.
 
 ```
 powershell -File scripts/Check-Coats.ps1
@@ -34,22 +29,22 @@ powershell -File scripts/Run-Functional-Tests.ps1
 powershell -File scripts/Check-PatchFields.ps1
 ```
 
-Both skip, loudly, any target mod that is not installed on the machine they run on.
-The quick checker reuses the functional suite's mod-folder cache after verifying the
-folder's location and packageId, falling back to discovery when the entry is stale.
+Both skip, loudly, any target mod not installed on machine they run on.
+Quick checker reuses functional suite's mod-folder cache after verifying
+folder location and packageId, falling back to discovery when entry stale.
 
-The shared checkers in `../scripts/` cover `Class=` values (`Check-XmlClasses.ps1`),
+Shared checkers in `../scripts/` cover `Class=` values (`Check-XmlClasses.ps1`),
 dangling references (`Check-DefRefs.ps1`) and third-party types (`Check-TypeRefs.ps1`).
-`Check-XmlFields.ps1` only reads Defs documents and skips patches. The local wrapper
+`Check-XmlFields.ps1` only reads Defs documents, skips patches. Local wrapper
 `scripts/Check-PatchFields.ps1` therefore extracts all 41 injected payloads into temporary
-PawnKindDefs and passes them to that checker, including the nested AlternateGraphic fields.
-Supply `-FieldChecker` if the shared script lives elsewhere; a missing checker is an error.
+PawnKindDefs, passes them to that checker, including nested AlternateGraphic fields.
+Supply `-FieldChecker` if shared script lives elsewhere; missing checker is error.
 
-Verified on 2026-09-12: 22 functional tests passed, zero failed or skipped; all 41 payloads
-passed the field check; XML class, def-reference and third-party-type checks also passed.
-Manual scenarios have not yet been executed in game.
+Verified 2026-09-12: 22 functional tests passed, zero failed or skipped; all 41 payloads
+passed field check; XML class, def-reference, third-party-type checks also passed.
+Manual scenarios not yet executed in game.
 
-None of that says a coat appears on a dog. That is what the scenarios are for.
+None of that says coat appears on dog. That is what scenarios are for.
 
 ## Load order
 
@@ -63,28 +58,25 @@ cucumpear.azrael.varietycoats           Animal Variety Coats             1511926
 nelim.colorfulcoats.catsanddogs         this mod                         last
 ```
 
-The order matters in one direction only. Loading **after** the coat-painting mods is what lets the
-conditional see their work and stand aside. Loading before them is not a crash: this mod would add
-its tints, Animal Variety Coats would remove them and add its own, and Erin's Cat Overhaul would
-leave two `<alternateGraphics>` elements on the vanilla cat for the loader to choose between.
-`About.xml` declares the `loadAfter` entries, so the autosorter gets this right unaided.
+Order matters one direction only. Loading **after** coat-painting mods lets
+conditional see their work, stand aside. Loading before not crash: this mod would add
+tints, Animal Variety Coats would remove them, add own, Erin's Cat Overhaul would
+leave two `<alternateGraphics>` elements on vanilla cat for loader to choose between.
+`About.xml` declares `loadAfter` entries, so autosorter gets this right unaided.
 
 ## What only the game can settle
 
-The scenarios themselves live next to the suite that cannot replace them, in
-[`Tests/FUNCTIONAL-SCENARIOS.md`](Tests/FUNCTIONAL-SCENARIOS.md): eight of them, each with one
-thing to watch, one way of being wrong, and the line in `Player.log` that says so.
+Scenarios live next to suite that cannot replace them, in
+[`Tests/FUNCTIONAL-SCENARIOS.md`](Tests/FUNCTIONAL-SCENARIOS.md): eight, each with one
+thing to watch, one way of being wrong, and line in `Player.log` that says so.
 
-The one that matters most is the second. The tints are purpleyam's and were measured, but they were
-measured against Vanilla Animals Expanded's sprites, and the dogs of Stray Dogs keep their textures
-in a Unity asset bundle — so what those colours land on has never been seen outside a game.
+Most important is second. Tints are purpleyam's, measured, but measured against Vanilla Animals Expanded's sprites, and Stray Dogs' dogs keep textures in Unity asset bundle — so what those colours land on never seen outside game.
 
 ## Manual scenarios against what the game has already shown (2026-10-02)
 
-Criterion for `tested`: no manual test left to validate. Each of the eight scenarios of
-`Tests/FUNCTIONAL-SCENARIOS.md` is either automated and green, or listed as not applicable with its
-reason. State on revision `3dad095` (patches unchanged since); no `@wip` scenario, no `@requires`
-tag (the three passes decide which mods are present, by pass map, and each played in full:
+Criterion for `tested`: no manual test left to validate. Each of eight scenarios of
+`Tests/FUNCTIONAL-SCENARIOS.md` either automated and green, or listed not applicable with reason. State on revision `3dad095` (patches unchanged since); no `@wip` scenario, no `@requires`
+tag (three passes decide which mods present, by pass map, each played in full:
 38 of 38, `exitReason: passed`, `setName` read in each `summary.json`).
 
 | Scenario | Covered by | State |
@@ -98,7 +90,7 @@ tag (the three passes decide which mods are present, by pass map, and each playe
 | 6. the deliberate absences | pass 2 `the black cat has no coats`, `animals that already had coats were left alone` | not a test: a list of things not to report; the two assertions above cover it |
 | 7. the poodle's four coats | pass 2 `the standard poodle wears purpleyam's four poodle coats` plus its capture | automated, green |
 
-Nothing left before `tested` on the in-game side: scenario 2 is covered for all 34 breeds (`08-revue`, 2026-10-10)
-and scenario 3 is closed by 2bis-a/b/c, the removal chain and `32-ajout`. Whether the subtle spread of a few
-cat breeds is acceptable is the owner's call. English only for any manual pass; no French pass, the mod owns
+Nothing left before `tested` on in-game side: scenario 2 covered for all 34 breeds (`08-revue`, 2026-10-10)
+and scenario 3 closed by 2bis-a/b/c, removal chain, `32-ajout`. Whether subtle spread of few
+cat breeds acceptable is owner's call. English only for any manual pass; no French pass, mod owns
 no text (owner, 2026-09-28).
