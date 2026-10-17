@@ -17,7 +17,7 @@ port, so this is its idea rebuilt against the cats and dogs that are alive on 1.
 
 ### Changed
 
-- `supportedVersions` gains 1.7 (mod version 1.1.0); the Preview badge is regenerated with it. Not yet played on 1.7.
+- Mod version moves to 1.1.0, the line that carries the RimWorld 1.7 diagnostic pass. 1.7 is not declared in `supportedVersions` until a 1.7 run is green.
 
 - `packageId` `nelim.colorfulcoats.catsanddogsrenew` becomes `nelim.colorfulcoats.catsanddogs`. The
   0.1.0 item was created with the old value; nothing was published, and it was in no active mod list.
