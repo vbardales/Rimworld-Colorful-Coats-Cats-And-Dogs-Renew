@@ -51,3 +51,7 @@ evidence/
 
 # Reproducible Preview diagnostics generated locally by the shared renderer.
 Art/.render/
+
+# Pickle reception and parking folders (owner rule, 2026-10-19): runs land in Inbox/, failures wait in Parked/. Never in git.
+Tests/Pickle/Inbox/
+Tests/Pickle/Parked/
