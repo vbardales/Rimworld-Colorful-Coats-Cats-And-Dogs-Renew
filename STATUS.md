@@ -22,7 +22,7 @@ showcase:     complete
 tested_on:    2026-10-15 (cats replay rev a00034b: 10/10 and peintres 10/10, docs/runs/2026-10-14-chats-shader.txt; before that 2026-10-10 (Pickle 08-revue, 34/34 passed in the WSL, rev 58bcd23; passes 1-3 and add/removal runs on 2026-09-28 and 2026-10-02; no manual play))
 workshop:     3806769444 (0.1.0, item creation only; About/PublishedFileId.txt committed in 97c19d3; private, as Steam creates every item; not tested, not public)
 remaining:
-  - todo: shootGallery: shotlist written 2026-10-20 (self-score 4, header of 09-galerie-sanctuaire.feature and table below); owner reads it, then scenarios, wsl-deps.sanctuary.map, seeds, one ticket, read every capture
+  - unverified: gallery ticket e276 (09-galerie-sanctuaire, 6 scenes, rev 78d4454, wsl-deps.sanctuary.map) waiting RUN_DONE; shotlist self-score 4 (table below), scenarios written, no capture read yet; then candidates in Art/Gallery, subtitles, reindex, 07-galerie.feature and wsl-deps.galerie.map deleted once accepted
   - verified: ChatGPT review of the French texts (2026-10-17, FRENCH_REVIEW.md, PUBLICATION.md, CHANGELOG.md): no correction; Virginie read it and validated in chat the same day. Review line of FRENCH_REVIEW.md stays hers to fill
   - verified: RimWorld 1.7 diagnostic, 01-sans-facultatifs only: ticket 22df (rev 34e2d66) exit 0, exitReason passed, 10/10 passed; earlier 79df stall was not the mod. avec-cibles and avec-peintres not yet played in 1.7; 1.7 NOT in supportedVersions until green on all; tested_1_7 not set - docs/runs/2026-10-18-1.7-sans-facultatifs.txt
   - verified: cats replay (08-revue, ticket c554, rev c915093) 10/10 passed
