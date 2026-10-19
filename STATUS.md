@@ -8,7 +8,7 @@ packageId:    nelim.colorfulcoats.catsanddogs
 repo:         Rimworld-Colorful-Coats-Cats-And-Dogs-Renew
 visibility:   public
 detached:     yes
-workflow_stage: playTests[1.1.0]
+workflow_stage: shootGallery[1.1.0]
 audit_revision: a00034b4c2d3acdade8505073c708cd3f7c9f4ea (2026-10-15, chain 1 to 7 walked again, 8.a to 8.m below)
 audit_date: 2026-10-15
 automated_tests: passed; 22 passed, 0 failed, 0 skipped (rerun 2026-10-15, from scripts/)
@@ -36,7 +36,7 @@ remaining:
   - verified: the loadAfter defect of 2026-09-28 (retired sibling id) confirmed fixed in game, pass 3 scenario 1
   - not applicable: French pass and interface check in EN/FR, MainButtons shortcut, options persistence - no owned text, no settings (owner, 2026-09-28; settings_audit above)
 session:      local_b1565ae3-2100-4849-b88f-60237d43caed
-updated:      2026-10-15, playTests[1.0.0]: cats patch changed after the passes (Cutout shader, darker tints, shader guard), replayed green; code review 8.m redone on db54f23..a00034b, three findings fixed
+updated:      2026-10-19, shootGallery[1.1.0]: 8.n done, playTests green (cats 10/10, peintres 10/10, 1.7 sans-facultatifs 10/10); Mod/ identical to code_review_sha a00034b (git diff empty)
 code_review_sha: a00034b4c2d3acdade8505073c708cd3f7c9f4ea
 protocols_read_sha: c17f68bb3aa06d7c07fffc8dfabd612460bafb8f
 ---
