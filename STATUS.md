@@ -38,7 +38,7 @@ remaining:
 session:      local_b1565ae3-2100-4849-b88f-60237d43caed
 updated:      2026-10-15, playTests[1.0.0]: cats patch changed after the passes (Cutout shader, darker tints, shader guard), replayed green; code review 8.m redone on db54f23..a00034b, three findings fixed
 code_review_sha: a00034b4c2d3acdade8505073c708cd3f7c9f4ea
-protocols_read_sha: 7d3b1f5a26a32c297c2c12758979e0a909f674a1
+protocols_read_sha: c17f68bb3aa06d7c07fffc8dfabd612460bafb8f
 ---
 # Colorful Coats - Cats and Dogs! Renew — status
 
