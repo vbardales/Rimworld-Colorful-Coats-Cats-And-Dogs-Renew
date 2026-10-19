@@ -22,12 +22,13 @@ showcase:     complete
 tested_on:    2026-10-15 (cats replay rev a00034b: 10/10 and peintres 10/10, docs/runs/2026-10-14-chats-shader.txt; before that 2026-10-10 (Pickle 08-revue, 34/34 passed in the WSL, rev 58bcd23; passes 1-3 and add/removal runs on 2026-09-28 and 2026-10-02; no manual play))
 workshop:     3806769444 (0.1.0, item creation only; About/PublishedFileId.txt committed in 97c19d3; private, as Steam creates every item; not tested, not public)
 remaining:
-  - todo: protocols changed since protocols_read_sha 730ee92b (AGENTS, AUDIT, GALLERY, PUBLISHING, TOOLING-PITFALLS, TRANSLATIONS): re-read, then Mark-ProtocolsRead.ps1 before any workflow_stage change; also open: 8.n (Check-Status, stage change, commit, push) before shootGallery
+  - todo: open: 8.n (Check-Status, stage change, commit, push) before shootGallery
   - verified: ChatGPT review of the French texts (2026-10-17, FRENCH_REVIEW.md, PUBLICATION.md, CHANGELOG.md): no correction; Virginie read it and validated in chat the same day. Review line of FRENCH_REVIEW.md stays hers to fill
   - verified: RimWorld 1.7 diagnostic, 01-sans-facultatifs only: ticket 22df (rev 34e2d66) exit 0, exitReason passed, 10/10 passed; earlier 79df stall was not the mod. avec-cibles and avec-peintres not yet played in 1.7; 1.7 NOT in supportedVersions until green on all; tested_1_7 not set - docs/runs/2026-10-18-1.7-sans-facultatifs.txt
   - unverified: replay of cats (08-revue, ticket c554) and peintres (03-peintres, ticket 4a6a) at rev c915093 after the 10-17 commit; waiting RUN_DONE
   - verified: scenario 2 of Tests/FUNCTIONAL-SCENARIOS.md for all 34 breeds: 08-revue (rev 58bcd23, avec-cibles) 34/34 passed, exitReason passed, every @review capture opened and read, coats visibly differ on every breed; russian blue, american shorthair, white cat, kijitora, japanese bobtail and siamese only subtly (owner may judge) - docs/runs/2026-10-10-revue.txt
   - verified: all three Pickle passes (38 scenarios, rev 3dad095, Mod/ patches unchanged since) passed, exitReason passed, setName read in each summary.json (sans-facultatifs, avec-cibles, avec-peintres); no @wip, no @requires; Player.log grepped before deletion, 0 hits for this mod - docs/runs/2026-09-28-pass{1,2,3}.txt, docs/runs/2026-10-02-evidence-minified.txt
+  - verified: evidence model applied 2026-10-19 (Inbox, Prune-Evidence -Apply); Evidence/ holds 2026-10-14-a00034b-cats and -peintres (RELEASE.md: deleted when replays c554 and 4a6a are green); the 1.7 sans-facultatifs folder deleted, its condition met (green recorded here and in docs/runs/2026-10-18-1.7-sans-facultatifs.txt)
   - verified: 1.6 Pickle evidence of 2026-09-28 and 2026-10-02 deleted 2026-10-19 (superseded, no release condition); history in docs/runs/2026-09-28-pass{1,2,3}.txt, docs/runs/2026-10-02-evidence-minified.txt
   - verified: @review captures opened and read - huskies read as fur (icy blue, grey, cream, brown), poodles show 4 distinct tints, newfoundlands barely change as expected, persians show a faint tint as expected
   - verified: shared scripts/Check-Steps.ps1 -ModRoot (protocols repository, no game; a85e83c, 2026-10-11; 24 patterns, 416 step lines) found every step defined exactly once and every map entry resolving
@@ -36,7 +37,7 @@ remaining:
 session:      local_b1565ae3-2100-4849-b88f-60237d43caed
 updated:      2026-10-15, playTests[1.0.0]: cats patch changed after the passes (Cutout shader, darker tints, shader guard), replayed green; code review 8.m redone on db54f23..a00034b, three findings fixed
 code_review_sha: a00034b4c2d3acdade8505073c708cd3f7c9f4ea
-protocols_read_sha: 730ee92b2ee520dd415b7fd71180b3b859538aac
+protocols_read_sha: 7d3b1f5a26a32c297c2c12758979e0a909f674a1
 ---
 # Colorful Coats - Cats and Dogs! Renew — status
 
