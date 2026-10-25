@@ -39,7 +39,7 @@ remaining:
 session:      local_b1565ae3-2100-4849-b88f-60237d43caed
 updated:      2026-10-19, shootGallery[1.1.0]: 8.n done, playTests green (cats 10/10, peintres 10/10, 1.7 sans-facultatifs 10/10); Mod/ identical to code_review_sha a00034b (git diff empty)
 code_review_sha: a00034b4c2d3acdade8505073c708cd3f7c9f4ea
-protocols_read_sha: 709f94c1383b5e32138ef80caf13ef1057a42d1f
+protocols_read_sha: c94c7bd9c6954f001038a6202ae288fd8c078915
 ---
 # Colorful Coats - Cats and Dogs! Renew — status
 
