@@ -39,13 +39,13 @@ remaining:
 session:      local_b1565ae3-2100-4849-b88f-60237d43caed
 updated:      2026-10-19, shootGallery[1.1.0]: 8.n done, playTests green (cats 10/10, peintres 10/10, 1.7 sans-facultatifs 10/10); Mod/ identical to code_review_sha a00034b (git diff empty)
 code_review_sha: a00034b4c2d3acdade8505073c708cd3f7c9f4ea
-protocols_read_sha: c94c7bd9c6954f001038a6202ae288fd8c078915
+protocols_read_sha: f71e1afda494b774e5e038cf55e5e67f24d2960a
 ---
 # Colorful Coats - Cats and Dogs! Renew — status
 
 ## Shotlist v2 2026-10-25 (shootGallery[1.1.0], 9.0)
 
-Plan in the headers of `Tests/Pickle/Mod/Pickle/Features/09-galerie-sanctuaire.feature` (scenes 1-3) and `09b-galerie-soir.feature` (scenes 4-6), commit 90b1970. Story: Nelim pet-sits the neighbours' animals for a day, a new group every few hours, the evening gathers them (white cat of 1 asleep in 6); hours 07, 10, 12, 15, 18, 20, clear sky. Outfit continuity: denim CollarShirt (44,86,140), long loose auburn hair, smile all day; straw hat only in open sun (2, 3, 5), navy Duster added at 20:00 (6). Director pass by an Opus sub-agent kept (stopped haul, mixed followers/staged animals, wide scene 3 at zoom 6, Play_Chess job, Train job, harp, short tick counts); not kept: no animal garments (no animal-apparel mod in the map). Self-score **4/5**. Weak points: forced haul, walk, follow, lies down, Play_Chess, Train and Harp never played in a gallery; scenes 3 and 5 spawn "around" (statue-garden and enclosure cells unsurveyed); coats under low sun and firelight may blur; scene 4 has no fallback pose. Verdict column filled after the run.
+Plan in the headers of `Tests/Pickle/Mod/Pickle/Features/09-galerie-sanctuaire.feature` (scenes 1-3) and `09b-galerie-soir.feature` (scenes 4-6), commit 90b1970. Story: Nelim pet-sits the neighbours' animals for a day, a new group every few hours, the evening gathers them (white cat of 1 asleep in 6); hours 07, 10, 12, 15, 18, 20, clear sky. Outfit continuity: denim CollarShirt (44,86,140), long loose auburn hair, smile all day; straw hat only in open sun (2, 3, 5), navy Duster added at 20:00 (6). Director pass by an Opus sub-agent kept (stopped haul, mixed followers/staged animals, wide scene 3 at zoom 6, Play_Chess job, Train job, harp, short tick counts); not kept: no animal garments (no animal-apparel mod in the map). Self-score **4/5**. Weak points: forced haul, walk, follow, lies down, Play_Chess, Train and Harp never played in a gallery; scenes 3 and 5 spawn "around" (statue-garden and enclosure cells unsurveyed); coats under low sun and firelight may blur; scene 4 has no fallback pose. Verdict column filled after the run. Owner rule 2026-10-25: outfits and expressions are suggestions (default expression: smile; scene 4 smirk + squint falls back to smile); colonists other than NSB's need special authorization; any particular request goes to NPT, owner arbitrates a refusal.
 
 | # | Scene | a place, hour, zoom | b decor | c living | d Nelim | e action (instant, how) | f composition | g subject | j mod | est | verdict |
 |---|---|---|---|---|---|---|---|---|---|---|---|
