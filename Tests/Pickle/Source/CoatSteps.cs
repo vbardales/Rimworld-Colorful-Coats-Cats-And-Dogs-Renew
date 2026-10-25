@@ -298,13 +298,7 @@ namespace ColorfulCoatsCatsAndDogs.PickleSteps
             ctx.Assert(hidden == 0, $"{hidden} of {pawns.Count} animals of the row are not spawned or not in the camera view {view}");
         }
 
-        [When("Colorful Coats saves the game as {string}")]
-        public void SaveAs(PickleContext ctx, string file)
-        {
-            GameDataSaveLoader.SaveGame(file);
-            ctx.Require(System.IO.File.Exists(GenFilePaths.FilePathForSavedGame(file)), "no save file was written for " + file);
-        }
-
+        // Saving the game and handing the file to the surviving companion are Nelim's Pickle Tools SaveSteps.
         // The mod claims to write nothing into a save. The header lists every active mod by name, so it is
         // set aside; anything else that names this mod, as an element, an attribute or a class, is data.
         [Then("Colorful Coats save {string} holds nothing of this mod outside its mod list")]
@@ -323,21 +317,5 @@ namespace ColorfulCoatsCatsAndDogs.PickleSteps
                     + (at < 0 ? "" : text.Substring(Math.Max(0, at - 60), Math.Min(160, text.Length - Math.Max(0, at - 60)))));
             }
         }
-
-        // Pickle finds a saved game as a fixture: a .rws in Pickle/Fixtures of an active mod. The
-        // companion that survives the removal of this mod receives the file.
-        [When("Colorful Coats hands the saved game {string} to the mod {string}")]
-        public void HandOver(PickleContext ctx, string file, string packageId)
-        {
-            var target = LoadedModManager.RunningModsListForReading.FirstOrDefault(m =>
-                m.PackageIdPlayerFacing.ToLowerInvariant() == packageId.ToLowerInvariant());
-            ctx.Require(target != null, "no active mod has the packageId " + packageId);
-            var folder = System.IO.Path.Combine(target.RootDir, "Pickle", "Fixtures");
-            System.IO.Directory.CreateDirectory(folder);
-            var destination = System.IO.Path.Combine(folder, file + ".rws");
-            System.IO.File.Copy(GenFilePaths.FilePathForSavedGame(file), destination, true);
-            ctx.Require(System.IO.File.Exists(destination), "the saved game was not copied to " + destination);
-        }
-
     }
 }

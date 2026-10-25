@@ -24,6 +24,7 @@
     7. Keyed: every "Mod.Key" or "Mod_Key".Translate() used in Source/**/*.cs exists in the source language AND the translation;
        with Source/ present, an entry used nowhere is reported (turn off with -AllowUnusedKeyed). -DependencyKeyed lists the keys
        of a dependency mod that this mod only translates (no source-language entry, no call here): neither reported.
+       -VanillaKeyed lists keys of the game itself that the code calls (no entry in this mod): not reported as missing.
     8. With -RejectIdentical: a translation identical to its source text (HairDef and -AllowIdentical keys excepted).
 
   What it does not do: resolve keys against the game's classes (Check-DefInjected.ps1 does), compare wording, or
@@ -45,6 +46,9 @@ param(
   # Keyed entries that translate a DEPENDENCY's keys (the English text and the code are in that mod, this mod only ships the
   # translation): not required in the source language, never reported unused.
   [string[]]$DependencyKeyed = @(),
+  # Keys the code calls that belong to the GAME (vanilla Keyed, e.g. "TextMote_Dodge"): not required in this mod's Keyed files.
+  # List each one with its reason in the mod's docs.
+  [string[]]$VanillaKeyed = @(),
   # Make the warnings errors: an injection outside the inventory, a stage with no usable label handle.
   [switch]$Strict,
   # A translation identical to the source text is a finding (a text left untranslated), except HairDef and the keys of -AllowIdentical
@@ -67,8 +71,8 @@ function Find($msg) { if (-not $findings.Contains($msg)) { $findings.Add($msg) }
 function Warn($msg) { if (-not $warnings.Contains($msg)) { $warnings.Add($msg) } }
 
 $cjk = '[\p{IsCJKUnifiedIdeographs}]'
-$topFields = @('label', 'description', 'jobString', 'labelNoun', 'labelMale', 'labelFemale', 'labelPlural', 'pawnLabel', 'gerundLabel', 'ingestible/ingestCommandString', 'ingestible/ingestReportString') + $ExtraFields
-$known = @('label', 'description', 'jobString', 'labelShort', 'reportString', 'customLabel', 'ingestCommandString', 'ingestReportString') + $ExtraFields
+$topFields = @('label', 'description', 'jobString', 'labelNoun', 'labelMale', 'labelFemale', 'labelPlural', 'pawnLabel', 'gerundLabel', 'verb', 'gerund', 'ingestible/ingestCommandString', 'ingestible/ingestReportString') + $ExtraFields
+$known = @('label', 'description', 'jobString', 'verb', 'gerund', 'labelShort', 'reportString', 'customLabel', 'ingestCommandString', 'ingestReportString') + $ExtraFields
 
 # --- inventory --------------------------------------------------------------
 $inventory = @{}
@@ -83,6 +87,20 @@ function Add-Text($type, $key, $value) {
 $sources = @()
 # every Defs/ and Patches/ folder under Mod/, loadFolders subfolders included (Mod/Integrations/<X>/Patches, ...)
 foreach ($d in Get-ChildItem $modDir -Recurse -Directory -ErrorAction SilentlyContinue | Where-Object { $_.Name -in 'Defs', 'Patches' -and $_.FullName -notmatch '[\\/](Languages|\.claude)[\\/]' }) { $sources += Get-ChildItem $d.FullName -Recurse -Filter *.xml -File }
+# A git repository: files ignored by git are never shipped (local diagnostic defs, scratch patches), so they are not inventoried.
+# Not a repository, or git missing: nothing is skipped.
+if ($sources.Count -gt 0 -and (Test-Path (Join-Path $ModRoot '.git'))) {
+  # Relative forward-slash paths, NUL-separated (-z): Windows PowerShell 5.1 ends each piped line with CRLF, which git would read as part of the
+  # path, and without -z git quotes unusual names. A closing NUL keeps that CRLF out of the last path.
+  $rel = @{}
+  foreach ($s in $sources) { $rel[$s.FullName.Substring($ModRoot.Length).TrimStart('\', '/').Replace('\', '/')] = $s.FullName }
+  $gitOut = ((($rel.Keys -join [char]0) + [char]0) | git -C $ModRoot check-ignore --stdin -z 2>$null) -join ''
+  $ignored = @($gitOut.Split([char]0) | Where-Object { $_ -and $rel.ContainsKey($_) } | ForEach-Object { $rel[$_] })
+  if ($ignored.Count -gt 0) {
+    $sources = @($sources | Where-Object { $ignored -notcontains $_.FullName })
+    Write-Host "Skipped $($ignored.Count) git-ignored def/patch file(s) (not shipped)."
+  }
+}
 # every def carrying Name="..." (abstract bases included), to walk a ParentName chain
 $byName = @{}
 $parsed = New-Object System.Collections.Generic.List[object]
@@ -107,12 +125,12 @@ function Get-InheritedField($def, $f) {
 foreach ($doc in $parsed) {
   foreach ($def in $doc.SelectNodes('//*[defName]')) {
     $own = @()
-    foreach ($f in $topFields) { foreach ($node in $def.SelectNodes($f)) { $p = if ($f -like '*/*') { $f -replace '/', '.' } else { $node.LocalName }; Add-Text $def.LocalName "$($def.defName).$p" $node.InnerText; $own += $node } }
+    foreach ($f in $topFields) { foreach ($node in $def.SelectNodes($f)) { if ($node.SelectSingleNode('*')) { continue }; $p = if ($f -like '*/*') { $f -replace '/', '.' } else { $node.LocalName }; Add-Text $def.LocalName "$($def.defName).$p" $node.InnerText; $own += $node } }
     # a top field the def does not write itself comes from its parent chain (a RecipeDef jobString set on an abstract base)
     foreach ($f in $topFields) {
       if ($def.SelectNodes($f).Count) { continue }
       $inh = Get-InheritedField $def $f
-      if ($inh) { $p = if ($f -like '*/*') { $f -replace '/', '.' } else { $inh.LocalName }; Add-Text $def.LocalName "$($def.defName).$p" $inh.InnerText }
+      if ($inh -and -not $inh.SelectSingleNode('*')) { $p = if ($f -like '*/*') { $f -replace '/', '.' } else { $inh.LocalName }; Add-Text $def.LocalName "$($def.defName).$p" $inh.InnerText }
     }
     # the game numbers stages that share a handle: initial-0, initial-1
     $stageHandles = @($def.SelectNodes('stages/li') | ForEach-Object { ([string]$_.label) -replace '[^a-zA-Z0-9_ ]', '' -replace ' ', '_' })
@@ -127,6 +145,8 @@ foreach ($doc in $parsed) {
     foreach ($node in $def.SelectNodes($xp)) {
       # A text deeper in the def (tools/li/label, body parts, work giver verbs...): its exact handle path needs the game's classes
       # (Check-DefInjected.ps1 proves a key resolves), but it can still be COUNTED: see the nested count check below.
+      # <verb> of a ManeuverDef is a nested VerbProperties struct, not a text
+      if ($node.SelectSingleNode('*')) { continue }
       if ($own -notcontains $node) { $k = "$($def.LocalName)/$($def.defName)|$($node.LocalName)"; $nested[$k] = 1 + [int]$nested[$k] }
     }
   }
@@ -173,7 +193,7 @@ function Read-Language($language, $kind) {
     foreach ($node in $doc.DocumentElement.SelectNodes('*')) {
       $key = if ($kind -eq 'DefInjected') { "$($file.Directory.Name)/$($node.LocalName)" } else { $node.LocalName }
       if ($entries.ContainsKey($key)) { Find "Duplicate $language $kind key: $key"; continue }
-      if ([string]::IsNullOrWhiteSpace($node.InnerText) -or $node.InnerText -match 'TODO' -or ($RejectCjk -and $node.InnerText -match $cjk)) {
+      if ([string]::IsNullOrWhiteSpace($node.InnerText) -or $node.InnerText -cmatch '\bTODO\b' -or ($RejectCjk -and $node.InnerText -match $cjk)) {
         Find "Empty or untranslated $language $kind key: $key"; continue
       }
       $entries[$key] = $node.InnerText
@@ -229,6 +249,7 @@ if (-not $NoKeyed) {
     $prefixes = @([regex]::Matches($code, '"([A-Za-z0-9_]+(?:\.[A-Za-z0-9_]+)*\.)"') | ForEach-Object { $_.Groups[1].Value } | Sort-Object -Unique)
     $calls = @([regex]::Matches($code, '"((?=[A-Za-z0-9_.]*[._])[A-Za-z0-9_.]+)"\s*\.Translate(?:Simple)?\(') | ForEach-Object { $_.Groups[1].Value } | Sort-Object -Unique)
     foreach ($key in $calls) {
+      if ($VanillaKeyed -ccontains $key) { continue }
       if (-not $srcKeys.ContainsKey($key) -or -not $trKeys.ContainsKey($key)) { Find "Missing Keyed entry (needs $SourceLanguage and $Language): $key"; continue }
     }
   }

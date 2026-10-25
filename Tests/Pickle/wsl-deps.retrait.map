@@ -1,5 +1,6 @@
 # Scenario 3, removal: Stray Dogs, this mod, and the companion that survives the removal of this mod.
 # Played as one chain: -Filter 31-retrait-write -Then retrait-check -ThenWithout <this mod>,<its tests>.
+nelim.pickletools.savesteps path:PickleTools/SaveSteps/Mod
 Qux.stray.dogs 3549460027
 nelim.colorfulcoats.catsanddogs path:ColorfulCoatsCatsAndDogsRenew/Mod
 nelim.colorfulcoats.catsanddogs.pickleremoval path:ColorfulCoatsCatsAndDogsRenew/Tests/Pickle/Removal/Mod
