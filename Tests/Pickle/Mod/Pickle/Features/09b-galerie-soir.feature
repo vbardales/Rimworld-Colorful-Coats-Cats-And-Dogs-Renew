@@ -5,7 +5,7 @@
 #   JobDriver_SitFacingBuilding, forced on the ChessTable at (172, 126): she sits at the board), no hat, a smirk and a squint (she is
 #   about to win). Instant: the Yorkshires have just come to watch. Yorkshire terriers (Core, three coats picked to differ:
 #   -1 original dark, 0 steel blue, 2 oatmeal): one lies down by the KneelPillow at (174, 127), one walks in from (176, 128) towards
-#   the table facing the camera, one stands at (175, 129) facing south. Decor: PlantPot_Bonsai (171, 126), two lit TorchLamp
+#   the table facing the camera, one stands at (177, 129) facing south. Decor: PlantPot_Bonsai (171, 126), two lit TorchLamp
 #   (169, 127) and (178, 126), Plant_Daylily at (170, 128) and (177, 127) (all placed in e276), the columns. No fallback pose:
 #   if the job fails the scene is replaced. Estimate 4. Subtitle: "A game of chess, watched from below."
 #
@@ -54,12 +54,12 @@ Feature: images for the Workshop page, one day at the sanctuary, evening
     And Nelim's Pickle Tools: "Nelim" hair colour is rgb (122, 58, 34)
     And Nelim's Pickle Tools: an adult animal of kind "YorkshireTerrier" named "Tweed" is spawned at (174, 127)
     And Nelim's Pickle Tools: an adult animal of kind "YorkshireTerrier" named "Brume" is spawned at (176, 128)
-    And Nelim's Pickle Tools: an adult animal of kind "YorkshireTerrier" named "Brioche" is spawned at (175, 129)
+    And Nelim's Pickle Tools: an adult animal of kind "YorkshireTerrier" named "Brioche" is spawned at (177, 129)
     And Nelim's Pickle Tools: the animal "Tweed" is given coat -1
     And Nelim's Pickle Tools: the animal "Brume" is given coat 0
     And Nelim's Pickle Tools: the animal "Brioche" is given coat 2
     When Nelim's Pickle Tools: I let 20 ticks pass
-    And Nelim's Pickle Tools: the animal "Brioche" stands at (175, 129) facing South
+    And Nelim's Pickle Tools: the animal "Brioche" stands at (177, 129) facing South
     And Nelim's Pickle Tools: the animal "Brume" stands at (176, 128) facing West
     And Nelim's Pickle Tools: "Nelim" is forced into the job "Play_Chess" on the building "ChessTable" at (172, 126)
     And Nelim's Pickle Tools: "Tweed" lies down
@@ -95,17 +95,20 @@ Feature: images for the Workshop page, one day at the sanctuary, evening
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_CowboyHat" dyed rgb (214, 174, 92)
     And Nelim's Pickle Tools: "Nelim" hairstyle is "Long"
     And Nelim's Pickle Tools: "Nelim" hair colour is rgb (122, 58, 34)
-    And Nelim's Pickle Tools: 4 adult animals of kind "Husky" are spawned around (158, 211)
-    And Nelim's Pickle Tools: the animal "coat-1" is given coat 0
-    And Nelim's Pickle Tools: the animal "coat-2" is given coat -1
-    And Nelim's Pickle Tools: the animal "coat-3" is given coat 1
-    And Nelim's Pickle Tools: the animal "coat-4" is given coat 2
+    And Nelim's Pickle Tools: an adult animal of kind "Husky" named "Givre" is spawned at (157, 211)
+    And Nelim's Pickle Tools: an adult animal of kind "Husky" named "Ardoise" is spawned at (159, 212)
+    And Nelim's Pickle Tools: an adult animal of kind "Husky" named "Moka" is spawned at (161, 210)
+    And Nelim's Pickle Tools: an adult animal of kind "Husky" named "Lait" is spawned at (155, 213)
+    And Nelim's Pickle Tools: the animal "Givre" is given coat 0
+    And Nelim's Pickle Tools: the animal "Ardoise" is given coat -1
+    And Nelim's Pickle Tools: the animal "Moka" is given coat 1
+    And Nelim's Pickle Tools: the animal "Lait" is given coat 2
     When Nelim's Pickle Tools: I let 20 ticks pass
-    And Nelim's Pickle Tools: the animal "coat-2" stands at (158, 211) facing South
-    And Nelim's Pickle Tools: "coat-4" lies down
-    And Nelim's Pickle Tools: "coat-1" follows "Nelim" within 3 cells
-    And Nelim's Pickle Tools: "coat-3" follows "Nelim" within 3 cells
-    And Nelim's Pickle Tools: "Nelim" is forced into the job "Train" on "coat-2"
+    And Nelim's Pickle Tools: the animal "Ardoise" stands at (158, 211) facing South
+    And Nelim's Pickle Tools: "Lait" lies down
+    And Nelim's Pickle Tools: "Givre" follows "Nelim" within 3 cells
+    And Nelim's Pickle Tools: "Moka" follows "Nelim" within 3 cells
+    And Nelim's Pickle Tools: "Nelim" is forced into the job "Train" on "Ardoise"
     And Nelim's Pickle Tools: I let 45 ticks pass
     And game speed is paused
     And Nelim's Pickle Tools: studio presentation mode is enabled
