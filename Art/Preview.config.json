@@ -1,40 +1,15 @@
 {
   "panel": {
-    "modIconSource": "ModIcon-source.png",
     "title": "Colorful Coats - Cats and Dogs! Renew (unofficial)",
-    "titleSize": 38,
     "titleParts": [
-      {
-        "text": "Colorful Coats",
-        "scale": 1
-      },
-      {
-        "break": true
-      },
-      {
-        "text": "Cats and Dogs!",
-        "scale": 1
-      },
-      {
-        "text": "Renew",
-        "scale": 0.65,
-        "font": "ui",
-        "color": "secondary"
-      }
+      { "text": "Colorful Coats - Cats and Dogs!" },
+      { "text": "Renew (unofficial)", "suffix": true }
     ],
-    "tag": "(unofficial)",
-    "tagInline": true,
-    "copyLines": [
-      "Coat variations for forty-one cat and dog breeds that still have only one."
-    ]
+    "description": "Coat variations for forty-one cat and dog breeds that still have only one."
   },
-  "backgroundFile": "Preview-source.png",
-  "echo": {
-    "file": "echo-concept.png"
-  },
-  "icon": {
-    "file": "ModIcon-source.png"
-  },
+  "background": { "file": "Preview-source.png" },
+  "echo": { "file": "echo-concept.png" },
+  "icon": { "file": "ModIcon-source.png" },
   "palette": {
     "veil": "#302820",
     "inkPrimary": "#F2ECE1",
