@@ -132,11 +132,11 @@ Feature: images for the Workshop page, one day at the sanctuary, morning
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_CowboyHat" dyed rgb (214, 174, 92)
     And Nelim's Pickle Tools: "Nelim" hairstyle is "Long"
     And Nelim's Pickle Tools: "Nelim" hair colour is rgb (122, 58, 34)
-    And Nelim's Pickle Tools: an adult animal of kind "LabradorRetriever" named "Miel" is spawned at (146, 129)
+    And Nelim's Pickle Tools: an adult animal of kind "LabradorRetriever" named "Caramel" is spawned at (146, 129)
     And Nelim's Pickle Tools: an adult animal of kind "LabradorRetriever" named "Cacao" is spawned at (148, 132)
     And Nelim's Pickle Tools: an adult animal of kind "LabradorRetriever" named "Jais" is spawned at (150, 129)
     And Nelim's Pickle Tools: an adult animal of kind "LabradorRetriever" named "Sable" is spawned at (151, 133)
-    And Nelim's Pickle Tools: the animal "Miel" is given coat -1
+    And Nelim's Pickle Tools: the animal "Caramel" is given coat -1
     And Nelim's Pickle Tools: the animal "Cacao" is given coat 0
     And Nelim's Pickle Tools: the animal "Jais" is given coat 2
     And Nelim's Pickle Tools: the animal "Sable" is given coat 1
@@ -144,7 +144,7 @@ Feature: images for the Workshop page, one day at the sanctuary, morning
     And Nelim's Pickle Tools: "Nelim" stands at (144, 131) facing East
     And Nelim's Pickle Tools: the animal "Jais" stands at (150, 129) facing South
     And Nelim's Pickle Tools: "Nelim" is forced to haul 1 of the item "WoodLog" to (148, 132)
-    And Nelim's Pickle Tools: "Miel" follows "Nelim" within 3 cells
+    And Nelim's Pickle Tools: "Caramel" follows "Nelim" within 3 cells
     And Nelim's Pickle Tools: "Cacao" follows "Nelim" within 3 cells
     And Nelim's Pickle Tools: "Sable" follows "Nelim" within 3 cells
     And Nelim's Pickle Tools: "Jais" is forced to walk to (150, 127)

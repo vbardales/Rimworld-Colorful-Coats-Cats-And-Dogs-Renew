@@ -22,6 +22,7 @@ showcase:     complete
 tested_on:    2026-10-15 (cats replay rev a00034b: 10/10 and peintres 10/10, docs/runs/2026-10-14-chats-shader.txt; before that 2026-10-10 (Pickle 08-revue, 34/34 passed in the WSL, rev 58bcd23; passes 1-3 and add/removal runs on 2026-09-28 and 2026-10-02; no manual play))
 workshop:     3806769444 (0.1.0, item creation only; About/PublishedFileId.txt committed in 97c19d3; private, as Steam creates every item; not tested, not public)
 remaining:
+  - 2026-11-06 asked NPT (via SendMessage): Play_Chess IndexOutOfRange (b935 scene 4) and scene 3 "coat-2 has 0 alternate coats" (poodle kind has 4 in the patch, Stray Dogs def has none; GiveCoat looks up by LabelShort over the map, suspect another pawn named coat-2); wait answer, then refile 3 and 4
   - 2026-11-06 test-shape conversion (TM relay, owner mission 2026-11-05): no local script, no Rule-OwnValues planned; CI/CD asked to regenerate (--regenerate), Audit told, wait both answers
   - 2026-11-06 resume: Preview redone (echo checked, committed; Virginie validated it in chat 2026-11-06). RUN_DONE read: 993b (gallery-2, scenes 1-2 passed, scene 3 failed: "coat-2 has 0 alternate coats (0 to -1, or -1 for the original), not 1", step "the animal coat-2 is given coat 1": feature fix, pick a breed with coats or give coat 0), 680b (scene 6 Harp, all passed, gallery-3b), b935 (scene 4 failed: IndexOutOfRange on forced job Play_Chess at ChessTable (172,126), scene 5 passed; same exception as the Harp: ask NPT via TM), 9358 (removal chain, all passed, Inbox/removal-savesteps). Next: fix scene 3, ask NPT on Play_Chess, refile scenes 3 and 4, read every capture (9.d)
   - 2026-10-31 (ffe2abb): feature fixes done: scene 4 Brioche moved to (177,129), scene 5 huskies named and spawned at fixed cells (the "around" names coat-N were not found). Refiled: scenes 4-5 as 20261031-200207-980-b935 (Inbox/gallery-3c), 097b as 20261031-200208-900-9358 (097b died on WSL not answering, 0 scenarios, empty folder deleted). Still waiting RUN_DONE: 993b (scenes 1-3), 680b (scene 6). The "refile 5157 and 097b" and scene 4/5 fix items below are done.
@@ -61,6 +62,34 @@ Plan in the headers of `Tests/Pickle/Mod/Pickle/Features/09-galerie-sanctuaire.f
 | 6 | fireside | fire-pit 20:00, zoom 5, +60 | harp, 3 lit torches, bonsai | 4 corgis (original faces camera, one walks in, one lies) + white cat asleep | same + navy Duster, no hat | plays the harp (first notes, corgis gather; plays the instrument) | medium, closing | corgis + cat, same coats by fire | VAE, LHAC | 4 | |
 
 k story written once (headers), sizes 1 medium, 2 medium, 3 wide, 4 tight, 5 medium-tight, 6 medium; opening 1, closing 6. Interface windows: none. Subtitles drafted in the feature headers, to copy into `PUBLICATION.md` "Gallery subtitles" at step 10.
+
+## NSB (sync-nsb 2026-11-06)
+
+NSB docs of 2026-11-05 read; no change since 2026-10-25 in the place docs. Rules said back: NSB places, colonists, domestic animals free; outside NSB (colonist or domestic animal) needs Virginie's express validation before play; colonist properties change only with it; every outfit free. Updated: labrador "Miel" renamed "Caramel" in 09 (Miel is an NSB colonist; anonymous fauna must not carry an NSB name). Left alone: places, hours, outfits.
+
+Places read: 2026-11-06. Tribe read: 2026-11-06 (SANCTUAIRE-LIEUX "Qui une galerie peut utiliser", CATALOGUE-ANIMAUX, NELIM-PROFIL, APPARENCES-CANON; other profiles not needed, not opened).
+
+| Place | Shots | Changes for the gallery | Last read |
+|---|---|---|---|
+| sofa-corner | 1 | Plant_Daylily (183,123), (190,123); hour 07 | 2026-11-06 |
+| right-bank | 2 | Plant_Daylily x3; hour 10 | 2026-11-06 |
+| statue-garden | 3 | Plant_Daylily (151,94); hour 12 | 2026-11-06 |
+| cloister | 4 | Bonsai, 2 TorchLamp, 2 Daylily; hour 15 | 2026-11-06 |
+| enclosure-south | 5 | 2 grass plants; hour 18 | 2026-11-06 |
+| fire-pit | 6 | Harp, Bonsai, 3 TorchLamp; hour 20 | 2026-11-06 |
+
+| Colonist | Shots | Outfit per shot | Last read | Exceptions |
+|---|---|---|---|---|
+| Nelim | 1-6 | denim CollarShirt + fixture trousers all day; straw CowboyHat in 2, 3, 5 (open sun); navy Duster in 6 (cold evening); smile, smirk in 4 (about to win) | 2026-11-06 | PENDING (rule 3): hair colour rgb (122,58,34) vs canon Hair_DarkSaturatedReddish (56,36,18), and hairstyle "Long" (vanilla) without hat in 1, 4, 6 vs canon Roo_HD_Hair_Highpony (Roo_Royal_LongHD under a hat). No quoted validation yet |
+
+| Animal | Shots | Outfit | Last read | Exceptions |
+|---|---|---|---|---|
+| Labradors (4, anonymous Core) | 2 | none | 2026-11-06 | none (in NSB fauna; renamed Caramel, Jais, Cacao, Sable) |
+| Huskies (4, anonymous Core) | 5 | none | 2026-11-06 | none (in NSB fauna; not Yuki) |
+| Yorkshire terriers (3, anonymous Core) | 4 | none | 2026-11-06 | none (in NSB fauna) |
+| White cats, Let's Have a Cat! (5) | 1, 6 | none | 2026-11-06 | outside NSB: PENDING (rule 2); NSB alternative: base-game Cat of the house |
+| Standard poodles, Stray Dogs (4) | 3 | none | 2026-11-06 | outside NSB: PENDING (rule 2); no NSB alternative shows the mod's coats |
+| Corgis, Vanilla Animals Expanded (3) | 6 | none | 2026-11-06 | outside NSB: PENDING (rule 2); no NSB alternative shows the mod's coats |
 
 ## Audit 2026-10-15
 
