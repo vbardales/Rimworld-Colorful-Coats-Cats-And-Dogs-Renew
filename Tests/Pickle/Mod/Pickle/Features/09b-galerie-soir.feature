@@ -25,6 +25,21 @@
 #   evening gathers the day. Decor: Harp at (183, 116), PlantPot_Bonsai (185, 117), lit TorchLamp at (177, 114), (184, 114),
 #   (181, 118) (the old (185, 114) holds a Fence). Estimate 4. Subtitle: "By the fire, the corgis keep their own colours."
 #
+# PLANNED 2026-11-06 (sync-nsb, rule 5: every animal the mod patches must be in a shot; 35 of 41 had none). Four grouped shots, plan
+# only: no scenario written, no ticket, no estimate until the write-shotlist director pass and Virginie's go on the grouping. Each
+# shows ONE coat per breed, picked to differ from its neighbours; the other coats of the breed are declared not drawn (the group shot
+# cannot tell them apart at 268 px, the 08-revue captures show them all). Nelim keeps the day's outfit; each gesture is a forced job
+# or walk so the animals are caught mid-motion, mixed lying, walking, sitting (no catalogue row).
+# 7 workshop-7-cats (12 cats: Core Cat, akaNEKO_Persian, Siamese, Scottish_Fold_Long, Scottish_Fold, N_Forest_Cat, J_Bobtail,
+#   Maine_Coon, Russian_Blue, A_Shorthair, kijitora, AEXP_CatAbyssinian): terrace or sofa-corner, tea time, Nelim sets down a bowl.
+# 8 workshop-8-dogs-a (9 Stray Dogs: SCAfghanHound, BorderCollie, Borzoi, Bullmastiff, BullTerrier, Caucasianshepherd, Chowchow,
+#   GoldenRetriever, Greyhound): flower-garden, late morning, Nelim walks the pack.
+# 9 workshop-9-dogs-b (9 Stray Dogs: SCMiniatureDachshund, NewFoundland, OldEnglishSheepdog, Pug, Saintbernard, Schnauzer, WelshCorgi,
+#   StrayDogs_BerneseMountainDog, StrayDogs_SwedishVallhund): statue-garden or cotton-field, afternoon, Nelim throws a stick.
+# 10 workshop-10-dogs-vae (5 Vanilla Animals Expanded dogs: AEXP_Beagle, FrenchBulldog, GermanShepherd, Pug, WelshTerrier): a
+#   place not yet used, afternoon, Nelim with a ball. Open question for Virginie: 10 images in the series, or fewer shots with more
+#   animals each.
+#
 # Interface windows: none planned (an info card of a breed would be taken on window-backdrop-for-height and cropped, no subtitle).
 @review @timeout:900 @requires:nelim.pickletools.clickdiagnostics @requires:nelim.sanctuarybacklot @requires:nelim.pickletools.screenshotstudio @requires:nelim.pickletools.colonistrace @requires:nelim.pickletools.coatsteps @requires:nelim.pickletools.stagedecor @requires:nelim.pickletools.camerazoom
 Feature: images for the Workshop page, one day at the sanctuary, evening

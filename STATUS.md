@@ -98,22 +98,22 @@ Places read: 2026-11-06. Tribe read: 2026-11-06 (SANCTUAIRE-LIEUX "Qui une galer
 
 ### Included animals (rule 5, sync-nsb 2026-11-06 second run)
 
-NSB Docs: no commit since 2026-11-06, nothing re-read, all "last read" dates above unchanged. Built from the 41 `PawnKindDef` of `Mod/Patches/Coats_*.xml`. Shown in the shotlist: 6 of 41. **35 MISSING**: shotlist gap, rule 5 not met, plan pending Virginie (grouping choice).
+NSB Docs: no commit since 2026-11-06 (checked again, third run), nothing re-read, all "last read" dates above unchanged. Built from the 41 PawnKindDef of Mod/Patches/Coats_*.xml. Shown in played shots: 6 of 41. The other 35 now have a PLANNED grouped shot (7 cats 12, 8 and 9 Stray Dogs 9 each, 10 VAE dogs 5, header of 09b-galerie-soir.feature): plan only, no scenario, no ticket, no estimate; Virginie decides the grouping (10 images in the series or fewer, bigger groups). Outside NSB: Core Cat, Let us Have a Cat cats, Stray Dogs, VAE animals are part of the mod, auto-validated (Virginie, 2026-11-06: "ils font partie du mod, donc auto validés").
 
 | Pack | Animal (defName) | Shot(s) |
 |---|---|---|
 | Core | LabradorRetriever | 2 |
 | Core | Husky | 5 |
 | Core | YorkshireTerrier | 4 |
-| Core | Cat | MISSING |
+| Core | Cat | 7 (planned) |
 | LHAC | akaNEKO_shironeko | 1, 6 |
-| LHAC | akaNEKO_Persian, Siamese, Scottish_Fold_Long, Scottish_Fold, N_Forest_Cat, J_Bobtail, Maine_Coon, Russian_Blue, A_Shorthair, kijitora (10) | MISSING |
+| LHAC | akaNEKO_Persian, Siamese, Scottish_Fold_Long, Scottish_Fold, N_Forest_Cat, J_Bobtail, Maine_Coon, Russian_Blue, A_Shorthair, kijitora (10) | 7 (planned) |
 | Stray Dogs | SCStandardPoodle | 3 |
-| Stray Dogs | SCAfghanHound, BorderCollie, Borzoi, Bullmastiff, BullTerrier, Caucasianshepherd, Chowchow, GoldenRetriever, Greyhound, MiniatureDachshund, NewFoundland, OldEnglishSheepdog, Pug, Saintbernard, Schnauzer, WelshCorgi, StrayDogs_BerneseMountainDog, StrayDogs_SwedishVallhund (18) | MISSING |
+| Stray Dogs | SCAfghanHound, BorderCollie, Borzoi, Bullmastiff, BullTerrier, Caucasianshepherd, Chowchow, GoldenRetriever, Greyhound, MiniatureDachshund, NewFoundland, OldEnglishSheepdog, Pug, Saintbernard, Schnauzer, WelshCorgi, StrayDogs_BerneseMountainDog, StrayDogs_SwedishVallhund (18) | 8 (planned: first 9) and 9 (planned: last 9) |
 | VAE | AEXP_Corgi | 6 |
-| VAE | AEXP_CatAbyssinian, Beagle, FrenchBulldog, GermanShepherd, Pug, WelshTerrier (6) | MISSING |
+| VAE | AEXP_CatAbyssinian, Beagle, FrenchBulldog, GermanShepherd, Pug, WelshTerrier (6) | Abyssinian in 7 (planned), 5 dogs in 10 (planned) |
 
-Proposal (not applied): grouped shots, one per pack (cats 12, Stray Dogs 18, VAE 6), each naming the coats drawn; or accept that the 08-revue captures (34/34 read, test not gallery) do not count.
+Each planned shot draws one coat per breed, the others declared not drawn.
 
 ## Audit 2026-10-15
 
