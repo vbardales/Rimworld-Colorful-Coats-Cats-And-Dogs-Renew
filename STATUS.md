@@ -87,9 +87,9 @@ Places read: 2026-11-06. Tribe read: 2026-11-06 (SANCTUAIRE-LIEUX "Qui une galer
 | Labradors (4, anonymous Core) | 2 | none | 2026-11-06 | none (in NSB fauna; renamed Caramel, Jais, Cacao, Sable) |
 | Huskies (4, anonymous Core) | 5 | none | 2026-11-06 | none (in NSB fauna; not Yuki) |
 | Yorkshire terriers (3, anonymous Core) | 4 | none | 2026-11-06 | none (in NSB fauna) |
-| White cats, Let's Have a Cat! (5) | 1, 6 | none | 2026-11-06 | outside NSB: PENDING (rule 2); NSB alternative: base-game Cat of the house |
-| Standard poodles, Stray Dogs (4) | 3 | none | 2026-11-06 | outside NSB: PENDING (rule 2); no NSB alternative shows the mod's coats |
-| Corgis, Vanilla Animals Expanded (3) | 6 | none | 2026-11-06 | outside NSB: PENDING (rule 2); no NSB alternative shows the mod's coats |
+| White cats, Let's Have a Cat! (5) | 1, 6 | none | 2026-11-06 | outside NSB: part of the mod, auto-validated (Virginie, 2026-11-06: "ils font partie du mod, donc auto validés") |
+| Standard poodles, Stray Dogs (4) | 3 | none | 2026-11-06 | outside NSB: part of the mod, auto-validated (Virginie, 2026-11-06) |
+| Corgis, Vanilla Animals Expanded (3) | 6 | none | 2026-11-06 | outside NSB: part of the mod, auto-validated (Virginie, 2026-11-06) |
 
 ## Audit 2026-10-15
 
