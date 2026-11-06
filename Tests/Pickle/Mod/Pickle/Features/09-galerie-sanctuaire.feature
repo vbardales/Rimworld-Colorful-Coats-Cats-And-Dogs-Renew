@@ -31,14 +31,20 @@
 #
 # SHOTLIST (index, file, place, hour, framing, gesture and instant, living things, decor, estimate, subtitle)
 #
-# 1 workshop-1-breakfast. sofa-corner, 07:00, zoom 5 on (186, 121), +45 ticks. Opening image, poses the home. Gesture: Nelim walks
-#   west along the parquet strip carrying 10 Kibble (forced haul from (190, 120) towards (183, 120), stopped after 45 ticks, still
-#   2 to 3 cells short: mid-stride). Instant: she is about to set the bowl down, the cats have just caught up. Cats of Let's Have a
-#   Cat! (akaNEKO_shironeko, coats -1 original, 0 peach, 1 steel blue, 2 grey, 3 fawn): grey and steel blue follow her within 2
-#   cells, peach (190, 121) and fawn (191, 119) stand staggered behind her facing west on the parquet, the original white one walks
-#   south towards the camera from (184, 121) to (184, 119): the series' front view. Nelim: no hat, smile. Decor: Plant_Daylily fully
-#   grown at (183, 123) and (190, 123) (placed in e276), existing couches, bookcase and torch lamps. Estimate 4.
-#   Subtitle: "Breakfast for five: one white cat, five coats."
+# 1 workshop-1-breakfast (REWRITTEN 2026-11-06 after the captures of run 2708: cats tiny and pale on the parquet, one follower, face hidden).
+#   sofa-corner, 07:00, clear, zoom 4 on (186, 122) (8 cells tall, about 19 px a cell at 268 px wide: a cat is about 20 px), +45 ticks.
+#   Opening image, poses the home. Light: warm interior, roofed room, the hour is carried by the subtitle (indoors it cannot be read).
+#   Foreground: Nelim and the two dark cats on the parquet strip (z 119 to 121); background: the magenta rug with the sofas, the
+#   bookcase and the torch lamps (z 122 to 124). Gesture: Nelim walks west carrying 10 Kibble (forced haul from (189, 120) towards
+#   (183, 120), stopped after 45 ticks near x 186: mid-stride, in profile, no hat, smile). Instant: she is about to set the bowl down,
+#   the cats have just caught up. Cats of Let's Have a Cat! (akaNEKO_shironeko, coats -1 original white, 0 peach, 1 steel blue,
+#   2 grey, 3 fawn), pale coats on the magenta rug, dark coats on the parquet, no "follows" step (it piled the cats onto her): peach
+#   (186, 124) and fawn (188, 124) stand on the rug facing west; grey walks (forced) from (191, 121) to (185, 121) and steel blue from
+#   (191, 119) to (185, 119), one row above and below her, about 2 cells behind; the original white one walks south from (183, 121) to
+#   (183, 119), clear of her line: the series' front view. Decor: Plant_Daylily fully grown at (183, 123) and (190, 123) (placed in
+#   e276), existing couches, bookcase and torch lamps. Fallbacks: if the Kibble stack still hides her face, haul 6 instead of 10 or
+#   start her at (189, 119). Estimate 4.5 (-0.5: rug cells come from the list of 2026-10-06, the thumbnail size is computed, not seen).
+#   Subtitle: "Seven o'clock breakfast: one white cat, five coats."
 #
 # 2 workshop-2-fetch. right-bank, 10:00, zoom 5 on (147, 131), +45 ticks. Gesture: Nelim, hat on, brings a log back from the water
 #   (forced haul of one WoodLog from (144, 131) to (148, 132)), mid-stride. Instant: she has just fetched the log, the dogs are on
@@ -46,12 +52,19 @@
 #   (forced walk from (150, 129) to (150, 127)) facing the camera. Decor: Plant_Daylily fully grown at (143, 130), (147, 134),
 #   (149, 131) (placed in e276), the river behind. Estimate 4. Subtitle: "Fetch by the river: four labradors, one log."
 #
-# 3 workshop-3-poodle-parade. statue-garden, 12:00, zoom 6 on (155, 98), +90 ticks. WIDE shot of the series. Gesture: Nelim,
-#   hat on, strolls past the statues empty-handed, east to west in profile (forced walk from (160, 98) to (152, 98)); the four
-#   poodles of Stray Dogs (SCStandardPoodle, coats -1, 1 chocolate, 2 ink, 3 champagne) follow within 3 cells in a loose trail among
-#   the statues, on the stone. Instant: the trail has just formed behind her. Decor: the existing big statues and the yellow flower
-#   field, one Plant_Daylily at (151, 94) (placed in e276); nothing else is placed (other cells unknown, (156, 93) holds a
-#   ShipChunk). Animals are spawned "around" so a bad cell fails loudly. Estimate 4. Subtitle: "Four poodles tour the statue garden."
+# 3 workshop-3-poodle-parade (REWRITTEN 2026-11-06 after the captures of run 2708: poodles piled onto Nelim, no trail, zoom 6 not wide).
+#   statue-garden, 12:00, clear (short shadows), zoom 7 on (156, 98) (14 cells tall, about 25 wide, x 144 to 168; a poodle is about
+#   14 px at 268 px wide), +90 ticks. WIDE shot of the series. Gesture: Nelim, hat on (straw, long loose hair), strolls past the
+#   statues empty-handed, east to west in profile (forced walk from (160, 98) to (152, 98)); no "follows" step (it bunched the dogs):
+#   four poodles of Stray Dogs (SCStandardPoodle) are spawned on exact cells behind her, (163, 98), (165, 97), (167, 99), (169, 98),
+#   with coats alternating light and dark from her side: -1 white, 2 ink, 3 champagne, 1 chocolate (chocolate last, weakest on the soil);
+#   each is forced to walk to its own target (149, 98), (151, 97), (153, 99), (155, 98), started on the same tick as Nelim, so after 90
+#   ticks they form a spaced zig-zag trail about 2 cells apart (Nelim near (154, 98), last dog near (161, 98)), mid-step, nobody at its
+#   target. Instant: the trail has just formed behind her. Decor: the existing big statues, the two small sculptures beside the z 98
+#   row, the horse statue and the yellow flower field, one Plant_Daylily at (151, 94) (placed in e276); nothing else is placed
+#   ((156, 93) holds a ShipChunk). Spawn cells are unchecked against the free-cell list: a bad cell fails loudly. If the dogs outrun
+#   or lag Nelim, start them one cell further east or west; keep the tick count. Estimate 4.5 (-0.5: cells unchecked, size computed).
+#   Subtitle: "Four poodles tour the statue garden."
 #
 # Scenes 4, 5, 6: see 09b-galerie-soir.feature.
 #
@@ -82,25 +95,25 @@ Feature: images for the Workshop page, one day at the sanctuary, morning
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_CollarShirt" dyed rgb (44, 86, 140)
     And Nelim's Pickle Tools: "Nelim" hairstyle is "Roo_HD_Hair_Highpony"
     And Nelim's Pickle Tools: "Nelim" hair colour is rgb (56, 36, 18)
-    And Nelim's Pickle Tools: an adult animal of kind "akaNEKO_shironeko" named "Neige" is spawned at (184, 121)
-    And Nelim's Pickle Tools: an adult animal of kind "akaNEKO_shironeko" named "Peche" is spawned at (190, 121)
-    And Nelim's Pickle Tools: an adult animal of kind "akaNEKO_shironeko" named "Azur" is spawned at (189, 122)
-    And Nelim's Pickle Tools: an adult animal of kind "akaNEKO_shironeko" named "Cendre" is spawned at (188, 119)
-    And Nelim's Pickle Tools: an adult animal of kind "akaNEKO_shironeko" named "Paille" is spawned at (191, 119)
+    And Nelim's Pickle Tools: an adult animal of kind "akaNEKO_shironeko" named "Neige" is spawned at (183, 121)
+    And Nelim's Pickle Tools: an adult animal of kind "akaNEKO_shironeko" named "Peche" is spawned at (186, 124)
+    And Nelim's Pickle Tools: an adult animal of kind "akaNEKO_shironeko" named "Azur" is spawned at (191, 119)
+    And Nelim's Pickle Tools: an adult animal of kind "akaNEKO_shironeko" named "Cendre" is spawned at (191, 121)
+    And Nelim's Pickle Tools: an adult animal of kind "akaNEKO_shironeko" named "Paille" is spawned at (188, 124)
     And Nelim's Pickle Tools: the animal "Neige" is given coat -1
     And Nelim's Pickle Tools: the animal "Peche" is given coat 0
     And Nelim's Pickle Tools: the animal "Azur" is given coat 1
     And Nelim's Pickle Tools: the animal "Cendre" is given coat 2
     And Nelim's Pickle Tools: the animal "Paille" is given coat 3
     When Nelim's Pickle Tools: I let 20 ticks pass
-    And Nelim's Pickle Tools: "Nelim" stands at (190, 120) facing West
-    And Nelim's Pickle Tools: the animal "Peche" stands at (190, 121) facing West
-    And Nelim's Pickle Tools: the animal "Paille" stands at (191, 119) facing West
-    And Nelim's Pickle Tools: the animal "Neige" stands at (184, 121) facing South
+    And Nelim's Pickle Tools: "Nelim" stands at (189, 120) facing West
+    And Nelim's Pickle Tools: the animal "Peche" stands at (186, 124) facing West
+    And Nelim's Pickle Tools: the animal "Paille" stands at (188, 124) facing West
+    And Nelim's Pickle Tools: the animal "Neige" stands at (183, 121) facing South
     And Nelim's Pickle Tools: "Nelim" is forced to haul 10 of the item "Kibble" to (183, 120)
-    And Nelim's Pickle Tools: "Azur" follows "Nelim" within 2 cells
-    And Nelim's Pickle Tools: "Cendre" follows "Nelim" within 2 cells
-    And Nelim's Pickle Tools: "Neige" is forced to walk to (184, 119)
+    And Nelim's Pickle Tools: "Cendre" is forced to walk to (185, 121)
+    And Nelim's Pickle Tools: "Azur" is forced to walk to (185, 119)
+    And Nelim's Pickle Tools: "Neige" is forced to walk to (183, 119)
     And Nelim's Pickle Tools: I let 45 ticks pass
     And game speed is paused
     And Nelim's Pickle Tools: studio presentation mode is enabled
@@ -109,7 +122,7 @@ Feature: images for the Workshop page, one day at the sanctuary, morning
     And Nelim's Pickle Tools: the tooltips are hidden
     And Nelim's Pickle Tools: the resource readout is hidden
     And Nelim's Pickle Tools: the selection brackets are hidden
-    And Nelim's Pickle Tools: I frame the cell (186, 121) at zoom 5
+    And Nelim's Pickle Tools: I frame the cell (186, 122) at zoom 4
     And Nelim's Pickle Tools: I move the mouse to (10, 10)
     And Nelim's Pickle Tools: "Nelim" face kit is "neutral"
     And Nelim's Pickle Tools: "Nelim" face is held neutral
@@ -177,10 +190,10 @@ Feature: images for the Workshop page, one day at the sanctuary, morning
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_CowboyHat" dyed rgb (214, 174, 92)
     And Nelim's Pickle Tools: "Nelim" hairstyle is "Roo_Royal_LongHD"
     And Nelim's Pickle Tools: "Nelim" hair colour is rgb (56, 36, 18)
-    And Nelim's Pickle Tools: an adult animal of kind "SCStandardPoodle" named "Frimousse" is spawned at (158, 98)
-    And Nelim's Pickle Tools: an adult animal of kind "SCStandardPoodle" named "Bouclette" is spawned at (157, 100)
-    And Nelim's Pickle Tools: an adult animal of kind "SCStandardPoodle" named "Pompon" is spawned at (157, 96)
-    And Nelim's Pickle Tools: an adult animal of kind "SCStandardPoodle" named "Chantilly" is spawned at (159, 100)
+    And Nelim's Pickle Tools: an adult animal of kind "SCStandardPoodle" named "Frimousse" is spawned at (163, 98)
+    And Nelim's Pickle Tools: an adult animal of kind "SCStandardPoodle" named "Pompon" is spawned at (165, 97)
+    And Nelim's Pickle Tools: an adult animal of kind "SCStandardPoodle" named "Chantilly" is spawned at (167, 99)
+    And Nelim's Pickle Tools: an adult animal of kind "SCStandardPoodle" named "Bouclette" is spawned at (169, 98)
     And Nelim's Pickle Tools: the animal "Frimousse" is given coat -1
     And Nelim's Pickle Tools: the animal "Bouclette" is given coat 1
     And Nelim's Pickle Tools: the animal "Pompon" is given coat 2
@@ -188,10 +201,10 @@ Feature: images for the Workshop page, one day at the sanctuary, morning
     When Nelim's Pickle Tools: I let 20 ticks pass
     And Nelim's Pickle Tools: "Nelim" stands at (160, 98) facing West
     And Nelim's Pickle Tools: "Nelim" is forced to walk to (152, 98)
-    And Nelim's Pickle Tools: "Frimousse" follows "Nelim" within 3 cells
-    And Nelim's Pickle Tools: "Bouclette" follows "Nelim" within 3 cells
-    And Nelim's Pickle Tools: "Pompon" follows "Nelim" within 3 cells
-    And Nelim's Pickle Tools: "Chantilly" follows "Nelim" within 3 cells
+    And Nelim's Pickle Tools: "Frimousse" is forced to walk to (155, 98)
+    And Nelim's Pickle Tools: "Pompon" is forced to walk to (153, 99)
+    And Nelim's Pickle Tools: "Chantilly" is forced to walk to (151, 97)
+    And Nelim's Pickle Tools: "Bouclette" is forced to walk to (149, 98)
     And Nelim's Pickle Tools: I let 90 ticks pass
     And game speed is paused
     And Nelim's Pickle Tools: studio presentation mode is enabled
@@ -200,7 +213,7 @@ Feature: images for the Workshop page, one day at the sanctuary, morning
     And Nelim's Pickle Tools: the tooltips are hidden
     And Nelim's Pickle Tools: the resource readout is hidden
     And Nelim's Pickle Tools: the selection brackets are hidden
-    And Nelim's Pickle Tools: I frame the cell (155, 98) at zoom 6
+    And Nelim's Pickle Tools: I frame the cell (156, 98) at zoom 7
     And Nelim's Pickle Tools: I move the mouse to (10, 10)
     And Nelim's Pickle Tools: "Nelim" face kit is "neutral"
     And Nelim's Pickle Tools: "Nelim" face is held neutral
