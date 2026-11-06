@@ -50,8 +50,8 @@ Feature: images for the Workshop page, one day at the sanctuary, evening
     And Nelim's Pickle Tools: I place the decor "TorchLamp" at (178, 126)
     And Nelim's Pickle Tools: the decor "TorchLamp" at (178, 126) is lit
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_CollarShirt" dyed rgb (44, 86, 140)
-    And Nelim's Pickle Tools: "Nelim" hairstyle is "Long"
-    And Nelim's Pickle Tools: "Nelim" hair colour is rgb (122, 58, 34)
+    And Nelim's Pickle Tools: "Nelim" hairstyle is "Roo_HD_Hair_Highpony"
+    And Nelim's Pickle Tools: "Nelim" hair colour is rgb (56, 36, 18)
     And Nelim's Pickle Tools: an adult animal of kind "YorkshireTerrier" named "Tweed" is spawned at (174, 127)
     And Nelim's Pickle Tools: an adult animal of kind "YorkshireTerrier" named "Brume" is spawned at (176, 128)
     And Nelim's Pickle Tools: an adult animal of kind "YorkshireTerrier" named "Brioche" is spawned at (177, 129)
@@ -93,8 +93,8 @@ Feature: images for the Workshop page, one day at the sanctuary, evening
     And Nelim's Pickle Tools: I place the decor "Plant_YellowTallGrass" at (162, 212) fully grown
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_CollarShirt" dyed rgb (44, 86, 140)
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_CowboyHat" dyed rgb (214, 174, 92)
-    And Nelim's Pickle Tools: "Nelim" hairstyle is "Long"
-    And Nelim's Pickle Tools: "Nelim" hair colour is rgb (122, 58, 34)
+    And Nelim's Pickle Tools: "Nelim" hairstyle is "Roo_Royal_LongHD"
+    And Nelim's Pickle Tools: "Nelim" hair colour is rgb (56, 36, 18)
     And Nelim's Pickle Tools: an adult animal of kind "Husky" named "Givre" is spawned at (157, 211)
     And Nelim's Pickle Tools: an adult animal of kind "Husky" named "Ardoise" is spawned at (159, 212)
     And Nelim's Pickle Tools: an adult animal of kind "Husky" named "Moka" is spawned at (161, 210)
@@ -144,8 +144,8 @@ Feature: images for the Workshop page, one day at the sanctuary, evening
     And Nelim's Pickle Tools: I place the decor "Harp" at (183, 116)
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_CollarShirt" dyed rgb (44, 86, 140)
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_Duster" dyed rgb (58, 58, 98)
-    And Nelim's Pickle Tools: "Nelim" hairstyle is "Long"
-    And Nelim's Pickle Tools: "Nelim" hair colour is rgb (122, 58, 34)
+    And Nelim's Pickle Tools: "Nelim" hairstyle is "Roo_HD_Hair_Highpony"
+    And Nelim's Pickle Tools: "Nelim" hair colour is rgb (56, 36, 18)
     And Nelim's Pickle Tools: an adult animal of kind "AEXP_Corgi" named "Noisette" is spawned at (182, 113)
     And Nelim's Pickle Tools: an adult animal of kind "AEXP_Corgi" named "Praline" is spawned at (177, 116)
     And Nelim's Pickle Tools: an adult animal of kind "AEXP_Corgi" named "Dune" is spawned at (183, 114)

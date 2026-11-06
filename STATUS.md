@@ -80,7 +80,7 @@ Places read: 2026-11-06. Tribe read: 2026-11-06 (SANCTUAIRE-LIEUX "Qui une galer
 
 | Colonist | Shots | Outfit per shot | Last read | Exceptions |
 |---|---|---|---|---|
-| Nelim | 1-6 | denim CollarShirt + fixture trousers all day; straw CowboyHat in 2, 3, 5 (open sun); navy Duster in 6 (cold evening); smile, smirk in 4 (about to win) | 2026-11-06 | PENDING (rule 3): hair colour rgb (122,58,34) vs canon Hair_DarkSaturatedReddish (56,36,18), and hairstyle "Long" (vanilla) without hat in 1, 4, 6 vs canon Roo_HD_Hair_Highpony (Roo_Royal_LongHD under a hat). No quoted validation yet |
+| Nelim | 1-6 | denim CollarShirt + fixture trousers all day; straw CowboyHat in 2, 3, 5 (open sun); navy Duster in 6 (cold evening); smile, smirk in 4 (about to win) | 2026-11-06 | none: Virginie, 2026-11-06 "repars du canon": hair back to canon in all six scenes (colour (56,36,18), Roo_HD_Hair_Highpony without hat, Roo_Royal_LongHD under the hat); scenes 1-3 played with the old hair, to replay |
 
 | Animal | Shots | Outfit | Last read | Exceptions |
 |---|---|---|---|---|

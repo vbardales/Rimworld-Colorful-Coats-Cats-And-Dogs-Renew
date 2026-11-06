@@ -13,7 +13,7 @@
 # then the gesture is STARTED by a job (haul, walk, follow, lie down, play) and 30 to 60 ticks pass, then the game is paused:
 # the image is the game paused mid-play, nobody stands still waiting for the photo).
 # OUTFIT, CONTINUITY (one story day): Nelim wears the same outfit in every scene: denim-blue Apparel_CollarShirt dyed rgb
-# (44, 86, 140), her fixture trousers, long loose auburn hair (122, 58, 34), a smile (MouthSmile + LidCheerful; scene 4 a smirk,
+# (44, 86, 140), her fixture trousers, canon hair (NSB: Roo_HD_Hair_Highpony, Roo_Royal_LongHD under the hat; colour (56, 36, 18)), a smile (MouthSmile + LidCheerful; scene 4 a smirk,
 # she is about to win). Only two changes, both justified by the story: a straw Apparel_CowboyHat dyed (214, 174, 92) goes on for
 # the three scenes in open sun (2, 3, 5) and is off indoors or under a roof (1, 4, 6); at 20:00 (scene 6) she adds a navy
 # Apparel_Duster dyed (58, 58, 98) "because the evening is cold". Hat on long loose hair, never a ponytail (Show Hair Under Stuff
@@ -80,8 +80,8 @@ Feature: images for the Workshop page, one day at the sanctuary, morning
     And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (183, 123) fully grown
     And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (190, 123) fully grown
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_CollarShirt" dyed rgb (44, 86, 140)
-    And Nelim's Pickle Tools: "Nelim" hairstyle is "Long"
-    And Nelim's Pickle Tools: "Nelim" hair colour is rgb (122, 58, 34)
+    And Nelim's Pickle Tools: "Nelim" hairstyle is "Roo_HD_Hair_Highpony"
+    And Nelim's Pickle Tools: "Nelim" hair colour is rgb (56, 36, 18)
     And Nelim's Pickle Tools: an adult animal of kind "akaNEKO_shironeko" named "Neige" is spawned at (184, 121)
     And Nelim's Pickle Tools: an adult animal of kind "akaNEKO_shironeko" named "Peche" is spawned at (190, 121)
     And Nelim's Pickle Tools: an adult animal of kind "akaNEKO_shironeko" named "Azur" is spawned at (189, 122)
@@ -130,8 +130,8 @@ Feature: images for the Workshop page, one day at the sanctuary, morning
     And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (149, 131) fully grown
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_CollarShirt" dyed rgb (44, 86, 140)
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_CowboyHat" dyed rgb (214, 174, 92)
-    And Nelim's Pickle Tools: "Nelim" hairstyle is "Long"
-    And Nelim's Pickle Tools: "Nelim" hair colour is rgb (122, 58, 34)
+    And Nelim's Pickle Tools: "Nelim" hairstyle is "Roo_Royal_LongHD"
+    And Nelim's Pickle Tools: "Nelim" hair colour is rgb (56, 36, 18)
     And Nelim's Pickle Tools: an adult animal of kind "LabradorRetriever" named "Caramel" is spawned at (146, 129)
     And Nelim's Pickle Tools: an adult animal of kind "LabradorRetriever" named "Cacao" is spawned at (148, 132)
     And Nelim's Pickle Tools: an adult animal of kind "LabradorRetriever" named "Jais" is spawned at (150, 129)
@@ -175,8 +175,8 @@ Feature: images for the Workshop page, one day at the sanctuary, morning
     And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (151, 94) fully grown
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_CollarShirt" dyed rgb (44, 86, 140)
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_CowboyHat" dyed rgb (214, 174, 92)
-    And Nelim's Pickle Tools: "Nelim" hairstyle is "Long"
-    And Nelim's Pickle Tools: "Nelim" hair colour is rgb (122, 58, 34)
+    And Nelim's Pickle Tools: "Nelim" hairstyle is "Roo_Royal_LongHD"
+    And Nelim's Pickle Tools: "Nelim" hair colour is rgb (56, 36, 18)
     And Nelim's Pickle Tools: 4 adult animals of kind "SCStandardPoodle" are spawned around (156, 98)
     And Nelim's Pickle Tools: the animal "coat-1" is given coat -1
     And Nelim's Pickle Tools: the animal "coat-2" is given coat 1
