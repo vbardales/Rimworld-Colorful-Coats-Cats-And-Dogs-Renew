@@ -22,6 +22,7 @@ showcase:     complete
 tested_on:    2026-10-15 (cats replay rev a00034b: 10/10 and peintres 10/10, docs/runs/2026-10-14-chats-shader.txt; before that 2026-10-10 (Pickle 08-revue, 34/34 passed in the WSL, rev 58bcd23; passes 1-3 and add/removal runs on 2026-09-28 and 2026-10-02; no manual play))
 workshop:     3806769444 (0.1.0, item creation only; About/PublishedFileId.txt committed in 97c19d3; private, as Steam creates every item; not tested, not public)
 remaining:
+  - 2026-11-06 resume (cleared): CI/CD regen arrived uncommitted (.github, Tests/Test-Mod.ps1); Test-Mod 4/5, Check-PatchTargets FAIL 37 errors on optional-mod targets (Stray Dogs, VAE, LHAC, guarded by FindMod): asked CI/CD, commit of .github and Test-Mod waits, then tell Audit. Still waiting RUN_DONE 9665
   - 2026-11-06 NPT: f566769 did not cover ChessTable (no interaction cell); fixed in 7bcbcf6 (needs chair/stool next to table, else clear error "Play_Chess needs a chair or stool on a cell next to chess table"). Refiled scene 4 alone: 20261106-091153-352-9665 (Inbox/gallery-6, map wsl-deps.sanctuary.map), waiting RUN_DONE; check log line "[stage] Nelim forced into Play_Chess ... target B"; if no seat next to (172,126), add decor "Stool" step
   - 2026-11-06 RUN_DONE d5ef (Inbox/gallery-5, HETZNER): 2/3, exit 1. Scene 4 chess FAILED again: IndexOutOfRange at the forced Play_Chess step (feature 09b line 64), after NPT fix f566769: asked NPT via TM (fix or fallback "sits on the building"). Scene 5 huskies read OK (4 coats, hat, low sun; huskies close to Nelim, acceptable), scene 6 fireside read OK (harp, 3 corgis, white cat asleep, duster, canon hair). Next: NPT answer, refile 4 alone; rewrite and replay 3 alone
   - 2026-11-06 RUN_DONE 2708 (Inbox/gallery-4-1, runner HETZNER): 3/3 passed, exit 0, captures read (9.d): scene 1 OK (5 cats, 5 coats, canon ponytail, Kibble carried), scene 2 OK (4 labradors, 4 coats, hat, log, river), scene 3 WEAK (poodles bunched on Nelim, overlap, no trail, not wide; coats still read: white, pink-brown, dark): rewrite scene 3 spacing (spawn cells in a line, walk first), then replay alone. d5ef (scenes 4-6) still queued. Old captures of rewritten scenes to git rm after accept (GALLERY rule 2026-11-06)
@@ -48,7 +49,7 @@ remaining:
 session:      local_b1565ae3-2100-4849-b88f-60237d43caed
 updated:      2026-10-30 replay-audit: sections 1 to 8 hold (8.m: Mod/ diff since a00034b is Preview.png only), first unfulfilled 9.a captures (993b waiting, 5157 failed), stage unchanged; weak proofs (STATUS.md only): 1.a-1.d, 4.g, 5.g, 6.h, 7.b, 7.c, 8.e; Run-UnitTests n/a (no test csproj); earlier 2026-10-19, shootGallery[1.1.0]: 8.n done, playTests green (cats 10/10, peintres 10/10, 1.7 sans-facultatifs 10/10); Mod/ identical to code_review_sha a00034b (git diff empty)
 code_review_sha: a00034b4c2d3acdade8505073c708cd3f7c9f4ea
-protocols_read_sha: 21e22cbde6212aacdb1eed5aae2acb8450480451
+protocols_read_sha: 28785802f833b595d4add3702a39c6c162346fbc
 ---
 # Colorful Coats - Cats and Dogs! Renew — status
 
