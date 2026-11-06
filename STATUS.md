@@ -62,9 +62,14 @@ Plan in the headers of `Tests/Pickle/Mod/Pickle/Features/09-galerie-sanctuaire.f
 | 1 | breakfast (rewritten 2026-11-06) | sofa-corner 07:00, zoom 4 on (186,122), +45 ticks | 2 daylilies, Kibble, couches, lamps, magenta rug | 5 white cats (coats -1..3): peach, fawn staged on the rug, grey and steel blue forced walks 2 cells behind her, original walks south clear of her line | denim shirt, canon Highpony, smile, no hat | carries Kibble west (about to set it down; forced haul) | medium-tight, opening, pale coats on rug, dark on parquet, hour in subtitle | white cat, 5 coats | LHAC | 4.5 | |
 | 2 | fetch | right-bank 10:00, zoom 5, +45 | 3 daylilies, log, river | 4 labradors, one runs ahead to camera | same + straw hat | log back from the water (dogs on her heels; haul + 3 follow) | medium, river behind | labradors, 4 coats | Core | 4 | |
 | 3 | poodle parade (rewritten 2026-11-06) | statue-garden 12:00, zoom 7 on (156,98), +90 | statues, sculptures, horse statue, flower field, 1 daylily | 4 poodles spawned east in a line, forced walks to own cells, zig-zag trail 2 cells apart, coats alternate light/dark | same + straw hat | strolls east to west (trail just formed; forced walks, no follows) | WIDE (14 cells tall), profile | poodles, 4 coats | Stray Dogs | 4.5 | |
-| 4 | chess | cloister 15:00, zoom 3.5, +45 | bonsai, 2 lit torches, 2 daylilies, columns | 3 Yorkshires (-1, 0, 2): one lies, one walks in facing camera, one stands | same, no hat, smirk + squint | plays chess (about to win; Play_Chess forced, sits) | TIGHT, table | Yorkshires, 3 distinct coats | Core | 4 | |
+| 4 | chess (rewritten 2026-11-06) | cloister 15:00, zoom 2.5 on (174,128), +45 +15 | daylilies x2, existing table, pillow, torches, fence | 3 Yorkshires (coats -1, 0, 1): one lies, one walks in mid-step, one faces camera | denim shirt, canon Highpony, smirk + squint (fallback smile), no hat, sits facing camera | plays chess (about to win; Play_Chess forced) | TIGHT (5 cells tall), table | Yorkshires, 3 distinct coats | Core | 4.5 | |
 | 5 | evening training | enclosure-south 18:00, zoom 4.5, +45 | yellow grass x2, fence, laying boxes | 4 huskies: one lies tired, two follow, trained one faces camera | same + straw hat | trains a husky at the gate (command just given; Train forced; fallback Hay haul) | medium-tight, low sun | huskies, 4 coats | Core | 4 | |
 | 6 | fireside | fire-pit 20:00, zoom 5, +60 | harp, 3 lit torches, bonsai | 4 corgis (original faces camera, one walks in, one lies) + white cat asleep | same + navy Duster, no hat | plays the harp (first notes, corgis gather; plays the instrument) | medium, closing | corgis + cat, same coats by fire | VAE, LHAC | 4 | |
+| 7 | cats terrace | terrace 13:00, zoom 4 on (197,121), +45 | Campfire, torches, blanket (Cloth) | 6 cats, one coat each, Russian Blue faces camera | denim shirt, Highpony, smile, no hat | hauls a blanket, cats wake and walk | medium, siesta | 6 cat breeds | LHAC, Core | 4.5 | |
+| 8 | cats tea | dining-nook 17:00, zoom 4 on (176,108), +45 | table, rug, chairs, cup | 6 cats, one coat each | denim shirt, smile, sits at the table | sits, cats come to her | medium | 6 cat breeds | LHAC, VAE | 4 | |
+| 9 | dogs clearing walk | emerald-clearing 11:00, zoom 5 on (195,152), +60 | none | 9 Stray Dogs, one coat each, Golden Retriever faces camera | denim shirt, straw hat, Royal_LongHD, smile | walks toward camera, hounds sprint ahead | wide-medium, sun | 9 Stray Dog breeds | Stray Dogs | 4 | |
+| 10 | dogs horseshoes | calm-zone 16:00, zoom 4.5 on (200,186), +45 | HorseshoesPin | 9 Stray Dogs, one coat each, Pug faces camera | denim shirt, straw hat, smile | throws a horseshoe, dogs race it | medium, low sun | 9 Stray Dog breeds | Stray Dogs | 4 | |
+| 11 | dogs supper | prestige-hall 19:00, zoom 3.5 on (196,112), +45 | 2 torches, table | 5 VAE dogs, one coat each, French Bulldog faces camera | denim shirt, smile, no hat | hauls a meal, dogs follow the smell | tight-medium, evening | 5 VAE dog breeds | VAE | 4 | |
 
 k story written once (headers), sizes 1 medium, 2 medium, 3 wide, 4 tight, 5 medium-tight, 6 medium; opening 1, closing 6. Interface windows: none. Subtitles drafted in the feature headers, to copy into `PUBLICATION.md` "Gallery subtitles" at step 10.
 
@@ -98,20 +103,20 @@ Places read: 2026-11-06. Tribe read: 2026-11-06 (SANCTUAIRE-LIEUX "Qui une galer
 
 ### Included animals (rule 5, sync-nsb 2026-11-06 second run)
 
-NSB Docs: no commit since 2026-11-06 (checked again, third run), nothing re-read, all "last read" dates above unchanged. Built from the 41 PawnKindDef of Mod/Patches/Coats_*.xml. Shown in played shots: 6 of 41. The other 35 now have a PLANNED grouped shot (7 cats 12, 8 and 9 Stray Dogs 9 each, 10 VAE dogs 5, header of 09b-galerie-soir.feature): plan only, no scenario, no ticket, no estimate; Virginie decides the grouping (10 images in the series or fewer, bigger groups). Outside NSB: Core Cat, Let us Have a Cat cats, Stray Dogs, VAE animals are part of the mod, auto-validated (Virginie, 2026-11-06: "ils font partie du mod, donc auto validés").
+NSB Docs: no commit since 2026-11-06, nothing re-read, dates above unchanged. Built from the 41 PawnKindDef of Mod/Patches/Coats_*.xml. Shots 7 to 11 written 2026-11-06 (header of 09b-galerie-soir.feature, director decision "c est toi la realisatrice"): every animal now has a shot, scenarios not yet written. Outside NSB: Core Cat, Lets Have a Cat cats, Stray Dogs, VAE animals are part of the mod, auto-validated (Virginie, 2026-11-06: "ils font partie du mod, donc auto validés").
 
 | Pack | Animal (defName) | Shot(s) |
 |---|---|---|
 | Core | LabradorRetriever | 2 |
 | Core | Husky | 5 |
 | Core | YorkshireTerrier | 4 |
-| Core | Cat | 7 (planned) |
+| Core | Cat | 7 |
 | LHAC | akaNEKO_shironeko | 1, 6 |
-| LHAC | akaNEKO_Persian, Siamese, Scottish_Fold_Long, Scottish_Fold, N_Forest_Cat, J_Bobtail, Maine_Coon, Russian_Blue, A_Shorthair, kijitora (10) | 7 (planned) |
+| LHAC | akaNEKO_Persian, Siamese, Scottish_Fold_Long, Scottish_Fold, N_Forest_Cat, J_Bobtail, Maine_Coon, Russian_Blue, A_Shorthair, kijitora (10) | 7 (Persian, Siamese, Scottish_Fold, Maine_Coon, Russian_Blue) and 8 (Scottish_Fold_Long, N_Forest_Cat, J_Bobtail, A_Shorthair, kijitora) |
 | Stray Dogs | SCStandardPoodle | 3 |
-| Stray Dogs | SCAfghanHound, BorderCollie, Borzoi, Bullmastiff, BullTerrier, Caucasianshepherd, Chowchow, GoldenRetriever, Greyhound, MiniatureDachshund, NewFoundland, OldEnglishSheepdog, Pug, Saintbernard, Schnauzer, WelshCorgi, StrayDogs_BerneseMountainDog, StrayDogs_SwedishVallhund (18) | 8 (planned: first 9) and 9 (planned: last 9) |
+| Stray Dogs | SCAfghanHound, BorderCollie, Borzoi, Bullmastiff, BullTerrier, Caucasianshepherd, Chowchow, GoldenRetriever, Greyhound, MiniatureDachshund, NewFoundland, OldEnglishSheepdog, Pug, Saintbernard, Schnauzer, WelshCorgi, StrayDogs_BerneseMountainDog, StrayDogs_SwedishVallhund (18) | 9 (first 9) and 10 (last 9) |
 | VAE | AEXP_Corgi | 6 |
-| VAE | AEXP_CatAbyssinian, Beagle, FrenchBulldog, GermanShepherd, Pug, WelshTerrier (6) | Abyssinian in 7 (planned), 5 dogs in 10 (planned) |
+| VAE | AEXP_CatAbyssinian, Beagle, FrenchBulldog, GermanShepherd, Pug, WelshTerrier (6) | Abyssinian in 8, 5 dogs in 11 |
 
 Each planned shot draws one coat per breed, the others declared not drawn.
 
