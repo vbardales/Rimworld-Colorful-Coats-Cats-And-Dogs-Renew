@@ -177,18 +177,21 @@ Feature: images for the Workshop page, one day at the sanctuary, morning
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_CowboyHat" dyed rgb (214, 174, 92)
     And Nelim's Pickle Tools: "Nelim" hairstyle is "Roo_Royal_LongHD"
     And Nelim's Pickle Tools: "Nelim" hair colour is rgb (56, 36, 18)
-    And Nelim's Pickle Tools: 4 adult animals of kind "SCStandardPoodle" are spawned around (156, 98)
-    And Nelim's Pickle Tools: the animal "coat-1" is given coat -1
-    And Nelim's Pickle Tools: the animal "coat-2" is given coat 1
-    And Nelim's Pickle Tools: the animal "coat-3" is given coat 2
-    And Nelim's Pickle Tools: the animal "coat-4" is given coat 3
+    And Nelim's Pickle Tools: an adult animal of kind "SCStandardPoodle" named "Frimousse" is spawned at (158, 98)
+    And Nelim's Pickle Tools: an adult animal of kind "SCStandardPoodle" named "Bouclette" is spawned at (157, 100)
+    And Nelim's Pickle Tools: an adult animal of kind "SCStandardPoodle" named "Pompon" is spawned at (157, 96)
+    And Nelim's Pickle Tools: an adult animal of kind "SCStandardPoodle" named "Chantilly" is spawned at (159, 100)
+    And Nelim's Pickle Tools: the animal "Frimousse" is given coat -1
+    And Nelim's Pickle Tools: the animal "Bouclette" is given coat 1
+    And Nelim's Pickle Tools: the animal "Pompon" is given coat 2
+    And Nelim's Pickle Tools: the animal "Chantilly" is given coat 3
     When Nelim's Pickle Tools: I let 20 ticks pass
     And Nelim's Pickle Tools: "Nelim" stands at (160, 98) facing West
     And Nelim's Pickle Tools: "Nelim" is forced to walk to (152, 98)
-    And Nelim's Pickle Tools: "coat-1" follows "Nelim" within 3 cells
-    And Nelim's Pickle Tools: "coat-2" follows "Nelim" within 3 cells
-    And Nelim's Pickle Tools: "coat-3" follows "Nelim" within 3 cells
-    And Nelim's Pickle Tools: "coat-4" follows "Nelim" within 3 cells
+    And Nelim's Pickle Tools: "Frimousse" follows "Nelim" within 3 cells
+    And Nelim's Pickle Tools: "Bouclette" follows "Nelim" within 3 cells
+    And Nelim's Pickle Tools: "Pompon" follows "Nelim" within 3 cells
+    And Nelim's Pickle Tools: "Chantilly" follows "Nelim" within 3 cells
     And Nelim's Pickle Tools: I let 90 ticks pass
     And game speed is paused
     And Nelim's Pickle Tools: studio presentation mode is enabled
