@@ -96,6 +96,25 @@ Places read: 2026-11-06. Tribe read: 2026-11-06 (SANCTUAIRE-LIEUX "Qui une galer
 | Standard poodles, Stray Dogs (4) | 3 | none | 2026-11-06 | outside NSB: part of the mod, auto-validated (Virginie, 2026-11-06) |
 | Corgis, Vanilla Animals Expanded (3) | 6 | none | 2026-11-06 | outside NSB: part of the mod, auto-validated (Virginie, 2026-11-06) |
 
+### Included animals (rule 5, sync-nsb 2026-11-06 second run)
+
+NSB Docs: no commit since 2026-11-06, nothing re-read, all "last read" dates above unchanged. Built from the 41 `PawnKindDef` of `Mod/Patches/Coats_*.xml`. Shown in the shotlist: 6 of 41. **35 MISSING**: shotlist gap, rule 5 not met, plan pending Virginie (grouping choice).
+
+| Pack | Animal (defName) | Shot(s) |
+|---|---|---|
+| Core | LabradorRetriever | 2 |
+| Core | Husky | 5 |
+| Core | YorkshireTerrier | 4 |
+| Core | Cat | MISSING |
+| LHAC | akaNEKO_shironeko | 1, 6 |
+| LHAC | akaNEKO_Persian, Siamese, Scottish_Fold_Long, Scottish_Fold, N_Forest_Cat, J_Bobtail, Maine_Coon, Russian_Blue, A_Shorthair, kijitora (10) | MISSING |
+| Stray Dogs | SCStandardPoodle | 3 |
+| Stray Dogs | SCAfghanHound, BorderCollie, Borzoi, Bullmastiff, BullTerrier, Caucasianshepherd, Chowchow, GoldenRetriever, Greyhound, MiniatureDachshund, NewFoundland, OldEnglishSheepdog, Pug, Saintbernard, Schnauzer, WelshCorgi, StrayDogs_BerneseMountainDog, StrayDogs_SwedishVallhund (18) | MISSING |
+| VAE | AEXP_Corgi | 6 |
+| VAE | AEXP_CatAbyssinian, Beagle, FrenchBulldog, GermanShepherd, Pug, WelshTerrier (6) | MISSING |
+
+Proposal (not applied): grouped shots, one per pack (cats 12, Stray Dogs 18, VAE 6), each naming the coats drawn; or accept that the 08-revue captures (34/34 read, test not gallery) do not count.
+
 ## Audit 2026-10-15
 
 Chain walked again vs current protocols (read in full where changed since `990a7ae7`: AGENTS, AUDIT, GALLERY, STYLE_RIMWORLD, USE_THIS_INSTEAD, README, CICD, scripts). Transitions 1 to 7 hold: 22 functional tests, `Check-Coats`, `Check-PatchFields` (41), `Check-XmlClasses`, `Check-DefRefs`, `Check-TypeRefs`, `Check-Steps` (416 lines), `Check-ModBasics` rerun green. ModIcon weight (38.6 KB) no longer finding: AUDIT 2.c now treats 20 to 30 KB as usual, not threshold (only over 100 KB absurd). `FRENCH_REVIEW.md` regenerated at `254e5b4`, review line stays Virginie's.
