@@ -22,6 +22,9 @@ showcase:     complete
 tested_on:    2026-10-15 (cats replay rev a00034b: 10/10 and peintres 10/10, docs/runs/2026-10-14-chats-shader.txt; before that 2026-10-10 (Pickle 08-revue, 34/34 passed in the WSL, rev 58bcd23; passes 1-3 and add/removal runs on 2026-09-28 and 2026-10-02; no manual play))
 workshop:     3806769444 (0.1.0, item creation only; About/PublishedFileId.txt committed in 97c19d3; private, as Steam creates every item; not tested, not public)
 remaining:
+  - 2026-11-06 NPT: f566769 did not cover ChessTable (no interaction cell); fixed in 7bcbcf6 (needs chair/stool next to table, else clear error "Play_Chess needs a chair or stool on a cell next to chess table"). Refiled scene 4 alone: 20261106-091153-352-9665 (Inbox/gallery-6, map wsl-deps.sanctuary.map), waiting RUN_DONE; check log line "[stage] Nelim forced into Play_Chess ... target B"; if no seat next to (172,126), add decor "Stool" step
+  - 2026-11-06 RUN_DONE d5ef (Inbox/gallery-5, HETZNER): 2/3, exit 1. Scene 4 chess FAILED again: IndexOutOfRange at the forced Play_Chess step (feature 09b line 64), after NPT fix f566769: asked NPT via TM (fix or fallback "sits on the building"). Scene 5 huskies read OK (4 coats, hat, low sun; huskies close to Nelim, acceptable), scene 6 fireside read OK (harp, 3 corgis, white cat asleep, duster, canon hair). Next: NPT answer, refile 4 alone; rewrite and replay 3 alone
+  - 2026-11-06 RUN_DONE 2708 (Inbox/gallery-4-1, runner HETZNER): 3/3 passed, exit 0, captures read (9.d): scene 1 OK (5 cats, 5 coats, canon ponytail, Kibble carried), scene 2 OK (4 labradors, 4 coats, hat, log, river), scene 3 WEAK (poodles bunched on Nelim, overlap, no trail, not wide; coats still read: white, pink-brown, dark): rewrite scene 3 spacing (spawn cells in a line, walk first), then replay alone. d5ef (scenes 4-6) still queued. Old captures of rewritten scenes to git rm after accept (GALLERY rule 2026-11-06)
   - 2026-11-06 filed (scoped to the 3 gallery scenes each, map now has rooboid.hdhair.continued 3559870636 for the canon hairstyles; first pair e683/5d80 cancelled: pre-check failed without the hair mod): 20261106-043207-526-2708 (09, scenes 1-3, Inbox/gallery-4) and 20261106-043212-571-d5ef (09b, scenes 4-6, Inbox/gallery-5); waiting RUN_DONE. Canon hair, named poodles, cats/poodles/corgis validated by Virginie, Play_Chess fix f566769 by NPT. Also pending: test-shape conversion (CI/CD regen files in tree, Audit told)
   - 2026-11-06 asked NPT (via SendMessage): Play_Chess IndexOutOfRange (b935 scene 4) and scene 3 "coat-2 has 0 alternate coats" (poodle kind has 4 in the patch, Stray Dogs def has none; GiveCoat looks up by LabelShort over the map, suspect another pawn named coat-2); wait answer, then refile 3 and 4
   - 2026-11-06 test-shape conversion (TM relay, owner mission 2026-11-05): no local script, no Rule-OwnValues planned; CI/CD asked to regenerate (--regenerate), Audit told, wait both answers
@@ -45,7 +48,7 @@ remaining:
 session:      local_b1565ae3-2100-4849-b88f-60237d43caed
 updated:      2026-10-30 replay-audit: sections 1 to 8 hold (8.m: Mod/ diff since a00034b is Preview.png only), first unfulfilled 9.a captures (993b waiting, 5157 failed), stage unchanged; weak proofs (STATUS.md only): 1.a-1.d, 4.g, 5.g, 6.h, 7.b, 7.c, 8.e; Run-UnitTests n/a (no test csproj); earlier 2026-10-19, shootGallery[1.1.0]: 8.n done, playTests green (cats 10/10, peintres 10/10, 1.7 sans-facultatifs 10/10); Mod/ identical to code_review_sha a00034b (git diff empty)
 code_review_sha: a00034b4c2d3acdade8505073c708cd3f7c9f4ea
-protocols_read_sha: 4e6d7b694f3ae899b26ec15b743228a30a7dd519
+protocols_read_sha: 578b341369371485b611e3726c9b5d54bfeffb22
 ---
 # Colorful Coats - Cats and Dogs! Renew — status
 
