@@ -24,10 +24,10 @@
 #           Estimate 5. Subtitle: "Eleven o'clock walk: nine stray dogs, nine coats."
 #
 #  10. workshop-10-dogs-horseshoes. calm-zone (cream ground), 16h, clear, low sun, zoom 5 on (201, 187) (10 cells tall, about 18
-#           wide, a small dog about 19 px at 268 px wide), +45 ticks. Horseshoes. Nelim, straw Apparel_CowboyHat dyed
+#           wide, a small dog about 19 px at 268 px wide), +100 ticks. Horseshoes. Nelim, straw Apparel_CowboyHat dyed
 #           rgb (214, 174, 92) on long loose Roo_Royal_LongHD, hair colour rgb (56, 36, 18), denim Apparel_CollarShirt dyed
 #           rgb (44, 86, 140), smile (MouthSmile, LidCheerful), stands at (198, 185) facing East and is forced into the job
-#           Play_Horseshoes on the HorseshoesPin placed at (203, 189); instant: the horseshoe has just left her hand and the dogs race
+#           Play_Horseshoes on the HorseshoesPin placed at (203, 189); instant: the throw is under way (no frame shows the horseshoe in flight) and the dogs race
 #           it (fallback if the job does not start: forced haul of one WoodLog to the cell beside the pin, the stick). Nine Stray Dogs, one coat
 #           each: StrayDogs_SwedishVallhund 0 slate races (200, 183) to (203, 188); SCWelshCorgi 2 stone races (197, 186) to
 #           (202, 190); SCMiniatureDachshund 0 chocolate trails (196, 184) to (200, 187); SCPug 1 ink stands (198, 183) facing
@@ -36,9 +36,9 @@
 #           StrayDogs_BerneseMountainDog 1 mist lies (204, 184). Decor, a garden court round the pitch: HorseshoesPin; Plant_Daylily
 #           fully grown at (195, 182), (195, 191), (205, 191) and (205, 183); PlantPot_Bonsai at (205, 185); TorchLamp at (205, 188)
 #           lit and at (205, 181) lit; Stool at (199, 191); SculptureSmall at (201, 191); Plant_YellowTallGrass fully grown at
-#           (196, 191): low sun plus two lamps. Says: Nelim is playing horseshoes in the garden court and the nine dogs run after
-#           every throw, nine coats. Flag: the Newfoundland and the Bernese are near-black sprites, they are there for presence.
-#           Estimate 5. Subtitle: "Horseshoes at four: nine dogs chase every throw."
+#           (196, 191): low sun plus two lamps. Says: Nelim is at the horseshoes pitch in the garden court and the nine dogs run about the pin
+#           and her, nine coats. Flag: the Newfoundland and the Bernese are near-black sprites, they are there for presence.
+#           Estimate 5. Subtitle: "Horseshoes at four: nine dogs run for the pin."
 #
 #  11. workshop-11-dogs-supper. prestige-hall (grey rug, table, piano), 19h, clear outside, zoom 3.5 on (196, 112) (7 cells tall,
 #           about 12 wide, a pug about 19 px at 268 px wide), +30 ticks. Supper. Nelim, no hat, denim Apparel_CollarShirt dyed
@@ -206,7 +206,7 @@ Feature: images for the Workshop page, one day at the sanctuary, dogs
     And Nelim's Pickle Tools: "Galette" is forced to walk to (202, 190)
     And Nelim's Pickle Tools: "Saucisse" is forced to walk to (200, 187)
     And Nelim's Pickle Tools: "Poivre" is forced to walk to (201, 185)
-    And Nelim's Pickle Tools: I let 45 ticks pass
+    And Nelim's Pickle Tools: I let 100 ticks pass
     And game speed is paused
     And Nelim's Pickle Tools: studio presentation mode is enabled
     And Nelim's Pickle Tools: the colonist bar is hidden
