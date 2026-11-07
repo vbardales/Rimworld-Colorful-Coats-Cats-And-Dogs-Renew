@@ -189,10 +189,10 @@ Feature: images for the Workshop page, one day at the sanctuary, morning
     And Nelim's Sanctuary: I am at the sanctuary "statue-garden"
     And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (151, 94) fully grown
     And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (147, 95) fully grown
-    And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (150, 94) fully grown
+    And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (145, 94) fully grown
+    And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (164, 93) fully grown
     And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (153, 95) fully grown
     And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (158, 95) fully grown
-    And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (161, 94) fully grown
     And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (164, 95) fully grown
     And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (167, 94) fully grown
     And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (146, 101) fully grown

@@ -5,8 +5,8 @@
 #
 # SHOTLIST (index, name, place, hour, framing, gesture, decor, living things, outfit, what the image says, subtitle)
 #
-#   4. workshop-4-chess. cloister, 15h, clear, zoom 3.5 on (173, 127) (7 cells tall, about 21 px a cell at 268 px wide, a Yorkshire
-#           about 12 px), +20 then +30 then +15 ticks. TIGHT shot of the series. Light under the roof plus the torches. Gesture:
+#   4. workshop-4-chess. cloister, 15h, clear, zoom 4 on (172, 126) (8 cells tall, about 19 px a cell at 268 px wide, a Yorkshire
+#           about 14 px), +20 then +30 then +15 ticks. TIGHT shot of the series. Light under the roof plus the torches. Gesture:
 #           Nelim, no hat (roofed), denim Apparel_CollarShirt dyed rgb (44, 86, 140), Roo_HD_Hair_Highpony, hair colour
 #           rgb (56, 36, 18), a smirk and a squint (MouthSmirkSmile, LidSquinting: she is about to win; fallback smile), first
 #           stands at (172, 127) facing South, then is forced into the job Play_Chess on the ChessTable at (172, 126), so she
@@ -30,7 +30,7 @@
 #           pen: the fence and the laying boxes of the pen, Plant_YellowTallGrass fully grown at (156, 209), (162, 212), (154, 210),
 #           (160, 208) and (163, 213), Plant_Daylily fully grown at (157, 209) and (162, 211), PlantPot_Bonsai at (163, 210),
 #           TorchLamp at (156, 208) lit and at (162, 208) lit: grass all round, painted zones hidden, low sun plus two lamps.
-#           Says: at the gate of the pen, Nelim trains one of her four huskies at dusk while the others wait their turn, four coats.
+#           Says: at dusk Nelim gathers her four huskies at the pen, the braziers lit, four coats.
 #           Estimate 5. Subtitle: "Evening training, and four huskies at the gate."
 #
 #   6. workshop-6-fireside. fire-pit, 20h, clear, zoom 5 on (181, 115), +60 ticks. CLOSING image. Gesture: Nelim, now in the navy
@@ -98,7 +98,7 @@ Feature: images for the Workshop page, one day at the sanctuary, evening
     And Nelim's Pickle Tools: the tooltips are hidden
     And Nelim's Pickle Tools: the resource readout is hidden
     And Nelim's Pickle Tools: the selection brackets are hidden
-    And Nelim's Pickle Tools: I frame the cell (173, 127) at zoom 3.5
+    And Nelim's Pickle Tools: I frame the cell (172, 126) at zoom 4
     And Nelim's Pickle Tools: I move the mouse to (10, 10)
     And Nelim's Pickle Tools: "Nelim" face kit is "neutral"
     And Nelim's Pickle Tools: "Nelim" face is held neutral
