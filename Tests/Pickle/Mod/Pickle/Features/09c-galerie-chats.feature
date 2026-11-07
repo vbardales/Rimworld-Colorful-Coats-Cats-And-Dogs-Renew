@@ -23,16 +23,16 @@
 #   8. workshop-8-cats-tea. dining-nook (white rug, table, chairs), 17h, clear, zoom 4 on (176, 108) (8 cells tall, about 14 wide,
 #           x 169 to 183), +45 ticks. Tea time. Nelim, no hat, denim Apparel_CollarShirt dyed rgb (44, 86, 140),
 #           Roo_HD_Hair_Highpony, hair colour rgb (56, 36, 18), smile (MouthSmile, LidCheerful), sits on the DiningChair at
-#           (176, 110) on the north side of the table, so she faces the camera (sits on the building: no job to time), the table laid for
-#           tea before her. Six other cats, one coat each: akaNEKO_Scottish_Fold_Long 2
+#           (176, 110) on the north side of the table, so she faces the camera (sits on the building: no job to time), the table before
+#           her. Six other cats, one coat each: akaNEKO_Scottish_Fold_Long 2
 #           blue lies (178, 109); akaNEKO_N_Forest_Cat 0 chocolate lies (173, 108); akaNEKO_J_Bobtail 1 grey walks (181, 111) to
 #           (177, 111); akaNEKO_A_Shorthair 1 ink walks (172, 111) to (174, 111); AEXP_CatAbyssinian 2 champagne lies (180, 108);
 #           akaNEKO_kijitora 1 ashblue stands (179, 111) facing South: the animal that faces the camera. Instant: the last two cats
-#           are crossing the rug towards her plate. Decor: the existing Table2x2c, white rug, four DiningChairs, TorchLamps
+#           are crossing the rug towards her. Decor: the existing Table2x2c, white rug, four DiningChairs, TorchLamps
 #           (four around the nook), pots and bonsai, plus Plant_Daylily fully grown at (180, 109)
-#           and (181, 111) and TorchLamp at (178, 107) lit: the nook is full, light in frame. Says: Nelim has laid the table for
-#           tea and the cats of the house have come to share it, six more coats. Estimate 5. Subtitle: "Tea at five: six more cats
-#           come to the table."
+#           and (181, 111) and TorchLamp at (178, 107) lit: the nook is full, light in frame. Says: Nelim sits down at the dining table and
+#           six more cats of the house gather round her, six more coats. Estimate 5. Subtitle: "Five o'clock at the table: six more cats
+#           join Nelim."
 #
 # RISK: the seat facing (the chair may turn her away: then the scene is recomposed with the chair on the south side), cats stopping
 # at their targets (+30 ticks), the veranda roof (light), dark coats on the dark rug in 8.
