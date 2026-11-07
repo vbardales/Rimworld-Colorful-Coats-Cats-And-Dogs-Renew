@@ -23,10 +23,10 @@
 #           neighbourhood with a handful of treats and every one of them has come for them, nine coats.
 #           Estimate 5. Subtitle: "Eleven o'clock walk: nine stray dogs, nine coats."
 #
-#  10. workshop-10-dogs-horseshoes. calm-zone (cream ground), 16h, clear, low sun, zoom 5 on (201, 187) (10 cells tall, about 18
+#  10. workshop-10-dogs-horseshoes. calm-zone (cream ground), 16h, clear, low sun, zoom 6 on (202, 187) (8 cells tall, about 14
 #           wide, a small dog about 19 px at 268 px wide), +100 ticks. Horseshoes. Nelim, straw Apparel_CowboyHat dyed
 #           rgb (214, 174, 92) on long loose Roo_Royal_LongHD, hair colour rgb (56, 36, 18), denim Apparel_CollarShirt dyed
-#           rgb (44, 86, 140), smile (MouthSmile, LidCheerful), stands at (198, 185) facing East and is forced into the job
+#           rgb (44, 86, 140), smile (MouthSmile, LidCheerful), stands at (201, 187) facing East, three cells from the pin, and is forced into the job
 #           Play_Horseshoes on the HorseshoesPin placed at (203, 189); instant: the throw is under way (no frame shows the horseshoe in flight) and the dogs race
 #           it (fallback if the job does not start: forced haul of one WoodLog to the cell beside the pin, the stick). Nine Stray Dogs, one coat
 #           each: StrayDogs_SwedishVallhund 0 slate races (200, 183) to (203, 188); SCWelshCorgi 2 stone races (197, 186) to
@@ -197,7 +197,7 @@ Feature: images for the Workshop page, one day at the sanctuary, dogs
     And Nelim's Pickle Tools: the animal "Corbeau" is given coat 1
     And Nelim's Pickle Tools: the animal "Edelweiss" is given coat 1
     When Nelim's Pickle Tools: I let 20 ticks pass
-    And Nelim's Pickle Tools: "Nelim" stands at (198, 185) facing East
+    And Nelim's Pickle Tools: "Nelim" stands at (201, 187) facing East
     And Nelim's Pickle Tools: the animal "Truffe" stands at (198, 183) facing South
     And Nelim's Pickle Tools: the animal "Nuage" stands at (201, 183) facing West
     And Nelim's Pickle Tools: "Brioche" lies down
@@ -216,7 +216,7 @@ Feature: images for the Workshop page, one day at the sanctuary, dogs
     And Nelim's Pickle Tools: the tooltips are hidden
     And Nelim's Pickle Tools: the resource readout is hidden
     And Nelim's Pickle Tools: the selection brackets are hidden
-    And Nelim's Pickle Tools: I frame the cell (201, 187) at zoom 5
+    And Nelim's Pickle Tools: I frame the cell (202, 187) at zoom 6
     And Nelim's Pickle Tools: I move the mouse to (10, 10)
     And Nelim's Pickle Tools: "Nelim" face kit is "neutral"
     And Nelim's Pickle Tools: "Nelim" face is held neutral
