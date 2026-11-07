@@ -13,11 +13,11 @@
 # a shot (rule 5). Day order: 7h (1), 10h (2), 11h (9), 12h (3), 13h (7), 15h (4), 16h (10), 17h (8), 18h (5), 19h (11), 20h (6).
 # Rhythm: one hour per scene, clear sky all day; animals are placed, then the gesture is STARTED by a job (haul, walk, follow, lie
 # down, sit, play) and 30 to 60 ticks pass, then the game is paused: the game paused mid-play, nobody waits for the photo.
-# OUTFIT, CONTINUITY (one story day): the same denim Apparel_CollarShirt dyed rgb (44, 86, 140), her fixture trousers, canon hair
+# OUTFIT, CONTINUITY (one story day): brown Apparel_Pants dyed rgb (101, 67, 33) put on FIRST (the first wears undresses her, round 1 left her legs bare), the same denim Apparel_CollarShirt dyed rgb (44, 86, 140), canon hair
 # (NSB: Roo_HD_Hair_Highpony, Roo_Royal_LongHD under the hat, hair colour rgb (56, 36, 18)), a smile (MouthSmile, LidCheerful).
 # Two changes, both justified by the story: a straw Apparel_CowboyHat dyed rgb (214, 174, 92) goes on in open sun (shots 2, 3, 5,
 # 9, 10) and is off indoors or under a roof; at 20h (shot 6) a navy Apparel_Duster dyed rgb (58, 58, 98) "because the evening is
-# cold". Hat on long loose hair, never a ponytail (Show Hair Under Stuff, 3255379190, in the map).
+# cold". Hat on long loose hair, never a ponytail (Hat Hair Control, 3760821540, in the map with its settings seed, as in NSB).
 # Series (criterion k): shot sizes wide 3 (zoom 7), medium 1, 2, 5, 6, 7, 8, 9, 10, tight 4 (zoom 3.5) and 11 (zoom 3.5); opening
 # 1 (poses the home), closing 6 (the evening gathers the day); a front-facing animal in 1, 2, 4, 5, 6, 7, 8, 9, 10, 11.
 # Gestures: she carries (1, 2, 7, 9, 11), walks (3, 9), plays (4 chess, 6 harp, 10 horseshoes), trains (5), sits at tea (8).
@@ -89,6 +89,7 @@ Feature: images for the Workshop page, one day at the sanctuary, morning
     And Nelim's Pickle Tools: the decor "TorchLamp" at (182, 121) is lit
     And Nelim's Pickle Tools: I place the decor "PlantPot_Bonsai" at (180, 122)
     And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (191, 124) fully grown
+    And Nelim's Pickle Tools: "Nelim" wears "Apparel_Pants" dyed rgb (101, 67, 33)
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_CollarShirt" dyed rgb (44, 86, 140)
     And Nelim's Pickle Tools: "Nelim" hairstyle is "Roo_HD_Hair_Highpony"
     And Nelim's Pickle Tools: "Nelim" hair colour is rgb (56, 36, 18)
@@ -143,6 +144,7 @@ Feature: images for the Workshop page, one day at the sanctuary, morning
     And Nelim's Pickle Tools: I place the decor "Plant_Rose" at (145, 129) fully grown
     And Nelim's Pickle Tools: I place the decor "Plant_Rose" at (151, 131) fully grown
     And Nelim's Pickle Tools: I place the decor "Stool" at (152, 130)
+    And Nelim's Pickle Tools: "Nelim" wears "Apparel_Pants" dyed rgb (101, 67, 33)
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_CollarShirt" dyed rgb (44, 86, 140)
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_CowboyHat" dyed rgb (214, 174, 92)
     And Nelim's Pickle Tools: "Nelim" hairstyle is "Roo_Royal_LongHD"
@@ -207,6 +209,7 @@ Feature: images for the Workshop page, one day at the sanctuary, morning
     And Nelim's Pickle Tools: I place the decor "Plant_YellowTallGrass" at (157, 94) fully grown
     And Nelim's Pickle Tools: I place the decor "Plant_YellowTallGrass" at (166, 98) fully grown
     And Nelim's Pickle Tools: I place the decor "Plant_YellowTallGrass" at (146, 98) fully grown
+    And Nelim's Pickle Tools: "Nelim" wears "Apparel_Pants" dyed rgb (101, 67, 33)
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_CollarShirt" dyed rgb (44, 86, 140)
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_CowboyHat" dyed rgb (214, 174, 92)
     And Nelim's Pickle Tools: "Nelim" hairstyle is "Roo_Royal_LongHD"

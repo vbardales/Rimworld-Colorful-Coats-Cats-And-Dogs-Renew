@@ -1,23 +1,34 @@
-# Gallery pass of Colorful Coats - Cats and Dogs! Renew (feature 09-galerie-sanctuaire): the Sanctuary reference map of SanctuaryBacklot (wsl-deps.sanctuary.map, copied 2026-10-20, nothing challenged)
-# plus the Sanctuary steps, the three animal mods whose coats are shown and their framework. The mod under test is staged by the runner, last.
+# Gallery pass of Colorful Coats - Cats and Dogs! Renew: the Sanctuary reference map of NSB (copied from SanctuaryBacklot/Tests/Pickle/wsl-deps.sanctuary.map,
+# 2026-11-07, nothing challenged: Hat Hair Control replaces Show Hair Under Stuff, trousers and hair under the hat come from it),
+# plus the three animal mods whose coats are shown. The mod under test is staged by the pass.
 #
-#   Submit-PickleRun.ps1 -Mod ColorfulCoatsCatsAndDogsRenew -DepMap wsl-deps.sanctuary.map -Filter 09-galerie-sanctuaire -EvidenceDir Tests/Pickle/Inbox/<run>
+#   Submit-PickleRun.ps1 -Mod ColorfulCoatsCatsAndDogsRenew -DepMap wsl-deps.sanctuary.map -Filter '::gallery-1-'
 nelim.sanctuarybacklot path:SanctuaryBacklot/Mod
-OskarPotocki.VanillaFactionsExpanded.Core 2023507013
-VanillaExpanded.VanillaAnimalsExpanded 2871933948
 Qux.stray.dogs 3549460027
-akairo.LetsHaveaCat 3682940618
+VanillaExpanded.VanillaAnimalsExpanded 2871933948
 # The passes of the Sanctuaire de Nelim: the studio fixtures (including Nelims-tribe), the camera steps, the stage decor, the animal steps (coat steps) and the clear screen.
 #
+#   Submit-PickleRun.ps1 -Mod SanctuaryBacklot -DepMap wsl-deps.sanctuary.map -Filter "::infirmary-views"   (the Backlot's own suite; its scenarios stage Nelim's Pickle Tools by the path: lines below)
 nelim.pickletools.screenshotstudio path:PickleTools/ScreenshotStudio/Mod
 nelim.pickletools.camerazoom path:PickleTools/CameraZoom/Mod
 nelim.pickletools.stagedecor path:PickleTools/StageDecor/Mod
 nelim.pickletools.coatsteps path:PickleTools/CoatSteps/Mod
 nelim.pickletools.clearscreen path:PickleTools/ClearScreen/Mod
+nelim.pickletools.research path:PickleTools/ResearchSteps/Mod
 nelim.pickletools.colonistrace path:PickleTools/ColonistRace/Mod
 nelim.pickletools.clickdiagnostics path:PickleTools/ClickDiagnostics/Mod
 # The bundle is committed under PickleTools/Mod: this shell replaces it, so the tools above are the only copy of their steps (see StandaloneBase).
 nelim.pickletools   path:PickleTools/Tests/Pickle/StandaloneBase/Mod
+# Wardrobe canon, chosen 2026-10-20. FashionRIMsta supplies work and climate
+# silhouettes; VAE supplies functional layers; Fairycore supplies Gynism
+# ceremony and dance. The three are local Workshop installs, not copies.
+# VAE and Fairycore need Harmony; VAE also needs Vanilla Expanded Framework.
+brrainz.harmony 2009463077
+OskarPotocki.VanillaFactionsExpanded.Core 2023507013
+VanillaExpanded.VAPPE 1814987817
+VanillaExpanded.VHE 1888705256
+Mlie.FashionRIMsta 3592569869
+homebrew.fairycoreapparel2 3812924898
 # Minimum list, 2026-10-07/08 (owner). The staging activates in file order, then sorts by loadAfter/dependencies.
 # Bodies and trousers, as proven by Venus Touch Waistlines' gallery pass WITHOUT TailorMade (VenusTouchWaistlines/docs/runs/2026-10-08_gallery-no-tailormade-1):
 # Female Body Variants and Female Apparel Variants load BEFORE WDI (else their Naked_*_Female textures shadow WDI's); AB's Visible Pants is indispensable (without it Venus does nothing).
@@ -45,5 +56,9 @@ ria.cuterkidsforfacialanimation 3807706870
 Moshii.NLFA.InitFix 3609895011
 ccj.nlfaloadfix 3721489042
 # Show Hair Under Stuff (Raccoon Cuddler): hair stays visible under hats and helmets; only hard dependency is Harmony (owner, 2026-10-08).
-RaccoonCuddler.ShowHair 3255379190
+lordfelix.HatHairControl 3760821540
+# Roo's HD Hairstyles and Vanilla Hair Expanded (owner, 2026-10-25): canonical hair for Nelim, Miel, Soren and Blue. Same ids as wsl-deps.sanctuary-looks.map.
 rooboid.hdhair.continued 3559870636
+VanillaExpanded.VHE 1888705256
+# Let's Have a Cat! Continued (owner 2026-10-24): Tama is its akaNEKO_N_Forest_Cat. Kuru is the vanilla Cat. Animal close-ups of sanctuary-animals.feature.
+akairo.LetsHaveaCat 3682940618

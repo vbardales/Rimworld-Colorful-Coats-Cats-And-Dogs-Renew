@@ -100,6 +100,7 @@ Feature: images for the Workshop page, one day at the sanctuary, dogs
     And Nelim's Pickle Tools: the decor "TorchLamp" at (204, 148) is lit
     And Nelim's Pickle Tools: I place the decor "TorchLamp" at (204, 157)
     And Nelim's Pickle Tools: the decor "TorchLamp" at (204, 157) is lit
+    And Nelim's Pickle Tools: "Nelim" wears "Apparel_Pants" dyed rgb (101, 67, 33)
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_CollarShirt" dyed rgb (44, 86, 140)
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_CowboyHat" dyed rgb (214, 174, 92)
     And Nelim's Pickle Tools: "Nelim" hairstyle is "Roo_Royal_LongHD"
@@ -172,6 +173,7 @@ Feature: images for the Workshop page, one day at the sanctuary, dogs
     And Nelim's Pickle Tools: I place the decor "Stool" at (199, 191)
     And Nelim's Pickle Tools: I place the decor "SculptureSmall" at (201, 191)
     And Nelim's Pickle Tools: I place the decor "Plant_YellowTallGrass" at (196, 191) fully grown
+    And Nelim's Pickle Tools: "Nelim" wears "Apparel_Pants" dyed rgb (101, 67, 33)
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_CollarShirt" dyed rgb (44, 86, 140)
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_CowboyHat" dyed rgb (214, 174, 92)
     And Nelim's Pickle Tools: "Nelim" hairstyle is "Roo_Royal_LongHD"
@@ -237,6 +239,7 @@ Feature: images for the Workshop page, one day at the sanctuary, dogs
     And Nelim's Pickle Tools: the decor "TorchLamp" at (193, 109) is lit
     And Nelim's Pickle Tools: I place the decor "TorchLamp" at (200, 110)
     And Nelim's Pickle Tools: the decor "TorchLamp" at (200, 110) is lit
+    And Nelim's Pickle Tools: "Nelim" wears "Apparel_Pants" dyed rgb (101, 67, 33)
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_CollarShirt" dyed rgb (44, 86, 140)
     And Nelim's Pickle Tools: "Nelim" hairstyle is "Roo_HD_Hair_Highpony"
     And Nelim's Pickle Tools: "Nelim" hair colour is rgb (56, 36, 18)

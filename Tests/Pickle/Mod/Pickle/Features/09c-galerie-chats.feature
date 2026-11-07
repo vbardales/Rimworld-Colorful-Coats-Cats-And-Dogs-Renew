@@ -59,6 +59,7 @@ Feature: images for the Workshop page, one day at the sanctuary, afternoon cats
     And Nelim's Pickle Tools: the decor "TorchLamp" at (196, 124) is lit
     And Nelim's Pickle Tools: I place the decor "Brazier" at (199, 119)
     And Nelim's Pickle Tools: the decor "Brazier" at (199, 119) is lit
+    And Nelim's Pickle Tools: "Nelim" wears "Apparel_Pants" dyed rgb (101, 67, 33)
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_CollarShirt" dyed rgb (44, 86, 140)
     And Nelim's Pickle Tools: "Nelim" hairstyle is "Roo_HD_Hair_Highpony"
     And Nelim's Pickle Tools: "Nelim" hair colour is rgb (56, 36, 18)
@@ -111,6 +112,7 @@ Feature: images for the Workshop page, one day at the sanctuary, afternoon cats
     And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (181, 111) fully grown
     And Nelim's Pickle Tools: I place the decor "TorchLamp" at (178, 107)
     And Nelim's Pickle Tools: the decor "TorchLamp" at (178, 107) is lit
+    And Nelim's Pickle Tools: "Nelim" wears "Apparel_Pants" dyed rgb (101, 67, 33)
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_CollarShirt" dyed rgb (44, 86, 140)
     And Nelim's Pickle Tools: "Nelim" hairstyle is "Roo_HD_Hair_Highpony"
     And Nelim's Pickle Tools: "Nelim" hair colour is rgb (56, 36, 18)
