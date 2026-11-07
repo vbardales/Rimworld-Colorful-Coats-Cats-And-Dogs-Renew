@@ -77,9 +77,9 @@ k story written once (headers), sizes 1 medium, 2 medium, 3 wide, 4 tight, 5 med
 
 ## NSB (sync-nsb 2026-11-06)
 
-NSB docs of 2026-11-05 read; no change since 2026-10-25 in the place docs. Rules said back: NSB places, colonists, domestic animals free; outside NSB (colonist or domestic animal) needs Virginie's express validation before play; colonist properties change only with it; every outfit free. Updated: labrador "Miel" renamed "Caramel" in 09 (Miel is an NSB colonist; anonymous fauna must not carry an NSB name). Left alone: places, hours, outfits.
+NSB re-synced 2026-11-07 (diff since 2026-11-06, 38 NSB doc commits): place docs unchanged for my 11 places; vanometric cell (205,152) removed from the map at fixture NPT -j (Virginie, 2026-11-07), not used by this mod; NSB third decor order of 2026-11-07 (sofa-corner, fire-pit, dining-nook, prestige-hall, right-bank, enclosure, emerald-clearing, calm-zone redecorated by NPT, photos to Virginie): cells and decor may change, re-read SANCTUAIRE-CASES.md before the scenarios of shots 8, 10, 11; Nelim profile: only body hair 1.7 validated, no outfit or look change; animals catalogue unchanged. Earlier note: NSB docs of 2026-11-05 read; no change since 2026-10-25 in the place docs. Rules said back: NSB places, colonists, domestic animals free; outside NSB (colonist or domestic animal) needs Virginie's express validation before play; colonist properties change only with it; every outfit free. Updated: labrador "Miel" renamed "Caramel" in 09 (Miel is an NSB colonist; anonymous fauna must not carry an NSB name). Left alone: places, hours, outfits.
 
-Places read: 2026-11-06. Tribe read: 2026-11-06 (SANCTUAIRE-LIEUX "Qui une galerie peut utiliser", CATALOGUE-ANIMAUX, NELIM-PROFIL, APPARENCES-CANON; other profiles not needed, not opened).
+Places read: 2026-11-07 (diffs of SANCTUAIRE-LIEUX, GALERIE, EMBELLISSEMENT-LIEUX, SANCTUAIRE-CASES since 2026-11-06; no whole file re-read). Tribe read: 2026-11-07 (diffs of NELIM-PROFIL, VALIDE, CATALOGUE-ANIMAUX, APPARENCES-CANON, NSB-ROSTER; earlier whole read 2026-11-06: SANCTUAIRE-LIEUX "Qui une galerie peut utiliser", CATALOGUE-ANIMAUX, NELIM-PROFIL, APPARENCES-CANON; other profiles not needed, not opened).
 
 | Place | Shots | Changes for the gallery | Last read |
 |---|---|---|---|
@@ -92,7 +92,7 @@ Places read: 2026-11-06. Tribe read: 2026-11-06 (SANCTUAIRE-LIEUX "Qui une galer
 
 | Colonist | Shots | Outfit per shot | Last read | Exceptions |
 |---|---|---|---|---|
-| Nelim | 1-6 | denim CollarShirt + fixture trousers all day; straw CowboyHat in 2, 3, 5 (open sun); navy Duster in 6 (cold evening); smile, smirk in 4 (about to win) | 2026-11-06 | none: Virginie, 2026-11-06 "repars du canon": hair back to canon in all six scenes (colour (56,36,18), Roo_HD_Hair_Highpony without hat, Roo_Royal_LongHD under the hat); scenes 1-3 played with the old hair, to replay |
+| Nelim | 1-6 | denim CollarShirt + fixture trousers all day; straw CowboyHat in 2, 3, 5 (open sun); navy Duster in 6 (cold evening); smile, smirk in 4 (about to win) | 2026-11-07 | none: Virginie, 2026-11-06 "repars du canon": hair back to canon in all six scenes (colour (56,36,18), Roo_HD_Hair_Highpony without hat, Roo_Royal_LongHD under the hat); scenes 1-3 played with the old hair, to replay |
 
 | Animal | Shots | Outfit | Last read | Exceptions |
 |---|---|---|---|---|
