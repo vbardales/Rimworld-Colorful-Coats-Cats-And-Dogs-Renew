@@ -18,7 +18,7 @@
 # Two changes, both justified by the story: a straw Apparel_CowboyHat dyed rgb (214, 174, 92) goes on in open sun (shots 2, 3, 5,
 # 9, 10) and is off indoors or under a roof; at 20h (shot 6) a navy Apparel_Duster dyed rgb (58, 58, 98) "because the evening is
 # cold". Hat on long loose hair, never a ponytail (Show Hair Under Stuff, 3255379190, in the map).
-# Series (criterion k): shot sizes wide 3 (zoom 7), medium 1, 2, 5, 6, 7, 8, 9, 10, tight 4 (zoom 2.5) and 11 (zoom 3.5); opening
+# Series (criterion k): shot sizes wide 3 (zoom 7), medium 1, 2, 5, 6, 7, 8, 9, 10, tight 4 (zoom 3.5) and 11 (zoom 3.5); opening
 # 1 (poses the home), closing 6 (the evening gathers the day); a front-facing animal in 1, 2, 4, 5, 6, 7, 8, 9, 10, 11.
 # Gestures: she carries (1, 2, 7, 9, 11), walks (3, 9), plays (4 chess, 6 harp, 10 horseshoes), trains (5), sits at tea (8).
 #
@@ -60,7 +60,7 @@
 #           (155, 98), Pompon (153, 99), Chantilly (151, 97), Bouclette (149, 98), started on the same tick as Nelim, so after 90
 #           ticks they form a spaced zig-zag trail about 2 cells apart behind her, mid-step. Instant: the trail has just formed.
 #           Decor, a garden of statues: the existing big statues, the two small sculptures, the horse statue and the yellow flower
-#           field, plus Plant_Daylily fully grown at (151, 94): the place is full, no bare ground. Says: Nelim leads a parade of
+#           field, plus Plant_Daylily fully grown at (151, 94) and twelve more daylilies, four Plant_Rose and four tall-grass tufts scattered over the soil: the place is full, no bare ground. Says: Nelim leads a parade of
 #           four standard poodles through the statue garden, four coats. Estimate 5. Subtitle: "Four poodles tour the statue garden."
 #
 # Shots 4 to 6: 09b-galerie-soir.feature. Shots 7 and 8: 09c-galerie-chats.feature. Shots 9 to 11: 09d-galerie-chiens.feature.
@@ -188,6 +188,26 @@ Feature: images for the Workshop page, one day at the sanctuary, morning
     And Nelim's Sanctuary: the animals are removed from the sanctuary "statue-garden"
     And Nelim's Sanctuary: I am at the sanctuary "statue-garden"
     And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (151, 94) fully grown
+    And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (147, 95) fully grown
+    And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (150, 94) fully grown
+    And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (153, 95) fully grown
+    And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (158, 95) fully grown
+    And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (161, 94) fully grown
+    And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (164, 95) fully grown
+    And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (167, 94) fully grown
+    And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (146, 101) fully grown
+    And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (149, 102) fully grown
+    And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (153, 103) fully grown
+    And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (160, 102) fully grown
+    And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (163, 103) fully grown
+    And Nelim's Pickle Tools: I place the decor "Plant_Rose" at (148, 96) fully grown
+    And Nelim's Pickle Tools: I place the decor "Plant_Rose" at (155, 101) fully grown
+    And Nelim's Pickle Tools: I place the decor "Plant_Rose" at (162, 96) fully grown
+    And Nelim's Pickle Tools: I place the decor "Plant_Rose" at (165, 102) fully grown
+    And Nelim's Pickle Tools: I place the decor "Plant_YellowTallGrass" at (151, 102) fully grown
+    And Nelim's Pickle Tools: I place the decor "Plant_YellowTallGrass" at (157, 94) fully grown
+    And Nelim's Pickle Tools: I place the decor "Plant_YellowTallGrass" at (166, 98) fully grown
+    And Nelim's Pickle Tools: I place the decor "Plant_YellowTallGrass" at (146, 98) fully grown
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_CollarShirt" dyed rgb (44, 86, 140)
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_CowboyHat" dyed rgb (214, 174, 92)
     And Nelim's Pickle Tools: "Nelim" hairstyle is "Roo_Royal_LongHD"

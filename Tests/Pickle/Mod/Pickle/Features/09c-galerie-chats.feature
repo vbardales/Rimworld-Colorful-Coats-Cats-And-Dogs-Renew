@@ -23,8 +23,8 @@
 #   8. workshop-8-cats-tea. dining-nook (white rug, table, chairs), 17h, clear, zoom 4 on (176, 108) (8 cells tall, about 14 wide,
 #           x 169 to 183), +45 ticks. Tea time. Nelim, no hat, denim Apparel_CollarShirt dyed rgb (44, 86, 140),
 #           Roo_HD_Hair_Highpony, hair colour rgb (56, 36, 18), smile (MouthSmile, LidCheerful), sits on a DiningChair placed at
-#           (176, 107) on the north side of the table, so she faces the camera (sits on the building: no job to time). Two plates on
-#           the table: MealFine at (175, 108) and MealSimple at (176, 108). Six other cats, one coat each: akaNEKO_Scottish_Fold_Long 2
+#           (176, 106) north of the table, so she faces the camera (sits on the building: no job to time), the tea plate (a MealSimple)
+#           in her hands (carries the item). Six other cats, one coat each: akaNEKO_Scottish_Fold_Long 2
 #           blue lies (178, 109); akaNEKO_N_Forest_Cat 0 chocolate lies (173, 108); akaNEKO_J_Bobtail 1 grey walks (181, 111) to
 #           (177, 111); akaNEKO_A_Shorthair 1 ink walks (172, 111) to (174, 111); AEXP_CatAbyssinian 2 champagne lies (180, 108);
 #           akaNEKO_kijitora 1 ashblue stands (179, 111) facing South: the animal that faces the camera. Instant: the last two cats
@@ -107,9 +107,7 @@ Feature: images for the Workshop page, one day at the sanctuary, afternoon cats
     Given I set the hour to 17
     And Nelim's Sanctuary: the animals are removed from the sanctuary "dining-nook"
     And Nelim's Sanctuary: I am at the sanctuary "dining-nook"
-    And Nelim's Pickle Tools: I place the decor "DiningChair" at (176, 107)
-    And Nelim's Pickle Tools: I place the decor "MealFine" at (175, 108)
-    And Nelim's Pickle Tools: I place the decor "MealSimple" at (176, 108)
+    And Nelim's Pickle Tools: I place the decor "DiningChair" at (176, 106)
     And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (180, 109) fully grown
     And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (181, 111) fully grown
     And Nelim's Pickle Tools: I place the decor "TorchLamp" at (178, 107)
@@ -130,7 +128,8 @@ Feature: images for the Workshop page, one day at the sanctuary, afternoon cats
     And Nelim's Pickle Tools: the animal "Safran" is given coat 2
     And Nelim's Pickle Tools: the animal "Perle" is given coat 1
     When Nelim's Pickle Tools: I let 20 ticks pass
-    And Nelim's Pickle Tools: "Nelim" sits on the building "DiningChair" at (176, 107)
+    And Nelim's Pickle Tools: "Nelim" sits on the building "DiningChair" at (176, 106)
+    And Nelim's Pickle Tools: "Nelim" carries the item "MealSimple"
     And Nelim's Pickle Tools: the animal "Perle" stands at (179, 111) facing South
     And Nelim's Pickle Tools: "Flocon" lies down
     And Nelim's Pickle Tools: "Suie" lies down

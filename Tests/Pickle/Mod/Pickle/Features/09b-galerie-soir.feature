@@ -5,8 +5,8 @@
 #
 # SHOTLIST (index, name, place, hour, framing, gesture, decor, living things, outfit, what the image says, subtitle)
 #
-#   4. workshop-4-chess. cloister, 15h, clear, zoom 2.5 on (174, 128) (5 cells tall, about 30 px a cell at 268 px wide, a Yorkshire
-#           about 17 px), +20 then +30 then +15 ticks. TIGHT shot of the series. Light under the roof plus the torches. Gesture:
+#   4. workshop-4-chess. cloister, 15h, clear, zoom 3.5 on (173, 127) (7 cells tall, about 21 px a cell at 268 px wide, a Yorkshire
+#           about 12 px), +20 then +30 then +15 ticks. TIGHT shot of the series. Light under the roof plus the torches. Gesture:
 #           Nelim, no hat (roofed), denim Apparel_CollarShirt dyed rgb (44, 86, 140), Roo_HD_Hair_Highpony, hair colour
 #           rgb (56, 36, 18), a smirk and a squint (MouthSmirkSmile, LidSquinting: she is about to win; fallback smile), first
 #           stands at (172, 127) facing South, then is forced into the job Play_Chess on the ChessTable at (172, 126), so she
@@ -20,9 +20,9 @@
 #           about to win, and three Yorkshire terriers, three coats, keep her company. Estimate 5.
 #           Subtitle: "A game of chess, watched from below."
 #
-#   5. workshop-5-evening-training. enclosure-south, 18h, clear, low sun, zoom 4.5 on (158, 211), +45 ticks. Gesture: Nelim, straw
+#   5. workshop-5-evening-training. enclosure-south, 18h, clear, low sun, zoom 4.5 on (158, 210), +45 ticks. Gesture: Nelim, straw
 #           Apparel_CowboyHat dyed rgb (214, 174, 92) on long loose Roo_Royal_LongHD, denim Apparel_CollarShirt dyed
-#           rgb (44, 86, 140), hair colour rgb (56, 36, 18), smile, is forced into the job Train on the husky Ardoise: she stands
+#           rgb (44, 86, 140), hair colour rgb (56, 36, 18), smile, carries 2 Kibble (the treats) and is forced into the job Train on the husky Ardoise: she stands
 #           beside it, turned to it. Instant: she has just given the command, the husky answers (fallback if Train does not start: a
 #           forced haul of Hay to (158, 211)). Four huskies (Core, coats 0 iceblue, -1 original, 1 coffee, 2 oatmeal): Givre 0
 #           spawned (157, 211) and Moka 1 spawned (161, 210) follow her within 3 cells; Ardoise -1 stands (158, 211) facing South:
@@ -98,7 +98,7 @@ Feature: images for the Workshop page, one day at the sanctuary, evening
     And Nelim's Pickle Tools: the tooltips are hidden
     And Nelim's Pickle Tools: the resource readout is hidden
     And Nelim's Pickle Tools: the selection brackets are hidden
-    And Nelim's Pickle Tools: I frame the cell (174, 128) at zoom 2.5
+    And Nelim's Pickle Tools: I frame the cell (173, 127) at zoom 3.5
     And Nelim's Pickle Tools: I move the mouse to (10, 10)
     And Nelim's Pickle Tools: "Nelim" face kit is "neutral"
     And Nelim's Pickle Tools: "Nelim" face is held neutral
@@ -141,6 +141,7 @@ Feature: images for the Workshop page, one day at the sanctuary, evening
     And Nelim's Pickle Tools: the animal "Lait" is given coat 2
     When Nelim's Pickle Tools: I let 20 ticks pass
     And Nelim's Pickle Tools: the animal "Ardoise" stands at (158, 211) facing South
+    And Nelim's Pickle Tools: "Nelim" carries 2 of the item "Kibble"
     And Nelim's Pickle Tools: "Lait" lies down
     And Nelim's Pickle Tools: "Givre" follows "Nelim" within 3 cells
     And Nelim's Pickle Tools: "Moka" follows "Nelim" within 3 cells
@@ -153,7 +154,7 @@ Feature: images for the Workshop page, one day at the sanctuary, evening
     And Nelim's Pickle Tools: the tooltips are hidden
     And Nelim's Pickle Tools: the resource readout is hidden
     And Nelim's Pickle Tools: the selection brackets are hidden
-    And Nelim's Pickle Tools: I frame the cell (158, 211) at zoom 4.5
+    And Nelim's Pickle Tools: I frame the cell (158, 210) at zoom 4.5
     And Nelim's Pickle Tools: I move the mouse to (10, 10)
     And Nelim's Pickle Tools: "Nelim" face kit is "neutral"
     And Nelim's Pickle Tools: "Nelim" face is held neutral

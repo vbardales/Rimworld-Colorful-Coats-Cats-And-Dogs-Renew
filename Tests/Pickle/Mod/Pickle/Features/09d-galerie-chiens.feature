@@ -18,7 +18,7 @@
 #           taupe stands (194, 149) facing South: the animal that faces the camera; SCBullTerrier 2 grey walks at her heel
 #           (196, 157) to (196, 149). Decor, a flower border round the walk: Plant_Daylily fully grown at (191, 147), (191, 152),
 #           (204, 150) and (203, 155); Plant_Rose fully grown at (204, 153) and (192, 157); PlantPot_Bonsai at (191, 156);
-#           Plant_YellowTallGrass fully grown at (197, 147) and (201, 147); TorchLamp at (204, 148) lit and at (204, 157) lit: ground
+#           Plant_YellowTallGrass fully grown at (197, 147) and (201, 147) and a scatter of eight more daylilies, four roses and three tufts across the field; TorchLamp at (204, 148) lit and at (204, 157) lit: ground
 #           soil with plants all round, no bare field, two lights in frame. Says: Nelim walks the nine stray dogs of the
 #           neighbourhood with a handful of treats and every one of them has come for them, nine coats.
 #           Estimate 5. Subtitle: "Eleven o'clock walk: nine stray dogs, nine coats."
@@ -47,10 +47,10 @@
 #           the way. Instant: she has just lifted the dish, the dogs trot after the smell. Five Vanilla Animals Expanded dogs, one
 #           coat each: AEXP_GermanShepherd 2 slate walks (193, 114) to (198, 114); AEXP_Beagle 2 stone stands (199, 112) facing
 #           West, begging; AEXP_Pug 1 ink lies (194, 111); AEXP_FrenchBulldog 2 chocolate stands (194, 109) facing South: the
-#           animal that faces the camera; AEXP_WelshTerrier 0 mist walks (200, 113) to (200, 109). Decor, the supper laid: the
-#           existing table, piano, rug, braziers, pots and bonsai, plus MealSimple on the table at (196, 110) and at (197, 110),
+#           animal that faces the camera; AEXP_WelshTerrier 0 mist walks (200, 113) to (200, 109). Decor, the supper hall: the
+#           existing table, piano, rug, braziers, pots and bonsai, plus
 #           Plant_Daylily fully grown at (194, 112), (199, 115) and (200, 112), TorchLamp at (193, 109) lit and at (200, 110) lit:
-#           lamps in frame, the table set. Says: Nelim carries supper to a laid table and five dogs follow the smell, five coats.
+#           lamps in frame. Says: Nelim carries supper to a laid table and five dogs follow the smell, five coats.
 #           Estimate 5. Subtitle: "Supper at seven: five dogs know the way to the table."
 #
 # RISK: the strays stop at their targets (+45 ticks), Play_Horseshoes may not choose its stand cell (fallback above), the emerald
@@ -81,6 +81,21 @@ Feature: images for the Workshop page, one day at the sanctuary, dogs
     And Nelim's Pickle Tools: I place the decor "PlantPot_Bonsai" at (191, 156)
     And Nelim's Pickle Tools: I place the decor "Plant_YellowTallGrass" at (197, 147) fully grown
     And Nelim's Pickle Tools: I place the decor "Plant_YellowTallGrass" at (201, 147) fully grown
+    And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (193, 151) fully grown
+    And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (196, 150) fully grown
+    And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (198, 153) fully grown
+    And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (194, 154) fully grown
+    And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (201, 152) fully grown
+    And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (197, 155) fully grown
+    And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (200, 148) fully grown
+    And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (193, 147) fully grown
+    And Nelim's Pickle Tools: I place the decor "Plant_Rose" at (195, 151) fully grown
+    And Nelim's Pickle Tools: I place the decor "Plant_Rose" at (199, 150) fully grown
+    And Nelim's Pickle Tools: I place the decor "Plant_Rose" at (192, 154) fully grown
+    And Nelim's Pickle Tools: I place the decor "Plant_Rose" at (202, 150) fully grown
+    And Nelim's Pickle Tools: I place the decor "Plant_YellowTallGrass" at (196, 153) fully grown
+    And Nelim's Pickle Tools: I place the decor "Plant_YellowTallGrass" at (200, 154) fully grown
+    And Nelim's Pickle Tools: I place the decor "Plant_YellowTallGrass" at (194, 152) fully grown
     And Nelim's Pickle Tools: I place the decor "TorchLamp" at (204, 148)
     And Nelim's Pickle Tools: the decor "TorchLamp" at (204, 148) is lit
     And Nelim's Pickle Tools: I place the decor "TorchLamp" at (204, 157)
@@ -215,8 +230,6 @@ Feature: images for the Workshop page, one day at the sanctuary, dogs
     Given I set the hour to 19
     And Nelim's Sanctuary: the animals are removed from the sanctuary "prestige-hall"
     And Nelim's Sanctuary: I am at the sanctuary "prestige-hall"
-    And Nelim's Pickle Tools: I place the decor "MealSimple" at (196, 110)
-    And Nelim's Pickle Tools: I place the decor "MealSimple" at (197, 110)
     And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (194, 112) fully grown
     And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (199, 115) fully grown
     And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (200, 112) fully grown
