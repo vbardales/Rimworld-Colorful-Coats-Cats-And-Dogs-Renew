@@ -1,79 +1,72 @@
-# Workshop gallery, shotlist v2 of 2026-10-25 (shootGallery[1.1.0]). Replaces the shotlist of 2026-10-20 after ticket e276
-# (3/6 green, captures 1, 2, 4 read) and the rules of GALLERY.md of 2026-10-23/25. It replaces 07-galerie.feature (old fixture, a row
-# of animals facing the camera: a catalogue plate), which is deleted once the new images are accepted. Scenes 1 to 3 are in this
-# file, scenes 4 to 6 in 09b-galerie-soir.feature (a ticket of more than about 5 scenarios is killed, exit 137: two tickets of three).
-# Director pass of an Opus sub-agent kept: see "Director's remarks" at the end of this header.
+# Workshop gallery, SHOTLIST v3 of 2026-11-07 (shootGallery[1.1.0]); replaces the v2 of 2026-10-25 and the scenes rewritten on
+# 2026-11-06. Eleven shots in four files (a ticket of more than about 5 scenarios is killed, exit 137): shots 1 to 3 here, 4 to 6
+# in 09b-galerie-soir.feature, 7 and 8 in 09c-galerie-chats.feature, 9 to 11 in 09d-galerie-chiens.feature. The director is the
+# session (Virginie, 2026-11-06: "c'est toi la realisatrice"). Rules of GALLERY.md of 2026-11-07 applied: dense decor, the story
+# readable IN the image, every scene planned at 5/5 (rate-gallery), a capture under 4/5 on image, adequacy, understanding or
+# decoration is a REDO. Cells come from SANCTUAIRE-CASES.md of NSB, coats from Mod/Patches, steps from PickleTools.
 #
-# THE STORY. "Nelim pet-sits the neighbours' animals for a day." Nelim, alone in her sanctuary, looks after the animals of the
+# THE STORY. "Nelim pet-sits the neighbours' animals for a day." Alone in her sanctuary, Nelim looks after the animals of the
 # neighbouring farms: every few hours a new group arrives, in the coats this mod gives them, and she does one thing with them.
 # The evening gathers them (the white cat of the breakfast sleeps by the fire at the end). The series shows the mod's four
-# sources: Let's Have a Cat! (white cat, five coats), the base-game pets (Labrador, Yorkshire terrier, Husky), Stray Dogs (standard
-# poodle, four coats), Vanilla Animals Expanded (corgi, three coats).
-# Rhythm of time: one hour per scene, 07, 10, 12, 15, 18, 20, clear sky all day (I set the hour to N first; animals are placed,
-# then the gesture is STARTED by a job (haul, walk, follow, lie down, play) and 30 to 60 ticks pass, then the game is paused:
-# the image is the game paused mid-play, nobody stands still waiting for the photo).
-# OUTFIT, CONTINUITY (one story day): Nelim wears the same outfit in every scene: denim-blue Apparel_CollarShirt dyed rgb
-# (44, 86, 140), her fixture trousers, canon hair (NSB: Roo_HD_Hair_Highpony, Roo_Royal_LongHD under the hat; colour (56, 36, 18)), a smile (MouthSmile + LidCheerful; scene 4 a smirk,
-# she is about to win). Only two changes, both justified by the story: a straw Apparel_CowboyHat dyed (214, 174, 92) goes on for
-# the three scenes in open sun (2, 3, 5) and is off indoors or under a roof (1, 4, 6); at 20:00 (scene 6) she adds a navy
-# Apparel_Duster dyed (58, 58, 98) "because the evening is cold". Hat on long loose hair, never a ponytail (Show Hair Under Stuff
-# 3255379190 in the map).
-# Series (criterion k): shot sizes 1 medium (zoom 5, opening, poses the home), 2 medium (zoom 5), 3 wide (zoom 6), 4 tight
-# (zoom 3.5), 5 medium-tight (zoom 4.5), 6 medium (zoom 5, closing). One animal faces the camera in scenes 1, 2, 4, 6.
-# Gestures: 1 and 2 she carries (morning chores), 3 she walks empty-handed, 4 she plays, 5 she trains, 6 she plays music.
+# sources: Let's Have a Cat! (white cat, ten cat breeds), the base-game pets (Labrador, Yorkshire terrier, Husky, Cat), Stray Dogs
+# (the poodle and eighteen breeds), Vanilla Animals Expanded (corgi, five dogs, the Abyssinian). Every animal the mod patches is in
+# a shot (rule 5). Day order: 7h (1), 10h (2), 11h (9), 12h (3), 13h (7), 15h (4), 16h (10), 17h (8), 18h (5), 19h (11), 20h (6).
+# Rhythm: one hour per scene, clear sky all day; animals are placed, then the gesture is STARTED by a job (haul, walk, follow, lie
+# down, sit, play) and 30 to 60 ticks pass, then the game is paused: the game paused mid-play, nobody waits for the photo.
+# OUTFIT, CONTINUITY (one story day): the same denim Apparel_CollarShirt dyed rgb (44, 86, 140), her fixture trousers, canon hair
+# (NSB: Roo_HD_Hair_Highpony, Roo_Royal_LongHD under the hat, hair colour rgb (56, 36, 18)), a smile (MouthSmile, LidCheerful).
+# Two changes, both justified by the story: a straw Apparel_CowboyHat dyed rgb (214, 174, 92) goes on in open sun (shots 2, 3, 5,
+# 9, 10) and is off indoors or under a roof; at 20h (shot 6) a navy Apparel_Duster dyed rgb (58, 58, 98) "because the evening is
+# cold". Hat on long loose hair, never a ponytail (Show Hair Under Stuff, 3255379190, in the map).
+# Series (criterion k): shot sizes wide 3 (zoom 7), medium 1, 2, 5, 6, 7, 8, 9, 10, tight 4 (zoom 2.5) and 11 (zoom 3.5); opening
+# 1 (poses the home), closing 6 (the evening gathers the day); a front-facing animal in 1, 2, 4, 5, 6, 7, 8, 9, 10, 11.
+# Gestures: she carries (1, 2, 7, 9, 11), walks (3, 9), plays (4 chess, 6 harp, 10 horseshoes), trains (5), sits at tea (8).
 #
-# MAP: wsl-deps.sanctuary.map of this mod (nothing challenged; Show Hair Under Stuff in it). Steps all existing (ColonistRace):
-# "stands at", "is forced to haul N of the item X to (x, z)", "is forced to walk to (x, z)", "follows Y within N cells", "lies down",
-# "is forced into the job J on the building D at (x, z)", "is forced into the job J on Y", "plays the instrument D", "wears dyed",
-# "carries". Sanctuary: "the D near (x, z) is hidden". CoatSteps: "N adult animals of kind K are spawned around (x, z)" (animals
-# named coat-1.. in order), "the animal Y is given coat N" (-1 is the original). Cells below come from SANCTUAIRE-CASES.md (free
-# cells of sofa-corner, cloister, fire-pit) or were placed without failing in e276; elsewhere animals are spawned "around".
+# MAP: wsl-deps.sanctuary.map of this mod (nothing challenged). Steps all exist (ColonistRace, CoatSteps, StageDecor, Sanctuary).
 #
-# SHOTLIST (index, file, place, hour, framing, gesture and instant, living things, decor, estimate, subtitle)
+# SHOTLIST (index, name, place, hour, framing, gesture, decor, living things, outfit, what the image says, subtitle)
 #
-# 1 workshop-1-breakfast (REWRITTEN 2026-11-06 after the captures of run 2708: cats tiny and pale on the parquet, one follower, face hidden).
-#   sofa-corner, 07:00, clear, zoom 4 on (186, 122) (8 cells tall, about 19 px a cell at 268 px wide: a cat is about 20 px), +45 ticks.
-#   Opening image, poses the home. Light: warm interior, roofed room, the hour is carried by the subtitle (indoors it cannot be read).
-#   Foreground: Nelim and the two dark cats on the parquet strip (z 119 to 121); background: the magenta rug with the sofas, the
-#   bookcase and the torch lamps (z 122 to 124). Gesture: Nelim walks west carrying 10 Kibble (forced haul from (189, 120) towards
-#   (183, 120), stopped after 45 ticks near x 186: mid-stride, in profile, no hat, smile). Instant: she is about to set the bowl down,
-#   the cats have just caught up. Cats of Let's Have a Cat! (akaNEKO_shironeko, coats -1 original white, 0 peach, 1 steel blue,
-#   2 grey, 3 fawn), pale coats on the magenta rug, dark coats on the parquet, no "follows" step (it piled the cats onto her): peach
-#   (186, 124) and fawn (188, 124) stand on the rug facing west; grey walks (forced) from (191, 121) to (185, 121) and steel blue from
-#   (191, 119) to (185, 119), one row above and below her, about 2 cells behind; the original white one walks south from (183, 121) to
-#   (183, 119), clear of her line: the series' front view. Decor: Plant_Daylily fully grown at (183, 123) and (190, 123) (placed in
-#   e276), existing couches, bookcase and torch lamps. Fallbacks: if the Kibble stack still hides her face, haul 6 instead of 10 or
-#   start her at (189, 119). Estimate 4.5 (-0.5: rug cells come from the list of 2026-10-06, the thumbnail size is computed, not seen).
-#   Subtitle: "Seven o'clock breakfast: one white cat, five coats."
+#   1. workshop-1-breakfast. sofa-corner, 7h, clear, zoom 4 on (186, 122) (8 cells tall, about 19 px a cell at 268 px wide, a cat
+#           about 20 px), +45 ticks. Opening image, poses the home: warm roofed room, the hour is carried by the subtitle.
+#           Gesture: Nelim, no hat, denim Apparel_CollarShirt dyed rgb (44, 86, 140), Roo_HD_Hair_Highpony, hair colour
+#           rgb (56, 36, 18), smile, stands at (189, 120) facing West and is forced to haul 10 Kibble to (183, 120): mid-stride in
+#           profile near x 186. Instant: she is about to set the bowl down, the cats have just caught up. Five white cats
+#           (akaNEKO_shironeko, coats -1 original white, 0 champagne, 1 blue, 2 grey, 3 fawn): Peche 0 stands (186, 124) facing
+#           West and Paille 3 stands (188, 124) facing West on the rug; Cendre 2 walks (forced) from (191, 121) to (185, 121) and
+#           Azur 1 from (191, 119) to (185, 119), one row above and below her; Neige -1 stands (183, 121) facing South then walks
+#           to (183, 119): the animal that faces the camera. Decor, the room lived in: existing couches, armchair, end table,
+#           bookcase, drapes, sculptures, pots and the torch lamp, plus Plant_Daylily fully grown at (183, 123), (190, 123) and
+#           (191, 124), TorchLamp at (182, 121) lit, PlantPot_Bonsai at (180, 122): pale coats on the rug, dark on the parquet.
+#           Says: Nelim brings the breakfast bowl across the living room and the household's white cats, five coats, run to it.
+#           Estimate 5. Subtitle: "Seven o'clock breakfast: one white cat, five coats."
 #
-# 2 workshop-2-fetch. right-bank, 10:00, zoom 5 on (147, 131), +45 ticks. Gesture: Nelim, hat on, brings a log back from the water
-#   (forced haul of one WoodLog from (144, 131) to (148, 132)), mid-stride. Instant: she has just fetched the log, the dogs are on
-#   her heels. Labradors (Core, coats -1, 0 chocolate, 1 yellow, 2 black): three follow within 3 cells, the fourth runs ahead south
-#   (forced walk from (150, 129) to (150, 127)) facing the camera. Decor: Plant_Daylily fully grown at (143, 130), (147, 134),
-#   (149, 131) (placed in e276), the river behind. Estimate 4. Subtitle: "Fetch by the river: four labradors, one log."
+#   2. workshop-2-fetch. right-bank, 10h, clear, zoom 5 on (147, 131), +45 ticks. Gesture: Nelim, straw Apparel_CowboyHat
+#           dyed rgb (214, 174, 92) on long loose Roo_Royal_LongHD, denim Apparel_CollarShirt dyed rgb (44, 86, 140), smile,
+#           stands at (144, 131) facing East and is forced to haul 1 WoodLog to (148, 132): a log brought back from the water,
+#           mid-stride. Instant: she has just fetched the log, the dogs are on her heels. Four labradors (Core, coats -1 original,
+#           0 chocolate, 1 fawn, 2 ink): Caramel -1, Cacao 0 and Sable 1 follow within 3 cells; Jais 2 stands (150, 129) facing
+#           South, then walks to (150, 127): the animal that faces the camera. Decor, the river bank lived in: Plant_Daylily
+#           fully grown at (143, 130), (147, 134) and (149, 131), Plant_YellowTallGrass fully grown at (145, 133) and (150, 134),
+#           Plant_Rose fully grown at (145, 129) and (151, 131), a Stool at (152, 130), the river behind. Says: Nelim has
+#           fetched a log from the river and the four labradors follow her up the bank, four coats.
+#           Estimate 5. Subtitle: "Fetch by the river: four labradors, one log."
 #
-# 3 workshop-3-poodle-parade (REWRITTEN 2026-11-06 after the captures of run 2708: poodles piled onto Nelim, no trail, zoom 6 not wide).
-#   statue-garden, 12:00, clear (short shadows), zoom 7 on (156, 98) (14 cells tall, about 25 wide, x 144 to 168; a poodle is about
-#   14 px at 268 px wide), +90 ticks. WIDE shot of the series. Gesture: Nelim, hat on (straw, long loose hair), strolls past the
-#   statues empty-handed, east to west in profile (forced walk from (160, 98) to (152, 98)); no "follows" step (it bunched the dogs):
-#   four poodles of Stray Dogs (SCStandardPoodle) are spawned on exact cells behind her, (163, 98), (165, 97), (167, 99), (169, 98),
-#   with coats alternating light and dark from her side: -1 white, 2 ink, 3 champagne, 1 chocolate (chocolate last, weakest on the soil);
-#   each is forced to walk to its own target (149, 98), (151, 97), (153, 99), (155, 98), started on the same tick as Nelim, so after 90
-#   ticks they form a spaced zig-zag trail about 2 cells apart (Nelim near (154, 98), last dog near (161, 98)), mid-step, nobody at its
-#   target. Instant: the trail has just formed behind her. Decor: the existing big statues, the two small sculptures beside the z 98
-#   row, the horse statue and the yellow flower field, one Plant_Daylily at (151, 94) (placed in e276); nothing else is placed
-#   ((156, 93) holds a ShipChunk). Spawn cells are unchecked against the free-cell list: a bad cell fails loudly. If the dogs outrun
-#   or lag Nelim, start them one cell further east or west; keep the tick count. Estimate 4.5 (-0.5: cells unchecked, size computed).
-#   Subtitle: "Four poodles tour the statue garden."
+#   3. workshop-3-poodle-parade. statue-garden, 12h, clear (short shadows), zoom 7 on (156, 98) (14 cells tall, about 25 wide),
+#           +90 ticks. WIDE shot of the series. Gesture: Nelim, straw Apparel_CowboyHat dyed rgb (214, 174, 92) on Roo_Royal_LongHD,
+#           denim Apparel_CollarShirt dyed rgb (44, 86, 140), hair colour rgb (56, 36, 18), smile, stands at (160, 98) facing West
+#           and strolls empty-handed to (152, 98) past the statues, in profile. Four poodles of Stray Dogs (SCStandardPoodle,
+#           coats -1 white, 2 ink, 3 champagne, 1 chocolate, alternating light and dark): Frimousse -1 spawned (163, 98),
+#           Pompon 2 (165, 97), Chantilly 3 (167, 99), Bouclette 1 (169, 98); each is forced to walk to its own cell, Frimousse
+#           (155, 98), Pompon (153, 99), Chantilly (151, 97), Bouclette (149, 98), started on the same tick as Nelim, so after 90
+#           ticks they form a spaced zig-zag trail about 2 cells apart behind her, mid-step. Instant: the trail has just formed.
+#           Decor, a garden of statues: the existing big statues, the two small sculptures, the horse statue and the yellow flower
+#           field, plus Plant_Daylily fully grown at (151, 94): the place is full, no bare ground. Says: Nelim leads a parade of
+#           four standard poodles through the statue garden, four coats. Estimate 5. Subtitle: "Four poodles tour the statue garden."
 #
-# Scenes 4, 5, 6: see 09b-galerie-soir.feature.
-#
-# DIRECTOR'S REMARKS (Opus sub-agent, 2026-10-25), kept: Kibble haul stopped short of its cell; pale coats on the parquet; a mix of
-# followers and staged animals so they do not pile up behind her; the front-facing animal always moving; the white cat of scene 1
-# asleep in scene 6; scene 3 wide at zoom 6 and in profile east to west; chess by the real JobDef Play_Chess (sits); gate scene by a
-# Train job and the evening by a harp; short tick counts; the story reworded as a pet-sitting day. Not kept: zoom 11 for the huskies
-# became 4.5; no animal garments (no animal-apparel mod in the map, none warranted).
+# Shots 4 to 6: 09b-galerie-soir.feature. Shots 7 and 8: 09c-galerie-chats.feature. Shots 9 to 11: 09d-galerie-chiens.feature.
 # Images go to Art/Gallery/<n>-candidate-<name>.png, under 2 MB each; 0-preview.png stays the byte copy of Preview.png.
+# RISK: shot 1 the Kibble stack hiding her face (haul 6 instead of 10), shot 2 the log haul ending early (+30 ticks), shot 3 the
+# dogs outrunning or lagging Nelim (start them one cell further east or west, keep the tick count).
 @review @timeout:900 @requires:nelim.pickletools.clickdiagnostics @requires:nelim.sanctuarybacklot @requires:nelim.pickletools.screenshotstudio @requires:nelim.pickletools.colonistrace @requires:nelim.pickletools.coatsteps @requires:nelim.pickletools.stagedecor @requires:nelim.pickletools.camerazoom
 Feature: images for the Workshop page, one day at the sanctuary, morning
 
@@ -92,6 +85,10 @@ Feature: images for the Workshop page, one day at the sanctuary, morning
     And Nelim's Sanctuary: I am at the sanctuary "sofa-corner"
     And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (183, 123) fully grown
     And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (190, 123) fully grown
+    And Nelim's Pickle Tools: I place the decor "TorchLamp" at (182, 121)
+    And Nelim's Pickle Tools: the decor "TorchLamp" at (182, 121) is lit
+    And Nelim's Pickle Tools: I place the decor "PlantPot_Bonsai" at (180, 122)
+    And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (191, 124) fully grown
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_CollarShirt" dyed rgb (44, 86, 140)
     And Nelim's Pickle Tools: "Nelim" hairstyle is "Roo_HD_Hair_Highpony"
     And Nelim's Pickle Tools: "Nelim" hair colour is rgb (56, 36, 18)
@@ -141,6 +138,11 @@ Feature: images for the Workshop page, one day at the sanctuary, morning
     And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (143, 130) fully grown
     And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (147, 134) fully grown
     And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (149, 131) fully grown
+    And Nelim's Pickle Tools: I place the decor "Plant_YellowTallGrass" at (145, 133) fully grown
+    And Nelim's Pickle Tools: I place the decor "Plant_YellowTallGrass" at (150, 134) fully grown
+    And Nelim's Pickle Tools: I place the decor "Plant_Rose" at (145, 129) fully grown
+    And Nelim's Pickle Tools: I place the decor "Plant_Rose" at (151, 131) fully grown
+    And Nelim's Pickle Tools: I place the decor "Stool" at (152, 130)
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_CollarShirt" dyed rgb (44, 86, 140)
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_CowboyHat" dyed rgb (214, 174, 92)
     And Nelim's Pickle Tools: "Nelim" hairstyle is "Roo_Royal_LongHD"
