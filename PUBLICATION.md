@@ -22,20 +22,45 @@ opened and looked at before the boxes are answered.
 
 ## Gallery order
 
-`0-preview.png` is a byte-for-byte copy of `Mod/About/Preview.png` (checked by hash). The rest come from
-`Tests/Pickle/Mod/Pickle/Features/07-galerie.feature` (pass map `wsl-deps.galerie.map`). Steam shows the first
-image large, so the most demonstrative one goes first after the preview.
+`0-preview.png` is a byte-for-byte copy of `Mod/About/Preview.png` (checked by hash). The eleven others tell one story, a day of
+pet-sitting at the sanctuary (Nelim looks after the neighbours' animals, a new group every few hours), and come from
+`Tests/Pickle/Mod/Pickle/Features/09-galerie-sanctuaire.feature`, `09b-galerie-soir.feature`, `09c-galerie-chats.feature` and
+`09d-galerie-chiens.feature` (pass map `wsl-deps.sanctuary.map`). The order is the order of the day. Clean originals are in
+`Art/Gallery-clean/`, subtitled copies in `Art/Gallery/`.
 
-| # | Shot | What it shows |
+| # | File | Hour | Shot | What it shows |
+| --- | --- | --- | --- | --- |
+| 0 | `0-preview.png` | | Preview | The banner |
+| 1 | `1-breakfast.jpg` | 7h | Breakfast | White cat (Let's Have a Cat!), five coats |
+| 2 | `2-fetch.jpg` | 10h | Fetch | Labrador, four coats (base game) |
+| 3 | `3-dogs-clearing.jpg` | 11h | Walk | Nine Stray Dogs breeds, one coat each |
+| 4 | `4-poodle-parade.jpg` | 12h | Poodle parade | Standard poodle, four coats |
+| 5 | `5-cats-terrace.jpg` | 13h | Siesta | Six cat breeds (base game and Let's Have a Cat!) |
+| 6 | `6-chess.jpg` | 15h | Chess | Yorkshire terrier, three coats (base game) |
+| 7 | `7-dogs-horseshoes.jpg` | 16h | Horseshoes | Nine more Stray Dogs breeds |
+| 8 | `8-cats-table.jpg` | 17h | At the table | Six more cat breeds, one a Vanilla Animals Expanded Abyssinian |
+| 9 | `9-evening-huskies.jpg` | 18h | Evening | Husky, four coats (base game) |
+| 10 | `10-dogs-supper.jpg` | 19h | Supper | Five Vanilla Animals Expanded dogs |
+| 11 | `11-fireside.jpg` | 20h | Fireside | Vanilla Animals Expanded corgi, three coats, and the white cat asleep |
+
+Every patched animal is in a shot (the 08-revue captures show every coat of every breed). Review copies under 2 MB each,
+Gallery 6.4 MB, Gallery-clean 7.1 MB. Status: the eleven images are candidates read by the session; the owner's acceptance is pending.
+
+## Gallery subtitles
+
+| index | file | line |
 | --- | --- | --- |
-| 0 | Preview | The banner |
-| 1 | Poodles | A row, one animal of each coat, the original first. Four of the coats are purpleyam's own |
-| 2 | White cats | The widest range, five coats |
-| 3 | Huskies | A base-game dog that no other mod varies |
-
-Not yet taken or looked at: the first run showed no animal in any image and was fixed; the replay (`99ed`) is
-pending. The order above is a proposal until the images exist. Further images, if wanted: a breed or two from
-`08-revue.feature` (34 captures, not yet played).
+| 1 | `1-breakfast.jpg` | Seven o'clock breakfast: one white cat, five coats. |
+| 2 | `2-fetch.jpg` | Fetch by the river: four labradors, one log. |
+| 3 | `3-dogs-clearing.jpg` | Eleven o'clock walk: nine stray dogs, nine coats. |
+| 4 | `4-poodle-parade.jpg` | Four poodles tour the statue garden. |
+| 5 | `5-cats-terrace.jpg` | One o'clock siesta: six cats take the terrace. |
+| 6 | `6-chess.jpg` | A game of chess, watched from below. |
+| 7 | `7-dogs-horseshoes.jpg` | Horseshoes at four: nine dogs run for the pin. |
+| 8 | `8-cats-table.jpg` | Five o'clock at the table: six more cats join Nelim. |
+| 9 | `9-evening-huskies.jpg` | Evening at the pen: four huskies gather round Nelim. |
+| 10 | `10-dogs-supper.jpg` | Supper at seven: five dogs know the way to the table. |
+| 11 | `11-fireside.jpg` | By the fire, the corgis keep their own colours. |
 
 ## Messages to the authors
 
