@@ -9,7 +9,7 @@ port, so this is its idea rebuilt against the cats and dogs that are alive on 1.
 
 ### Fixed
 
-- The Let's Have a Cat! cats barely changed colour: their sprites use the CutoutComplex shader and ship no mask, so a tint hardly showed (twelve white cats stayed white). The patch now switches those cats to the plain Cutout shader, which multiplies the sprite by the tint, and the siamese, maine coon and russian blue get darker tints that can show. The black cat is still left out.
+- The Let's Have a Cat! cats barely changed colour: their sprites use the CutoutComplex shader and ship no mask, so a tint hardly showed (twelve white cats stayed white). The patch now switches those cats to the plain Cutout shader, which multiplies the sprite by the tint, and the Siamese, Maine Coon and Russian Blue get darker tints that can show. The black cat is still left out.
 - `About.xml` `loadAfter` named `nelim.colorfulcoats.vaerenew`, which is no longer the packageId of the
   sibling port (now `nelim.colorfulcoats.vae`). A `loadAfter` on an id that does not exist is ignored
   without a line of log, so this mod had no declared order against the sibling. Corrected in
@@ -29,16 +29,16 @@ port, so this is its idea rebuilt against the cats and dogs that are alive on 1.
 ### Added
 
 - Coats for **19 dogs of Stray Dogs (rescued)** — the seventeen Spidercamp breeds that ship with
-  none, plus the bernese mountain dog and the swedish vallhund. Its collie, its doberman and its
+  none, plus the Bernese Mountain Dog and the Swedish Vallhund. Its collie, its doberman and its
   six Japanese dogs already have coats and are untouched.
 - Coats for **11 of the 12 cats of Let's Have a Cat! Continued**, which had none at all.
 - Coats for the **7 cats and dogs of Vanilla Animals Expanded** purpleyam never painted: the
-  abyssinian cat, the beagle, the corgi, the french bulldog, the german shepherd, the pug and the
-  welsh terrier. The other fourteen are left to *Colorful Coats - Vanilla Animals Expanded! Renew*,
+  Abyssinian cat, the beagle, the corgi, the French Bulldog, the German Shepherd, the pug and the
+  Welsh Terrier. The other fourteen are left to *Colorful Coats - Vanilla Animals Expanded! Renew*,
   which ships purpleyam's own artwork for them.
-- Coats for the **4 base-game pets** — husky, labrador retriever, yorkshire terrier, cat — behind a
+- Coats for the **4 base-game pets** — husky, labrador retriever, Yorkshire Terrier, cat — behind a
   conditional, so Animal Variety Coats and Erin's Cat Overhaul win wherever they are running. The
-  yorkshire terrier is the one animal in the list that nothing else has ever covered.
+  Yorkshire Terrier is the one animal in the list that nothing else has ever covered.
 - `scripts/Check-Coats.ps1`, which re-checks every `defName` against the installed target mod, that
   no target has since grown `alternateGraphics` of its own, and that every colour is in the form
   `ParseHelper` reads as 0-255.

@@ -1,7 +1,7 @@
 # Publication
 
 What the Workshop page asks for and the repository holds nowhere else. Draft opened 2026-10-02, while the
-mod is at `playTests` (Pickle passes green, no manual play): nothing here is final, and nothing has been sent. The Workshop item
+mod is at `playTests` (Pickle passes green, no manual playtesting): nothing here is final, and nothing has been sent. The Workshop item
 `3806769444` exists (the `0.1.0` upload only created it; it is private).
 
 ## Dependencies and DLC
@@ -44,7 +44,7 @@ pet-sitting at the sanctuary (Nelim looks after the neighbours' animals, a new g
 | 11 | `11-fireside.jpg` | 20h | Fireside | Vanilla Animals Expanded corgi, three coats, and the white cat asleep |
 
 Every patched animal is in a shot (the 08-revue captures show every coat of every breed). Review copies under 2 MB each,
-Gallery 6.4 MB, Gallery-clean 7.1 MB. Status: the eleven images are candidates read by the session; the owner's acceptance is pending.
+Gallery 6.4 MB, Gallery-clean 7.1 MB. Status: the eleven images are candidates reviewed in this session; the owner's acceptance is pending.
 
 ## Gallery subtitles
 
@@ -71,14 +71,14 @@ public (see `WORKSHOP_COMMENTS.md`, "Writing a comment"). Recipients, each to be
 - Qux, Stray Dogs (rescued) (`3549460027`), and SpiderCamp, whose dogs it carries.
 - akairo and Bernau31, Let's Have a Cat! Continued (`3682940618`).
 - Vanilla Animals Expanded (`2871933948`): Oskar Potocki, Sarg Bjornson.
-- Erin, Erin's Cat Overhaul (`2763428090`), and the author of Animal Variety Coats (`1511926373`): both are stood aside for.
+- Erin, Erin's Cat Overhaul (`2763428090`), and the author of Animal Variety Coats (`1511926373`): both take precedence.
 - Pickle, RimLogging, Harmony and PickleTools (`3806142401`): development only, as the tests run on them.
 
 Drafts are not written: the voice and the true detail of each mod are the owner's.
 
 ## Steam change notes
 
-The note is written at the moment of upload. First line is `[b]<version>[/b]` with the exact version, or the CI stops.
+The note is written at the moment of upload. First line is `[b]<version>[/b]` with the exact version, or the CI fails.
 
 ### 1.0.0
 
