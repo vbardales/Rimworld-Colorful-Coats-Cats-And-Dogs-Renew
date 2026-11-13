@@ -15,7 +15,7 @@ automated_tests: passed; 22 passed, 0 failed, 0 skipped (rerun 2026-10-15, from 
 xml_tests: passed; Check-Coats, Check-PatchFields (41), Check-XmlClasses, Check-DefRefs, Check-TypeRefs (rerun 2026-10-10)
 licence:      silent
 licence_own:  MIT; LICENSE and Mod/LICENSE; covers this repository's contributions, not purpleyam's name or measured palette
-licence_at:   checked 2026-09-12; source not updated to 1.6 (original 1.3, official successor 1.4); no licence or permission found in source files, Steam descriptions and all comments; upstream repository searched but not found
+licence_at:   checked 2026-09-12; source not updated to 1.6 (original 1.3, series sibling VAE 1.4); no licence or permission found in source files, Steam descriptions and all comments; upstream repository searched but not found
 upstream_mod_remotes: N/A (no git repository found for purpleyam's "Colorful Coats - Cats and Dogs!", Workshop 2388932599; searched again 2026-10-02, only this mod's own Renew repositories come up)
 dependencies: none
 showcase:     complete
@@ -402,20 +402,20 @@ to anyone — not a name, not an idea traceable to one mod, not a value derived 
 - [Page originale](https://steamcommunity.com/sharedfiles/filedetails/?id=2388932599) :
   aucune licence ni consigne de redistribution trouvee dans description et
   commentaires affiches. Description et commentaire de purpleyam du
-  29 octobre 2022 renvoient explicitement vers successeur officiel.
-- [Successeur de purpleyam](https://steamcommunity.com/sharedfiles/filedetails/?id=2398446130) :
+  29 octobre 2022 renvoient vers le mod frere de la serie (VAE, et non un successeur).
+- [Mod frere de la serie (VAE), purpleyam](https://steamcommunity.com/sharedfiles/filedetails/?id=2398446130) :
   aucune licence trouvee dans description. Derniere mise a jour affichee :
   octobre 2022, version declaree jusqu'a 1.4 ; reponse de l'auteur visible en
   novembre 2023. Utilisateurs le signalent fonctionnel en 1.6 en 2025.
 - Verification directe dans navigateur : 20 commentaires du mod original
-  et 31 du successeur lus, toutes pages comprises. Aucune permission
+  et 31 du mod frere lus, toutes pages comprises. Aucune permission
   de reprise ni interdiction trouvee. « you can use both » de fevrier 2021
   concerne compatibilite avec Animal Variety Coats, pas redistribution.
-- [Historique du successeur](https://steamcommunity.com/sharedfiles/filedetails/changelog/2398446130) :
+- [Historique du mod frere](https://steamcommunity.com/sharedfiles/filedetails/changelog/2398446130) :
   cinq entrees lues ; aucune mise a jour apres octobre 2022.
 - [Profil public](https://steamcommunity.com/profiles/76561198342847927) consulte
   avec succes : aucune consigne generale de reutilisation ni annonce d'abandon.
-  Six publications publiques ne comprennent pas d'autre successeur annonce.
+  Six publications publiques ne comprennent pas d autre mod annonce.
 - Recherche de depot amont effectuee : liens pages Steam, profil public,
   champ URL du About.xml, recherches web par auteur, titre et packageId,
   puis recherche directe GitHub sur "Colorful Coats". Quatre resultats
@@ -424,7 +424,7 @@ to anyone — not a name, not an idea traceable to one mod, not a value derived 
   comme lu. Ne prouve pas qu'un depot non indexe ou prive n'existe pas.
 - Decision : `silent` confirme selon critere precise par l'utilisateur :
   **source abandonnee = pas mise a jour en 1.6**. Original declare au plus
-  1.3 et successeur officiel au plus 1.4. Aucune licence ni autorisation
+  1.3 et mod frere de la serie (VAE) au plus 1.4. Aucune licence ni autorisation
   trouvee dans sources consultees. Suffixe (unofficial) conserve.
   Ancien raisonnement fonde sur temps ecoule et reponses de l'auteur
   retire : ces elements ne determinent pas cette classification.
