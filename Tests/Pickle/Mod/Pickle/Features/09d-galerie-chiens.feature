@@ -23,21 +23,21 @@
 #           neighbourhood with a handful of treats and every one of them has come for them, nine coats.
 #           Estimate 5. Subtitle: "Eleven o'clock walk: nine stray dogs, nine coats."
 #
-#  10. workshop-10-dogs-horseshoes (name kept, scene recomposed 2026-11-09: no horseshoe game). calm-zone (cream ground), 16h, clear, low sun, zoom 6 on (200, 189) (8 cells tall, about 14
+#  10. workshop-10-dogs-horseshoes (name kept, scene recomposed 2026-11-09: no horseshoe game). calm-zone (cream ground), 16h, clear, low sun, zoom 4.5 on (200, 189) (about 11 cells tall, about 19
 #           wide, a small dog about 19 px at 268 px wide), +20 ticks. Garden rest. Nelim, straw Apparel_CowboyHat dyed
 #           rgb (214, 174, 92) on long loose Roo_Royal_LongHD, hair colour rgb (56, 36, 18), denim Apparel_CollarShirt dyed
-#           rgb (44, 86, 140), smile (MouthSmile, LidCheerful), sits on the Stool at (199, 191) (sits on the building: no job to time); instant: she rests
-#           in the late sun and the nine dogs have gathered round her stool, all awake. Nine Stray Dogs, one coat
+#           rgb (44, 86, 140), smile (MouthSmile, LidCheerful), sits on the Stool spawned at (199, 191) facing South, so she faces the camera (sits on the building: no job to time); instant: she rests
+#           in the late sun and the seven dogs have gathered round her stool, all awake. Seven Stray Dogs, one coat
 #           each, spawned close round the stool: StrayDogs_SwedishVallhund 0 slate stands (200, 190) facing West; SCWelshCorgi 2 stone stands (198, 190) facing
 #           East; SCMiniatureDachshund 0 chocolate (202, 190); SCPug 1 ink stands (199, 188) facing
 #           South: the animal that faces the camera; SCSchnauzer 2 coffee stands (201, 188) facing West; SCOldEnglishSheepdog 1
-#           taupe stands (197, 189) facing East; SCSaintbernard 1 taupe (203, 189); SCNewFoundland 1 mist (196, 188);
-#           StrayDogs_BerneseMountainDog 1 mist (200, 187). Decor, a garden court round the stool: Plant_Daylily
-#           fully grown at (195, 182), (195, 191), (205, 191) and (205, 183); PlantPot_Bonsai at (205, 185); TorchLamp at (205, 188)
-#           lit and at (205, 181) lit; Stool at (199, 191); SculptureSmall at (201, 191); Plant_YellowTallGrass fully grown at
-#           (196, 191): low sun plus two lamps. Says: Nelim rests on a stool in the garden court and the nine dogs have gathered round her,
-#           nine coats. Flag: the Newfoundland and the Bernese are near-black sprites, they are there for presence.
-#           Estimate 5. Subtitle: "Four o'clock rest: nine dogs gather round Nelim's stool."
+#           taupe stands (197, 189) facing East; SCSaintbernard 1 taupe (203, 189);
+#           Decor, a garden court round the stool: Plant_Daylily
+#           fully grown at (195, 182), (195, 191), (205, 191) and (205, 183); PlantPot_Bonsai at (205, 185); TorchLamp at (205, 188), (195, 188)
+#           lit and at (205, 181) lit and at (195, 188) lit; PlantPot_Bonsai also at (195, 185) and (204, 186); Plant_Daylily also at (197, 186) and (203, 186); Stool at (199, 191); SculptureSmall at (201, 191); Plant_YellowTallGrass fully grown at
+#           (196, 191): low sun plus three lamps. Says: Nelim rests on a stool in the garden court and the seven dogs have gathered round her,
+#           seven coats. The two near-black sprites (Newfoundland, Bernese) are dropped: unreadable at 268 px (scene 10 REDO 2026-11-13).
+#           Estimate 5. Subtitle: "Four o'clock rest: seven dogs gather round Nelim's stool."
 #
 #  11. workshop-11-dogs-supper. prestige-hall (grey rug, table, piano), 19h, clear outside, zoom 3.5 on (196, 112) (7 cells tall,
 #           about 12 wide, a pug about 19 px at 268 px wide), +30 ticks. Supper. Nelim, no hat, denim Apparel_CollarShirt dyed
@@ -58,7 +58,7 @@
 Feature: images for the Workshop page, one day at the sanctuary, dogs
 
   Background:
-    Given the save "Nelims-tribe" is loaded
+    Given the save "Nelims-tribe-decor-mods-z3" is loaded
     And game speed is paused
     And Nelim's Pickle Tools: the temperature of the map is 20 degrees
     And Nelim's Pickle Tools: the eclipse of the map is ended
@@ -168,7 +168,13 @@ Feature: images for the Workshop page, one day at the sanctuary, dogs
     And Nelim's Pickle Tools: the decor "TorchLamp" at (205, 188) is lit
     And Nelim's Pickle Tools: I place the decor "TorchLamp" at (205, 181)
     And Nelim's Pickle Tools: the decor "TorchLamp" at (205, 181) is lit
-    And Nelim's Pickle Tools: I place the decor "Stool" at (199, 191)
+    And Nelim's Pickle Tools: the building "Stool" is spawned at (199, 191) facing South
+    And Nelim's Pickle Tools: I place the decor "TorchLamp" at (195, 188)
+    And Nelim's Pickle Tools: the decor "TorchLamp" at (195, 188) is lit
+    And Nelim's Pickle Tools: I place the decor "PlantPot_Bonsai" at (195, 185)
+    And Nelim's Pickle Tools: I place the decor "PlantPot_Bonsai" at (204, 186)
+    And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (197, 186) fully grown
+    And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (203, 186) fully grown
     And Nelim's Pickle Tools: I place the decor "SculptureSmall" at (201, 191)
     And Nelim's Pickle Tools: I place the decor "Plant_YellowTallGrass" at (196, 191) fully grown
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_Pants" dyed rgb (101, 67, 33)
@@ -183,8 +189,6 @@ Feature: images for the Workshop page, one day at the sanctuary, dogs
     And Nelim's Pickle Tools: an adult animal of kind "SCSchnauzer" named "Poivre" is spawned at (201, 188)
     And Nelim's Pickle Tools: an adult animal of kind "SCOldEnglishSheepdog" named "Nuage" is spawned at (197, 189)
     And Nelim's Pickle Tools: an adult animal of kind "SCSaintbernard" named "Brioche" is spawned at (203, 189)
-    And Nelim's Pickle Tools: an adult animal of kind "SCNewFoundland" named "Corbeau" is spawned at (196, 188)
-    And Nelim's Pickle Tools: an adult animal of kind "StrayDogs_BerneseMountainDog" named "Edelweiss" is spawned at (200, 187)
     And Nelim's Pickle Tools: the animal "Brindille" is given coat 0
     And Nelim's Pickle Tools: the animal "Galette" is given coat 2
     And Nelim's Pickle Tools: the animal "Saucisse" is given coat 0
@@ -192,8 +196,6 @@ Feature: images for the Workshop page, one day at the sanctuary, dogs
     And Nelim's Pickle Tools: the animal "Poivre" is given coat 2
     And Nelim's Pickle Tools: the animal "Nuage" is given coat 1
     And Nelim's Pickle Tools: the animal "Brioche" is given coat 1
-    And Nelim's Pickle Tools: the animal "Corbeau" is given coat 1
-    And Nelim's Pickle Tools: the animal "Edelweiss" is given coat 1
     When Nelim's Pickle Tools: I let 20 ticks pass
     And Nelim's Pickle Tools: "Nelim" sits on the building "Stool" at (199, 191)
     And Nelim's Pickle Tools: the animal "Truffe" stands at (199, 188) facing South
@@ -209,7 +211,7 @@ Feature: images for the Workshop page, one day at the sanctuary, dogs
     And Nelim's Pickle Tools: the tooltips are hidden
     And Nelim's Pickle Tools: the resource readout is hidden
     And Nelim's Pickle Tools: the selection brackets are hidden
-    And Nelim's Pickle Tools: I frame the cell (200, 189) at zoom 6
+    And Nelim's Pickle Tools: I frame the cell (200, 189) at zoom 4.5
     And Nelim's Pickle Tools: I move the mouse to (10, 10)
     And Nelim's Pickle Tools: "Nelim" face kit is "neutral"
     And Nelim's Pickle Tools: "Nelim" face is held neutral
@@ -218,7 +220,7 @@ Feature: images for the Workshop page, one day at the sanctuary, dogs
     And Nelim's Pickle Tools: "Nelim" lids are "LidCheerful"
     And Nelim's Pickle Tools: "Nelim" facial expression is "normal+blink"
     And Nelim's Pickle Tools: I let 5 frames pass
-    Then I take a screenshot "gallery 10 - garden rest, nine stray dogs"
+    Then I take a screenshot "gallery 10 - garden rest, seven stray dogs"
     And Nelim's Pickle Tools: the decor is removed
 
   Scenario: gallery-11-dogs-supper

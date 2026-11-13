@@ -71,7 +71,7 @@
 Feature: images for the Workshop page, one day at the sanctuary, morning
 
   Background:
-    Given the save "Nelims-tribe" is loaded
+    Given the save "Nelims-tribe-decor-mods-z3" is loaded
     And game speed is paused
     And Nelim's Pickle Tools: the temperature of the map is 20 degrees
     And Nelim's Pickle Tools: the eclipse of the map is ended
