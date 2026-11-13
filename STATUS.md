@@ -22,6 +22,7 @@ showcase:     complete
 tested_on:    2026-10-15 (cats replay rev a00034b: 10/10 and peintres 10/10, docs/runs/2026-10-14-chats-shader.txt; before that 2026-10-10 (Pickle 08-revue, 34/34 passed in the WSL, rev 58bcd23; passes 1-3 and add/removal runs on 2026-09-28 and 2026-10-02; no manual play))
 workshop:     3806769444 (0.1.0, item creation only; About/PublishedFileId.txt committed in 97c19d3; private, as Steam creates every item; not tested, not public)
 remaining:
+  - 2026-11-13 resume: 3549 and 646b ended infrastructure-error (0 scenarios, filter matched nothing, Inbox v9a/v9a-1/v9b deleted). Refiled with full file::title filters, -DepMap wsl-deps.sanctuary.map (a930bff): 20261113-223228-022-14af (scenes 1, 2, Inbox/gallery-v10a), 20261113-223230-105-325f (scenes 5, 6, Inbox/gallery-v10b); ac2d (scenes 8, 11, Inbox/gallery-v9c) still RUNNING on azure (filter unverified, may be 0 scenarios too). Then read captures, 268 px check, score-gallery each, sync-nsb-npt, subtitles in all, ONE send. protocols_read_sha 0ee69017
   - 2026-11-13 resume + replay filed (rev 8052174, map wsl-deps.sanctuary.map): 20261113-212034-617-3549 (scenes 1, 2, Inbox/gallery-v9a), 20261113-212036-588-646b (scenes 5, 6, Inbox/gallery-v9b), 20261113-212039-131-ac2d (scenes 8, 11, Inbox/gallery-v9c), waiting RUN_DONE. Then read captures, 268 px check, score-gallery each, sync-nsb-npt, subtitles in all, ONE send. protocols_read_sha dd8b3f8f
   - 2026-11-13 scene 10 re-shot read (ticket 9872 passed 1/1, capture read, 268 px check, score-gallery): candidate (image 4, adequacy 4, understanding 4.5, decoration 4; j ok at 268 px: seven coats read as distinct blobs; smile faint but visible, long loose hair under hat). Saved Art/Gallery/10-candidate-garden-rest.jpg, Inbox/gallery-v8 deleted. Candidates now 1, 2, 3, 4, 5, 7, 8, 9, 10, 11. Next: replay 1, 2, 5, 6, 8, 11 as small tickets on z3, then sync-nsb-npt, subtitles in all, ONE send. No ticket in flight
   - 2026-11-13 scene 10 fix done (dogs pinned close to the stool, Saucisse (202, 189), Brioche (203, 190), frame (200, 190) zoom 5.5, header and scenario agree, Check-Steps OK): filed 20261113-205351-683-9872 (09d::gallery-10, wsl-deps.sanctuary.map, Inbox/gallery-v8, rev after 66953da), WAITING 8/8. On result: read capture, 268 px check, score-gallery, then replay 1, 2, 5, 6, 8, 11 as small tickets
@@ -74,7 +75,7 @@ remaining:
 session:      local_b1565ae3-2100-4849-b88f-60237d43caed
 updated:      2026-10-30 replay-audit: sections 1 to 8 hold (8.m: Mod/ diff since a00034b is Preview.png only), first unfulfilled 9.a captures (993b waiting, 5157 failed), stage unchanged; weak proofs (STATUS.md only): 1.a-1.d, 4.g, 5.g, 6.h, 7.b, 7.c, 8.e; Run-UnitTests n/a (no test csproj); earlier 2026-10-19, shootGallery[1.1.0]: 8.n done, playTests green (cats 10/10, peintres 10/10, 1.7 sans-facultatifs 10/10); Mod/ identical to code_review_sha a00034b (git diff empty)
 code_review_sha: a00034b4c2d3acdade8505073c708cd3f7c9f4ea
-protocols_read_sha: dd8b3f8ff51d1924bceb92e40579ba614c67162b
+protocols_read_sha: 0ee69017
 ---
 # Colorful Coats - Cats and Dogs! Renew — status
 
