@@ -29,7 +29,7 @@
 #           rgb (44, 86, 140), smile (MouthSmile, LidCheerful), sits on the Stool spawned at (199, 191) facing South, so she faces the camera (sits on the building: no job to time); instant: she rests
 #           in the late sun and the seven dogs have gathered round her stool, all awake. Seven Stray Dogs, one coat
 #           each, spawned close round the stool: StrayDogs_SwedishVallhund 0 slate stands (200, 190) facing West; SCWelshCorgi 2 stone stands (198, 190) facing
-#           East; SCMiniatureDachshund 0 chocolate (202, 190); SCPug 1 ink stands (199, 188) facing
+#           East; SCMiniatureDachshund 0 chocolate stands (202, 189) facing West; SCPug 1 ink stands (199, 188) facing
 #           South: the animal that faces the camera; SCSchnauzer 2 coffee stands (201, 188) facing West; SCOldEnglishSheepdog 1
 #           taupe stands (197, 189) facing East; SCSaintbernard 1 taupe stands (203, 190) facing West;
 #           Decor, a garden court round the stool: Plant_Daylily
