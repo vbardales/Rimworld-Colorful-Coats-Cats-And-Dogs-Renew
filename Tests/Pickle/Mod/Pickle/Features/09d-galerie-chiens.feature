@@ -23,15 +23,15 @@
 #           neighbourhood with a handful of treats and every one of them has come for them, nine coats.
 #           Estimate 5. Subtitle: "Eleven o'clock walk: nine stray dogs, nine coats."
 #
-#  10. workshop-10-dogs-horseshoes (name kept, scene recomposed 2026-11-09: no horseshoe game). calm-zone (cream ground), 16h, clear, low sun, zoom 4.5 on (200, 189) (about 11 cells tall, about 19
-#           wide, a small dog about 19 px at 268 px wide), +20 ticks. Garden rest. Nelim, straw Apparel_CowboyHat dyed
+#  10. workshop-10-dogs-horseshoes (name kept, scene recomposed 2026-11-09: no horseshoe game). calm-zone (cream ground), 16h, clear, low sun, zoom 5.5 on (200, 190) (about 9 cells tall, about 16
+#           wide, a small dog about 23 px at 268 px wide), +20 ticks. Garden rest. Nelim, straw Apparel_CowboyHat dyed
 #           rgb (214, 174, 92) on long loose Roo_Royal_LongHD, hair colour rgb (56, 36, 18), denim Apparel_CollarShirt dyed
 #           rgb (44, 86, 140), smile (MouthSmile, LidCheerful), sits on the Stool spawned at (199, 191) facing South, so she faces the camera (sits on the building: no job to time); instant: she rests
 #           in the late sun and the seven dogs have gathered round her stool, all awake. Seven Stray Dogs, one coat
 #           each, spawned close round the stool: StrayDogs_SwedishVallhund 0 slate stands (200, 190) facing West; SCWelshCorgi 2 stone stands (198, 190) facing
 #           East; SCMiniatureDachshund 0 chocolate (202, 190); SCPug 1 ink stands (199, 188) facing
 #           South: the animal that faces the camera; SCSchnauzer 2 coffee stands (201, 188) facing West; SCOldEnglishSheepdog 1
-#           taupe stands (197, 189) facing East; SCSaintbernard 1 taupe (203, 189);
+#           taupe stands (197, 189) facing East; SCSaintbernard 1 taupe stands (203, 190) facing West;
 #           Decor, a garden court round the stool: Plant_Daylily
 #           fully grown at (195, 182), (195, 191), (205, 191) and (205, 183); PlantPot_Bonsai at (205, 185); TorchLamp at (205, 188), (195, 188)
 #           lit and at (205, 181) lit and at (195, 188) lit; PlantPot_Bonsai also at (195, 185) and (204, 186); Plant_Daylily also at (197, 186) and (203, 186); Stool at (199, 191); SculptureSmall at (201, 191); Plant_YellowTallGrass fully grown at
@@ -184,11 +184,11 @@ Feature: images for the Workshop page, one day at the sanctuary, dogs
     And Nelim's Pickle Tools: "Nelim" hair colour is rgb (56, 36, 18)
     And Nelim's Pickle Tools: an adult animal of kind "StrayDogs_SwedishVallhund" named "Brindille" is spawned at (200, 190)
     And Nelim's Pickle Tools: an adult animal of kind "SCWelshCorgi" named "Galette" is spawned at (198, 190)
-    And Nelim's Pickle Tools: an adult animal of kind "SCMiniatureDachshund" named "Saucisse" is spawned at (202, 190)
+    And Nelim's Pickle Tools: an adult animal of kind "SCMiniatureDachshund" named "Saucisse" is spawned at (202, 189)
     And Nelim's Pickle Tools: an adult animal of kind "SCPug" named "Truffe" is spawned at (199, 188)
     And Nelim's Pickle Tools: an adult animal of kind "SCSchnauzer" named "Poivre" is spawned at (201, 188)
     And Nelim's Pickle Tools: an adult animal of kind "SCOldEnglishSheepdog" named "Nuage" is spawned at (197, 189)
-    And Nelim's Pickle Tools: an adult animal of kind "SCSaintbernard" named "Brioche" is spawned at (203, 189)
+    And Nelim's Pickle Tools: an adult animal of kind "SCSaintbernard" named "Brioche" is spawned at (203, 190)
     And Nelim's Pickle Tools: the animal "Brindille" is given coat 0
     And Nelim's Pickle Tools: the animal "Galette" is given coat 2
     And Nelim's Pickle Tools: the animal "Saucisse" is given coat 0
@@ -203,7 +203,9 @@ Feature: images for the Workshop page, one day at the sanctuary, dogs
     And Nelim's Pickle Tools: the animal "Poivre" stands at (201, 188) facing West
     And Nelim's Pickle Tools: the animal "Brindille" stands at (200, 190) facing West
     And Nelim's Pickle Tools: the animal "Galette" stands at (198, 190) facing East
-    And Nelim's Pickle Tools: I let 20 ticks pass
+    And Nelim's Pickle Tools: the animal "Saucisse" stands at (202, 189) facing West
+    And Nelim's Pickle Tools: the animal "Brioche" stands at (203, 190) facing West
+    And Nelim's Pickle Tools: I let 5 ticks pass
     And game speed is paused
     And Nelim's Pickle Tools: studio presentation mode is enabled
     And Nelim's Pickle Tools: the colonist bar is hidden
@@ -211,7 +213,7 @@ Feature: images for the Workshop page, one day at the sanctuary, dogs
     And Nelim's Pickle Tools: the tooltips are hidden
     And Nelim's Pickle Tools: the resource readout is hidden
     And Nelim's Pickle Tools: the selection brackets are hidden
-    And Nelim's Pickle Tools: I frame the cell (200, 189) at zoom 4.5
+    And Nelim's Pickle Tools: I frame the cell (200, 190) at zoom 5.5
     And Nelim's Pickle Tools: I move the mouse to (10, 10)
     And Nelim's Pickle Tools: "Nelim" face kit is "neutral"
     And Nelim's Pickle Tools: "Nelim" face is held neutral
