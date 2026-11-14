@@ -39,7 +39,7 @@
 #           seven coats. The two near-black sprites (Newfoundland, Bernese) are dropped: unreadable at 268 px (scene 10 REDO 2026-11-13).
 #           Estimate 5. Subtitle: "Four o'clock rest: seven dogs gather round Nelim's stool."
 #
-#  11. workshop-11-dogs-supper. prestige-hall (grey rug, table, piano), 19h, clear outside, zoom 3.5 on (196, 112) (7 cells tall,
+#  11. workshop-11-dogs-supper. prestige-hall (grey rug, table, piano), 18h, clear outside, zoom 3.5 on (196, 112) (7 cells tall,
 #           about 12 wide, a pug about 19 px at 268 px wide), +30 ticks. Supper. Nelim, no hat, denim Apparel_CollarShirt dyed
 #           rgb (44, 86, 140), Roo_HD_Hair_Highpony, hair colour rgb (56, 36, 18), smile (MouthSmile, LidCheerful), no Duster
 #           yet (it comes in the last shot), starts at (194, 113) facing East and is forced to haul 1 MealFine to (199, 113), the dogs know
@@ -50,10 +50,10 @@
 #           existing table, piano, rug, braziers, pots and bonsai, plus
 #           Plant_Daylily fully grown at (194, 112), (199, 115) and (200, 112), TorchLamp at (193, 109) lit and at (200, 110) lit:
 #           lamps in frame. Says: Nelim carries supper to a laid table and five dogs follow the smell, five coats.
-#           Estimate 5. Subtitle: "Supper at seven: five dogs know the way to the table."
+#           Estimate 5. Subtitle: "Supper at six: five dogs know the way to the table."
 #
 # RISK: the strays stop at their targets (+45 ticks), Play_Horseshoes may not choose its stand cell (fallback above), the emerald
-# carpet may still show at the edges (lay the soil one cell wider), dark indoors at 19h (the lit torches).
+# carpet may still show at the edges (lay the soil one cell wider), dark indoors at 19h in the first try (REDO 2026-11-14: dogs lost at 268 px), so 18h now and the lit torches.
 @review @timeout:900 @requires:nelim.pickletools.clickdiagnostics @requires:nelim.sanctuarybacklot @requires:nelim.pickletools.screenshotstudio @requires:nelim.pickletools.colonistrace @requires:nelim.pickletools.coatsteps @requires:nelim.pickletools.stagedecor @requires:nelim.pickletools.camerazoom
 Feature: images for the Workshop page, one day at the sanctuary, dogs
 
@@ -226,7 +226,7 @@ Feature: images for the Workshop page, one day at the sanctuary, dogs
     And Nelim's Pickle Tools: the decor is removed
 
   Scenario: gallery-11-dogs-supper
-    Given I set the hour to 19
+    Given I set the hour to 18
     And Nelim's Sanctuary: the animals are removed from the sanctuary "prestige-hall"
     And Nelim's Sanctuary: I am at the sanctuary "prestige-hall"
     And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (194, 112) fully grown
