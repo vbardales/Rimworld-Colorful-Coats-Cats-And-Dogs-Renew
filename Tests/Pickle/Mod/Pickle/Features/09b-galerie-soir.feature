@@ -147,6 +147,7 @@ Feature: images for the Workshop page, one day at the sanctuary, evening
     And Nelim's Pickle Tools: "Lait" lies down
     And Nelim's Pickle Tools: "Givre" follows "Nelim" within 3 cells
     And Nelim's Pickle Tools: "Moka" follows "Nelim" within 3 cells
+    And Nelim's Pickle Tools: the animal "Ardoise" is ready for the job "Train"
     And Nelim's Pickle Tools: "Nelim" is forced into the job "Train" on "Ardoise"
     And Nelim's Pickle Tools: I let 45 ticks pass
     And game speed is paused
