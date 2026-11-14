@@ -59,7 +59,7 @@ Gallery 6.4 MB, Gallery-clean 7.1 MB. Status: the eleven images are candidates r
 | 7 | `7-dogs-horseshoes.jpg` | Horseshoes at four: nine dogs run for the pin. |
 | 8 | `8-cats-table.jpg` | Five o'clock at the table: six more cats join Nelim. |
 | 9 | `9-evening-huskies.jpg` | Evening at the pen: four huskies gather round Nelim. |
-| 10 | `10-dogs-supper.jpg` | Supper at six: five dogs know the way to the table. |
+| 10 | `10-dogs-supper.jpg` | Supper at seven: five dogs know the way to the table. |
 | 11 | `11-fireside.jpg` | By the fire, the corgis keep their own colours. |
 
 ## Messages to the authors
