@@ -39,7 +39,7 @@
 #           seven coats. The two near-black sprites (Newfoundland, Bernese) are dropped: unreadable at 268 px (scene 10 REDO 2026-11-13).
 #           Estimate 5. Subtitle: "Four o'clock rest: seven dogs gather round Nelim's stool."
 #
-#  11. workshop-11-dogs-supper. prestige-hall (grey rug, table, piano), 19h, clear outside, zoom 3.5 on (196, 112) (7 cells tall,
+#  11. workshop-11-dogs-supper. prestige-hall (grey rug, table, piano), 19h, clear outside, zoom 3.5 on (196, 111) (7 cells tall,
 #           about 12 wide, a pug about 19 px at 268 px wide), +30 ticks. Supper. Nelim, no hat, denim Apparel_CollarShirt dyed
 #           rgb (44, 86, 140), Roo_HD_Hair_Highpony, hair colour rgb (56, 36, 18), smile (MouthSmile, LidCheerful), no Duster
 #           yet (it comes in the last shot), starts at (194, 113) facing East and is forced to haul 1 MealFine to (199, 113), the dogs know
@@ -226,7 +226,14 @@ Feature: images for the Workshop page, one day at the sanctuary, dogs
     And Nelim's Pickle Tools: the decor is removed
 
   Scenario: gallery-11-dogs-supper
-    Given I set the hour to 19
+    Given the save "Nelims-tribe" is loaded
+    And game speed is paused
+    And Nelim's Pickle Tools: the temperature of the map is 20 degrees
+    And Nelim's Pickle Tools: the eclipse of the map is ended
+    And Nelim's Pickle Tools: all filth is cleaned
+    And Nelim's Pickle Tools: all humans but "Nelim" are removed
+    And I set the weather to "Clear"
+    And I set the hour to 19
     And Nelim's Sanctuary: the animals are removed from the sanctuary "prestige-hall"
     And Nelim's Sanctuary: I am at the sanctuary "prestige-hall"
     And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (194, 112) fully grown
@@ -266,7 +273,7 @@ Feature: images for the Workshop page, one day at the sanctuary, dogs
     And Nelim's Pickle Tools: the tooltips are hidden
     And Nelim's Pickle Tools: the resource readout is hidden
     And Nelim's Pickle Tools: the selection brackets are hidden
-    And Nelim's Pickle Tools: I frame the cell (196, 112) at zoom 3.5
+    And Nelim's Pickle Tools: I frame the cell (196, 111) at zoom 3.5
     And Nelim's Pickle Tools: I move the mouse to (10, 10)
     And Nelim's Pickle Tools: "Nelim" face kit is "neutral"
     And Nelim's Pickle Tools: "Nelim" face is held neutral

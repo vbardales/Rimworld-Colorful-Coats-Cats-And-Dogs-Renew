@@ -13,7 +13,7 @@
 #           waking. Six cats, one coat each (palette names read in the patches): Cat 2 champagne walks (193, 121) to (197, 121);
 #           akaNEKO_Persian 3 chocolate lies (194, 124); akaNEKO_Siamese 0 blue walks (200, 121) to (198, 121) to greet her;
 #           akaNEKO_Scottish_Fold 2 ashblue lies (197, 123); akaNEKO_Maine_Coon 0 ink lies (195, 122) beside the Campfire
-#           of the veranda; akaNEKO_Russian_Blue 1 coffee stands (194, 118) facing South: the animal that faces the camera.
+#           of the veranda; akaNEKO_Russian_Blue 1 coffee stands (195, 119) facing South: the animal that faces the camera.
 #           Decor, grouped around the sleepers and the lane: the existing Campfire, Stool, Harpsichord, Shelf with its cloth and
 #           steel piles and the two TorchLamps, plus Plant_Daylily fully grown at (195, 124) and (198, 124),
 #           PlantPot_Bonsai at (193, 119), TorchLamp at (196, 124) lit, Brazier at (199, 119) lit: no bare floor, two light sources
@@ -68,7 +68,7 @@ Feature: images for the Workshop page, one day at the sanctuary, afternoon cats
     And Nelim's Pickle Tools: an adult animal of kind "akaNEKO_Siamese" named "Satin" is spawned at (200, 121)
     And Nelim's Pickle Tools: an adult animal of kind "akaNEKO_Scottish_Fold" named "Flocon" is spawned at (197, 123)
     And Nelim's Pickle Tools: an adult animal of kind "akaNEKO_Maine_Coon" named "Suie" is spawned at (195, 122)
-    And Nelim's Pickle Tools: an adult animal of kind "akaNEKO_Russian_Blue" named "Brume" is spawned at (194, 118)
+    And Nelim's Pickle Tools: an adult animal of kind "akaNEKO_Russian_Blue" named "Brume" is spawned at (195, 119)
     And Nelim's Pickle Tools: the animal "Miette" is given coat 2
     And Nelim's Pickle Tools: the animal "Velours" is given coat 3
     And Nelim's Pickle Tools: the animal "Satin" is given coat 0
@@ -77,7 +77,7 @@ Feature: images for the Workshop page, one day at the sanctuary, afternoon cats
     And Nelim's Pickle Tools: the animal "Brume" is given coat 1
     When Nelim's Pickle Tools: I let 20 ticks pass
     And Nelim's Pickle Tools: "Nelim" stands at (193, 122) facing East
-    And Nelim's Pickle Tools: the animal "Brume" stands at (194, 118) facing South
+    And Nelim's Pickle Tools: the animal "Brume" stands at (195, 119) facing South
     And Nelim's Pickle Tools: "Velours" lies down
     And Nelim's Pickle Tools: "Flocon" lies down
     And Nelim's Pickle Tools: "Suie" lies down
