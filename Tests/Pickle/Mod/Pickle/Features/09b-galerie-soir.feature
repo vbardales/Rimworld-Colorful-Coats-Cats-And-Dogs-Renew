@@ -12,7 +12,7 @@
 #           stands at (172, 127) facing South, then is forced into the job Play_Chess on the ChessTable at (172, 126), so she
 #           sits facing the camera. Instant: her hand is over the board as the third dog trots in (30 ticks of play, then
 #           Brume walks, 15 more ticks). Three Yorkshire terriers (Core, coats picked to differ): Tweed -1 original black and tan
-#           lies (174, 127); Brume 0 slate walks (forced) from (178, 128) to (175, 127), mid-step; Brioche 1 taupe stands (176, 127)
+#           lies (174, 127); Brume 0 slate walks (forced) from (179, 128) to (176, 128), mid-step; Brioche 1 taupe stands (178, 127)
 #           facing South: the animal that faces the camera; coat 2 oatmeal is not drawn (about the original at that size).
 #           Decor, a games corner: the existing ChessTable, KneelPillow, TorchLamps and columns of the colonnade, plus Plant_Daylily
 #           fully grown at (170, 128) and (177, 127), a Stool at (171, 126) and at (173, 127) beside the table, TorchLamp at
@@ -79,18 +79,18 @@ Feature: images for the Workshop page, one day at the sanctuary, evening
     And Nelim's Pickle Tools: "Nelim" hairstyle is "Roo_HD_Hair_Highpony"
     And Nelim's Pickle Tools: "Nelim" hair colour is rgb (56, 36, 18)
     And Nelim's Pickle Tools: an adult animal of kind "YorkshireTerrier" named "Tweed" is spawned at (174, 127)
-    And Nelim's Pickle Tools: an adult animal of kind "YorkshireTerrier" named "Brume" is spawned at (178, 128)
-    And Nelim's Pickle Tools: an adult animal of kind "YorkshireTerrier" named "Brioche" is spawned at (176, 127)
+    And Nelim's Pickle Tools: an adult animal of kind "YorkshireTerrier" named "Brume" is spawned at (179, 128)
+    And Nelim's Pickle Tools: an adult animal of kind "YorkshireTerrier" named "Brioche" is spawned at (178, 127)
     And Nelim's Pickle Tools: the animal "Tweed" is given coat -1
     And Nelim's Pickle Tools: the animal "Brume" is given coat 0
     And Nelim's Pickle Tools: the animal "Brioche" is given coat 1
     When Nelim's Pickle Tools: I let 20 ticks pass
-    And Nelim's Pickle Tools: the animal "Brioche" stands at (176, 127) facing South
+    And Nelim's Pickle Tools: the animal "Brioche" stands at (178, 127) facing South
     And Nelim's Pickle Tools: "Nelim" stands at (172, 127) facing South
     And Nelim's Pickle Tools: "Nelim" is forced into the job "Play_Chess" on the building "ChessTable" at (172, 126)
     And Nelim's Pickle Tools: "Tweed" lies down
     And Nelim's Pickle Tools: I let 30 ticks pass
-    And Nelim's Pickle Tools: "Brume" is forced to walk to (175, 127)
+    And Nelim's Pickle Tools: "Brume" is forced to walk to (176, 128)
     And Nelim's Pickle Tools: I let 15 ticks pass
     And game speed is paused
     And Nelim's Pickle Tools: studio presentation mode is enabled

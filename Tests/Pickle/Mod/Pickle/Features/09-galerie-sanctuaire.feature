@@ -44,8 +44,8 @@
 #           dyed rgb (214, 174, 92) on long loose Roo_Royal_LongHD, denim Apparel_CollarShirt dyed rgb (44, 86, 140), smile,
 #           stands at (144, 131) facing East and is forced to haul 1 WoodLog to (148, 132): a log brought back from the water,
 #           mid-stride. Instant: she has just fetched the log, the dogs are on her heels. Four labradors (Core, coats -1 original,
-#           0 chocolate, 1 fawn, 2 ink): Caramel -1, Cacao 0 and Sable 1 follow within 3 cells; Jais 2 stands (150, 129) facing
-#           South, then walks to (150, 127): the animal that faces the camera. Decor, the river bank lived in: Plant_Daylily
+#           0 chocolate, 1 fawn, 2 ink): Caramel -1, Cacao 0 and Sable 1 follow within 3 cells; Jais 2 stands (150, 130) facing
+#           South, then walks to (150, 129): the animal that faces the camera. Decor, the river bank lived in: Plant_Daylily
 #           fully grown at (143, 130), (147, 134) and (149, 131), Plant_YellowTallGrass fully grown at (145, 133) and (150, 134),
 #           Plant_Rose fully grown at (145, 129) and (151, 131), a Stool at (152, 130), the river behind. Says: Nelim has
 #           fetched a log from the river and the four labradors follow her up the bank, four coats.
@@ -151,7 +151,7 @@ Feature: images for the Workshop page, one day at the sanctuary, morning
     And Nelim's Pickle Tools: "Nelim" hair colour is rgb (56, 36, 18)
     And Nelim's Pickle Tools: an adult animal of kind "LabradorRetriever" named "Caramel" is spawned at (146, 129)
     And Nelim's Pickle Tools: an adult animal of kind "LabradorRetriever" named "Cacao" is spawned at (148, 132)
-    And Nelim's Pickle Tools: an adult animal of kind "LabradorRetriever" named "Jais" is spawned at (150, 129)
+    And Nelim's Pickle Tools: an adult animal of kind "LabradorRetriever" named "Jais" is spawned at (150, 130)
     And Nelim's Pickle Tools: an adult animal of kind "LabradorRetriever" named "Sable" is spawned at (151, 133)
     And Nelim's Pickle Tools: the animal "Caramel" is given coat -1
     And Nelim's Pickle Tools: the animal "Cacao" is given coat 0
@@ -159,12 +159,12 @@ Feature: images for the Workshop page, one day at the sanctuary, morning
     And Nelim's Pickle Tools: the animal "Sable" is given coat 1
     When Nelim's Pickle Tools: I let 20 ticks pass
     And Nelim's Pickle Tools: "Nelim" stands at (144, 131) facing East
-    And Nelim's Pickle Tools: the animal "Jais" stands at (150, 129) facing South
+    And Nelim's Pickle Tools: the animal "Jais" stands at (150, 130) facing South
     And Nelim's Pickle Tools: "Nelim" is forced to haul 1 of the item "WoodLog" to (148, 132)
     And Nelim's Pickle Tools: "Caramel" follows "Nelim" within 3 cells
     And Nelim's Pickle Tools: "Cacao" follows "Nelim" within 3 cells
     And Nelim's Pickle Tools: "Sable" follows "Nelim" within 3 cells
-    And Nelim's Pickle Tools: "Jais" is forced to walk to (150, 127)
+    And Nelim's Pickle Tools: "Jais" is forced to walk to (150, 129)
     And Nelim's Pickle Tools: I let 45 ticks pass
     And game speed is paused
     And Nelim's Pickle Tools: studio presentation mode is enabled
