@@ -8,7 +8,7 @@ packageId:    nelim.colorfulcoats.catsanddogs
 repo:         Rimworld-Colorful-Coats-Cats-And-Dogs-Renew
 visibility:   public
 detached:     yes
-workflow_stage: shootGallery[1.1.0]
+workflow_stage: mountPreview[1.1.0]
 audit_revision: a00034b4c2d3acdade8505073c708cd3f7c9f4ea (2026-10-15, chain 1 to 7 walked again, 8.a to 8.m below)
 audit_date: 2026-10-15
 automated_tests: passed; 22 passed, 0 failed, 0 skipped (rerun 2026-10-15, from scripts/)
@@ -22,6 +22,7 @@ showcase:     complete
 tested_on:    2026-10-15 (cats replay rev a00034b: 10/10 and peintres 10/10, docs/runs/2026-10-14-chats-shader.txt; before that 2026-10-10 (Pickle 08-revue, 34/34 passed in the WSL, rev 58bcd23; passes 1-3 and add/removal runs on 2026-09-28 and 2026-10-02; no manual play))
 workshop:     3806769444 (0.1.0, item creation only; About/PublishedFileId.txt committed in 97c19d3; private, as Steam creates every item; not tested, not public)
 remaining:
+  - 2026-11-17 owner "mais je valide tout": all 11 images accepted. 9.b indexes 0-11 contiguous, no gap or duplicate. 9.c order: indexes group the scenes by feature file (sanctuary 1-3, evening 4-6, cats 7-8, dogs 9-11), each following the day; image 1 (breakfast, 7h, white cat in five coats, medium frame, readable at 268 px) opens the day and is shown large by Steam; order is hers to change. 9.d every image opened (v19a, v19e for 4, 7, 8, 11; the others at the first full send). 9.e gallery table in PUBLICATION.md rewritten to the final file names (STATUS.md holds the shotlist table, rows 1 to 11). 9.e bis 11 subtitles burned, copies in Art/Gallery differ from the clean originals. 9.f Check-Status 0 error; stage moved to mountPreview[1.1.0]. Open before the echo: Art/echo-preview.png is provisional and invalid now that the gallery holds captures (10.a bis: redo the echo from the gallery, empty echo_review_sha, then validate); Preview regeneration (Render-Preview.cjs) at this stage. Notes kept for a later recompose (not blocking): scene 4 Nelim's own eyes; scene 11 meals on the table and RGK_DogBowl.
   - 2026-11-17 owner note "à garder en tête à l'avenir pour la 11, mettre des trucs sur la table et des gamelles aussi" (not a refusal: image 11 stays in the review). Next time scene 11 is recomposed: put meals on the table (Table in the prestige-hall, cells to read in SANCTUAIRE-CASES.md; MealFine/MealSimple as in scene 8) and RGK_DogBowl on the floor near the dogs (mod already in wsl-deps.sanctuary.map; place bowls before the dogs stand, free cells, no pawn on them). Note: the dish Nelim carries stays. Same family as scene 8 (v19e).
   - 2026-11-17 owner note "pour info, à l'avenir, mettre les bons yeux Nelim sur la 4" (not a refusal: no recompose now, image 4 stays in the review). Next time scene 4 is recomposed: give Nelim her own eyes (read docs/NELIM-PROFIL.md and the eyes step of NSB docs/steps.md before writing). Not verified: what the 09b scenario sets today for her eyes (face kit "neutral", brows, mouth, lids only; no eyes step found in 09b).
   - 2026-11-17 v19e (6aec + 8845, merged, 2/2 passed, Inbox deleted) read: scene 4 OK (Nelim in profile on the KneelPillow east of the chess board, facing it, smile; three Yorkshires close, one faces the camera), scene 8 OK (two meals and a MealSimple on the table, two RGK_DogBowl on the floor, six cats, Nelim smiling on the north chair). Both in Art/Gallery-clean (final names) and subtitled in Art/Gallery. Gallery COMPLETE: 11 subtitled images + 0-preview (4.8 MB / 4.0 MB). ONE review sent to Virginie: accept or refuse each image. Not verified: 268 px sheet of 4, 7, 8, 11 (their earlier versions were seen at 268 px or validated). Next: her verdict, then mountPreview.
@@ -73,7 +74,7 @@ remaining:
 session:      local_b1565ae3-2100-4849-b88f-60237d43caed
 updated:      2026-10-30 replay-audit: sections 1 to 8 hold (8.m: Mod/ diff since a00034b is Preview.png only), first unfulfilled 9.a captures (993b waiting, 5157 failed), stage unchanged; weak proofs (STATUS.md only): 1.a-1.d, 4.g, 5.g, 6.h, 7.b, 7.c, 8.e; Run-UnitTests n/a (no test csproj); earlier 2026-10-19, shootGallery[1.1.0]: 8.n done, playTests green (cats 10/10, peintres 10/10, 1.7 sans-facultatifs 10/10); Mod/ identical to code_review_sha a00034b (git diff empty)
 code_review_sha: e2c53139242e53e9b55755d8e771791028d77bb0
-protocols_read_sha: 0599469975dba18dbcba820a237a2e09b993681f
+protocols_read_sha: cc55569852194a8668047613f1fe6a2966b350c3
 ---
 # Colorful Coats - Cats and Dogs! Renew — status
 

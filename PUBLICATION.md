@@ -25,26 +25,25 @@ opened and looked at before the boxes are answered.
 `0-preview.png` is a byte-for-byte copy of `Mod/About/Preview.png` (checked by hash). The eleven others tell one story, a day of
 pet-sitting at the sanctuary (Nelim looks after the neighbours' animals, a new group every few hours), and come from
 `Tests/Pickle/Mod/Pickle/Features/09-galerie-sanctuaire.feature`, `09b-galerie-soir.feature`, `09c-galerie-chats.feature` and
-`09d-galerie-chiens.feature` (pass map `wsl-deps.sanctuary.map`). The order is the order of the day. Clean originals are in
+`09d-galerie-chiens.feature` (pass map `wsl-deps.sanctuary.map`). The order groups the scenes by feature file (sanctuary 1-3, evening 4-6, cats 7-8, dogs 9-11), each file following the day; image 1 opens the day. Clean originals are in
 `Art/Gallery-clean/`, subtitled copies in `Art/Gallery/`.
-
 | # | File | Hour | Shot | What it shows |
 | --- | --- | --- | --- | --- |
 | 0 | `0-preview.png` | | Preview | The banner |
 | 1 | `1-breakfast.jpg` | 7h | Breakfast | White cat (Let's Have a Cat!), five coats |
-| 2 | `2-fetch.jpg` | 10h | Fetch | Labrador, four coats (base game) |
-| 3 | `3-dogs-clearing.jpg` | 11h | Walk | Nine Stray Dogs breeds, one coat each |
-| 4 | `4-poodle-parade.jpg` | 12h | Poodle parade | Standard poodle, four coats |
-| 5 | `5-cats-terrace.jpg` | 13h | Siesta | Six cat breeds (base game and Let's Have a Cat!) |
-| 6 | `6-chess.jpg` | 15h | Chess | Yorkshire terrier, three coats (base game) |
-| 7 | `7-dogs-horseshoes.jpg` | 16h | Horseshoes | Nine more Stray Dogs breeds |
-| 8 | `8-cats-table.jpg` | 17h | At the table | Six more cat breeds, one a Vanilla Animals Expanded Abyssinian |
-| 9 | `9-evening-huskies.jpg` | 18h | Evening | Husky, four coats (base game) |
-| 10 | `10-dogs-supper.jpg` | 19h | Supper | Five Vanilla Animals Expanded dogs |
-| 11 | `11-fireside.jpg` | 20h | Fireside | Vanilla Animals Expanded corgi, three coats, and the white cat asleep |
+| 2 | `2-fetch-by-the-river.jpg` | 10h | Fetch | Labrador, four coats (base game) |
+| 3 | `3-four-poodles-tour-the-statue-garden.jpg` | 12h | Poodle parade | Standard poodle, four coats |
+| 4 | `4-chess-in-the-cloister.jpg` | 15h | Chess | Yorkshire terrier, three coats (base game) |
+| 5 | `5-evening-training.jpg` | 18h | Evening training | Husky, four coats (base game) |
+| 6 | `6-fireside.jpg` | 20h | Fireside | Vanilla Animals Expanded corgi, three coats, and the white cat asleep |
+| 7 | `7-siesta-on-the-terrace.jpg` | 13h | Siesta | Six cat breeds (base game and Let's Have a Cat!) |
+| 8 | `8-tea-time.jpg` | 17h | At the table | Six more cat breeds, one a Vanilla Animals Expanded Abyssinian |
+| 9 | `9-eleven-o-clock-walk.jpg` | 11h | Walk | Nine Stray Dogs breeds, one coat each |
+| 10 | `10-garden-rest.jpg` | 16h | Rest | Stray Dogs breeds resting round Nelim's stool |
+| 11 | `11-dogs-supper.jpg` | 19h | Supper | Five Vanilla Animals Expanded dogs |
 
 Every patched animal is in a shot (the 08-revue captures show every coat of every breed). Review copies under 2 MB each,
-Gallery 6.4 MB, Gallery-clean 7.1 MB. Status: the eleven images are candidates reviewed in this session; the owner's acceptance is pending.
+Gallery 4.8 MB, Gallery-clean 4.0 MB. Status: the eleven images were accepted by the owner on 2026-11-17 ("je valide tout").
 
 ## Gallery subtitles
 
