@@ -5,16 +5,17 @@
       { "text": "Colorful Coats - Cats and Dogs!" },
       { "text": "Renew (unofficial)", "suffix": true }
     ],
-    "description": "Coat variations for forty-one cat and dog breeds that still have only one."
+    "description": "Coat variations for forty-one cat and dog breeds that still have only one.",
+    "panelBare": true
   },
   "background": { "file": "Preview-source.png" },
-  "echo": { "file": "echo-concept.png" },
+  "echo": { "file": "echo-source.png" },
   "icon": { "file": "ModIcon-source.png" },
   "palette": {
-    "veil": "#302820",
+    "veil": "#6D3714",
     "inkPrimary": "#F2ECE1",
-    "inkSecondary": "#E8BA73",
-    "accent": "#92C83E",
+    "inkSecondary": "#FFD9A8",
+    "accent": "#FFB02E",
     "badgeInk": "#17120E"
   }
 }
