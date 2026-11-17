@@ -69,7 +69,7 @@ remaining:
 session:      local_b1565ae3-2100-4849-b88f-60237d43caed
 updated:      2026-10-30 replay-audit: sections 1 to 8 hold (8.m: Mod/ diff since a00034b is Preview.png only), first unfulfilled 9.a captures (993b waiting, 5157 failed), stage unchanged; weak proofs (STATUS.md only): 1.a-1.d, 4.g, 5.g, 6.h, 7.b, 7.c, 8.e; Run-UnitTests n/a (no test csproj); earlier 2026-10-19, shootGallery[1.1.0]: 8.n done, playTests green (cats 10/10, peintres 10/10, 1.7 sans-facultatifs 10/10); Mod/ identical to code_review_sha a00034b (git diff empty)
 code_review_sha: e2c53139242e53e9b55755d8e771791028d77bb0
-protocols_read_sha: 161d23ea994de6aab35c3cabe5af940316d80e1b
+protocols_read_sha: 0599469975dba18dbcba820a237a2e09b993681f
 ---
 # Colorful Coats - Cats and Dogs! Renew — status
 
