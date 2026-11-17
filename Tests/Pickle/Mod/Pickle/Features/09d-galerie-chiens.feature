@@ -39,12 +39,12 @@
 #           seven coats. The two near-black sprites (Newfoundland, Bernese) are dropped: unreadable at 268 px (scene 10 REDO 2026-11-13).
 #           Estimate 5. Subtitle: "Four o'clock rest: seven dogs gather round Nelim's stool."
 #
-#  11. workshop-11-dogs-supper. prestige-hall (grey rug, table, piano), 19h, clear outside, zoom 7.5 on (197, 111) (about 8 cells tall,
+#  11. workshop-11-dogs-supper. prestige-hall (grey rug, table, piano), 19h, clear outside, zoom 4 on (197, 111) (about 8 cells tall,
 #           about 14 wide, a pug about 15 px at 268 px wide), +30 ticks. Supper. Nelim, no hat, denim Apparel_CollarShirt dyed
 #           rgb (44, 86, 140), Roo_HD_Hair_Highpony, hair colour rgb (56, 36, 18), smile (MouthSmile, LidCheerful), no Duster
 #           yet (it comes in the last shot), starts at (194, 113) facing East and is forced to haul 1 MealFine to (199, 113), the dogs know
 #           the way. Instant: she has just lifted the dish, the dogs trot after the smell. Five Vanilla Animals Expanded dogs, one
-#           coat each, ALL awake and placed after the waits so none leaves the frame (REDO 2026-11-17, twice: v13a four dogs one asleep; v14a dogs at the room edges, dark coats lost on the carpet, frame too wide: now zoom 7.5, dogs within 3 cells of the table, light original coats for pug and bulldog): AEXP_GermanShepherd 2 slate stands (194, 111) facing East; AEXP_Beagle 2 stone stands (199, 111) facing
+#           coat each, ALL awake and placed after the waits so none leaves the frame (REDO 2026-11-17, twice: v13a four dogs one asleep; v14a dogs at the room edges, dark coats lost on the carpet, frame too wide; v15b: dogs round the table but specks at 268 px, the zoom is a root size, half the height in cells, so 7.5 shows 15 cells: now zoom 4 shows 8, dogs within 3 cells of the table, light original coats for pug and bulldog): AEXP_GermanShepherd 2 slate stands (194, 111) facing East; AEXP_Beagle 2 stone stands (199, 111) facing
 #           West, begging; AEXP_Pug -1 original stands (198, 109) facing North (seen from behind); AEXP_FrenchBulldog -1 original stands (194, 109) facing South: the
 #           animal that faces the camera; AEXP_WelshTerrier 0 mist stands (200, 112) facing West. Decor, the supper hall: the
 #           existing table, piano, rug, braziers, pots and bonsai, plus
@@ -273,7 +273,7 @@ Feature: images for the Workshop page, one day at the sanctuary, dogs
     And Nelim's Pickle Tools: the tooltips are hidden
     And Nelim's Pickle Tools: the resource readout is hidden
     And Nelim's Pickle Tools: the selection brackets are hidden
-    And Nelim's Pickle Tools: I frame the cell (197, 111) at zoom 7.5
+    And Nelim's Pickle Tools: I frame the cell (197, 111) at zoom 4
     And Nelim's Pickle Tools: I move the mouse to (10, 10)
     And Nelim's Pickle Tools: "Nelim" face kit is "neutral"
     And Nelim's Pickle Tools: "Nelim" face is held neutral
