@@ -50,17 +50,17 @@ Gallery 6.4 MB, Gallery-clean 7.1 MB. Status: the eleven images are candidates r
 
 | index | file | line |
 | --- | --- | --- |
-| 1 | `1-candidate-breakfast.jpg` | Seven o'clock breakfast: one white cat, five coats. |
-| 2 | `2-candidate-fetch-by-the-river.jpg` | Fetch by the river: four labradors, one log. |
-| 3 | `3-candidate-four-poodles-tour-the-statue-garden.jpg` | Four poodles tour the statue garden. |
-| 4 | `4-candidate-chess.jpg` | A game of chess, watched from below. |
-| 5 | `5-candidate-evening-training.jpg` | Evening training, and four huskies at the gate. |
-| 6 | `6-candidate-fireside.jpg` | By the fire, the corgis keep their own colours. |
-| 7 | `7-candidate-siesta-on-the-terrace.jpg` | One o'clock siesta: six cats take the terrace. |
-| 8 | `8-candidate-tea-time.jpg` | Five o'clock at the table: six cats keep Nelim company. |
-| 9 | `9-candidate-eleven-o-clock-walk.jpg` | Eleven o'clock walk: nine stray dogs, nine coats. |
-| 10 | `10-candidate-garden-rest.jpg` | Four o'clock rest: seven dogs gather round Nelim's stool. |
-| 11 | `11-candidate-supper.jpg` | Supper at seven: five dogs know the way to the table. |
+| 1 | `1-breakfast.jpg` | Seven o'clock breakfast: one white cat, five coats. |
+| 2 | `2-fetch-by-the-river.jpg` | Fetch by the river: four labradors, one log. |
+| 3 | `3-four-poodles-tour-the-statue-garden.jpg` | Four poodles tour the statue garden. |
+| 4 | `4-chess-in-the-cloister.jpg` | A game of chess, watched from below. |
+| 5 | `5-evening-training.jpg` | Evening training, and four huskies at the gate. |
+| 6 | `6-fireside.jpg` | By the fire, the corgis keep their own colours. |
+| 7 | `7-siesta-on-the-terrace.jpg` | One o'clock siesta: six cats take the terrace. |
+| 8 | `8-tea-time.jpg` | Five o'clock at the table: six cats keep Nelim company. |
+| 9 | `9-eleven-o-clock-walk.jpg` | Eleven o'clock walk: nine stray dogs, nine coats. |
+| 10 | `10-garden-rest.jpg` | Four o'clock rest: seven dogs gather round Nelim's stool. |
+| 11 | `11-dogs-supper.jpg` | Supper at seven: five dogs know the way to the table. |
 
 ## Messages to the authors
 
