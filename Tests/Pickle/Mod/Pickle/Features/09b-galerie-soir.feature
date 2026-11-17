@@ -9,14 +9,14 @@
 #           about 40 px at 268 px wide), +20 then +30 ticks. TIGHT shot of the series. Light under the roof plus the torches. Gesture:
 #           Nelim, no hat (roofed), denim Apparel_CollarShirt dyed rgb (44, 86, 140), Roo_HD_Hair_Highpony, hair colour
 #           rgb (56, 36, 18), a smirk and a squint (MouthSmirkSmile, LidSquinting: she is about to win; fallback smile), first
-#           stands at (173, 126) facing West (the stool east of the board), then is forced into the job Play_Chess on the ChessTable at (172, 126), so she
+#           stands at (173, 126) facing West (the KneelPillow east of the board), then is forced into the job Play_Chess on the ChessTable at (172, 126), so she
 #           sits beside the board, in profile, facing it. Instant: her hand is over the board while the three dogs gather round (30 ticks of play). REDO
 #           2026-11-17 (v13a: two of three dogs in frame, tiny, one asleep): all three AWAKE, placed after the waits; REDO again (v14a: dogs scattered, chess table 10 px at 268 px): frame zoom 9 on (174, 127), dogs within 2 cells of the table; REDO again (v15b: frame still 18 cells tall, the zoom is a root size, half the height in cells, so 9 shows 18 cells): zoom 3.5 shows 7; REDO again (v16a: dogs 10 px, chess table 8 px at 268 px, j weak): zoom 2.2 shows 4.4 cells, a cell is 245 px, 33 px at 268 px; REDO again (v17a: Nelim seated beside the board, dogs 3 to 5 cells away, j weak): zoom 1.8 on (172, 127), dogs close round her and the board. REDO again (v18a, owner: Nelim not at the chess table, seated diagonal to the board): she is seated on the stool (173, 126) next to the board, facing it, frame centred on (172, 127).
 #           Three Yorkshire terriers (Core, coats picked to differ): Tweed -1 original black and tan stands (174, 127) facing West
 #           (profile, beside her); Brume 0 slate stands (173, 128) facing North (from behind, below her); Brioche 1 taupe stands (172, 127)
 #           facing South (beside the board): the animal that faces the camera; coat 2 oatmeal is not drawn (about the original at that size).
 #           Decor, a games corner: the existing ChessTable, KneelPillow, TorchLamps and columns of the colonnade, plus Plant_Daylily
-#           fully grown at (171, 128) and (175, 128), PlantPot_Bonsai at (175, 126), a Stool at (171, 126) and at (173, 126) either side of the table, TorchLamp at
+#           fully grown at (171, 128) and (175, 128), PlantPot_Bonsai at (175, 126), a Stool at (171, 126) and the existing KneelPillow at (173, 126) either side of the table, TorchLamp at
 #           (170, 127) and (175, 127) lit: the board, two seats, lamps and flowers fill a tight frame. Says: Nelim is playing chess in the cloister,
 #           about to win, and three Yorkshire terriers, three coats, keep her company. Estimate 5.
 #           Subtitle: "A game of chess, watched from below."
@@ -75,7 +75,6 @@ Feature: images for the Workshop page, one day at the sanctuary, evening
     And Nelim's Pickle Tools: I place the decor "TorchLamp" at (175, 127)
     And Nelim's Pickle Tools: the decor "TorchLamp" at (175, 127) is lit
     And Nelim's Pickle Tools: I place the decor "Stool" at (171, 126)
-    And Nelim's Pickle Tools: I place the decor "Stool" at (173, 126)
     And Nelim's Pickle Tools: I place the decor "TorchLamp" at (170, 127)
     And Nelim's Pickle Tools: the decor "TorchLamp" at (170, 127) is lit
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_Pants" dyed rgb (101, 67, 33)
