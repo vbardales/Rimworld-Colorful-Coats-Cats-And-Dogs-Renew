@@ -30,7 +30,7 @@
 #           akaNEKO_kijitora 1 ashblue stands (179, 111) facing South: the animal that faces the camera. Instant: the last two cats
 #           are crossing the rug towards her. Decor: the existing Table2x2c, white rug, four DiningChairs, TorchLamps
 #           (four around the nook), pots and bonsai, plus Plant_Daylily fully grown at (180, 109)
-#           and (181, 111) and TorchLamp at (178, 107) lit: the nook is full, light in frame. Says: Nelim sits down at the dining table and
+#           and (181, 111), TorchLamp at (178, 107) lit and the tea laid on the table (REDO 2026-11-17, owner: bare table): MealFine at (175, 109) and (176, 109), MealSimple at (176, 108): the nook is full, light in frame. Says: Nelim sits down at the dining table and
 #           six more cats of the house gather round her, six more coats. Estimate 5. Subtitle: "Five o'clock at the table: six more cats
 #           join Nelim."
 #
@@ -113,6 +113,9 @@ Feature: images for the Workshop page, one day at the sanctuary, afternoon cats
     And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (181, 111) fully grown
     And Nelim's Pickle Tools: I place the decor "TorchLamp" at (178, 107)
     And Nelim's Pickle Tools: the decor "TorchLamp" at (178, 107) is lit
+    And Nelim's Pickle Tools: 1 of the item "MealFine" are spawned at (175, 109)
+    And Nelim's Pickle Tools: 1 of the item "MealFine" are spawned at (176, 109)
+    And Nelim's Pickle Tools: 1 of the item "MealSimple" are spawned at (176, 108)
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_Pants" dyed rgb (101, 67, 33)
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_CollarShirt" dyed rgb (44, 86, 140)
     And Nelim's Pickle Tools: "Nelim" hairstyle is "Roo_HD_Hair_Highpony"
