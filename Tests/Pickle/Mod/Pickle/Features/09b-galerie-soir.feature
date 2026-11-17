@@ -5,19 +5,19 @@
 #
 # SHOTLIST (index, name, place, hour, framing, gesture, decor, living things, outfit, what the image says, subtitle)
 #
-#   4. workshop-4-chess. cloister, 15h, clear, zoom 3.5 on (174, 127) (about 7 cells tall, about 12 wide, a Yorkshire
-#           about 16 px at 268 px wide), +20 then +30 ticks. TIGHT shot of the series. Light under the roof plus the torches. Gesture:
+#   4. workshop-4-chess. cloister, 15h, clear, zoom 2.2 on (174, 127) (about 4.4 cells tall, about 7.8 wide, 245 px a cell, a Yorkshire
+#           about 17 px at 268 px wide), +20 then +30 ticks. TIGHT shot of the series. Light under the roof plus the torches. Gesture:
 #           Nelim, no hat (roofed), denim Apparel_CollarShirt dyed rgb (44, 86, 140), Roo_HD_Hair_Highpony, hair colour
 #           rgb (56, 36, 18), a smirk and a squint (MouthSmirkSmile, LidSquinting: she is about to win; fallback smile), first
 #           stands at (172, 127) facing South, then is forced into the job Play_Chess on the ChessTable at (172, 126), so she
 #           sits facing the camera. Instant: her hand is over the board while the three dogs gather round (30 ticks of play). REDO
-#           2026-11-17 (v13a: two of three dogs in frame, tiny, one asleep): all three AWAKE, placed after the waits; REDO again (v14a: dogs scattered, chess table 10 px at 268 px): frame zoom 9 on (174, 127), dogs within 2 cells of the table; REDO again (v15b: frame still 18 cells tall, the zoom is a root size, half the height in cells, so 9 shows 18 cells): zoom 3.5 shows 7.
+#           2026-11-17 (v13a: two of three dogs in frame, tiny, one asleep): all three AWAKE, placed after the waits; REDO again (v14a: dogs scattered, chess table 10 px at 268 px): frame zoom 9 on (174, 127), dogs within 2 cells of the table; REDO again (v15b: frame still 18 cells tall, the zoom is a root size, half the height in cells, so 9 shows 18 cells): zoom 3.5 shows 7; REDO again (v16a: dogs 10 px, chess table 8 px at 268 px, j weak): zoom 2.2 shows 4.4 cells, a cell is 245 px, 33 px at 268 px.
 #           Three Yorkshire terriers (Core, coats picked to differ): Tweed -1 original black and tan stands (174, 127) facing West
 #           (profile); Brume 0 slate stands (175, 128) facing North (from behind); Brioche 1 taupe stands (176, 127)
 #           facing South: the animal that faces the camera; coat 2 oatmeal is not drawn (about the original at that size).
 #           Decor, a games corner: the existing ChessTable, KneelPillow, TorchLamps and columns of the colonnade, plus Plant_Daylily
-#           fully grown at (170, 128) and (177, 127), a Stool at (171, 126) and at (173, 127) beside the table, TorchLamp at
-#           (169, 127) lit: the board, two seats, lamps and flowers fill a tight frame. Says: Nelim is playing chess in the cloister,
+#           fully grown at (171, 128) and (177, 127), a Stool at (171, 126) and at (173, 127) beside the table, TorchLamp at
+#           (170, 127) lit: the board, two seats, lamps and flowers fill a tight frame. Says: Nelim is playing chess in the cloister,
 #           about to win, and three Yorkshire terriers, three coats, keep her company. Estimate 5.
 #           Subtitle: "A game of chess, watched from below."
 #
@@ -69,12 +69,12 @@ Feature: images for the Workshop page, one day at the sanctuary, evening
     Given I set the hour to 15
     And Nelim's Sanctuary: the animals are removed from the sanctuary "cloister"
     And Nelim's Sanctuary: I am at the sanctuary "cloister"
-    And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (170, 128) fully grown
+    And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (171, 128) fully grown
     And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (177, 127) fully grown
     And Nelim's Pickle Tools: I place the decor "Stool" at (171, 126)
     And Nelim's Pickle Tools: I place the decor "Stool" at (173, 127)
-    And Nelim's Pickle Tools: I place the decor "TorchLamp" at (169, 127)
-    And Nelim's Pickle Tools: the decor "TorchLamp" at (169, 127) is lit
+    And Nelim's Pickle Tools: I place the decor "TorchLamp" at (170, 127)
+    And Nelim's Pickle Tools: the decor "TorchLamp" at (170, 127) is lit
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_Pants" dyed rgb (101, 67, 33)
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_CollarShirt" dyed rgb (44, 86, 140)
     And Nelim's Pickle Tools: "Nelim" hairstyle is "Roo_HD_Hair_Highpony"
@@ -99,7 +99,7 @@ Feature: images for the Workshop page, one day at the sanctuary, evening
     And Nelim's Pickle Tools: the tooltips are hidden
     And Nelim's Pickle Tools: the resource readout is hidden
     And Nelim's Pickle Tools: the selection brackets are hidden
-    And Nelim's Pickle Tools: I frame the cell (174, 127) at zoom 3.5
+    And Nelim's Pickle Tools: I frame the cell (174, 127) at zoom 2.2
     And Nelim's Pickle Tools: I move the mouse to (10, 10)
     And Nelim's Pickle Tools: "Nelim" face kit is "neutral"
     And Nelim's Pickle Tools: "Nelim" face is held neutral
