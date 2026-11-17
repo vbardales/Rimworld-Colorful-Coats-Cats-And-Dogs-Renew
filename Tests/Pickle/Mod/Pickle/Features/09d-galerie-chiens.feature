@@ -39,17 +39,17 @@
 #           seven coats. The two near-black sprites (Newfoundland, Bernese) are dropped: unreadable at 268 px (scene 10 REDO 2026-11-13).
 #           Estimate 5. Subtitle: "Four o'clock rest: seven dogs gather round Nelim's stool."
 #
-#  11. workshop-11-dogs-supper. prestige-hall (grey rug, table, piano), 19h, clear outside, zoom 3.5 on (196, 111) (7 cells tall,
+#  11. workshop-11-dogs-supper. prestige-hall (grey rug, table, piano), 19h, clear outside, zoom 5 on (196, 112) (6 cells tall,
 #           about 12 wide, a pug about 19 px at 268 px wide), +30 ticks. Supper. Nelim, no hat, denim Apparel_CollarShirt dyed
 #           rgb (44, 86, 140), Roo_HD_Hair_Highpony, hair colour rgb (56, 36, 18), smile (MouthSmile, LidCheerful), no Duster
 #           yet (it comes in the last shot), starts at (194, 113) facing East and is forced to haul 1 MealFine to (199, 113), the dogs know
 #           the way. Instant: she has just lifted the dish, the dogs trot after the smell. Five Vanilla Animals Expanded dogs, one
-#           coat each: AEXP_GermanShepherd 2 slate walks (193, 114) to (198, 114); AEXP_Beagle 2 stone stands (199, 112) facing
-#           West, begging; AEXP_Pug 1 ink lies (194, 111); AEXP_FrenchBulldog 2 chocolate stands (194, 109) facing South: the
-#           animal that faces the camera; AEXP_WelshTerrier 0 mist walks (200, 113) to (200, 109). Decor, the supper hall: the
+#           coat each, ALL awake and placed after the waits so none leaves the frame (REDO 2026-11-17: only four dogs in frame, one asleep): AEXP_GermanShepherd 2 slate stands (193, 114) facing East; AEXP_Beagle 2 stone stands (199, 112) facing
+#           West, begging; AEXP_Pug 1 ink stands (194, 111) facing North (seen from behind); AEXP_FrenchBulldog 2 chocolate stands (194, 109) facing South: the
+#           animal that faces the camera; AEXP_WelshTerrier 0 mist stands (200, 113) facing West. Decor, the supper hall: the
 #           existing table, piano, rug, braziers, pots and bonsai, plus
 #           Plant_Daylily fully grown at (194, 112), (199, 115) and (200, 112), TorchLamp at (193, 109) lit and at (200, 110) lit:
-#           lamps in frame. Says: Nelim carries supper to a laid table and five dogs follow the smell, five coats.
+#           lamps in frame. Says: Nelim carries supper across the hall and five dogs follow the smell, five coats (the z3 hall holds no plates to lay: the dish is in her hands).
 #           Estimate 5. Subtitle: "Supper at seven: five dogs know the way to the table."
 #
 # RISK: the strays stop at their targets (+45 ticks), Play_Horseshoes may not choose its stand cell (fallback above), the emerald
@@ -259,13 +259,13 @@ Feature: images for the Workshop page, one day at the sanctuary, dogs
     And Nelim's Pickle Tools: the animal "Rubis" is given coat 0
     When Nelim's Pickle Tools: I let 20 ticks pass
     And Nelim's Pickle Tools: "Nelim" stands at (194, 113) facing East
-    And Nelim's Pickle Tools: the animal "Pistache" stands at (199, 112) facing West
-    And Nelim's Pickle Tools: the animal "Cassis" stands at (194, 109) facing South
-    And Nelim's Pickle Tools: "Praline" lies down
     And Nelim's Pickle Tools: "Nelim" is forced to haul 1 of the item "MealFine" to (199, 113)
-    And Nelim's Pickle Tools: "Ardent" is forced to walk to (198, 114)
-    And Nelim's Pickle Tools: "Rubis" is forced to walk to (200, 109)
     And Nelim's Pickle Tools: I let 30 ticks pass
+    And Nelim's Pickle Tools: the animal "Ardent" stands at (193, 114) facing East
+    And Nelim's Pickle Tools: the animal "Pistache" stands at (199, 112) facing West
+    And Nelim's Pickle Tools: the animal "Praline" stands at (194, 111) facing North
+    And Nelim's Pickle Tools: the animal "Cassis" stands at (194, 109) facing South
+    And Nelim's Pickle Tools: the animal "Rubis" stands at (200, 113) facing West
     And game speed is paused
     And Nelim's Pickle Tools: studio presentation mode is enabled
     And Nelim's Pickle Tools: the colonist bar is hidden
@@ -273,7 +273,7 @@ Feature: images for the Workshop page, one day at the sanctuary, dogs
     And Nelim's Pickle Tools: the tooltips are hidden
     And Nelim's Pickle Tools: the resource readout is hidden
     And Nelim's Pickle Tools: the selection brackets are hidden
-    And Nelim's Pickle Tools: I frame the cell (196, 111) at zoom 3.5
+    And Nelim's Pickle Tools: I frame the cell (196, 112) at zoom 5
     And Nelim's Pickle Tools: I move the mouse to (10, 10)
     And Nelim's Pickle Tools: "Nelim" face kit is "neutral"
     And Nelim's Pickle Tools: "Nelim" face is held neutral
