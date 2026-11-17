@@ -5,15 +5,15 @@
 #
 # SHOTLIST (index, name, place, hour, framing, gesture, decor, living things, outfit, what the image says, subtitle)
 #
-#   4. workshop-4-chess. cloister, 15h, clear, zoom 5.5 on (175, 127) (6 cells tall, about 11 wide, a Yorkshire
-#           about 20 px at 268 px wide), +20 then +30 ticks. TIGHT shot of the series. Light under the roof plus the torches. Gesture:
+#   4. workshop-4-chess. cloister, 15h, clear, zoom 9 on (174, 127) (about 7 cells tall, about 11 wide, a Yorkshire
+#           about 16 px at 268 px wide), +20 then +30 ticks. TIGHT shot of the series. Light under the roof plus the torches. Gesture:
 #           Nelim, no hat (roofed), denim Apparel_CollarShirt dyed rgb (44, 86, 140), Roo_HD_Hair_Highpony, hair colour
 #           rgb (56, 36, 18), a smirk and a squint (MouthSmirkSmile, LidSquinting: she is about to win; fallback smile), first
 #           stands at (172, 127) facing South, then is forced into the job Play_Chess on the ChessTable at (172, 126), so she
 #           sits facing the camera. Instant: her hand is over the board while the three dogs gather round (30 ticks of play). REDO
-#           2026-11-17 (v13a: two of three dogs in frame, tiny, one asleep): all three AWAKE, placed after the waits and framed tight.
+#           2026-11-17 (v13a: two of three dogs in frame, tiny, one asleep): all three AWAKE, placed after the waits; REDO again (v14a: dogs scattered, chess table 10 px at 268 px): frame zoom 9 on (174, 127), dogs within 2 cells of the table.
 #           Three Yorkshire terriers (Core, coats picked to differ): Tweed -1 original black and tan stands (174, 127) facing West
-#           (profile); Brume 0 slate stands (176, 128) facing North (from behind); Brioche 1 taupe stands (178, 127)
+#           (profile); Brume 0 slate stands (175, 128) facing North (from behind); Brioche 1 taupe stands (176, 127)
 #           facing South: the animal that faces the camera; coat 2 oatmeal is not drawn (about the original at that size).
 #           Decor, a games corner: the existing ChessTable, KneelPillow, TorchLamps and columns of the colonnade, plus Plant_Daylily
 #           fully grown at (170, 128) and (177, 127), a Stool at (171, 126) and at (173, 127) beside the table, TorchLamp at
@@ -80,8 +80,8 @@ Feature: images for the Workshop page, one day at the sanctuary, evening
     And Nelim's Pickle Tools: "Nelim" hairstyle is "Roo_HD_Hair_Highpony"
     And Nelim's Pickle Tools: "Nelim" hair colour is rgb (56, 36, 18)
     And Nelim's Pickle Tools: an adult animal of kind "YorkshireTerrier" named "Tweed" is spawned at (174, 127)
-    And Nelim's Pickle Tools: an adult animal of kind "YorkshireTerrier" named "Brume" is spawned at (179, 128)
-    And Nelim's Pickle Tools: an adult animal of kind "YorkshireTerrier" named "Brioche" is spawned at (178, 127)
+    And Nelim's Pickle Tools: an adult animal of kind "YorkshireTerrier" named "Brume" is spawned at (175, 128)
+    And Nelim's Pickle Tools: an adult animal of kind "YorkshireTerrier" named "Brioche" is spawned at (176, 127)
     And Nelim's Pickle Tools: the animal "Tweed" is given coat -1
     And Nelim's Pickle Tools: the animal "Brume" is given coat 0
     And Nelim's Pickle Tools: the animal "Brioche" is given coat 1
@@ -90,8 +90,8 @@ Feature: images for the Workshop page, one day at the sanctuary, evening
     And Nelim's Pickle Tools: "Nelim" is forced into the job "Play_Chess" on the building "ChessTable" at (172, 126)
     And Nelim's Pickle Tools: I let 30 ticks pass
     And Nelim's Pickle Tools: the animal "Tweed" stands at (174, 127) facing West
-    And Nelim's Pickle Tools: the animal "Brume" stands at (176, 128) facing North
-    And Nelim's Pickle Tools: the animal "Brioche" stands at (178, 127) facing South
+    And Nelim's Pickle Tools: the animal "Brume" stands at (175, 128) facing North
+    And Nelim's Pickle Tools: the animal "Brioche" stands at (176, 127) facing South
     And game speed is paused
     And Nelim's Pickle Tools: studio presentation mode is enabled
     And Nelim's Pickle Tools: the colonist bar is hidden
@@ -99,7 +99,7 @@ Feature: images for the Workshop page, one day at the sanctuary, evening
     And Nelim's Pickle Tools: the tooltips are hidden
     And Nelim's Pickle Tools: the resource readout is hidden
     And Nelim's Pickle Tools: the selection brackets are hidden
-    And Nelim's Pickle Tools: I frame the cell (175, 127) at zoom 5.5
+    And Nelim's Pickle Tools: I frame the cell (174, 127) at zoom 9
     And Nelim's Pickle Tools: I move the mouse to (10, 10)
     And Nelim's Pickle Tools: "Nelim" face kit is "neutral"
     And Nelim's Pickle Tools: "Nelim" face is held neutral
