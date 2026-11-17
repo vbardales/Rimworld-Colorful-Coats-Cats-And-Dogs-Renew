@@ -48,7 +48,7 @@
 #           West, begging; AEXP_Pug -1 original stands (198, 109) facing North (seen from behind); AEXP_FrenchBulldog -1 original stands (194, 109) facing South: the
 #           animal that faces the camera; AEXP_WelshTerrier 0 mist stands (200, 112) facing West. Decor, the supper hall: the
 #           existing table, piano, rug, braziers, pots and bonsai, plus
-#           Plant_Daylily fully grown at (194, 112), (199, 115) and (200, 112), TorchLamp at (193, 109) lit and at (200, 110) lit:
+#           Plant_Daylily fully grown at (194, 112) and (199, 115) (REDO 2026-11-17, owner: a dog stood on the flower at (200, 112), flower removed), TorchLamp at (193, 109) lit and at (200, 110) lit:
 #           lamps in frame. Says: Nelim carries supper across the hall and five dogs follow the smell, five coats (the z3 hall holds no plates to lay: the dish is in her hands).
 #           Estimate 5. Subtitle: "Supper at seven: five dogs know the way to the table."
 #
@@ -238,7 +238,6 @@ Feature: images for the Workshop page, one day at the sanctuary, dogs
     And Nelim's Sanctuary: I am at the sanctuary "prestige-hall"
     And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (194, 112) fully grown
     And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (199, 115) fully grown
-    And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (200, 112) fully grown
     And Nelim's Pickle Tools: I place the decor "TorchLamp" at (193, 109)
     And Nelim's Pickle Tools: the decor "TorchLamp" at (193, 109) is lit
     And Nelim's Pickle Tools: I place the decor "TorchLamp" at (200, 110)
