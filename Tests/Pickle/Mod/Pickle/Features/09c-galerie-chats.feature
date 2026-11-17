@@ -16,7 +16,7 @@
 #           of the veranda; akaNEKO_Russian_Blue 1 coffee stands (195, 119) facing South: the animal that faces the camera.
 #           Decor, grouped around the sleepers and the lane: the existing Campfire, Stool, Harpsichord, Shelf with its cloth and
 #           steel piles and the two TorchLamps, plus Plant_Daylily fully grown at (195, 124) and (198, 124),
-#           PlantPot_Bonsai at (193, 119), TorchLamp at (196, 124) lit, Brazier at (199, 119) lit: no bare floor, two light sources
+#           PlantPot_Bonsai at (193, 119), TorchLamp at (196, 124) lit, Brazier at (199, 119) lit: WoodPlankFloor laid from (193, 119) to (199, 123) (REDO 2026-11-17, owner: v13a showed the veranda as bare earth), no bare floor, two light sources
 #           in frame. Says: Nelim brings a blanket across the veranda, three cats are asleep by the fire, three wake to greet her:
 #           the cats nap here, in six coats. Estimate 5. Subtitle: "One o'clock siesta: six cats take the terrace."
 #
@@ -52,6 +52,7 @@ Feature: images for the Workshop page, one day at the sanctuary, afternoon cats
     Given I set the hour to 13
     And Nelim's Sanctuary: the animals are removed from the sanctuary "terrace"
     And Nelim's Sanctuary: I am at the sanctuary "terrace"
+    And Nelim's Pickle Tools: I lay the floor "WoodPlankFloor" from (193, 119) to (199, 123)
     And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (195, 124) fully grown
     And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (198, 124) fully grown
     And Nelim's Pickle Tools: I place the decor "PlantPot_Bonsai" at (193, 119)
