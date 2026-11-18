@@ -25,7 +25,7 @@ remaining:
   - 2026-11-18 cleanUp[1.0.0]: 14.a done, seven noreg tickets green on v1.0.0 (Mod/ = tag 9083b73), line per ticket in docs/runs/2026-11-18-noregression-v1.0.0.txt; published, public, gallery uploaded, thanks and Use This Instead comments posted (history: docs/runs/2026-11-18-status-history.md and -2.md). Owner: "on passe en 1.1.0": next version 1.1.0 carries the 1.7 pass (tickets avec-cibles and avec-peintres in 1.7; 01-sans-facultatifs already green in 1.7, docs/runs/2026-10-18-1.7-sans-facultatifs.txt; tested_1_7 unset; 1.7 NOT in supportedVersions before a green 1.7 run on all).
   - not applicable: French pass and interface check in EN/FR, MainButtons shortcut, options persistence - no owned text, no settings (owner, 2026-09-28; settings_audit above)
 session:      local_b1565ae3-2100-4849-b88f-60237d43caed
-updated:      2026-11-18 owner "on passe en 1.1.0": reopened at code[1.1.0] for the 1.7 pass (avec-cibles, avec-peintres in 1.7); v1.0.0 published, Mod/ = tag 9083b73
+updated:      2026-11-18 code[1.1.0]: 1.7 diagnostic tickets filed on 6bc91b8, -Game rimworld17: 4ca6 (02-cibles + 08-revue, avec-cibles), 309f (03-peintres, avec-peintres); 01-sans-facultatifs already green in 1.7
 code_review_sha: 6476e28cd0c9c4ae85ccf92beb8b1f3c35be2f5c
 publication_changelog_review_sha: 0c6021be5d0a30b4cabcfe510af53c83b1b8d716
 thanks_drafted_line: 1.0
