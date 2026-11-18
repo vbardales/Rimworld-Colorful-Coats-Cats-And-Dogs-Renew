@@ -189,7 +189,7 @@ Two of your dog bowls sit on the floor of the tea-time picture in my gallery, an
 Draft, purpleyam's original:
 
 ```text
-Your four poodle coats now sit on the standard poodle of Stray Dogs, in your order :) I measured 17 of your 26 coats into plain tints, so they reach dogs and cats you never painted: [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3806769444]Colorful Coats - Cats and Dogs! Renew[/url]. It says in big letters it's not yours, and it comes down the day you ask. Thank you for the idea.
+Not one pixel of yours was copied, I only measured the colours: 17 of your 26 coats became plain tints, and your four poodle coats ride on the standard poodle of Stray Dogs, in your order :) That is how a mod named after yours reaches 41 breeds you never painted: [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3806769444]Colorful Coats - Cats and Dogs! Renew[/url]. Thank you for the colours, and tell me if you would rather I stop.
 ```
 
 Draft, Stray Dogs (rescued):
