@@ -234,3 +234,14 @@ Colorful Coats - Cats and Dogs! by purpleyam (2388932599, package purpleyam.colo
 
 Commit `About/PublishedFileId.txt` at once (already done for `0.1.0`, in `97c19d3`). Steam creates every item
 private: the owner flips it to public by hand, subscribes to her own item, and watches its comments.
+
+Version `1.0.0` was uploaded on 2026-11-18 (publish run 44213322211, commit `9083b73d3268bb6871b82f8f8b1467f1cededa06`, tag `v1.0.0`, tags sent: Mod, 1.6).
+
+## Collection "RimWorld through Nelim's eyes"
+
+The collection is https://steamcommunity.com/sharedfiles/filedetails/?id=3815982565 and the owner alone adds to it (AUDIT.md 13.c), when the item is public:
+
+- the item: https://steamcommunity.com/sharedfiles/filedetails/?id=3806769444
+- dependencies that are also Nelim's mods: none (no `modDependencies`, no `OptionalCompat.xml`; the sibling `nelim.colorfulcoats.vae` is only in `loadAfter`, and a `loadAfter` is not a dependency)
+- DLC the mod requires: none
+- descriptors (Workshop tags sent by CI): Mod, 1.6
