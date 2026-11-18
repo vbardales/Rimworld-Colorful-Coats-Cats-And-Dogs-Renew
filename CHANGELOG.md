@@ -2,6 +2,15 @@
 
 All notable changes to this mod are documented here.
 
+## [Unreleased]
+
+### Added
+
+- RimWorld 1.7 is declared in `supportedVersions`. The Pickle diagnostic ran green on 1.7 over the
+  three sets of the suite (no optional mods, with the target mods, with the two coat painters), so
+  no patch, texture or load folder changed: the declaration is the only change in `Mod/`. The
+  Preview badge now reads 1.7.
+
 ## [1.0.0] - 2026-11-18
 
 First release. Not a port: purpleyam's **Colorful Coats - Cats and Dogs!** had nothing left to
