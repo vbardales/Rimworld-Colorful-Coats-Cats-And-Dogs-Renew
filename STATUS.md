@@ -8,7 +8,7 @@ packageId:    nelim.colorfulcoats.catsanddogs
 repo:         Rimworld-Colorful-Coats-Cats-And-Dogs-Renew
 visibility:   public
 detached:     yes
-workflow_stage: startWatch[1.0.0]
+workflow_stage: postOnSteam[1.0.0]
 audit_revision: a00034b4c2d3acdade8505073c708cd3f7c9f4ea (2026-10-15, chain 1 to 7 walked again, 8.a to 8.m below)
 audit_date: 2026-10-15
 automated_tests: passed; 22 passed, 0 failed, 0 skipped (rerun 2026-10-15, from scripts/)
@@ -22,6 +22,7 @@ showcase:     complete
 tested_on:    2026-10-15 (cats replay rev a00034b: 10/10 and peintres 10/10, docs/runs/2026-10-14-chats-shader.txt; before that 2026-10-10 (Pickle 08-revue, 34/34 passed in the WSL, rev 58bcd23; passes 1-3 and add/removal runs on 2026-09-28 and 2026-10-02; no manual play))
 workshop:     3806769444 (0.1.0, item creation only; About/PublishedFileId.txt committed in 97c19d3; private, as Steam creates every item; not tested, not public)
 remaining:
+  - 2026-11-18 14.f done ("fait": Steam comment notifications on the item enabled by her, her word). 14.g stage postOnSteam[1.0.0]. Today's batch for her (at most three thank-you a day, not in a row): purpleyam original 2388932599, Stray Dogs (rescued) 3549460027, Erin's Cat Overhaul 2763428090, plus the Use This Instead comment. Left for later days: Animal Variety Coats 1511926373, Gloomy Furniture (Continued) 3240958004, Vanilla Animals Expanded 2871933948 (only if AnimalsNaturally has not posted). Each posted comment: register row to `posted` with the date (WORKSHOP_COMMENTS.md), UTI row to `posted`.
   - 2026-11-18 14.f startWatch: GitHub watch of vbardales/Rimworld-Colorful-Coats-Cats-And-Dogs-Renew set (gh api subscription: subscribed true, ignored false; she had said "et watch git aussi"). Open, hers: Steam notifications of the item comments (https://steamcommunity.com/sharedfiles/filedetails/?id=3806769444). Collection and subscribe test already done (13.b, 13.f). Then 14.g postOnSteam: thank-you comments (6 drafts, one page each, at most three a day, PUBLICATION.md), Use This Instead comment (USE_THIS_INSTEAD.md row `drafted`, exit refused while it stays drafted), gallery already uploaded by her. TM told STAGE startWatch[1.0.0].
   - 2026-11-18 13.f: Virginie answered "oui" to "item added to the collection RimWorld through Nelim's eyes (https://steamcommunity.com/sharedfiles/filedetails/?id=3815982565; no dependency, no DLC, tags Mod and 1.6)": added by her, her word, not read on the collection page. Stage moved to startWatch[1.0.0].
   - 2026-11-18 13.c PUBLIC by Virginie ("c'est public, j'ai mis la gallery"): item switched public and the gallery uploaded by her. Checked through the Steam API and the page fetch: result 1, visibility 0 (public), title "Colorful Coats - Cats and Dogs! Renew (unofficial)", tags Mod and 1.6, file_size 645056, description starts with "[b]UNOFFICIAL.[/b]...", preview image present, subscriptions 1 (PiI on her account). Not verified: the order and count of the gallery images (she uploaded them), the collection https://steamcommunity.com/sharedfiles/filedetails/?id=3815982565 (she did not say), the rendering of the description on the page. Next: her word on the collection (13.f needs it recorded), then startWatch[1.0.0].
