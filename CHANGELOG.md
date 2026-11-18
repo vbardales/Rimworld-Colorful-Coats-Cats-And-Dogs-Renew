@@ -17,7 +17,7 @@ port, so this is its idea rebuilt against the cats and dogs that are alive on 1.
 
 ### Changed
 
-- Mod version moves to 1.1.0, the line that carries the RimWorld 1.7 diagnostic pass. 1.7 is not declared in `supportedVersions` until a 1.7 run is green.
+- The mod version moves to 1.1.0; this release carries the RimWorld 1.7 diagnostic pass. 1.7 is not declared in `supportedVersions` until a 1.7 run is green.
 
 - `packageId` `nelim.colorfulcoats.catsanddogsrenew` becomes `nelim.colorfulcoats.catsanddogs`. The
   0.1.0 item was created with the old value; nothing was published, and it was in no active mod list.
@@ -28,7 +28,7 @@ port, so this is its idea rebuilt against the cats and dogs that are alive on 1.
 
 ### Added
 
-- Coats for **19 dogs of Stray Dogs (rescued)** — the seventeen Spidercamp breeds that ship with
+- Coats for **19 dogs of Stray Dogs (rescued)** — the seventeen SpiderCamp breeds that ship with
   none, plus the Bernese Mountain Dog and the Swedish Vallhund. Its collie, its doberman and its
   six Japanese dogs already have coats and are untouched.
 - Coats for **11 of the 12 cats of Let's Have a Cat! Continued**, which had none at all.
