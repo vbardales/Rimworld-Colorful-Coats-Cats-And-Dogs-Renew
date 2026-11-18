@@ -2,7 +2,7 @@
 
 All notable changes to this mod are documented here.
 
-## [Unreleased]
+## [1.0.0] - 2026-11-18
 
 First release. Not a port: purpleyam's **Colorful Coats - Cats and Dogs!** had nothing left to
 port, so this is its idea rebuilt against the cats and dogs that are alive on 1.6.

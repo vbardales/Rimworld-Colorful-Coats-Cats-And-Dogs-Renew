@@ -120,7 +120,7 @@ Gallery 4.8 MB, Gallery-clean 4.0 MB. Status: the eleven images were accepted by
 | 10 | `10-garden-rest.jpg` | Four o'clock rest: seven dogs gather round Nelim's stool. |
 | 11 | `11-dogs-supper.jpg` | Supper at seven: five dogs know the way to the table. |
 
-## Steam release notes
+## Steam change notes
 
 The note is written at the moment of upload. First line is `[b]<version>[/b]` with the exact version, or the CI fails (AUDIT.md 11.i).
 Sent before: `[b]0.1.0[/b]`, the creation of the item (private).
