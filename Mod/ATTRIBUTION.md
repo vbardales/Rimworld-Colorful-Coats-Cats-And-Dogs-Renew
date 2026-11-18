@@ -46,8 +46,9 @@ What was actually missing was the rest of the cats and dogs on 1.6, which is wha
 
 ### How the palette was recovered
 
-For each of purpleyam's coats, `scripts/Measure-Coats.ps1` takes the mean colour of its opaque
-pixels, takes the same for the sprite it was painted over, and divides one by the other. That ratio
+For each of purpleyam's coats, a one-off tool (`Measure-Coats.ps1`, since removed from the repository
+and kept in its git history, commit `4f15825`) took the mean colour of its opaque
+pixels, took the same for the sprite it was painted over, and divided one by the other. That ratio
 is the `<color>` that makes `AlternateGraphic.GetGraphic` land on purpleyam's coat starting from the
 untouched sprite. It is a measurement of their work, reproducible from the two mods on disk, and it
 travels to animals their textures never could.
@@ -91,7 +92,7 @@ to. The colours travel; the pixels do not.
 
 ## What was made
 
-Four patch files, three tools, a showcase image and an icon. No textures, no assembly, no `Defs`,
+Four patch files, a showcase image and an icon. No textures, no assembly, no `Defs`,
 no DLC.
 
 | file | breeds |

@@ -1,7 +1,7 @@
 # Functional scenarios, to be played in game
 
-`Run-Functional-Tests.ps1` next door answers "does the game's patch engine write what these files
-say, and does the game still read it". It cannot answer "does the result look like a dog", because
+The offline suite (`Test-Mod.ps1` next door) answers "do the files parse, resolve and still target
+what exists". It cannot answer "does the result look like a dog", because
 that takes a map and a pair of eyes. These are the scenarios that do, written so each one has a
 single thing to watch and a single way of being wrong.
 

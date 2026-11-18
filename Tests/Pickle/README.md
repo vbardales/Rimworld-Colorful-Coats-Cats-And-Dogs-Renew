@@ -1,20 +1,19 @@
 # Colorful Coats - Cats and Dogs! Renew: Pickle suite
 
 Development only. Nothing under `Tests/` is part of the Workshop payload: Steam publishes `Mod/`
-and nothing else. **Written, built and not yet played.** No run has been submitted, so no scenario
-here has a result, and none is claimed. The step assembly compiles, and `scripts/Check-Steps.ps1 -ModRoot <this folder>` of the protocols repository (run it after every edit of a feature or a
-step) checks the features against Pickle's real steps: every step is defined exactly once and every map entry
-resolves. That proves the phrases exist, not that a step
-does what its sentence says; only a run does.
+and nothing else. **Played:** the passes are recorded in `STATUS.md` and `Docs/runs/` (three passes,
+the 34-breed review, the cats and painters replays, the removal chain, the 1.7 run without optional
+mods, and the gallery runs). `scripts/Check-Steps.ps1 -ModRoot <this folder>` of the protocols
+repository (run it after every edit of a feature or a step) checks the features against Pickle's real
+steps: every step is defined exactly once and every map entry resolves. That proves the phrases exist,
+not that a step does what its sentence says; only a run does.
 
 ## Scope
 
-The offline suites own everything provable without a game, and this mod is unusually well served
-by them: `scripts/Run-Functional-Tests.ps1` runs **RimWorld's own patch engine** on the real defs of
-the real target mods (41 breeds, 22 tests, 17 seen red under mutation), `scripts/Check-Coats.ps1`
-and `scripts/Check-PatchFields.ps1` check the defNames and every injected field, and the shared
-`Check-XmlClasses`, `Check-DefRefs` and `Check-TypeRefs` cover the rest. A scenario that only repeats
-one of those was not written.
+The offline suite (`Tests/Test-Mod.ps1`, the shared checks `Check-ModBasics`, `Check-DefRefs`,
+`Check-Textures`, `Check-PatchTargets` and `Check-ConfigErrors`) owns everything provable without a
+game. A scenario that only repeats one of those was not written. The local suite that ran RimWorld's
+own patch engine outside the game was removed on 2026-10-20 (commit `4f15825`).
 
 Pickle is limited to what needs a running game:
 

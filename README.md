@@ -43,17 +43,14 @@ Core does this itself: the guinea pig lists three texture coats and two colour c
 
 ## The palette is purpleyam's, measured
 
-The colours are not invented. `scripts/Measure-Coats.ps1` takes each coat purpleyam painted, divides
-its mean colour by the mean colour of the sprite it was painted over, and that ratio is the tint
-which reproduces it. Of their 26 coats, **17 are reachable that way** and those seventeen are the
-whole palette here; the other nine are repaints a multiply cannot reach, and the tool says so
+The colours are not invented. A one-off tool (`Measure-Coats.ps1`, since removed from the repository
+and kept in its git history, commit `4f15825`) took each coat purpleyam painted, divided its mean
+colour by the mean colour of the sprite it was painted over, and that ratio is the tint which
+reproduces it. Of their 26 coats, **17 are reachable that way** and those seventeen are the
+whole palette here; the other nine are repaints a multiply cannot reach, and the tool said so
 rather than rounding them down.
 
 The standard poodle of Stray Dogs ends up wearing purpleyam's four poodle coats, in their order.
-
-```
-powershell -File scripts/Measure-Coats.ps1
-```
 
 The limit is that a colour **multiplies** the sprite. A coat can only come out darker or warmer
 than the original, never lighter. Three things follow, and all three are deliberate:
@@ -81,8 +78,9 @@ would otherwise happen: `PatchOperationAdd` appends, it does not merge.
 - **`GetGraphic` really applies a colour without a path** — read in the decompiled 1.6 assembly,
   quoted in [ATTRIBUTION.md](ATTRIBUTION.md), and used by Core itself for the guinea pig.
 - **All 41 `defName`s exist in the mod each patch names**, and none of them already ships
-  `alternateGraphics` upstream. `scripts/Check-Coats.ps1` re-checks this against the installed mods,
-  and names the breed when it stops being true.
+  `alternateGraphics` upstream. The shared `Check-PatchTargets` check of `Tests/Test-Mod.ps1`
+  re-checks against the installed mods that every target still exists, and the Pickle passes check
+  that no animal ends up with two coat lists.
 - **Nothing else in the workshop already does this.** The 9 726 installed mods were swept for one
   representative breed of each target — `SCGoldenRetriever`, `akaNEKO_Persian`, `AEXP_Beagle` — and
   nothing patches their graphics: the hits are the target mods themselves, Dog Wool and A Dog Said,
@@ -91,17 +89,16 @@ would otherwise happen: `PatchOperationAdd` appends, it does not merge.
   never covered the yorkshire terrier, and nor has anything else.
 
 ```
-powershell -File scripts/Check-Coats.ps1
-powershell -File scripts/Run-Functional-Tests.ps1
+powershell -File Tests/Test-Mod.ps1
 ```
 
-The second one runs **RimWorld's own patch engine** outside the game: the shipped XML is turned
-back into real `PatchOperationConditional` and `PatchOperationAdd` objects and applied to a
-document built from the target mods' defs, so the coats that land on the animals are the ones the
-game itself writes. It also sweeps the IL of `Assembly-CSharp` for whoever reads
-`AlternateGraphic.color` — a setting nothing reads would be a mod that loads, logs nothing and
-does nothing. Twenty-two tests, seventeen of which have been seen to fail under a mutation, and
-two faults in the suite itself found that way.
+That offline suite runs the shared checks: XML well formed, every def reference and texture path
+resolves, every patch target still exists in the installed mod, no config error of the game. The
+earlier local suite that ran **RimWorld's own patch engine** outside the game (22 tests) was
+removed on 2026-10-20 in favour of these shared checks and the in-game Pickle passes; it stays in
+the git history (commit `4f15825`). The Pickle passes play the mod in the game and read the result:
+coats that land on the animals, two mods never dressing one animal, add and removal on a running
+colony.
 
 ## Layout
 
@@ -112,7 +109,8 @@ Mod/          published — the junction into RimWorld/Mods points here
 Art/          sources of the showcase and the icon, Preview.config.json, the Gallery. The Preview is rendered
               from inside this folder with `node ../scripts/Render-Preview.cjs`, which writes
               Mod/About/Preview.png, Art/Gallery/0-preview.png and the two .ico files
-scripts/      the checkers, the tool that recovers the palette, the functional tests, the icon cut-out
+Tests/        the offline suite (Test-Mod.ps1), the Pickle suite and the scenarios to play in game
+Docs/         review notes and the journal of runs
 ```
 
 Everything outside `Mod/` stays out of the Steam upload by construction:
