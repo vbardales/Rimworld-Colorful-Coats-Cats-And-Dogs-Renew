@@ -1,7 +1,7 @@
 # Publication
 
 What the Workshop page asks for and the repository holds nowhere else. The Workshop item `3806769444` exists (the `0.1.0` upload only
-created it; it is private). Target version `1.1.0`, the first public release. Nothing has been sent except `0.1.0`.
+created it; it is private). Target version `1.0.0`, the first public release (owner, 2026-11-18: 1.0.0 on the 1.6 line first, then non-regression, then 1.1.0 for the 1.7 pass). Nothing has been sent except `0.1.0`.
 
 ## Steam description
 
@@ -125,10 +125,10 @@ Gallery 4.8 MB, Gallery-clean 4.0 MB. Status: the eleven images were accepted by
 The note is written at the moment of upload. First line is `[b]<version>[/b]` with the exact version, or the CI fails (AUDIT.md 11.i).
 Sent before: `[b]0.1.0[/b]`, the creation of the item (private).
 
-### 1.1.0
+### 1.0.0
 
 ```
-[b]1.1.0[/b]
+[b]1.0.0[/b]
 [list]
 [*] First public release: coat variations for forty-one breeds of cat and dog, nineteen dogs of Stray Dogs (rescued), eleven cats of Let's Have a Cat! Continued, seven breeds of Vanilla Animals Expanded and the four base-game pets.
 [*] The palette is measured from the coats purpleyam painted for the original mod; the mod ships no artwork, only tints over each animal's own sprite.

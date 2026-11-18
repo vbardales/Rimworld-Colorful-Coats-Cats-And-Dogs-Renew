@@ -17,8 +17,6 @@ port, so this is its idea rebuilt against the cats and dogs that are alive on 1.
 
 ### Changed
 
-- The mod version moves to 1.1.0; this release carries the RimWorld 1.7 diagnostic pass. 1.7 is not declared in `supportedVersions` until a 1.7 run is green.
-
 - `packageId` `nelim.colorfulcoats.catsanddogsrenew` becomes `nelim.colorfulcoats.catsanddogs`. The
   0.1.0 item was created with the old value; nothing was published, and it was in no active mod list.
 

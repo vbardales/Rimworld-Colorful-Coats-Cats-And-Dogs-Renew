@@ -8,7 +8,7 @@ packageId:    nelim.colorfulcoats.catsanddogs
 repo:         Rimworld-Colorful-Coats-Cats-And-Dogs-Renew
 visibility:   public
 detached:     yes
-workflow_stage: writeReleaseDocs[1.1.0]
+workflow_stage: writeReleaseDocs[1.0.0]
 audit_revision: a00034b4c2d3acdade8505073c708cd3f7c9f4ea (2026-10-15, chain 1 to 7 walked again, 8.a to 8.m below)
 audit_date: 2026-10-15
 automated_tests: passed; 22 passed, 0 failed, 0 skipped (rerun 2026-10-15, from scripts/)
@@ -22,6 +22,7 @@ showcase:     complete
 tested_on:    2026-10-15 (cats replay rev a00034b: 10/10 and peintres 10/10, docs/runs/2026-10-14-chats-shader.txt; before that 2026-10-10 (Pickle 08-revue, 34/34 passed in the WSL, rev 58bcd23; passes 1-3 and add/removal runs on 2026-09-28 and 2026-10-02; no manual play))
 workshop:     3806769444 (0.1.0, item creation only; About/PublishedFileId.txt committed in 97c19d3; private, as Steam creates every item; not tested, not public)
 remaining:
+  - 2026-11-18 owner: "on finit d'abord la 1.0.0": target version is 1.0.0 (never published, AUDIT 1.7 pass: a never-published mod keeps 1.0.0), stage writeReleaseDocs[1.0.0], 1.0.0 on the 1.6 line, then runNoRegression, then 1.1.0 carries the 1.7 pass (tickets avec-cibles and avec-peintres wait for 1.1.0, tested_1_7 stays unset until then). Changed: stage, thanks_drafted_line 1.0, CHANGELOG (the "version moves to 1.1.0" line removed, [Unreleased] becomes [1.0.0] at the dry-run, 12.e), PUBLICATION.md target and Steam note `[b]1.0.0[/b]`. The 11.j reread was given on the 1.1 line: the line changed to 1.0, so Virginie is asked to confirm it still holds (texts otherwise unchanged); publication_changelog_review_sha 6476e28 kept until she answers. Not changed: gallery file headers that say shootGallery[1.1.0] (history).
   - 2026-11-18 owner: gallery mods must be in the thank-you comments too. PUBLICATION.md "Gallery mods" table lists every gallery-set mod with its register state; the 17 pages already posted (bodies, apparel, pants, Roo's, facial animation stack, VFE) now name this mod in Covers (WORKSHOP_COMMENTS.md 2edec9c, pushed); Gloomy Furniture (Continued) 3240958004 (the two RGK_DogBowl of image 8) added as `drafted` with a draft (original author to verify on the page: Gaon maintains the continuation). Vanilla Hair Expanded removed from the ATTRIBUTION gallery set (not found in any scenario, only Roo's hair is). Second short messages on already-thanked pages: owner decided "covers" (2026-11-18): Covers only, no second message; Audit asked to make the rule explicit (message 2026-11-18). protocols_read_sha 2edec9c1 (register diff only).
   - 2026-11-18 12.b dependencies and DLC unchanged (no dependency, loadAfter list as in PUBLICATION.md, no OptionalCompat.xml change). 12.c `Check-Status -Strict` 0 error, 0 warning (INFO only: protocols USE_THIS_INSTEAD diff, STATUS size). 12.c bis caveman-compress done on Tests/Pickle/README.md, Tests/FUNCTIONAL-SCENARIOS.md, Docs/PROTOCOLS-READ.md (identifiers, numbers, headings checked equal; copies compressed in uniquely named folders because the tool's backup name Pickle/README.original.md collides with other mods; backups under %LOCALAPPDATA%\caveman-compress\backups\ccd-*); TESTING.md rewritten terse by hand (stale scripts removed), Docs/review-*.md and STATUS.md left as they are (tables and notes already terse, front matter must stay intact). README.md, ATTRIBUTION.md, TESTING.md, Tests/Pickle/README.md no longer point at the scripts deleted in 4f15825 (README and ATTRIBUTION are public texts: the owner has not reread these two edits, told to her). Not done: 12.d (needs this commit pushed, then check), 12.e dry-run (CHANGELOG [Unreleased] to [1.1.0] with the date, then dispatch-publish dry-run), 12.f gates (tested_1_7 unset: avec-cibles and avec-peintres 1.7 tickets not filed), 12.h publish stage.
   - 2026-11-18 11.j done: Virginie "je valide" on PUBLICATION.md, CHANGELOG.md and the drafts (ChatGPT review page 1 clean after 2 rounds: 3 wording fixes applied, the "name 1.6" proposal rejected per AGENTS.md no-version rule); publication_changelog_review_sha = 6476e28. 12.a: revue du diff e2c5313..6476e28 de Mod/ : images (Preview.png), Mod/ATTRIBUTION.md copy and the description text of About.xml only (everything outside <description> identical, checked by diff), so code_review_sha moved to 6476e28, no new playTests. Next: 12.b dependencies unchanged check, 12.c lint -Strict, 12.c bis caveman-compress, 12.d, 12.e dry-run, 12.f, 12.h publish stage.
@@ -52,10 +53,10 @@ session:      local_b1565ae3-2100-4849-b88f-60237d43caed
 updated:      2026-10-30 replay-audit: sections 1 to 8 hold (8.m: Mod/ diff since a00034b is Preview.png only), first unfulfilled 9.a captures (993b waiting, 5157 failed), stage unchanged; weak proofs (STATUS.md only): 1.a-1.d, 4.g, 5.g, 6.h, 7.b, 7.c, 8.e; Run-UnitTests n/a (no test csproj); earlier 2026-10-19, shootGallery[1.1.0]: 8.n done, playTests green (cats 10/10, peintres 10/10, 1.7 sans-facultatifs 10/10); Mod/ identical to code_review_sha a00034b (git diff empty)
 code_review_sha: 6476e28cd0c9c4ae85ccf92beb8b1f3c35be2f5c
 publication_changelog_review_sha: 6476e28cd0c9c4ae85ccf92beb8b1f3c35be2f5c
-thanks_drafted_line: 1.1
+thanks_drafted_line: 1.0
 echo_review_sha: a0366588bcd4f511c48099c1178abe1d5ee36106
 social_preview_sha256: f0d49f063409f88fd785c0b3f3cba52d4e938fd144114dbbb47e0695083253c6
-protocols_read_sha: 2edec9c1087df1c273127ee6474e000f0e9e1853
+protocols_read_sha: f4d1c40d0cac8e843da95e4d737d5b1d34ffb705
 ---
 # Colorful Coats - Cats and Dogs! Renew — status
 
