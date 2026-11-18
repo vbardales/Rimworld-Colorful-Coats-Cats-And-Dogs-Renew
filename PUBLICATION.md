@@ -153,10 +153,38 @@ mod is public first, and one comment only goes out. **To draft, post by the owne
 | Vanilla Animals Expanded (Oskar Potocki, Sarg Bjornson) | 2871933948 | drafted, not `posted` |
 | Erin's Cat Overhaul (Erin) | 2763428090 | drafted, not `posted` |
 | Animal Variety Coats (Think3r, Azrael) | 1511926373 | drafted, not `posted` |
+| Gloomy Furniture (Continued) (Gaon, after the original author) | 3240958004 | drafted, not `posted` (gallery, image 8) |
 
 **To verify on the pages before posting:** SpiderCamp's Dog Pack has no Workshop page found yet (Stray Dogs (rescued) names it); the Stray Dogs comment
 carries the thanks for both. Animal Variety Coats credits Think3r as the author and Azrael as collaborator on the page, the assembly is thirite's and
 Xen's: the draft names the author and the collaborator, not the assembly. Erin's page says art and XML by Erin.
+
+**Gallery mods (owner, 2026-11-18: the mods used for the gallery are listed too).** The captures show Nelim and the set through the mods of
+`ATTRIBUTION.md` ("Gallery set"). Their pages in the register (`WORKSHOP_COMMENTS.md`):
+
+| Mod | Id | State in the register |
+|---|---|---|
+| Female Body Variants Continued | 3798082132 | posted 2026-10-11, this mod joins `Covers` |
+| Female Apparel Variants Continued | 3799726535 | posted 2026-10-11, joins `Covers` |
+| WDI's Realistic Bodies | 3527486510 | posted 2026-10-11, joins `Covers` |
+| AB's Visible Pants | 2986402536 | posted 2026-10-11, joins `Covers` |
+| Roo's HD Hairstyles (continued) | 3559870636 | posted 2026-11-10, joins `Covers` (Nelim's hair `Roo_HD_Hair_Highpony`, `Roo_Royal_LongHD` in the captures) |
+| Hat Hair Control | 3760821540 | posted 2026-11-17, joins `Covers` (hair under the straw hat) |
+| [NL] Facial Animation, Experimentals, Vanilla Textures Expanded - Facial Animation, Akeron Extras, EyeGenes3, Performance Patch, Vanilla Experimentals, [VK] add closed eyes, Visual beauty, Init Fix, Load Fix | 1635901197, 2581693737, 2816938779, 2889716301, 3745223213, 3790129900, 3753978140, 3694711465, 3685072616, 3609895011, 3721489042 | all posted (2026-10-11 and 2026-11-16), join `Covers` (Nelim's smile and eyes) |
+| Vanilla Expanded Framework | 2023507013 | posted 2026-09-22, joins `Covers` (required by Vanilla Animals Expanded, staged by the map) |
+| Let's Have a Cat! Continued | 3682940618 | posted 2026-11-10, joins `Covers` (also a patch target) |
+| Gloomy Furniture (Continued) | 3240958004 | not in the register: row added `drafted`, draft below (the two `RGK_DogBowl` of image 8) |
+
+One thank-you comment per page, ever (`WORKSHOP_COMMENTS.md`): all the pages above but Gloomy Furniture already carry one, so nothing is drafted for them
+and this mod only joins their `Covers`. If the owner wants a second short message on one of them (the Adaptive Storage Neolithic Renew session drafted
+such messages for its camp gallery), say which one: it is the owner's call. To verify on the Gloomy Furniture page before posting: the original author
+(the page is a continuation maintained by Gaon, its text names no original author here) so both are credited, as for any "(Continued)" mod.
+
+Draft, Gloomy Furniture (Continued):
+
+```text
+Two of your dog bowls sit on the floor of the tea-time picture in my gallery, and six cats came for them anyway xD Nothing of yours is in the mod, they only show in that shot: [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3806769444]Colorful Coats - Cats and Dogs! Renew[/url]. Thanks for the furniture, and for bringing it to 1.6 :)
+```
 
 Draft, purpleyam's original:
 
@@ -188,7 +216,7 @@ Draft, Animal Variety Coats:
 You got there first with real art for the husky, the labrador and the cat, so [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3806769444]Colorful Coats - Cats and Dogs! Renew[/url] steps aside for them whenever your mod runs. The Yorkshire terrier is the one pet nobody had covered, so mine takes that one. Thanks to Think3r and Azrael for all the variations :)
 ```
 
-The five drafts differ in opening, ending and joke; each is under 1,000 characters and carries one hidden link. Re-read side by side before posting.
+The six drafts differ in opening, ending and joke; each is under 1,000 characters and carries one hidden link. Re-read side by side before posting.
 
 ## Use This Instead
 

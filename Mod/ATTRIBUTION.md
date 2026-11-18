@@ -206,7 +206,6 @@ Mods loaded by the gallery scenes (`Tests/Pickle/wsl-deps.sanctuary.map`) that s
 | Realistic Bodies (`wdi.realistic.bodies`) | see Workshop page | 3527486510 |
 | AB's Visible Pants (`ab.vplrf`) | see Workshop page | 2986402536 |
 | Roo's HD Hairstyles, continued (`rooboid.hdhair.continued`) | Qux, continuing Rooboid's mods | 3559870636 |
-| Vanilla Hair Expanded (`VanillaExpanded.VHE`) | see Workshop page | 1888705256 |
 | Hat Hair Control (`lordfelix.HatHairControl`) | Silvaran | 3760821540 |
 | Facial Animation (`Nals.FacialAnimation`) | Nals | 1635901197 |
 | Facial Animation Experimentals (`nals.facialanimationexperimentals`) | Nals | 2581693737 |
@@ -215,7 +214,7 @@ Mods loaded by the gallery scenes (`Tests/Pickle/wsl-deps.sanctuary.map`) that s
 | EyeGenes3 (`lucius.eyegenes3`) | see Workshop page | 3745223213 |
 | `astryl.FacialAnimationPerformancePatch` | see Workshop page | 3790129900 |
 | `sd.fa.movingvanillaeyes` | see Workshop page | 3753978140 |
-| Gloomy Furniture (Continued) (`Gloomy.Furniture.Continued`, the dog bowls of capture 8) | see Workshop page | 3240958004 |
+| Gloomy Furniture (Continued) (`Gloomy.Furniture.Continued`, the dog bowls of capture 8) | Gaon (continuation; original author on the Workshop page) | 3240958004 |
 | Vanilla Expanded Framework (`OskarPotocki.VanillaFactionsExpanded.Core`, required by Vanilla Animals Expanded) | Oskar Potocki, Sarg Bjornson | 2023507013 |
 
 The Sanctuary itself (places, colonists, fixtures) is Nelim's own set, `SanctuaryBacklot`, and the steps that stage it are PickleTools'.
