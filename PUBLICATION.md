@@ -1,8 +1,67 @@
 # Publication
 
-What the Workshop page asks for and the repository holds nowhere else. Draft opened 2026-10-02, while the
-mod is at `playTests` (Pickle passes green, no manual playtesting): nothing here is final, and nothing has been sent. The Workshop item
-`3806769444` exists (the `0.1.0` upload only created it; it is private).
+What the Workshop page asks for and the repository holds nowhere else. The Workshop item `3806769444` exists (the `0.1.0` upload only
+created it; it is private). Target version `1.1.0`, the first public release. Nothing has been sent except `0.1.0`.
+
+## Steam description
+
+```markdown
+**UNOFFICIAL.** This mod is published without the original author's explicit consent. If the original author contacts me to request its removal, I undertake to take it down promptly.
+
+Coat variations for forty-one breeds of cat and dog that have none, so a colony's pets stop being interchangeable. Nineteen dogs from [Stray Dogs (rescued)](https://steamcommunity.com/sharedfiles/filedetails/?id=3549460027), eleven cats from [Let's Have a Cat! Continued](https://steamcommunity.com/sharedfiles/filedetails/?id=3682940618), seven breeds from [Vanilla Animals Expanded](https://steamcommunity.com/sharedfiles/filedetails/?id=2871933948), and the four pets the base game ships with.
+
+Four patch files. No textures, no assembly, no Harmony, no DLC, no def of its own. Safe to add to a save in progress and safe to remove from one. Animals already on the map take their coats the moment the mod is added, and go back to their original one if it is removed - nothing is written into the save.
+
+## WHAT IT COVERS, AND WHAT IT LEAVES ALONE
+
+Every operation fires only when the animal has no coat variation already. Run it beside a mod that paints coats for the same breed and that mod wins, silently and every time - so this fills gaps rather than competing.
+
+From [Stray Dogs (rescued)](https://steamcommunity.com/sharedfiles/filedetails/?id=3549460027), by Qux, the living home of SpiderCamp's Dog Pack: afghan hound, border collie, borzoi, bullmastiff, bull terrier, caucasian shepherd, chow chow, golden retriever, greyhound, miniature dachshund, newfoundland, old english sheepdog, pug, saint bernard, schnauzer, standard poodle, welsh corgi, bernese mountain dog and swedish vallhund. Its collie, its doberman and its six Japanese dogs already have coats and are untouched.
+
+From [Let's Have a Cat! Continued](https://steamcommunity.com/sharedfiles/filedetails/?id=3682940618), by akairo and Bernau31: eleven of its twelve breeds. The black cat is deliberately left out - see below.
+
+From [Vanilla Animals Expanded](https://steamcommunity.com/sharedfiles/filedetails/?id=2871933948): the abyssinian cat, the beagle, the corgi, the french bulldog, the german shepherd, the pug and the welsh terrier. The other fourteen cats and dogs in that mod already have hand-painted coats from Colorful Coats - Vanilla Animals Expanded! Renew, and are left to it.
+
+From the base game: husky, labrador retriever, yorkshire terrier and cat. [Animal Variety Coats](https://steamcommunity.com/sharedfiles/filedetails/?id=1511926373) and [Erin's Cat Overhaul](https://steamcommunity.com/sharedfiles/filedetails/?id=2763428090) both cover some of those with real artwork; when either is running, it wins. The yorkshire terrier is the one animal here that nothing else in the workshop has ever given a second coat.
+
+## HOW IT WORKS, AND WHAT THAT COSTS
+
+The latest RimWorld version lets an alternate graphic carry a colour instead of a texture path. When it does, the game keeps the animal's own sprite and tints it. That is the whole mod: a list of tints per breed, and not one pixel of anyone's art.
+
+The tints are purpleyam's own. Each one was measured out of a coat they painted for the original mod, by dividing that coat by the sprite it was painted over - which gives the colour that reproduces it. They painted 26 coats; 17 can be reached this way and those 17 are the whole palette here. The standard poodle of Stray Dogs ends up wearing their four poodle coats, in their order.
+
+The honest limit of that trick is that a tint multiplies, so a coat can only come out darker or warmer than the original, never lighter. Two consequences, both deliberate:
+
+- The original coat is always the most common one. Chances run from 40% to 80%.
+- Animals whose sprite is already almost black get few coats or none. The black cat of Let's Have a Cat! gets none at all: its texture averages 29 out of 255, so every tint on it would land within two shades of where it started. A variation nobody can see is worse than no variation.
+
+## CREDIT
+
+The idea, the name and the whole shape of this mod are purpleyam's. Their [Colorful Coats - Cats and Dogs!](https://steamcommunity.com/sharedfiles/filedetails/?id=2388932599) stopped at RimWorld 1.3 with the mod it patched, Vanilla Animals Expanded - Cats and Dogs, which no longer exists on its own: Vanilla Animals Expanded absorbed it, and the coats purpleyam painted for those breeds live on in Colorful Coats - Vanilla Animals Expanded! Renew. So this is not that mod ported. It is the same idea pointed at the cats and dogs that are alive today and still have one coat each.
+
+No file of purpleyam's is included here; the colours are theirs, the measuring is mine.
+
+## IF I GO QUIET
+
+If I do not answer within a reasonable time after being contacted, anyone may freely update this or any other of my mods, including publishing a continuation of it. All credit must be preserved.
+
+## AI-GENERATED
+
+This mod was made with AI tools, under human direction: Claude Code (Anthropic) and Codex (OpenAI) for the XML patches, the checks, the test suites, the documentation and the composition of the Preview, and DALL-E (OpenAI) for the illustrations behind the ModIcon and the Preview. The in-game test runs were played by Pickle.
+
+## THANKS
+
+[purpleyam](https://steamcommunity.com/sharedfiles/filedetails/?id=2388932599) for the idea and the coats. SpiderCamp and Qux, for the dogs of [Stray Dogs (rescued)](https://steamcommunity.com/sharedfiles/filedetails/?id=3549460027). akairo and Bernau31, for the cats of [Let's Have a Cat! Continued](https://steamcommunity.com/sharedfiles/filedetails/?id=3682940618). Oskar Potocki and Sarg Bjornson, for the animals of [Vanilla Animals Expanded](https://steamcommunity.com/sharedfiles/filedetails/?id=2871933948). Erin, for [Erin's Cat Overhaul](https://steamcommunity.com/sharedfiles/filedetails/?id=2763428090), and Think3r and Azrael, for [Animal Variety Coats](https://steamcommunity.com/sharedfiles/filedetails/?id=1511926373): both are read, never required, and win wherever they run. For development only, never a dependency of this mod: [Pickle](https://steamcommunity.com/sharedfiles/filedetails/?id=3791648678), [RimLogging](https://steamcommunity.com/sharedfiles/filedetails/?id=3733484696), [Harmony](https://steamcommunity.com/sharedfiles/filedetails/?id=2009463077) (which Pickle needs) and [PickleTools](https://steamcommunity.com/sharedfiles/filedetails/?id=3806142401).
+
+Full credits and the licence are in ATTRIBUTION.md and LICENSE, in the source repository below.
+
+[Source code on GitHub](https://github.com/vbardales/Rimworld-Colorful-Coats-Cats-And-Dogs-Renew)
+```
+
+The block above is the one source of the description: `Mod/About/About.xml` is generated from it (`node .github/scripts/sync-about-description.mjs`).
+It ends, after the credits, with the `Source code on GitHub` link to the repository, which is also the `<url>` field. Not linked on purpose:
+SpiderCamp (no Workshop page of its own found yet, to verify before posting) and Colorful Coats - Vanilla Animals Expanded! Renew (the sibling item
+`3806766686` is private until its own release; link it when it is public).
 
 ## Dependencies and DLC
 
@@ -17,8 +76,8 @@ mod is at `playTests` (Pickle passes green, no manual playtesting): nothing here
 
 ## Adult content boxes
 
-None apply: the images show animals and a colonist in a meadow, no nudity, no violence. Every image is to be
-opened and looked at before the boxes are answered.
+None apply: the images show animals and a colonist in a meadow, no nudity, no violence. Every image was opened and looked at (11 gallery
+images, accepted by the owner on 2026-11-17, plus the Preview).
 
 ## Gallery order
 
@@ -61,37 +120,87 @@ Gallery 4.8 MB, Gallery-clean 4.0 MB. Status: the eleven images were accepted by
 | 10 | `10-garden-rest.jpg` | Four o'clock rest: seven dogs gather round Nelim's stool. |
 | 11 | `11-dogs-supper.jpg` | Supper at seven: five dogs know the way to the table. |
 
-## Messages to the authors
+## Steam release notes
 
-One message per recipient, under 1000 characters, BBCode links, in the owner's voice, posted after the item is
-public (see `WORKSHOP_COMMENTS.md`, "Writing a comment"). Recipients, each to be checked on its page before writing:
+The note is written at the moment of upload. First line is `[b]<version>[/b]` with the exact version, or the CI fails (AUDIT.md 11.i).
+Sent before: `[b]0.1.0[/b]`, the creation of the item (private).
 
-- purpleyam, the original *Colorful Coats - Cats and Dogs!* (Workshop `2388932599`): the idea, and the palette, measured not copied.
-- Qux, Stray Dogs (rescued) (`3549460027`), and SpiderCamp, whose dogs it carries.
-- akairo and Bernau31, Let's Have a Cat! Continued (`3682940618`).
-- Vanilla Animals Expanded (`2871933948`): Oskar Potocki, Sarg Bjornson.
-- Erin, Erin's Cat Overhaul (`2763428090`), and the author of Animal Variety Coats (`1511926373`): both take precedence.
-- Pickle, RimLogging, Harmony and PickleTools (`3806142401`): development only, as the tests run on them.
-
-Drafts are not written: the voice and the true detail of each mod are the owner's.
-
-## Steam change notes
-
-The note is written at the moment of upload. First line is `[b]<version>[/b]` with the exact version, or the CI fails.
-
-### 1.0.0
+### 1.1.0
 
 ```
-[b]1.0.0[/b]
-First complete release. Coat variations for forty-one breeds of cat and dog: nineteen dogs of Stray Dogs, eleven cats of Let's Have a Cat!, seven breeds of Vanilla Animals Expanded and the four base-game pets. Every coat is a tint over the animal's own sprite, so the mod ships no artwork. Nothing is written into the save: add or remove it at any time.
-Fixed since the item was created: the load order against Colorful Coats - Vanilla Animals Expanded! Renew now names the right mod.
+[b]1.1.0[/b]
+[list]
+[*] First public release: coat variations for forty-one breeds of cat and dog, nineteen dogs of Stray Dogs (rescued), eleven cats of Let's Have a Cat! Continued, seven breeds of Vanilla Animals Expanded and the four base-game pets.
+[*] The palette is measured from the coats purpleyam painted for the original mod; the mod ships no artwork, only tints over each animal's own sprite.
+[*] Every patch is conditional: where another mod already paints a breed (Animal Variety Coats, Erin's Cat Overhaul, Colorful Coats - Vanilla Animals Expanded! Renew), that mod wins.
+[*] The cats of Let's Have a Cat! switch to the plain Cutout shader so a tint shows; the black cat stays out.
+[*] Checked by static scripts and an automated in-game suite; nobody has played it by hand yet.
+[/list]
+[url=https://github.com/vbardales/Rimworld-Colorful-Coats-Cats-And-Dogs-Renew/blob/main/CHANGELOG.md]Full changelog on GitHub[/url]
 ```
 
-## Description
+## Thank-you comments (one per page, after the item is public)
 
-`About.xml` is read once, when the item is created, so it does not change the live page: the page description is updated by the CI (`update_description` of the manual workflow), from a Markdown block to write here before `prepublished`. The `<description>` of `About.xml` was rewritten on 2026-10-02 to carry, after the body and in PUBLISHING.md order, `IF I GO QUIET` (clause word for word), `AI-GENERATED`, `THANKS`, the line pointing to `ATTRIBUTION.md` and the licence, and the `[url=...]Source code on GitHub[/url]` link. It no longer says that in-game validation is pending.
+Register: `WORKSHOP_COMMENTS.md`, keyed by the recipient's Workshop id. Let's Have a Cat! Continued (3682940618), Harmony (2009463077), Pickle
+(3791648678) and RimLogging (3733484696) are already `posted`: only this mod joins their `Covers`, nothing is posted. PickleTools (3806142401) is the
+owner's own project: `not_applicable`. Vanilla Animals Expanded (2871933948) is `drafted` by another mod (not posted): this draft is kept in case this
+mod is public first, and one comment only goes out. **To draft, post by the owner under her own account, after reading the last comments of each page:**
 
-**AI tools named, per PUBLISHING.md ("Génération par IA", 2026-09-22):** Claude Code, Codex and DALL-E, as stated by the owner on 2026-10-02. The repository itself records no Codex contribution (no commit, no note), so the split of who did what is the owner's wording, not something verifiable here. Tools already named in that block are not repeated in `THANKS`.
+| Recipient | Id | State |
+|---|---|---|
+| Colorful Coats - Cats and Dogs! (purpleyam, original) | 2388932599 | drafted, not `posted` |
+| Stray Dogs (rescued) (Qux) | 3549460027 | drafted, not `posted` |
+| Vanilla Animals Expanded (Oskar Potocki, Sarg Bjornson) | 2871933948 | drafted, not `posted` |
+| Erin's Cat Overhaul (Erin) | 2763428090 | drafted, not `posted` |
+| Animal Variety Coats (Think3r, Azrael) | 1511926373 | drafted, not `posted` |
+
+**To verify on the pages before posting:** SpiderCamp's Dog Pack has no Workshop page found yet (Stray Dogs (rescued) names it); the Stray Dogs comment
+carries the thanks for both. Animal Variety Coats credits Think3r as the author and Azrael as collaborator on the page, the assembly is thirite's and
+Xen's: the draft names the author and the collaborator, not the assembly. Erin's page says art and XML by Erin.
+
+Draft, purpleyam's original:
+
+```text
+Your four poodle coats now sit on the standard poodle of Stray Dogs, in your order :) I measured 17 of your 26 coats into plain tints, so they reach dogs and cats you never painted: [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3806769444]Colorful Coats - Cats and Dogs! Renew[/url]. It says in big letters it's not yours, and it comes down the day you ask. Thank you for the idea.
+```
+
+Draft, Stray Dogs (rescued):
+
+```text
+Nineteen of your dogs had one coat each, so my pug kept looking like a clone xD I added tints for them, no texture touched: [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3806769444]Colorful Coats - Cats and Dogs! Renew[/url]. Thanks for keeping the pack alive, and to SpiderCamp for drawing it.
+```
+
+Draft, Vanilla Animals Expanded:
+
+```text
+Seven of your animals (abyssinian, beagle, corgi, french bulldog, german shepherd, pug, welsh terrier) get new coat tints in [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3806769444]Colorful Coats - Cats and Dogs! Renew[/url], without a texture of yours moved. The other fourteen already have purpleyam's painted coats from the other Colorful Coats port, so I left them alone. Thanks for the animals :)
+```
+
+Draft, Erin's Cat Overhaul:
+
+```text
+The base-game cat is the one animal my patch and your overhaul both want to recolour. I wrote mine to see your coats and stand aside, so yours wins whenever it's running: [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3806769444]Colorful Coats - Cats and Dogs! Renew[/url]. Thank you for the cats xD
+```
+
+Draft, Animal Variety Coats:
+
+```text
+You got there first with real art for the husky, the labrador and the cat, so [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3806769444]Colorful Coats - Cats and Dogs! Renew[/url] steps aside for them whenever your mod runs. The Yorkshire terrier is the one pet nobody had covered, so mine takes that one. Thanks to Think3r and Azrael for all the variations :)
+```
+
+The five drafts differ in opening, ending and joke; each is under 1,000 characters and carries one hidden link. Re-read side by side before posting.
+
+## Use This Instead
+
+One comment on the [Use This Instead](https://steamcommunity.com/sharedfiles/filedetails/?id=3396308787) page (Mlie), posted by the owner after the item is public,
+so players of the original are told about the Renew (`docs/USE_THIS_INSTEAD.md`). The Renew is the idea rebuilt, not a port: the original's own painted
+coats live on in Colorful Coats - Vanilla Animals Expanded! Renew. The register row is added at `publish` (step 1 of the file). Old data read from
+the original page and the ecosystem study (`docs/inventory/ecosystem-steam/ColorfulCoatsCatsAndDogsRenew.md`, PiI 2026-11-13); `oldVersions` to read again
+on the page before posting:
+
+```text
+Colorful Coats - Cats and Dogs! by purpleyam (2388932599, package purpleyam.colorfulcoats.vaecatsdogs, RimWorld 1.3) can be replaced by [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3806769444]Colorful Coats - Cats and Dogs! Renew (unofficial)[/url] (3806769444, package nelim.colorfulcoats.catsanddogs, RimWorld 1.6), by Nelim. Same idea, rebuilt for the cats and dogs that are alive today (Stray Dogs, Let's Have a Cat!, Vanilla Animals Expanded, base game): tints measured from purpleyam's coats, no texture shipped. Original: [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2388932599]Colorful Coats - Cats and Dogs![/url]. Thank you for the mod xD
+```
 
 ## After the upload
 

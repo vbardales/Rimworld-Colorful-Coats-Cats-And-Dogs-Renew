@@ -194,9 +194,35 @@ lighter. That decides three things in the patches:
 - the black cat of Let's Have a Cat! gets none at all. Its texture averages 29 out of 255, so every
   tint would land within two shades of where it started.
 
+## Gallery set
+
+Mods loaded by the gallery scenes (`Tests/Pickle/wsl-deps.sanctuary.map`) that shape what Nelim and the set look like in the captures: body, clothes, hair, face, a prop, and the framework behind Vanilla Animals Expanded. None is a dependency of this mod and none is needed to play it; nothing of theirs is copied. An author not named here is on the Workshop page.
+
+| Mod | Author | Workshop id |
+|---|---|---|
+| Female Body Variants (`tiagocc0.FemaleBodyVariants`) | tiagocc0 | 3798082132 |
+| Female Apparel Variants (`tiagocc0.FemaleApparelVariants`) | tiagocc0 | 3799726535 |
+| Realistic Bodies (`wdi.realistic.bodies`) | see Workshop page | 3527486510 |
+| AB's Visible Pants (`ab.vplrf`) | see Workshop page | 2986402536 |
+| Roo's HD Hairstyles, continued (`rooboid.hdhair.continued`) | Qux, continuing Rooboid's mods | 3559870636 |
+| Vanilla Hair Expanded (`VanillaExpanded.VHE`) | see Workshop page | 1888705256 |
+| Hat Hair Control (`lordfelix.HatHairControl`) | Silvaran | 3760821540 |
+| Facial Animation (`Nals.FacialAnimation`) | Nals | 1635901197 |
+| Facial Animation Experimentals (`nals.facialanimationexperimentals`) | Nals | 2581693737 |
+| `VanillaExpanded.VTEXE.FacialAnims` | see Workshop page | 2816938779 |
+| `Newton.AKNExtras.FacialAnimations` | see Workshop page | 2889716301 |
+| EyeGenes3 (`lucius.eyegenes3`) | see Workshop page | 3745223213 |
+| `astryl.FacialAnimationPerformancePatch` | see Workshop page | 3790129900 |
+| `sd.fa.movingvanillaeyes` | see Workshop page | 3753978140 |
+| Gloomy Furniture (Continued) (`Gloomy.Furniture.Continued`, the dog bowls of capture 8) | see Workshop page | 3240958004 |
+| Vanilla Expanded Framework (`OskarPotocki.VanillaFactionsExpanded.Core`, required by Vanilla Animals Expanded) | Oskar Potocki, Sarg Bjornson | 2023507013 |
+
+The Sanctuary itself (places, colonists, fixtures) is Nelim's own set, `SanctuaryBacklot`, and the steps that stage it are PickleTools'.
+
 ## Thanks
 
 - **purpleyam**, for the idea and the name.
 - **SpiderCamp**, and **Qux** for keeping the dogs alive.
 - **akairo** and **Bernau31**, for the cats.
-- **Oskar Potocki**, **Sarg Bjornson** and **Erin**, for the animals of Vanilla Animals Expanded.
+- **Oskar Potocki** and **Sarg Bjornson**, for the animals of Vanilla Animals Expanded.
+- **Erin**, for Erin's Cat Overhaul; **Think3r** and **Azrael**, for Animal Variety Coats. Both are read, never required.

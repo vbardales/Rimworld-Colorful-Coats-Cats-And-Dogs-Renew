@@ -10,5 +10,11 @@
     "Assemblies"
   ],
   "previewFile": "About/Preview.png",
-  "galleryDir": "Art/Gallery"
+  "galleryDir": "Art/Gallery",
+  "aboutFromDescription": true,
+  "description": {
+    "file": "PUBLICATION.md",
+    "format": "markdown",
+    "heading": "^## Steam description$"
+  }
 }

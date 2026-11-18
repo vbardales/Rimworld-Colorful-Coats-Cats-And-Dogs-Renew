@@ -18,7 +18,7 @@
   </loadAfter>
   <description>UNOFFICIAL. This mod is published without the original author's explicit consent. If the original author contacts me to request its removal, I undertake to take it down promptly.
 
-Coat variations for forty-one breeds of cat and dog that have none, so a colony's pets stop being interchangeable. Nineteen dogs from Stray Dogs, eleven cats from Let's Have a Cat!, seven breeds from Vanilla Animals Expanded, and the four pets the base game ships with.
+Coat variations for forty-one breeds of cat and dog that have none, so a colony's pets stop being interchangeable. Nineteen dogs from Stray Dogs (rescued) (https://steamcommunity.com/sharedfiles/filedetails/?id=3549460027), eleven cats from Let's Have a Cat! Continued (https://steamcommunity.com/sharedfiles/filedetails/?id=3682940618), seven breeds from Vanilla Animals Expanded (https://steamcommunity.com/sharedfiles/filedetails/?id=2871933948), and the four pets the base game ships with.
 
 Four patch files. No textures, no assembly, no Harmony, no DLC, no def of its own. Safe to add to a save in progress and safe to remove from one. Animals already on the map take their coats the moment the mod is added, and go back to their original one if it is removed - nothing is written into the save.
 
@@ -26,13 +26,13 @@ WHAT IT COVERS, AND WHAT IT LEAVES ALONE
 
 Every operation fires only when the animal has no coat variation already. Run it beside a mod that paints coats for the same breed and that mod wins, silently and every time - so this fills gaps rather than competing.
 
-From Stray Dogs (rescued), by Qux, the living home of Spidercamp's Dog Pack: afghan hound, border collie, borzoi, bullmastiff, bull terrier, caucasian shepherd, chow chow, golden retriever, greyhound, miniature dachshund, newfoundland, old english sheepdog, pug, saint bernard, schnauzer, standard poodle, welsh corgi, bernese mountain dog and swedish vallhund. Its collie, its doberman and its six Japanese dogs already have coats and are untouched.
+From Stray Dogs (rescued) (https://steamcommunity.com/sharedfiles/filedetails/?id=3549460027), by Qux, the living home of SpiderCamp's Dog Pack: afghan hound, border collie, borzoi, bullmastiff, bull terrier, caucasian shepherd, chow chow, golden retriever, greyhound, miniature dachshund, newfoundland, old english sheepdog, pug, saint bernard, schnauzer, standard poodle, welsh corgi, bernese mountain dog and swedish vallhund. Its collie, its doberman and its six Japanese dogs already have coats and are untouched.
 
-From Let's Have a Cat! Continued, by akairo and Bernau31: eleven of its twelve breeds. The black cat is deliberately left out - see below.
+From Let's Have a Cat! Continued (https://steamcommunity.com/sharedfiles/filedetails/?id=3682940618), by akairo and Bernau31: eleven of its twelve breeds. The black cat is deliberately left out - see below.
 
-From Vanilla Animals Expanded: the abyssinian cat, the beagle, the corgi, the french bulldog, the german shepherd, the pug and the welsh terrier. The other fourteen cats and dogs in that mod already have hand-painted coats from Colorful Coats - Vanilla Animals Expanded! Renew, and are left to it.
+From Vanilla Animals Expanded (https://steamcommunity.com/sharedfiles/filedetails/?id=2871933948): the abyssinian cat, the beagle, the corgi, the french bulldog, the german shepherd, the pug and the welsh terrier. The other fourteen cats and dogs in that mod already have hand-painted coats from Colorful Coats - Vanilla Animals Expanded! Renew, and are left to it.
 
-From the base game: husky, labrador retriever, yorkshire terrier and cat. Animal Variety Coats and Erin's Cat Overhaul both cover some of those with real artwork; when either is running, it wins. The yorkshire terrier is the one animal here that nothing else in the workshop has ever given a second coat.
+From the base game: husky, labrador retriever, yorkshire terrier and cat. Animal Variety Coats (https://steamcommunity.com/sharedfiles/filedetails/?id=1511926373) and Erin's Cat Overhaul (https://steamcommunity.com/sharedfiles/filedetails/?id=2763428090) both cover some of those with real artwork; when either is running, it wins. The yorkshire terrier is the one animal here that nothing else in the workshop has ever given a second coat.
 
 HOW IT WORKS, AND WHAT THAT COSTS
 
@@ -47,9 +47,9 @@ The honest limit of that trick is that a tint multiplies, so a coat can only com
 
 CREDIT
 
-The idea, the name and the whole shape of this mod are purpleyam's. Their Colorful Coats - Cats and Dogs! stopped at RimWorld 1.3 with the mod it patched, Vanilla Animals Expanded - Cats and Dogs, which no longer exists on its own: Vanilla Animals Expanded absorbed it, and the coats purpleyam painted for those breeds live on in Colorful Coats - Vanilla Animals Expanded! Renew. So this is not that mod ported. It is the same idea pointed at the cats and dogs that are alive today and still have one coat each.
+The idea, the name and the whole shape of this mod are purpleyam's. Their Colorful Coats - Cats and Dogs! (https://steamcommunity.com/sharedfiles/filedetails/?id=2388932599) stopped at RimWorld 1.3 with the mod it patched, Vanilla Animals Expanded - Cats and Dogs, which no longer exists on its own: Vanilla Animals Expanded absorbed it, and the coats purpleyam painted for those breeds live on in Colorful Coats - Vanilla Animals Expanded! Renew. So this is not that mod ported. It is the same idea pointed at the cats and dogs that are alive today and still have one coat each.
 
-No file of purpleyam's is included here; the colours are theirs, the measuring is mine. Original mod: https://steamcommunity.com/sharedfiles/filedetails/?id=2388932599 - declares 1.3 and nothing further.
+No file of purpleyam's is included here; the colours are theirs, the measuring is mine.
 
 IF I GO QUIET
 
@@ -61,9 +61,9 @@ This mod was made with AI tools, under human direction: Claude Code (Anthropic) 
 
 THANKS
 
-Thanks to purpleyam for the idea and the coats, to SpiderCamp and Qux for the dogs, to akairo and Bernau31 for the cats, and to Oskar Potocki, Sarg Bjornson and Erin for the animals of Vanilla Animals Expanded. Thanks to the authors of Pickle, RimLogging and Harmony, on which the tests run (development only, not part of this mod).
+purpleyam (https://steamcommunity.com/sharedfiles/filedetails/?id=2388932599) for the idea and the coats. SpiderCamp and Qux, for the dogs of Stray Dogs (rescued) (https://steamcommunity.com/sharedfiles/filedetails/?id=3549460027). akairo and Bernau31, for the cats of Let's Have a Cat! Continued (https://steamcommunity.com/sharedfiles/filedetails/?id=3682940618). Oskar Potocki and Sarg Bjornson, for the animals of Vanilla Animals Expanded (https://steamcommunity.com/sharedfiles/filedetails/?id=2871933948). Erin, for Erin's Cat Overhaul (https://steamcommunity.com/sharedfiles/filedetails/?id=2763428090), and Think3r and Azrael, for Animal Variety Coats (https://steamcommunity.com/sharedfiles/filedetails/?id=1511926373): both are read, never required, and win wherever they run. For development only, never a dependency of this mod: Pickle (https://steamcommunity.com/sharedfiles/filedetails/?id=3791648678), RimLogging (https://steamcommunity.com/sharedfiles/filedetails/?id=3733484696), Harmony (https://steamcommunity.com/sharedfiles/filedetails/?id=2009463077) (which Pickle needs) and PickleTools (https://steamcommunity.com/sharedfiles/filedetails/?id=3806142401).
 
 Full credits and the licence are in ATTRIBUTION.md and LICENSE, in the source repository below.
 
-[url=https://github.com/vbardales/Rimworld-Colorful-Coats-Cats-And-Dogs-Renew]Source code on GitHub[/url]</description>
+Source code on GitHub (https://github.com/vbardales/Rimworld-Colorful-Coats-Cats-And-Dogs-Renew)</description>
 </ModMetaData>
