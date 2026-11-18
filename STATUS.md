@@ -18,7 +18,8 @@ licence:      silent
 licence_own:  MIT; LICENSE and Mod/LICENSE; covers this repository's contributions, not purpleyam's name or measured palette
 licence_at:   checked 2026-09-12; source not updated to 1.6 (original 1.3, series sibling VAE 1.4); no licence or permission found in source files, Steam descriptions and all comments; upstream repository searched but not found
 upstream_mod_remotes: N/A (no git repository found for purpleyam's "Colorful Coats - Cats and Dogs!", Workshop 2388932599; searched again 2026-10-02, only this mod's own Renew repositories come up)
-dependencies: none
+dependencies: none (checked 2026-11-19 at 11ac030: About.xml has no modDependencies, no incompatibleWith, no loadBefore; loadAfter = Ludeon.RimWorld, Qux.stray.dogs, akairo.LetsHaveaCat, VanillaExpanded.VanillaAnimalsExpanded, nelim.colorfulcoats.vae, Erin.Cats, cucumpear.azrael.varietycoats, order only; every patch guarded by PatchOperationConditional on the target def; no LoadFolders.xml, no DLC branch, no MayRequire; supportedVersions 1.6 and 1.7; Check-OptionalCompat 0 targets, 0 declared, OK; sibling nelim.colorfulcoats.vae does not name this mod, no cycle; 4.f n/a, the mod adds no animal)
+workshop_required_items: n/a, no hard Workshop dependency (modDependencies none), checked 2026-11-19
 showcase:     complete
 tested_on:    2026-10-15 (cats replay rev a00034b: 10/10 and peintres 10/10, docs/runs/2026-10-14-chats-shader.txt; before that 2026-10-10 (Pickle 08-revue, 34/34 passed in the WSL, rev 58bcd23; passes 1-3 and add/removal runs on 2026-09-28 and 2026-10-02; no manual play))
 tested_1_7:   yes
