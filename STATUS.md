@@ -67,7 +67,7 @@ publication_changelog_review_sha: 0c6021be5d0a30b4cabcfe510af53c83b1b8d716
 thanks_drafted_line: 1.0
 echo_review_sha: a0366588bcd4f511c48099c1178abe1d5ee36106
 social_preview_sha256: f0d49f063409f88fd785c0b3f3cba52d4e938fd144114dbbb47e0695083253c6
-protocols_read_sha: 3e013fbde98de8c2ac1e20e1f4d20a4e2334a0ec
+protocols_read_sha: ba5bc2537242b9d2c7d46e7dd6db6046f7c1387b
 ---
 # Colorful Coats - Cats and Dogs! Renew — status
 
