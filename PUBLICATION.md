@@ -183,37 +183,37 @@ such messages for its camp gallery), say which one: it is the owner's call. To v
 Draft, Gloomy Furniture (Continued):
 
 ```text
-Two of your dog bowls sit on the floor of the tea-time picture in my gallery, and six cats came for them anyway xD Nothing of yours is in the mod, they only show in that shot: [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3806769444]Colorful Coats - Cats and Dogs! Renew[/url]. Thanks for the furniture, and for bringing it to 1.6 :)
+Two of your dog bowls sit on the floor of the tea-time picture in my gallery, and six cats turned up for them anyway xD Nothing of yours is inside the mod, they only star in that one shot: [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3806769444]Colorful Coats - Cats and Dogs! Renew[/url]. Thank you for keeping the furniture alive :)
 ```
 
 Draft, purpleyam's original:
 
 ```text
-Not one pixel of yours was copied, I only measured the colours: 17 of your 26 coats became plain tints, and your four poodle coats ride on the standard poodle of Stray Dogs, in your order :) That is how a mod named after yours reaches 41 breeds you never painted: [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3806769444]Colorful Coats - Cats and Dogs! Renew[/url]. Thank you for the colours, and tell me if you would rather I stop.
+I did the maths on your coats. Literally: coat divided by sprite, twenty-six times, and seventeen survived as plain tints :) Now your four poodles trot around on Stray Dogs' standard poodle in your order, and a pug you never painted wears your colours too: [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3806769444]Colorful Coats - Cats and Dogs! Renew[/url]. Not one pixel of yours inside, promise. Thank you, and you can send me packing any time lol
 ```
 
 Draft, Stray Dogs (rescued):
 
 ```text
-Nineteen of your dogs had one coat each, so my pug kept looking like a clone xD I added tints for them, no texture touched: [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3806769444]Colorful Coats - Cats and Dogs! Renew[/url]. Thanks for keeping the pack alive, and to SpiderCamp for drawing it.
+Nineteen of your dogs had worn the same coat since forever, and my colony's pug was starting to look like a clone xD So I handed them tints instead, no texture touched: [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3806769444]Colorful Coats - Cats and Dogs! Renew[/url]. Thank you Qux for keeping the pack alive, and SpiderCamp for drawing it. Please feed the pug.
 ```
 
 Draft, Vanilla Animals Expanded:
 
 ```text
-Seven of your animals (abyssinian, beagle, corgi, french bulldog, german shepherd, pug, welsh terrier) get new coat tints in [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3806769444]Colorful Coats - Cats and Dogs! Renew[/url], without a texture of yours moved. The other fourteen already have purpleyam's painted coats from the other Colorful Coats port, so I left them alone. Thanks for the animals :)
+Seven of your animals just got a wardrobe: the abyssinian, beagle, corgi, french bulldog, german shepherd, pug and welsh terrier, in [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3806769444]Colorful Coats - Cats and Dogs! Renew[/url]. Your textures did not move an inch, the game just tints them. The other fourteen already wear purpleyam's painted coats, so I let them be. Thank you Oskar and Sarg for the zoo xD
 ```
 
 Draft, Erin's Cat Overhaul:
 
 ```text
-The base-game cat is the one animal my patch and your overhaul both want to recolour. I wrote mine to see your coats and stand aside, so yours wins whenever it's running: [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3806769444]Colorful Coats - Cats and Dogs! Renew[/url]. Thank you for the cats xD
+Confession: the base-game cat is the one creature my patch and your overhaul would fight over, so I made mine lose on purpose :) When Erin's Cat Overhaul is running, my tints step aside and your cats get the stage. It is part of [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3806769444]Colorful Coats - Cats and Dogs! Renew[/url]. Thank you Erin, they are lovely cats xD
 ```
 
 Draft, Animal Variety Coats:
 
 ```text
-You got there first with real art for the husky, the labrador and the cat, so [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3806769444]Colorful Coats - Cats and Dogs! Renew[/url] steps aside for them whenever your mod runs. The Yorkshire terrier is the one pet nobody had covered, so mine takes that one. Thanks to Think3r and Azrael for all the variations :)
+You were drawing proper husky, labrador and cat coats while I was still counting pixels lol So in [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3806769444]Colorful Coats - Cats and Dogs! Renew[/url] my tints wait their turn and yours win, no fight. The Yorkshire terrier is the one pet nobody had touched, so I took that one :) Thank you Think3r and Azrael for the whole menagerie!
 ```
 
 The six drafts differ in opening, ending and joke; each is under 1,000 characters and carries one hidden link. Re-read side by side before posting.
