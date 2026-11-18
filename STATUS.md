@@ -8,7 +8,7 @@ packageId:    nelim.colorfulcoats.catsanddogs
 repo:         Rimworld-Colorful-Coats-Cats-And-Dogs-Renew
 visibility:   public
 detached:     yes
-workflow_stage: postOnSteam[1.0.0]
+workflow_stage: runNoRegression[1.0.0]
 audit_revision: a00034b4c2d3acdade8505073c708cd3f7c9f4ea (2026-10-15, chain 1 to 7 walked again, 8.a to 8.m below)
 audit_date: 2026-10-15
 automated_tests: passed; 22 passed, 0 failed, 0 skipped (rerun 2026-10-15, from scripts/)
@@ -22,6 +22,7 @@ showcase:     complete
 tested_on:    2026-10-15 (cats replay rev a00034b: 10/10 and peintres 10/10, docs/runs/2026-10-14-chats-shader.txt; before that 2026-10-10 (Pickle 08-revue, 34/34 passed in the WSL, rev 58bcd23; passes 1-3 and add/removal runs on 2026-09-28 and 2026-10-02; no manual play))
 workshop:     3806769444 (0.1.0, item creation only; About/PublishedFileId.txt committed in 97c19d3; private, as Steam creates every item; not tested, not public)
 remaining:
+  - 2026-11-18 14.h done: Virginie posted ALL remaining comments ("j'ai tout posté"): Animal Variety Coats 1511926373, Gloomy Furniture (Continued) 3240958004, Vanilla Animals Expanded 2871933948, each seen live on its page (comment by nelim17 mentioning Cats and Dogs! Renew); registers `posted` (pushed). With batch 1 below: 6 thank-you comments and the Use This Instead comment posted, gallery uploaded by her. AnimalsNaturally's own draft for the VAE page is now moot (told in the register row). Stage moved to runNoRegression[1.0.0] (14.i). Next 14.a: rerun of the whole Pickle suite on the published build v1.0.0 (Mod/ unchanged since 9083b73), in small tickets, filed with file-pickle-ticket; then cleanUp[1.0.0].
   - 2026-11-18 14.b/14.h batch 1 posted by Virginie ("fait"): purpleyam 2388932599, Stray Dogs (rescued) 3549460027, Erin's Cat Overhaul 2763428090 (all three seen live on their pages, comment mentions Cats and Dogs! Renew; Stray Dogs seen as "Just now" by nelim17), Use This Instead comment on 3396308787 (her word, NOT seen in the first 100 comments of the page). Registers updated and pushed (WORKSHOP_COMMENTS rows posted, USE_THIS_INSTEAD row posted). Left for another day (three a day, one per page): Animal Variety Coats 1511926373, Gloomy Furniture (Continued) 3240958004, Vanilla Animals Expanded 2871933948 (only if AnimalsNaturally has not posted; check the register first). Rewrite note: avoid the phrase "keeping the pack alive" (already in the Dodos message to Mlie). Next: runNoRegression[1.0.0] (14.a, Pickle suite on the published build, Mod/ unchanged since v1.0.0).
   - 2026-11-18 14.f done ("fait": Steam comment notifications on the item enabled by her, her word). 14.g stage postOnSteam[1.0.0]. Today's batch for her (at most three thank-you a day, not in a row): purpleyam original 2388932599, Stray Dogs (rescued) 3549460027, Erin's Cat Overhaul 2763428090, plus the Use This Instead comment. Left for later days: Animal Variety Coats 1511926373, Gloomy Furniture (Continued) 3240958004, Vanilla Animals Expanded 2871933948 (only if AnimalsNaturally has not posted). Each posted comment: register row to `posted` with the date (WORKSHOP_COMMENTS.md), UTI row to `posted`.
   - 2026-11-18 14.f startWatch: GitHub watch of vbardales/Rimworld-Colorful-Coats-Cats-And-Dogs-Renew set (gh api subscription: subscribed true, ignored false; she had said "et watch git aussi"). Open, hers: Steam notifications of the item comments (https://steamcommunity.com/sharedfiles/filedetails/?id=3806769444). Collection and subscribe test already done (13.b, 13.f). Then 14.g postOnSteam: thank-you comments (6 drafts, one page each, at most three a day, PUBLICATION.md), Use This Instead comment (USE_THIS_INSTEAD.md row `drafted`, exit refused while it stays drafted), gallery already uploaded by her. TM told STAGE startWatch[1.0.0].
@@ -65,7 +66,7 @@ publication_changelog_review_sha: 0c6021be5d0a30b4cabcfe510af53c83b1b8d716
 thanks_drafted_line: 1.0
 echo_review_sha: a0366588bcd4f511c48099c1178abe1d5ee36106
 social_preview_sha256: f0d49f063409f88fd785c0b3f3cba52d4e938fd144114dbbb47e0695083253c6
-protocols_read_sha: 24804c4bceb132de12b36cf69053a088aee201ec
+protocols_read_sha: af8f7e2d2d92c36d1ef96e7b281bcd9a3c304b0f
 ---
 # Colorful Coats - Cats and Dogs! Renew — status
 
