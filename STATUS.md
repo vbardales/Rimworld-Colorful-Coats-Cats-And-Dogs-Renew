@@ -20,18 +20,19 @@ upstream_mod_remotes: N/A (no git repository found for purpleyam's "Colorful Coa
 dependencies: none
 showcase:     complete
 tested_on:    2026-10-15 (cats replay rev a00034b: 10/10 and peintres 10/10, docs/runs/2026-10-14-chats-shader.txt; before that 2026-10-10 (Pickle 08-revue, 34/34 passed in the WSL, rev 58bcd23; passes 1-3 and add/removal runs on 2026-09-28 and 2026-10-02; no manual play))
+tested_1_7:   yes
 workshop:     3806769444 (0.1.0, item creation only; About/PublishedFileId.txt committed in 97c19d3; private, as Steam creates every item; not tested, not public)
 remaining:
-  - 2026-11-18 cleanUp[1.0.0]: 14.a done, seven noreg tickets green on v1.0.0 (Mod/ = tag 9083b73), line per ticket in docs/runs/2026-11-18-noregression-v1.0.0.txt; published, public, gallery uploaded, thanks and Use This Instead comments posted (history: docs/runs/2026-11-18-status-history.md and -2.md). Owner: "on passe en 1.1.0": next version 1.1.0 carries the 1.7 pass (tickets avec-cibles and avec-peintres in 1.7; 01-sans-facultatifs already green in 1.7, docs/runs/2026-10-18-1.7-sans-facultatifs.txt; tested_1_7 unset; 1.7 NOT in supportedVersions before a green 1.7 run on all). 1.7 status: sans-facultatifs green (2026-10-18), avec-cibles green (4ca6, 52/52, 2026-11-18), avec-peintres ticket 309f was gone from the queue on resume, refiled 2026-11-18 as 9a70 (label 1.7 avec-peintres ba84c6c, -DepMap wsl-deps.avec-peintres.map); when green: tested_1_7 yes, then the 1.1.0 publication gesture (<li>1.7</li>, CHANGELOG, Preview redo with 1.7 badge, tag 1.7).
+  - 2026-11-18 cleanUp[1.0.0]: 14.a done, seven noreg tickets green on v1.0.0 (Mod/ = tag 9083b73), line per ticket in docs/runs/2026-11-18-noregression-v1.0.0.txt; published, public, gallery uploaded, thanks and Use This Instead comments posted (history: docs/runs/2026-11-18-status-history.md and -2.md). Owner: "on passe en 1.1.0": next version 1.1.0 carries the 1.7 pass (tickets avec-cibles and avec-peintres in 1.7; 01-sans-facultatifs already green in 1.7, docs/runs/2026-10-18-1.7-sans-facultatifs.txt; 1.7 NOT yet in supportedVersions). 1.7 status: ALL GREEN, tested_1_7 yes: sans-facultatifs (2026-10-18), avec-cibles 4ca6 52/52, avec-peintres 9a70 10/10 (refile of 309f, 2026-11-18, docs/runs/2026-11-18-1.7-avec-peintres.txt, evidence Tests/Pickle/Evidence/v17-peintres). Next: the 1.1.0 publication gesture, one commit (<li>1.7</li> in supportedVersions, CHANGELOG, Preview redo with 1.7 badge, tag 1.7).
   - not applicable: French pass and interface check in EN/FR, MainButtons shortcut, options persistence - no owned text, no settings (owner, 2026-09-28; settings_audit above)
 session:      local_b1565ae3-2100-4849-b88f-60237d43caed
-updated:      2026-11-18 code[1.1.0]: 1.7 avec-cibles 4ca6 GREEN 52/52 (docs/runs/2026-11-18-1.7-avec-cibles.txt); 9a70 (03-peintres, avec-peintres, refile of 309f) queued; then tested_1_7
+updated:      2026-11-18 code[1.1.0]: 1.7 avec-peintres 9a70 GREEN 10/10; all three 1.7 sets green, tested_1_7 yes; next the 1.1.0 publication gesture
 code_review_sha: 6476e28cd0c9c4ae85ccf92beb8b1f3c35be2f5c
 publication_changelog_review_sha: 0c6021be5d0a30b4cabcfe510af53c83b1b8d716
 thanks_drafted_line: 1.0
 echo_review_sha: a0366588bcd4f511c48099c1178abe1d5ee36106
 social_preview_sha256: f0d49f063409f88fd785c0b3f3cba52d4e938fd144114dbbb47e0695083253c6
-protocols_read_sha: 113f53ea8c2130a1425348e87f66394898f2e328
+protocols_read_sha: c75e709ad14b7a6f8640d3660311fbd18e5242b0
 ---
 # Colorful Coats - Cats and Dogs! Renew — status
 

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<testsuites>
+  <testsuite name="Standing aside for the mods that paint" tests="10" failures="0" skipped="0" flakes="0" time="80.612">
+    <testcase name="the painters are loaded, before this mod" classname="Standing aside for the mods that paint" time="1.681">
+      <system-out>Attachment: smoke-attachment -&gt; smoke test attachment content
+</system-out>
+    </testcase>
+    <testcase name="no animal received two coat lists" classname="Standing aside for the mods that paint" time="20.887">
+      <system-out>Attachment: smoke-attachment -&gt; smoke test attachment content
+</system-out>
+    </testcase>
+    <testcase name="Cat stayed with Erin's Cat Overhaul" classname="Standing aside for the mods that paint" time="3.117">
+      <system-out>Attachment: smoke-attachment -&gt; smoke test attachment content
+</system-out>
+    </testcase>
+    <testcase name="Husky stayed with Animal Variety Coats" classname="Standing aside for the mods that paint" time="3.201">
+      <system-out>Attachment: smoke-attachment -&gt; smoke test attachment content
+</system-out>
+    </testcase>
+    <testcase name="LabradorRetriever stayed with Animal Variety Coats" classname="Standing aside for the mods that paint" time="3.132">
+      <system-out>Attachment: smoke-attachment -&gt; smoke test attachment content
+</system-out>
+    </testcase>
+    <testcase name="AEXP_Chihuahua stayed with the sibling Vanilla port" classname="Standing aside for the mods that paint" time="3.118">
+      <system-out>Attachment: smoke-attachment -&gt; smoke test attachment content
+</system-out>
+    </testcase>
+    <testcase name="AEXP_CatSiamese stayed with the sibling Vanilla port" classname="Standing aside for the mods that paint" time="3.112">
+      <system-out>Attachment: smoke-attachment -&gt; smoke test attachment content
+</system-out>
+    </testcase>
+    <testcase name="AEXP_Poodle stayed with the sibling Vanilla port" classname="Standing aside for the mods that paint" time="3.183">
+      <system-out>Attachment: smoke-attachment -&gt; smoke test attachment content
+</system-out>
+    </testcase>
+    <testcase name="the seven breeds the sibling never painted are ours" classname="Standing aside for the mods that paint" time="9.540">
+      <system-out>Attachment: smoke-attachment -&gt; smoke test attachment content
+</system-out>
+    </testcase>
+    <testcase name="an animal a painter owns and one of ours can share a map" classname="Standing aside for the mods that paint" time="29.641">
+      <system-out>Attachment: smoke-attachment -&gt; smoke test attachment content
+</system-out>
+    </testcase>
+  </testsuite>
+</testsuites>
