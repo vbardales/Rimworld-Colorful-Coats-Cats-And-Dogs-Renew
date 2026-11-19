@@ -30,3 +30,4 @@
 - 2026-11-19 Pass 2bis-a stray dogs + add to a running colony: ticket 1cb1, exitReason passed, 12/12 passed, 0 failed, 0 skipped, setName stray-dogs read in summary.json (Inbox/noreg110-2a).
 - 2026-11-19 Pass 2bis-b lets have a cat: ticket eb76, exitReason passed, 9/9 passed, 0 failed, 0 skipped, setName lets-have-a-cat read in summary.json (Inbox/noreg110-2b).
 - 2026-11-19 Pass 2bis-c vae: ticket e6f4, exitReason passed, 8/8 passed, 0 failed, 0 skipped, setName vae read in summary.json (Inbox/noreg110-2c).
+- 2026-11-19 Pass 4 removal chain: ticket 6745, exitReason passed on both sequences, seq1 (31-retrait-write) 1/1 passed, seq2 (retrait-check, mod not loaded) 1/1 passed, 0 failed, 0 skipped, setName retrait read in each summary.json (Evidence/noreg110-4). All seven 1.1.0 non-regression tickets green on 1.6 (Mod/ = 7a9d22e); Player.log not read line by line.
