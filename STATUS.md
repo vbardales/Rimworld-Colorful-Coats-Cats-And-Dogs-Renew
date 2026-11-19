@@ -32,7 +32,7 @@ remaining:
 session:      local_b1565ae3-2100-4849-b88f-60237d43caed
 updated:      2026-11-19 writeReleaseDocs[1.1.0] 11.i done (### 1.1.0 note in PUBLICATION.md), thanks_drafted_line none (no new recipient), 11.j reread of PUBLICATION.md and CHANGELOG.md awaited from the owner; (9 and 10 passed through: gallery unchanged since v1.0.0 (showcase complete), Preview redone with the 1.7 badge in 9fa977c, 10.d checked, 10.f done (social_preview_sha256)) (8.n passed: tested_1_7 yes, code_review_sha 6213dba holds, no Mod/ or Source/ commit since; mod documents migrated 4b2ac8b) (6.i and 7.i passed: translations not_applicable, 7.b 5 passed, 7.c green) (5.h passed, settings_audit not_applicable stands; resume at 8dbc6b8): 4.h passed (dependency record 0f6ed0f); declareDependencies: 3.d passed after the 1.1.0 gesture (9fa977c); audit replay, first open 3.c (CHANGELOG [Unreleased]); remote field added; 2026-11-18 1.7 avec-peintres 9a70 GREEN 10/10; all three 1.7 sets green, tested_1_7 yes; next the 1.1.0 publication gesture
 code_review_sha: 6213dbaa4aad79e4ca724bec67fa977d7a5532a5
-publication_changelog_review_sha: 0c6021be5d0a30b4cabcfe510af53c83b1b8d716
+publication_changelog_review_sha: ae9f147e50c6310107ecc5cd4f2485b64bbdc434
 thanks_drafted_line: none
 echo_review_sha: a0366588bcd4f511c48099c1178abe1d5ee36106
 social_preview_sha256: 510e78e7ff1c39b069f4f10dbb40b8d82dd6bee010f8de32fdbb3130b044bd8e
