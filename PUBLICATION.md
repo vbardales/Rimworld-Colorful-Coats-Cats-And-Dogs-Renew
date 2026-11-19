@@ -1,6 +1,6 @@
 # Publication
 
-What the Workshop page asks for and the repository holds nowhere else. The Workshop item `3806769444` is public: `1.0.0` was the first public release (2026-11-18, 1.6 line), `0.1.0` only created the item. Target version `1.1.0` (owner, 2026-11-18: the 1.7 pass). Nothing has been sent for `1.1.0` yet.
+What the Workshop page asks for and the repository holds nowhere else. The Workshop item `3806769444` is public: `1.0.0` was the first public release (2026-11-18, 1.6 line), `0.1.0` only created the item. Target version `1.1.0` (owner, 2026-11-18: the 1.7 pass). `1.1.0` was sent on 2026-11-19 (1.7 declared).
 
 ## Steam description
 
@@ -122,21 +122,7 @@ Gallery 4.8 MB, Gallery-clean 4.0 MB. Status: the eleven images were accepted by
 ## Steam change notes
 
 The note is written at the moment of upload. First line is `[b]<version>[/b]` with the exact version, or the CI fails (AUDIT.md 11.i).
-Sent before: `[b]0.1.0[/b]`, the creation of the item (private).
-
-### 1.0.0
-
-```
-[b]1.0.0[/b]
-[list]
-[*] First public release: coat variations for forty-one breeds of cat and dog, nineteen dogs of Stray Dogs (rescued), eleven cats of Let's Have a Cat! Continued, seven breeds of Vanilla Animals Expanded and the four base-game pets.
-[*] The palette is measured from the coats purpleyam painted for the original mod; the mod ships no artwork, only tints over each animal's own sprite.
-[*] Every patch is conditional: where another mod already paints a breed (Animal Variety Coats, Erin's Cat Overhaul, Colorful Coats - Vanilla Animals Expanded! Renew), that mod wins.
-[*] The cats of Let's Have a Cat! switch to the plain Cutout shader so a tint shows; the black cat stays out.
-[*] Checked by static scripts and an automated in-game suite; nobody has played it by hand yet.
-[/list]
-[url=https://github.com/vbardales/Rimworld-Colorful-Coats-Cats-And-Dogs-Renew/blob/main/CHANGELOG.md]Full changelog on GitHub[/url]
-```
+Sent before: `[b]0.1.0[/b]` (creation of the item, private) and `[b]1.0.0[/b]` (first public release, 2026-11-18). Text of both is in git history.
 
 ### 1.1.0
 
@@ -159,12 +145,12 @@ mod is public first, and one comment only goes out. **To draft, post by the owne
 
 | Recipient | Id | State |
 |---|---|---|
-| Colorful Coats - Cats and Dogs! (purpleyam, original) | 2388932599 | drafted, not `posted` |
-| Stray Dogs (rescued) (Qux) | 3549460027 | drafted, not `posted` |
-| Vanilla Animals Expanded (Oskar Potocki, Sarg Bjornson) | 2871933948 | drafted, not `posted` |
-| Erin's Cat Overhaul (Erin) | 2763428090 | drafted, not `posted` |
-| Animal Variety Coats (Think3r, Azrael) | 1511926373 | drafted, not `posted` |
-| Gloomy Furniture (Continued) (Gaon, after the original author) | 3240958004 | drafted, not `posted` (gallery, image 8) |
+| Colorful Coats - Cats and Dogs! (purpleyam, original) | 2388932599 | posted 2026-11-18, text below kept (register cites it) |
+| Stray Dogs (rescued) (Qux) | 3549460027 | posted 2026-11-18, text below kept (register cites it) |
+| Vanilla Animals Expanded (Oskar Potocki, Sarg Bjornson) | 2871933948 | posted 2026-11-18, text below kept (register cites it) |
+| Erin's Cat Overhaul (Erin) | 2763428090 | posted 2026-11-18, text below kept (register cites it) |
+| Animal Variety Coats (Think3r, Azrael) | 1511926373 | posted 2026-11-18, text below kept (register cites it) |
+| Gloomy Furniture (Continued) (Gaon, after the original author) | 3240958004 | posted 2026-11-18, text below kept (register cites it) (gallery, image 8) |
 
 **To verify on the pages before posting:** SpiderCamp's Dog Pack has no Workshop page found yet (Stray Dogs (rescued) names it); the Stray Dogs comment
 carries the thanks for both. Animal Variety Coats credits Think3r as the author and Azrael as collaborator on the page, the assembly is thirite's and
@@ -184,7 +170,7 @@ Xen's: the draft names the author and the collaborator, not the assembly. Erin's
 | [NL] Facial Animation, Experimentals, Vanilla Textures Expanded - Facial Animation, Akeron Extras, EyeGenes3, Performance Patch, Vanilla Experimentals, [VK] add closed eyes, Visual beauty, Init Fix, Load Fix | 1635901197, 2581693737, 2816938779, 2889716301, 3745223213, 3790129900, 3753978140, 3694711465, 3685072616, 3609895011, 3721489042 | all posted (2026-10-11 and 2026-11-16), join `Covers` (Nelim's smile and eyes) |
 | Vanilla Expanded Framework | 2023507013 | posted 2026-09-22, joins `Covers` (required by Vanilla Animals Expanded, staged by the map) |
 | Let's Have a Cat! Continued | 3682940618 | posted 2026-11-10, joins `Covers` (also a patch target) |
-| Gloomy Furniture (Continued) | 3240958004 | not in the register: row added `drafted`, draft below (the two `RGK_DogBowl` of image 8) |
+| Gloomy Furniture (Continued) | 3240958004 | posted 2026-11-18, text below kept (the two `RGK_DogBowl` of image 8) |
 
 One thank-you comment per page, ever (`WORKSHOP_COMMENTS.md`): all the pages above but Gloomy Furniture already carry one, so nothing is drafted for them
 and this mod only joins their `Covers`. If the owner wants a second short message on one of them (the Adaptive Storage Neolithic Renew session drafted
@@ -247,6 +233,7 @@ Commit `About/PublishedFileId.txt` at once (already done for `0.1.0`, in `97c19d
 private: the owner flips it to public by hand, subscribes to her own item, and watches its comments.
 
 Version `1.0.0` was uploaded on 2026-11-18 (publish run 44213322211, commit `9083b73d3268bb6871b82f8f8b1467f1cededa06`, tag `v1.0.0`, tags sent: Mod, 1.6).
+Version `1.1.0` was uploaded on 2026-11-19 (publish run 44495900058, commit `7a9d22e`, tag `v1.1.0`, tags sent: Mod, 1.6, 1.7).
 
 ## Collection "RimWorld through Nelim's eyes"
 
