@@ -1,3 +1,0 @@
-2026-11-18 RimWorld 1.7 diagnostic, avec-peintres: request 20261118-181221-940-9a70 (refile of 309f, label 1.7 avec-peintres ba84c6c, -DepMap wsl-deps.avec-peintres.map), azure, exit 0, exitReason passed, 10/10 passed, 0 failed, 0 skipped, setName avec-peintres read in summary.json; junit.xml 0 failure. English only. Evidence minified in Tests/Pickle/Evidence/v17-peintres.
-stdout.txt of 9a70 (1.7): ERRORs name only the Wayland GLFW platform and Nelims Pickle Tools Screenshot mode (test host, not Mod/); none names this mod. Not failures of the suite (10/10).
-All three 1.7 sets green: sans-facultatifs (2026-10-18), avec-cibles 4ca6 52/52, avec-peintres 9a70 10/10. tested_1_7: yes.
