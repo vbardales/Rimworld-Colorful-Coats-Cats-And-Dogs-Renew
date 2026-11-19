@@ -139,6 +139,18 @@ Sent before: `[b]0.1.0[/b]`, the creation of the item (private).
 [url=https://github.com/vbardales/Rimworld-Colorful-Coats-Cats-And-Dogs-Renew/blob/main/CHANGELOG.md]Full changelog on GitHub[/url]
 ```
 
+### 1.1.0
+
+```
+[b]1.1.0[/b]
+[list]
+[*] The mod is now declared for the latest RimWorld version as well. An automated in-game suite ran green on it over the three sets (no optional mods, with the target mods, with the two coat painters), so no patch, texture or load folder changed.
+[*] Nothing else changed in the mod: the coats, the patches and the load order are the same as 1.0.0.
+[*] The preview image now shows the new version badge.
+[/list]
+[url=https://github.com/vbardales/Rimworld-Colorful-Coats-Cats-And-Dogs-Renew/blob/main/CHANGELOG.md]Full changelog on GitHub[/url]
+```
+
 ## Thank-you comments (one per page, after the item is public)
 
 Register: `WORKSHOP_COMMENTS.md`, keyed by the recipient's Workshop id. Let's Have a Cat! Continued (3682940618), Harmony (2009463077), Pickle
