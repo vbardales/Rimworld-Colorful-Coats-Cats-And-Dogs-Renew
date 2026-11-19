@@ -29,3 +29,4 @@
 - 2026-11-19 Pass 3 peintres: ticket 365f, exitReason passed, 10/10 passed, 0 failed, 0 skipped, setName avec-peintres read in summary.json (Inbox/noreg110-3).
 - 2026-11-19 Pass 2bis-a stray dogs + add to a running colony: ticket 1cb1, exitReason passed, 12/12 passed, 0 failed, 0 skipped, setName stray-dogs read in summary.json (Inbox/noreg110-2a).
 - 2026-11-19 Pass 2bis-b lets have a cat: ticket eb76, exitReason passed, 9/9 passed, 0 failed, 0 skipped, setName lets-have-a-cat read in summary.json (Inbox/noreg110-2b).
+- 2026-11-19 Pass 2bis-c vae: ticket e6f4, exitReason passed, 8/8 passed, 0 failed, 0 skipped, setName vae read in summary.json (Inbox/noreg110-2c).
