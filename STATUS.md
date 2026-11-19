@@ -9,7 +9,7 @@ repo:         Rimworld-Colorful-Coats-Cats-And-Dogs-Renew
 remote:       https://github.com/vbardales/Rimworld-Colorful-Coats-Cats-And-Dogs-Renew.git
 visibility:   public
 detached:     yes
-workflow_stage: localize[1.1.0]
+workflow_stage: playTests[1.1.0]
 audit_revision: a00034b4c2d3acdade8505073c708cd3f7c9f4ea (2026-10-15, chain 1 to 7 walked again, 8.a to 8.m below)
 audit_date: 2026-10-15
 automated_tests: passed; Tests/Test-Mod.ps1 5 passed, 0 failed, 0 skipped (Check-ModBasics, DefRefs, Textures, PatchTargets, ConfigErrors), Check-Translations PASS; no unit-test project (no C#, 7.b n/a for Run-UnitTests); rerun 2026-11-19 at 48fbefc
@@ -30,7 +30,7 @@ remaining:
   - Settings audit 2026-11-19 (5.a to 5.g, at 9a755bf): settings_audit not_applicable stands. git ls-files Mod = About.xml, ModIcon.png, Preview.png, PublishedFileId.txt, LICENSE, ATTRIBUTION.md and Patches/ only: no C#, no assembly, no ModSettings, no Mod/Languages, no Keyed text. No options page, no MainButtons shortcut to hide, nothing to persist. Automated proof: Check-Status 0 error, Check-Translations PASS (0 source texts).
   - not applicable: French pass and interface check in EN/FR, MainButtons shortcut, options persistence - no owned text, no settings (owner, 2026-09-28; settings_audit above)
 session:      local_b1565ae3-2100-4849-b88f-60237d43caed
-updated:      2026-11-19 localize[1.1.0] (5.h passed, settings_audit not_applicable stands; resume at 8dbc6b8): 4.h passed (dependency record 0f6ed0f); declareDependencies: 3.d passed after the 1.1.0 gesture (9fa977c); audit replay, first open 3.c (CHANGELOG [Unreleased]); remote field added; 2026-11-18 1.7 avec-peintres 9a70 GREEN 10/10; all three 1.7 sets green, tested_1_7 yes; next the 1.1.0 publication gesture
+updated:      2026-11-19 playTests[1.1.0] (6.i and 7.i passed: translations not_applicable, 7.b 5 passed, 7.c green) (5.h passed, settings_audit not_applicable stands; resume at 8dbc6b8): 4.h passed (dependency record 0f6ed0f); declareDependencies: 3.d passed after the 1.1.0 gesture (9fa977c); audit replay, first open 3.c (CHANGELOG [Unreleased]); remote field added; 2026-11-18 1.7 avec-peintres 9a70 GREEN 10/10; all three 1.7 sets green, tested_1_7 yes; next the 1.1.0 publication gesture
 code_review_sha: 6213dbaa4aad79e4ca724bec67fa977d7a5532a5
 publication_changelog_review_sha: 0c6021be5d0a30b4cabcfe510af53c83b1b8d716
 thanks_drafted_line: 1.0
