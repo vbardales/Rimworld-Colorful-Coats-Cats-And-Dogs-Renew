@@ -6,11 +6,11 @@ Coat variations for forty-one breeds of cat and dog on RimWorld 1.6 that have no
 
 Named after **purpleyam's Colorful Coats - Cats and Dogs!** and built on its idea. **No file of
 theirs is in it, but every colour in it is theirs**, measured out of the coats they painted. Their
-mod patched *Vanilla Animals Expanded — Cats and Dogs*, which no longer exists as a mod of its own,
+mod patched *Vanilla Animals Expanded - Cats and Dogs*, which no longer exists as a mod of its own,
 and the coats themselves are already shipped by a different port. See
 [ATTRIBUTION.md](ATTRIBUTION.md) for the whole of that story.
 
-Original mod: https://steamcommunity.com/sharedfiles/filedetails/?id=2388932599 — declares 1.3 and
+Original mod: https://steamcommunity.com/sharedfiles/filedetails/?id=2388932599 - declares 1.3 and
 nothing further.
 
 ## What the mod does
@@ -32,7 +32,7 @@ nothing, so the mod is useful with any one of them and harmless with none.
 
 `Verse.AlternateGraphic` takes a `color` as well as a `texPath`, and `GetGraphic` applies the
 colour over the animal's **own** sprite when no path is given. One line of XML is therefore a coat,
-and the artwork stays where it belongs — with whoever drew the animal.
+and the artwork stays where it belongs - with whoever drew the animal.
 
 Core does this itself: the guinea pig lists three texture coats and two colour coats in the same
 `alternateGraphics` block.
@@ -56,7 +56,7 @@ The limit is that a colour **multiplies** the sprite. A coat can only come out d
 than the original, never lighter. Three things follow, and all three are deliberate:
 
 - the original coat is the most common one everywhere, with chances between 40% and 80%;
-- dark breeds — newfoundland, bernese mountain dog, maine coon — get two coats and a low chance;
+- dark breeds - newfoundland, bernese mountain dog, maine coon - get two coats and a low chance;
 - the black cat of Let's Have a Cat! gets none. Its texture averages 29 out of 255, and every tint
   on it would land within two shades of the original. A variation nobody can see is worse than none.
 
@@ -75,14 +75,14 @@ would otherwise happen: `PatchOperationAdd` appends, it does not merge.
 
 - **Every field exists in 1.6**, by reflection against `Assembly-CSharp.dll`: `alternateGraphics`,
   `alternateGraphicChance`, and `AlternateGraphic.texPath`, `color`, `colorTwo`, `weight`.
-- **`GetGraphic` really applies a colour without a path** — read in the decompiled 1.6 assembly,
+- **`GetGraphic` really applies a colour without a path** - read in the decompiled 1.6 assembly,
   quoted in [ATTRIBUTION.md](ATTRIBUTION.md), and used by Core itself for the guinea pig.
 - **All 41 `defName`s exist in the mod each patch names**, and none of them already ships
   `alternateGraphics` upstream. The shared `Check-PatchTargets` check of `Tests/Test-Mod.ps1`
   re-checks against the installed mods that every target still exists, and the Pickle passes check
   that no animal ends up with two coat lists.
 - **Nothing else in the workshop already does this.** The 9 726 installed mods were swept for one
-  representative breed of each target — `SCGoldenRetriever`, `akaNEKO_Persian`, `AEXP_Beagle` — and
+  representative breed of each target - `SCGoldenRetriever`, `akaNEKO_Persian`, `AEXP_Beagle` - and
   nothing patches their graphics: the hits are the target mods themselves, Dog Wool and A Dog Said,
   neither of which is about how an animal looks. Animal Variety Coats does cover the cat, the husky
   and the labrador with real artwork, which is why those three sit behind a conditional; it has
@@ -103,7 +103,7 @@ colony.
 ## Layout
 
 ```
-Mod/          published — the junction into RimWorld/Mods points here
+Mod/          published - the junction into RimWorld/Mods points here
   About/
   Patches/
 Art/          sources of the showcase and the icon, Preview.config.json, the Gallery. The Preview is rendered
@@ -120,7 +120,7 @@ filtering.
 ## Credit and removal
 
 purpleyam declared no licence, checked at all four places one could be. No file of theirs is
-redistributed here in any case — what is borrowed is the idea, the name, and the colours measured
+redistributed here in any case - what is borrowed is the idea, the name, and the colours measured
 from their coats. If purpleyam would rather this mod did not carry that name or those colours, say
 so and it is renamed, repainted or taken down, without argument.
 

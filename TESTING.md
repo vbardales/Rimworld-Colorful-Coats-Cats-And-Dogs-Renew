@@ -1,6 +1,6 @@
 # Test scenarios
 
-Four patch files, no textures, no assembly. Little here to break. What can break breaks **silently** — so mod needs game, not checker.
+Four patch files, no textures, no assembly. Little here to break. What can break breaks **silently** - so mod needs game, not checker.
 
 **No errors in log is not a pass.** Every operation carries
 `<success>Always</success>`, so operation finding no animal reports success, writes
@@ -53,7 +53,7 @@ Scenarios live next to suite that cannot replace them, in
 [`Tests/FUNCTIONAL-SCENARIOS.md`](Tests/FUNCTIONAL-SCENARIOS.md): eight, each with one
 thing to watch, one way of being wrong, and line in `Player.log` that says so.
 
-Most important is second. Tints are purpleyam's, measured, but measured against Vanilla Animals Expanded's sprites, and Stray Dogs' dogs keep textures in Unity asset bundle — so what those colours land on never seen outside game.
+Most important is second. Tints are purpleyam's, measured, but measured against Vanilla Animals Expanded's sprites, and Stray Dogs' dogs keep textures in Unity asset bundle - so what those colours land on never seen outside game.
 
 ## Manual scenarios against what the game has already shown (2026-10-02)
 
