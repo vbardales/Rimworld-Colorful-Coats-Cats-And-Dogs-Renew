@@ -12,8 +12,8 @@ detached:     yes
 workflow_stage: localize[1.1.0]
 audit_revision: a00034b4c2d3acdade8505073c708cd3f7c9f4ea (2026-10-15, chain 1 to 7 walked again, 8.a to 8.m below)
 audit_date: 2026-10-15
-automated_tests: passed; 22 passed, 0 failed, 0 skipped (rerun 2026-10-15, from scripts/)
-xml_tests: passed; Check-Coats, Check-PatchFields (41), Check-XmlClasses, Check-DefRefs, Check-TypeRefs (rerun 2026-10-10)
+automated_tests: passed; Tests/Test-Mod.ps1 5 passed, 0 failed, 0 skipped (Check-ModBasics, DefRefs, Textures, PatchTargets, ConfigErrors), Check-Translations PASS; no unit-test project (no C#, 7.b n/a for Run-UnitTests); rerun 2026-11-19 at 48fbefc
+xml_tests: passed; Check-PatchGuards 0 error (42 ops, 4 files), Check-TypeRefs 0 third-party refs, Check-XmlFields 5 files OK, Check-OptionalCompat OK (0 targets); Check-XmlClasses n/a (no C#, no TypeLists); rerun 2026-11-19 at 48fbefc
 licence:      silent
 licence_own:  MIT; LICENSE and Mod/LICENSE; covers this repository's contributions, not purpleyam's name or measured palette
 licence_at:   checked 2026-09-12; source not updated to 1.6 (original 1.3, series sibling VAE 1.4); no licence or permission found in source files, Steam descriptions and all comments; upstream repository searched but not found
