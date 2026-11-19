@@ -34,7 +34,7 @@ updated:      2026-11-19 publish[1.1.0] (12.a to 12.h done; compress-docs skippe
 code_review_sha: 6213dbaa4aad79e4ca724bec67fa977d7a5532a5
 publication_changelog_review_sha: ae9f147e50c6310107ecc5cd4f2485b64bbdc434
 thanks_drafted_line: none
-echo_review_sha: a0366588bcd4f511c48099c1178abe1d5ee36106
+echo_review_sha: 7dfb090d48031ce36093d381817a469fe8000d0c
 social_preview_sha256: 510e78e7ff1c39b069f4f10dbb40b8d82dd6bee010f8de32fdbb3130b044bd8e
 protocols_read_sha: 17c496d34a1f08f70ed2988fce4e4368993c5f8b
 ---
