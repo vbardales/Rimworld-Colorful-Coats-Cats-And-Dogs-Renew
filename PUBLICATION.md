@@ -1,7 +1,6 @@
 # Publication
 
-What the Workshop page asks for and the repository holds nowhere else. The Workshop item `3806769444` exists (the `0.1.0` upload only
-created it; it is private). Target version `1.0.0`, the first public release (owner, 2026-11-18: 1.0.0 on the 1.6 line first, then non-regression, then 1.1.0 for the 1.7 pass). Nothing has been sent except `0.1.0`.
+What the Workshop page asks for and the repository holds nowhere else. The Workshop item `3806769444` is public: `1.0.0` was the first public release (2026-11-18, 1.6 line), `0.1.0` only created the item. Target version `1.1.0` (owner, 2026-11-18: the 1.7 pass). Nothing has been sent for `1.1.0` yet.
 
 ## Steam description
 
