@@ -9,7 +9,7 @@ repo:         Rimworld-Colorful-Coats-Cats-And-Dogs-Renew
 remote:       https://github.com/vbardales/Rimworld-Colorful-Coats-Cats-And-Dogs-Renew.git
 visibility:   public
 detached:     yes
-workflow_stage: cleanUp[1.1.0]
+workflow_stage: dormant[1.1.0]
 audit_revision: a00034b4c2d3acdade8505073c708cd3f7c9f4ea (2026-10-15, chain 1 to 7 walked again, 8.a to 8.m below)
 audit_date: 2026-10-15
 automated_tests: passed; Tests/Test-Mod.ps1 5 passed, 0 failed, 0 skipped (Check-ModBasics, DefRefs, Textures, PatchTargets, ConfigErrors), Check-Translations PASS; no unit-test project (no C#, 7.b n/a for Run-UnitTests); rerun 2026-11-19 at 48fbefc
@@ -30,7 +30,7 @@ remaining:
   - Settings audit 2026-11-19 (5.a to 5.g, at 9a755bf): settings_audit not_applicable stands. git ls-files Mod = About.xml, ModIcon.png, Preview.png, PublishedFileId.txt, LICENSE, ATTRIBUTION.md and Patches/ only: no C#, no assembly, no ModSettings, no Mod/Languages, no Keyed text. No options page, no MainButtons shortcut to hide, nothing to persist. Automated proof: Check-Status 0 error, Check-Translations PASS (0 source texts).
   - not applicable: French pass and interface check in EN/FR, MainButtons shortcut, options persistence - no owned text, no settings (owner, 2026-09-28; settings_audit above)
 session:      local_b1565ae3-2100-4849-b88f-60237d43caed
-updated:      2026-11-19 cleanUp[1.1.0], 14.c done: PUBLICATION.md lost the sent 1.0.0 note (1.1.0 note kept, current version), thank-you states set to posted, 1.1.0 upload line added; posted texts kept (WORKSHOP_COMMENTS cites them); WSL: workshop-cache holds none of this mod staged items (its optional mods 1511926373 and 2763428090 come from the Windows Workshop folder), nothing removed, no lock held; evidence noreg110-* and v17-* kept (current Mod/ 7a9d22e); TESTING.md, README, CHANGELOG untouched. Next: 14.d (only main, nothing to do), 14.e dormant[1.1.0], or open next version (14.i).
+updated:      2026-11-19 dormant[1.1.0] (14.e done), 14.c done: PUBLICATION.md lost the sent 1.0.0 note (1.1.0 note kept, current version), thank-you states set to posted, 1.1.0 upload line added; posted texts kept (WORKSHOP_COMMENTS cites them); WSL: workshop-cache holds none of this mod staged items (its optional mods 1511926373 and 2763428090 come from the Windows Workshop folder), nothing removed, no lock held; evidence noreg110-* and v17-* kept (current Mod/ 7a9d22e); TESTING.md, README, CHANGELOG untouched. Next: 14.d (only main, nothing to do), 14.e dormant[1.1.0], or open next version (14.i).
 code_review_sha: 6213dbaa4aad79e4ca724bec67fa977d7a5532a5
 publication_changelog_review_sha: ae9f147e50c6310107ecc5cd4f2485b64bbdc434
 thanks_drafted_line: none
