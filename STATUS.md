@@ -25,6 +25,7 @@ tested_on:    2026-10-15 (cats replay rev a00034b: 10/10 and peintres 10/10, Doc
 tested_1_7:   yes
 workshop:     3806769444 (0.1.0, item creation only; About/PublishedFileId.txt committed in 97c19d3; private, as Steam creates every item; not tested, not public)
 remaining:
+  - 2026-11-23 owner: "refaire 6, 9, 11": old captures git rm, scenes recomposed (eaa2fc9: 6 sits on a stool at zoom 2.6, 9 front view with lamps and props, 11 zoom 2.6), Check-ShotlistVsScenario OK, ticket 6033 filed (label gallery redo 6 9 11 eaa2fc9). Next: read the three captures, score-gallery, subtitles via rate-gallery, then her oui for 9.f. Gallery files 6, 9, 11 missing in Art until the run lands.
   - 2026-11-23 score-gallery (images opened, j read by eye on a 268 px sheet, not pixel-measured): shots 6, 9, 11 REDO candidates (6 and 11 subject 6 to 12 px at 268, 9 bare soil and Nelim seen from behind where the plan says front view); 1 to 5, 7, 8, 10 candidate. Gallery published in 1.1.0 and accepted 2026-11-17: redo or keep waits for her answer.
   - 2026-11-23 replay: 9.f open [owner]: her explicit oui on the gallery (11 images) then gallery_validated_sha (Get-GalleryHash 5fec88cd839c98f2268851fc0b3ce0c4f7f6625c at this replay). After that 10.a echo and 10.a bis preview_source_decision (not read). Open INFO gallery-credits: ATTRIBUTION Gallery set rows for 2871933948, 3549460027, 3682940618 (Mod/ATTRIBUTION.md, outside this replay).
   - 2026-11-19 PiI answered (relay via TM): original 2388932599 unsubscribed for the owner, success:1. Nothing else open, mod dormant[1.1.0].
