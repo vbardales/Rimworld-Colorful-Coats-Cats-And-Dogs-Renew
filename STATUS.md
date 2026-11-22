@@ -25,7 +25,7 @@ tested_on:    2026-10-15 (cats replay rev a00034b: 10/10 and peintres 10/10, Doc
 tested_1_7:   yes
 workshop:     3806769444 (0.1.0, item creation only; About/PublishedFileId.txt committed in 97c19d3; private, as Steam creates every item; not tested, not public)
 remaining:
-  - 2026-11-22 replay: 2.h open [PiI]: ECOSYSTEM? for line 1.1 then write ecosystem_line: 1.1; later 9.f gallery_validated_sha (her oui) and gallery-credits INFO (ATTRIBUTION Gallery set rows for 2871933948, 3549460027, 3682940618).
+  - 2026-11-22 replay: 2.h done (PiI delta answered, ecosystem_line: 1.1); replay again to decide the stage; later 9.f gallery_validated_sha (her oui) and gallery-credits INFO (ATTRIBUTION Gallery set rows for 2871933948, 3549460027, 3682940618).
   - 2026-11-19 PiI answered (relay via TM): original 2388932599 unsubscribed for the owner, success:1. Nothing else open, mod dormant[1.1.0].
   - 2026-11-18 cleanUp[1.0.0]: 14.a done, seven noreg tickets green on v1.0.0 (Mod/ = tag 9083b73), line per ticket in Docs/runs/pickle.md; published, public, gallery uploaded, thanks and Use This Instead comments posted (history: Docs/runs/pickle.md). Owner: "on passe en 1.1.0": next version 1.1.0 carries the 1.7 pass (tickets avec-cibles and avec-peintres in 1.7; 01-sans-facultatifs already green in 1.7, Docs/runs/pickle.md; 1.7 NOT yet in supportedVersions). 1.7 status: ALL GREEN, tested_1_7 yes: sans-facultatifs (2026-10-18), avec-cibles 4ca6 52/52, avec-peintres 9a70 10/10 (refile of 309f, 2026-11-18, Docs/runs/pickle.md, evidence Tests/Pickle/Evidence/v17-peintres). Next: the 1.1.0 publication gesture, one commit (<li>1.7</li> in supportedVersions, CHANGELOG, Preview redo with 1.7 badge, tag 1.7).
   - 2026-11-19 1.1.0 gesture done in 9fa977c: `<li>1.7</li>` in supportedVersions, CHANGELOG `## [Unreleased]` (3.c done), Preview redone with the 1.7 badge (checked: echo, title, badge clear), Art/Gallery/0-preview.png byte copy, GitHub social preview uploaded (sha256 recorded). code_review_sha moved to 6213dba: revue du diff : images et texte seuls (Mod/ since 6476e28 = About.xml supportedVersions, Preview.png, ATTRIBUTION.md copy; AUDIT.md 8.m exceptions). echo_review_sha INFO stale kept: only the renders changed, echo-source.png untouched, for Virginie to see. 3.d done 2026-11-19: stage now declareDependencies[1.1.0]; walk on (section 4 to 14) to publish (version 1.1.0, tag 1.7 minor, update_tags=true).
@@ -38,11 +38,12 @@ publication_changelog_review_sha: ae9f147e50c6310107ecc5cd4f2485b64bbdc434
 thanks_drafted_line: none
 echo_review_sha: 7dfb090d48031ce36093d381817a469fe8000d0c
 social_preview_sha256: 510e78e7ff1c39b069f4f10dbb40b8d82dd6bee010f8de32fdbb3130b044bd8e
+ecosystem_line: 1.1
 protocols_read_sha: d41f16042895ec5a4a18312bfb8c3091e322d89f
 ---
 # Colorful Coats - Cats and Dogs! Renew - status
 
-## Ecosystem (PiI rerun 2026-11-15, docs/inventory/ecosystem-steam/ColorfulCoatsCatsAndDogsRenew.md, b0a2f19)
+## Ecosystem (PiI delta 2026-11-22, line 1.1: parent Colorful Coats - Cats and Dogs! 2388932599; no new fork, patch or translation since 2026-11-18; Stray Dogs 3549460027 updated 2026-11-15, still linked. Earlier rerun 2026-11-15, docs/inventory/ecosystem-steam/ColorfulCoatsCatsAndDogsRenew.md, b0a2f19)
 
 Original 2388932599 (purpleyam, dead on 1.3, no Languages folder, no licence line). No duplicate, fork, replacement, patch, retexture or separate translation found (18 queries x 2 pages, 805 items). Series siblings: VAE 2398446130, Megafauna 2560113727, Dodos 2388053651. Neighbour: Animal Variety Coats 1511926373 (alive). Verdict: continue. Translations to integrate at localize: none. `ecosystem-links` block asked from PiI 2026-11-17. VAE commenter point (tigers and badgers moved to Odyssey): checked 2026-11-17, grep of Mod/Patches finds neither kind, this mod does not patch them (VAE patches cover only the seven breeds in the description).
 
