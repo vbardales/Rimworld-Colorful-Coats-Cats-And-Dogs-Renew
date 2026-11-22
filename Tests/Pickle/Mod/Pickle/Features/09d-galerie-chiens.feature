@@ -18,9 +18,14 @@
 #           taupe stands (194, 149) facing South: the animal that faces the camera; SCBullTerrier 2 grey walks at her heel
 #           (196, 157) to (196, 149). Decor, a flower border round the walk: Plant_Daylily fully grown at (191, 147), (191, 152),
 #           (204, 150) and (203, 155); Plant_Rose fully grown at (204, 153) and (192, 157); PlantPot_Bonsai at (191, 156);
-#           Plant_YellowTallGrass fully grown at (197, 147) and (201, 147) and a scatter of eight more daylilies, four roses and three tufts across the field; TorchLamp at (204, 148) lit and at (204, 157) lit: ground
+#           Plant_YellowTallGrass fully grown at (197, 147) and (201, 147) and a scatter of eight more daylilies, four roses and three tufts across the field; TorchLamp lit at (190, 148), (190, 157), (203, 148) and (203, 157): ground
 #           soil with plants all round, no bare field, two lights in frame. Says: Nelim walks the nine stray dogs of the
 #           neighbourhood with a handful of treats and every one of them has come for them, nine coats.
+#           REDO 2026-11-23 (score-gallery: Nelim seen from behind where the plan says front view, bare soil, no lamp in frame):
+#           she starts at (195, 157) facing South, is forced to walk towards (195, 148), and after 40 ticks is set standing at
+#           (195, 151) facing South with the treats in her hands, so the frame shows her face; TorchLamp lit at (190, 148),
+#           (190, 157), (203, 148) and (203, 157), Brazier lit at (202, 157), Stool at (190, 152), PlantPot_Bonsai at (203, 152):
+#           lamps and props in frame, the old lamps at x 204 were on the edge.
 #           Estimate 5. Subtitle: "Eleven o'clock walk: nine stray dogs, nine coats."
 #
 #  10. workshop-10-dogs-horseshoes (name kept, scene recomposed 2026-11-09: no horseshoe game). calm-zone (cream ground), 16h, clear, low sun, zoom 5.5 on (200, 190) (about 9 cells tall, about 16
@@ -48,8 +53,11 @@
 #           West, begging; AEXP_Pug -1 original stands (198, 109) facing North (seen from behind); AEXP_FrenchBulldog -1 original stands (194, 109) facing South: the
 #           animal that faces the camera; AEXP_WelshTerrier 0 mist stands (200, 112) facing West. Decor, the supper hall: the
 #           existing table, piano, rug, braziers, pots and bonsai, plus
-#           Plant_Daylily fully grown at (194, 112) and (199, 115) (REDO 2026-11-17, owner: a dog stood on the flower at (200, 112), flower removed), TorchLamp at (193, 109) lit and at (200, 110) lit:
+#           Plant_Daylily fully grown at (194, 112) and (201, 113) (REDO 2026-11-17, owner: a dog stood on the flower at (200, 112), flower removed), TorchLamp at (193, 109) lit and at (200, 110) lit:
 #           lamps in frame. Says: Nelim carries supper across the hall and five dogs follow the smell, five coats (the z3 hall holds no plates to lay: the dish is in her hands).
+#           REDO 2026-11-23 (score-gallery: the five dogs were 6 to 14 px at 268 px, j weak): frame (197, 111) at zoom 2.6, 5.2 cells
+#           tall and about 9 wide (x 193 to 202, z 109 to 114), a cell about 207 px, 29 px at 268 px; the dogs and Nelim already sit
+#           inside it; Plant_Daylily moved to (201, 113), PlantPot_Bonsai added at (201, 111) and (193, 111).
 #           Estimate 5. Subtitle: "Supper at seven: five dogs know the way to the table."
 #
 # RISK: the strays stop at their targets (+45 ticks), Play_Horseshoes may not choose its stand cell (fallback above), the emerald
@@ -95,10 +103,18 @@ Feature: images for the Workshop page, one day at the sanctuary, dogs
     And Nelim's Pickle Tools: I place the decor "Plant_YellowTallGrass" at (196, 153) fully grown
     And Nelim's Pickle Tools: I place the decor "Plant_YellowTallGrass" at (200, 154) fully grown
     And Nelim's Pickle Tools: I place the decor "Plant_YellowTallGrass" at (194, 152) fully grown
-    And Nelim's Pickle Tools: I place the decor "TorchLamp" at (204, 148)
-    And Nelim's Pickle Tools: the decor "TorchLamp" at (204, 148) is lit
-    And Nelim's Pickle Tools: I place the decor "TorchLamp" at (204, 157)
-    And Nelim's Pickle Tools: the decor "TorchLamp" at (204, 157) is lit
+    And Nelim's Pickle Tools: I place the decor "TorchLamp" at (190, 148)
+    And Nelim's Pickle Tools: the decor "TorchLamp" at (190, 148) is lit
+    And Nelim's Pickle Tools: I place the decor "TorchLamp" at (190, 157)
+    And Nelim's Pickle Tools: the decor "TorchLamp" at (190, 157) is lit
+    And Nelim's Pickle Tools: I place the decor "TorchLamp" at (203, 148)
+    And Nelim's Pickle Tools: the decor "TorchLamp" at (203, 148) is lit
+    And Nelim's Pickle Tools: I place the decor "TorchLamp" at (203, 157)
+    And Nelim's Pickle Tools: the decor "TorchLamp" at (203, 157) is lit
+    And Nelim's Pickle Tools: I place the decor "Brazier" at (202, 157)
+    And Nelim's Pickle Tools: the decor "Brazier" at (202, 157) is lit
+    And Nelim's Pickle Tools: I place the decor "Stool" at (190, 152)
+    And Nelim's Pickle Tools: I place the decor "PlantPot_Bonsai" at (203, 152)
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_Pants" dyed rgb (101, 67, 33)
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_CollarShirt" dyed rgb (44, 86, 140)
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_CowboyHat" dyed rgb (214, 174, 92)
@@ -123,7 +139,7 @@ Feature: images for the Workshop page, one day at the sanctuary, dogs
     And Nelim's Pickle Tools: the animal "Miel" is given coat 2
     And Nelim's Pickle Tools: the animal "Galet" is given coat 2
     When Nelim's Pickle Tools: I let 20 ticks pass
-    And Nelim's Pickle Tools: "Nelim" stands at (195, 157) facing North
+    And Nelim's Pickle Tools: "Nelim" stands at (195, 157) facing South
     And Nelim's Pickle Tools: "Nelim" carries 5 of the item "Kibble"
     And Nelim's Pickle Tools: the animal "Miel" stands at (194, 149) facing South
     And Nelim's Pickle Tools: the animal "Encre" stands at (200, 151) facing West
@@ -135,7 +151,8 @@ Feature: images for the Workshop page, one day at the sanctuary, dogs
     And Nelim's Pickle Tools: "Soie" is forced to walk to (201, 149)
     And Nelim's Pickle Tools: "Bouton" is forced to walk to (194, 155)
     And Nelim's Pickle Tools: "Galet" is forced to walk to (196, 149)
-    And Nelim's Pickle Tools: I let 60 ticks pass
+    And Nelim's Pickle Tools: I let 40 ticks pass
+    And Nelim's Pickle Tools: "Nelim" stands at (195, 151) facing South
     And game speed is paused
     And Nelim's Pickle Tools: studio presentation mode is enabled
     And Nelim's Pickle Tools: the colonist bar is hidden
@@ -237,7 +254,9 @@ Feature: images for the Workshop page, one day at the sanctuary, dogs
     And Nelim's Sanctuary: the animals are removed from the sanctuary "prestige-hall"
     And Nelim's Sanctuary: I am at the sanctuary "prestige-hall"
     And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (194, 112) fully grown
-    And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (199, 115) fully grown
+    And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (201, 113) fully grown
+    And Nelim's Pickle Tools: I place the decor "PlantPot_Bonsai" at (201, 111)
+    And Nelim's Pickle Tools: I place the decor "PlantPot_Bonsai" at (193, 111)
     And Nelim's Pickle Tools: I place the decor "TorchLamp" at (193, 109)
     And Nelim's Pickle Tools: the decor "TorchLamp" at (193, 109) is lit
     And Nelim's Pickle Tools: I place the decor "TorchLamp" at (200, 110)
@@ -272,7 +291,7 @@ Feature: images for the Workshop page, one day at the sanctuary, dogs
     And Nelim's Pickle Tools: the tooltips are hidden
     And Nelim's Pickle Tools: the resource readout is hidden
     And Nelim's Pickle Tools: the selection brackets are hidden
-    And Nelim's Pickle Tools: I frame the cell (197, 111) at zoom 4
+    And Nelim's Pickle Tools: I frame the cell (197, 111) at zoom 2.6
     And Nelim's Pickle Tools: I move the mouse to (10, 10)
     And Nelim's Pickle Tools: "Nelim" face kit is "neutral"
     And Nelim's Pickle Tools: "Nelim" face is held neutral

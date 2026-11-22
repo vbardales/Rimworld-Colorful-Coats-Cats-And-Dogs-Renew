@@ -34,17 +34,20 @@
 #           Says: at dusk Nelim gathers her four huskies at the pen, the braziers lit, four coats.
 #           Estimate 5. Subtitle: "Evening training, and four huskies at the gate."
 #
-#   6. workshop-6-fireside. fire-pit, 20h, clear, zoom 5 on (181, 115), +60 ticks. CLOSING image. Gesture: Nelim, now in the navy
-#           Apparel_Duster dyed rgb (58, 58, 98) over the denim Apparel_CollarShirt dyed rgb (44, 86, 140) "because the evening is
-#           cold", no hat, Roo_HD_Hair_Highpony, hair colour rgb (56, 36, 18), smile, plays the instrument Harp by the fire (the
-#           harp of the ritual hall, near (207, 117), is hidden first so the step finds ours). Instant: the first notes, the corgis
-#           gather. Corgis of Vanilla Animals Expanded (AEXP_Corgi, coats -1 original, 0 taupe, 1 champagne, 2 slate): Noisette -1
-#           stands (182, 113) facing South: the animal that faces the camera; Praline 0 walks (forced) from (177, 116) to (179, 115)
-#           towards the fire; Dune 1 stands (183, 114) facing West; Brume 2 lies asleep (179, 113); the white cat of shot 1, Neige
-#           (akaNEKO_shironeko, coat -1), sleeps at (179, 117): the evening gathers the day. Decor, the fireside lived in: Harp at
-#           (183, 116), PlantPot_Bonsai at (185, 117), TorchLamp at (177, 114), (184, 114) and (181, 118) lit, Brazier at (186, 114)
-#           lit, Plant_Daylily fully grown at (184, 119) and (186, 119), a Stool at (178, 118), the fire itself. Says: Nelim plays
-#           the harp by the fire in the cold evening, the corgis gather and the white cat of the breakfast sleeps: the day is done.
+#   6. workshop-6-fireside. fire-pit, 20h, clear, zoom 2.6 on (181, 115) (REDO 2026-11-23, score-gallery: corgis about 12 px at 268 px,
+#           Nelim seen from behind, no smile visible; a cell is now about 207 px, 29 px at 268 px, 5.2 cells tall, x 177 to 186, z 113 to
+#           118), +30 ticks. CLOSING image. Gesture: Nelim, now in the navy Apparel_Duster dyed rgb (58, 58, 98) over the denim
+#           Apparel_CollarShirt dyed rgb (44, 86, 140) "because the evening is cold", no hat, Roo_HD_Hair_Highpony, hair colour
+#           rgb (56, 36, 18), smile (MouthSmile, LidCheerful), sits on the Stool spawned at (181, 117) facing South, north of the fire,
+#           so she faces the camera (sits on the building: no job to time), the Harp beside her at (183, 117). Instant: she has sat down
+#           by the fire and the corgis come to it. Corgis of Vanilla Animals Expanded (AEXP_Corgi, coats -1 original, 0 taupe, 1
+#           champagne, 2 slate): Noisette -1 stands (182, 113) facing South: the animal that faces the camera; Praline 0 walks (forced)
+#           from (177, 116) to (179, 115) towards the fire; Dune 1 stands (183, 114) facing West; Brume 2 lies asleep (179, 113); the
+#           white cat of shot 1, Neige (akaNEKO_shironeko, coat -1), sleeps at (179, 117): the evening gathers the day. Decor, the
+#           fireside lived in: Harp at (183, 117), PlantPot_Bonsai at (185, 117), TorchLamp at (177, 114), (184, 114) and (181, 118) lit,
+#           Brazier at (186, 114) lit, Plant_Daylily fully grown at (184, 118) and (186, 118), a Stool at (178, 118), the fire itself.
+#           Says: Nelim sits by the fire in the cold evening, the corgis gather and the white cat of the breakfast sleeps: the day is
+#           done.
 #           Estimate 5. Subtitle: "By the fire, the corgis keep their own colours."
 #
 # Day order (reindex at 9.b): 7h (1), 10h (2), 11h (9), 12h (3), 13h (7), 15h (4), 16h (10), 17h (8), 18h (5), 19h (11), 20h (6).
@@ -183,10 +186,11 @@ Feature: images for the Workshop page, one day at the sanctuary, evening
     And Nelim's Pickle Tools: I place the decor "TorchLamp" at (181, 118)
     And Nelim's Pickle Tools: the decor "TorchLamp" at (181, 118) is lit
     And Nelim's Pickle Tools: I place the decor "PlantPot_Bonsai" at (185, 117)
-    And Nelim's Pickle Tools: I place the decor "Harp" at (183, 116)
-    And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (184, 119) fully grown
-    And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (186, 119) fully grown
+    And Nelim's Pickle Tools: I place the decor "Harp" at (183, 117)
+    And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (184, 118) fully grown
+    And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (186, 118) fully grown
     And Nelim's Pickle Tools: I place the decor "Stool" at (178, 118)
+    And Nelim's Pickle Tools: the building "Stool" is spawned at (181, 117) facing South
     And Nelim's Pickle Tools: I place the decor "Brazier" at (186, 114)
     And Nelim's Pickle Tools: the decor "Brazier" at (186, 114) is lit
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_CollarShirt" dyed rgb (44, 86, 140)
@@ -209,8 +213,8 @@ Feature: images for the Workshop page, one day at the sanctuary, evening
     And Nelim's Pickle Tools: "Brume" lies down
     And Nelim's Pickle Tools: "Neige" lies down
     And Nelim's Pickle Tools: "Praline" is forced to walk to (179, 115)
-    And Nelim's Pickle Tools: "Nelim" plays the instrument "Harp"
-    And Nelim's Pickle Tools: I let 60 ticks pass
+    And Nelim's Pickle Tools: "Nelim" sits on the building "Stool" at (181, 117)
+    And Nelim's Pickle Tools: I let 30 ticks pass
     And game speed is paused
     And Nelim's Pickle Tools: studio presentation mode is enabled
     And Nelim's Pickle Tools: the colonist bar is hidden
@@ -218,7 +222,7 @@ Feature: images for the Workshop page, one day at the sanctuary, evening
     And Nelim's Pickle Tools: the tooltips are hidden
     And Nelim's Pickle Tools: the resource readout is hidden
     And Nelim's Pickle Tools: the selection brackets are hidden
-    And Nelim's Pickle Tools: I frame the cell (181, 115) at zoom 5
+    And Nelim's Pickle Tools: I frame the cell (181, 115) at zoom 2.6
     And Nelim's Pickle Tools: I move the mouse to (10, 10)
     And Nelim's Pickle Tools: "Nelim" face kit is "neutral"
     And Nelim's Pickle Tools: "Nelim" face is held neutral
